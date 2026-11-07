@@ -82,8 +82,8 @@
     {
      "id": "joker",
      "name": "JokerFinn06",
-     "team": "",
-     "nat": "",
+     "team": "rb",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
@@ -98,8 +98,8 @@
     {
      "id": "schuppi",
      "name": "Schuppi2010",
-     "team": "",
-     "nat": "",
+     "team": "fer",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
@@ -113,7 +113,7 @@
     },
     {
      "id": "luis",
-     "name": "Luisloli89",
+     "name": "Mehlone",
      "team": "",
      "nat": "",
      "active": true,
@@ -121,27 +121,27 @@
     },
     {
      "id": "ds4",
-     "name": "Dualshock4759",
-     "team": "",
-     "nat": "",
+     "name": "Italian Gamer",
+     "team": "sau",
+     "nat": "it",
      "active": true,
      "role": "stamm"
     },
     {
      "id": "fuchs",
      "name": "DON-FUCHSER88",
-     "team": "",
-     "nat": "",
+     "team": "fer",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
     {
      "id": "dbred",
-     "name": "DB_RedX",
+     "name": "Ben",
      "team": "",
      "nat": "",
      "active": true,
-     "role": "stamm"
+     "role": "ersatz"
     },
     {
      "id": "tore",
@@ -154,8 +154,8 @@
     {
      "id": "crash",
      "name": "Crashturtle2000",
-     "team": "",
-     "nat": "",
+     "team": "rbr",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
@@ -165,7 +165,7 @@
      "team": "",
      "nat": "",
      "active": true,
-     "role": "stamm"
+     "role": "ersatz"
     },
     {
      "id": "dominik",
@@ -173,15 +173,22 @@
      "team": "",
      "nat": "",
      "active": true,
-     "role": "stamm"
+     "role": "ersatz"
     },
     {
      "id": "rocco",
      "name": "Rocco_genti1",
      "team": "",
      "nat": "",
-     "active": true,
+     "active": false,
      "role": "stamm"
+    },
+    {
+     "id": "xw9zsshm",
+     "name": "Leokobra",
+     "team": "rb",
+     "nat": "de",
+     "active": true
     }
    ],
    "races": [
