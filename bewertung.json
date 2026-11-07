@@ -577,7 +577,7 @@
                                                     },
                                           "pos":  [
                                                       "Von Startplatz 7 auf P4.",
-                                                      "Runde 1: Rad an Rad mit Mehlone durch Kurve 1 bis 3 ohne Kontakt, dann an Crashturtle2000 vorbei.",
+                                                      "Runde 1: Rad an Rad mit Mehlone durch Kurve 1 bis 3 ohne Kontakt, dann in Kurve 11 mit Windschatten innen an Crashturtle2000 vorbei, ohne Berührung.",
                                                       "Runde 2: nutzt den Dreher von Italian Gamer und geht auf P5.",
                                                       "Undercut mit Stopp in Runde 9 bringt ihn vor Mesota und Mehlone.",
                                                       "Verteidigt in Runde 16 innen sauber gegen Mesota, kein Kontakt.",
@@ -589,7 +589,8 @@
                                                       "Die beste Rennrunde (1:21.286) ist die langsamste beste Runde im Feld, 1,3 s über der schnellsten.",
                                                       "Runde 2 bis 9: hängt 0,2 bis 1,3 s hinter Mehlone, bekommt aber kein Überholmanöver durch.",
                                                       "Der zweite Stopp in Runde 19 (Medium auf Medium) kostete vermutlich P3. Im Ziel fehlten 1,1 s auf Mehlone.",
-                                                      "Track-Limit-Warnung in Runde 5."
+                                                      "Track-Limit-Warnung in Runde 5.",
+                                                      "Kurve 11, Runde 1: Beim Herausbeschleunigen nutzt er die volle Breite, Crashturtle2000 muss außen über den Randstein ausweichen. Hart, aber im Rahmen eines normalen Duells."
                                                   ],
                                           "besser":  [
                                                          "Reines Tempo, vor allem im Quali und in Sektor 3.",
@@ -603,7 +604,7 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "In Kurve 1 bis 3 fährt er Rad an Rad neben Mehlone, sauber und ohne Kontakt. Nach Crashturtle2000s Abflug geht er in Kurve 3 an ihm vorbei auf P6. In Runde 2 nutzt er den Dreher von Italian Gamer und liegt auf P5."
+                                                              "x":  "In Kurve 1 bis 3 fährt er Rad an Rad neben Mehlone, sauber und ohne Kontakt. Crashturtle2000 fliegt in Kurve 6 allein ab, Fuchser ist da noch weit dahinter. Am Ende der langen Geraden vor Kurve 11 holt er ihn im Windschatten ein, geht innen über den Scheitelpunkt-Randstein vorbei und liegt am Scheitelpunkt vorne. Am Ausgang nutzt er die ganze Strecke, Turtle muss außen über den Randstein ausweichen. Eine Berührung gibt es nicht, Fuchser liegt danach auf P6. In Runde 2 nutzt er den Dreher von Italian Gamer und liegt auf P5."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
@@ -615,7 +616,7 @@
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Durchweg fair: Rad an Rad mit Mehlone in Runde 1, Überholmanöver gegen Crashturtle2000 und Italian Gamer, und in Runde 16 eine saubere Verteidigung innen gegen Mesota, der im Windschatten vor Kurve 3 vorbeigeht. Kein Kontakt."
+                                                              "x":  "Durchweg fair: Rad an Rad mit Mehlone in Runde 1, das Überholmanöver gegen Crashturtle2000 in Kurve 11 innen ohne Berührung (am Ausgang etwas hart, Turtle muss über den Randstein), Italian Gamer nach dessen Dreher und in Runde 16 eine saubere Verteidigung innen gegen Mesota, der im Windschatten vor Kurve 3 vorbeigeht. Kein Kontakt."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
@@ -679,7 +680,8 @@
                                                       "Für den Verbindungsabbruch gibt es keinen Abzug beim Tempo."
                                                   ],
                                           "neg":  [
-                                                      "Runde 1: Abflug in Kurve 6 ins Gras mit leichtem Schaden. Mehlone, Italian Gamer und DON-FUCHSER88 gehen vorbei, von P4 auf P7.",
+                                                      "Runde 1, Kurve 6: ohne Fremdeinwirkung am Ausgang zu weit links, mit den linken Rädern über Kunstrasen und Gras. Mehlone und Italian Gamer gehen vorbei (P4 → P6), der Frontflügel ist leicht beschädigt.",
+                                                      "Runde 1, Kurve 11: DON-FUCHSER88 geht innen vorbei, Turtle muss außen über den Randstein ausweichen und fällt auf P7. Eine Berührung gab es nicht.",
                                                       "Runde 2 bis 8: Verbindungsabbruch. Erst eine Einladung von Mesota brachte ihn zurück, danach mit großem Rückstand auf P7.",
                                                       "Runde 9 bis 19 auf Hard: Rundenzeiten von 1:27.4 bis 1:24.2, also 3 bis 4 s langsamer als das Feld.",
                                                       "Runde 20: Boxenstopp mit Frontflügelwechsel, 8,271 s, laut Spiel langsamer, weil er zu früh in die Box eingebogen ist.",
@@ -699,7 +701,7 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "In Kurve 6 kommt Crashturtle2000 links ins Gras und beschädigt das Auto leicht. Mehlone und Italian Gamer ziehen vorbei, kurz danach in Kurve 3 auch DON-FUCHSER88. Nach einer Runde liegt er auf P7, drei Plätze schlechter als gestartet. Das war ein eigener Fehler."
+                                                              "x":  "Am Ausgang von Kurve 6 kommt Crashturtle2000 ohne Fremdeinwirkung zu weit nach links und fährt mit den linken Rädern über Kunstrasen und Gras. Niemand ist neben ihm, DON-FUCHSER88 liegt zu dem Zeitpunkt weit dahinter. Auf dem Weg zu Kurve 7 gehen Mehlone und Italian Gamer vorbei, P4 wird zu P6, der Frontflügel zeigt leichte Schäden von 2 bis 4 %. Am Ende der langen Geraden vor Kurve 11 zieht DON-FUCHSER88 im Windschatten innen neben ihn und liegt am Scheitelpunkt vorne. Beim Herausbeschleunigen nutzt Fuchser die volle Streckenbreite, Turtle muss außen über den Randstein und kurz neben die Strecke. Eine Berührung ist auf keinem der beiden Onboards zu sehen. Nach Runde 1 liegt Turtle auf P7."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
@@ -711,7 +713,7 @@
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Nur in Runde 1, und dort verliert er nach seinem Fehler drei Plätze ohne Kontakt. Danach fährt er allein am Ende des Feldes."
+                                                              "x":  "Nur in Runde 1. Nach dem eigenen Fehler in Kurve 6 verliert er zwei Plätze ohne Gegenwehr. In Kurve 11 hält er gegen DON-FUCHSER88 außen dagegen, bremst aber früher, ist langsamer am Scheitelpunkt und muss am Ausgang über den Randstein ausweichen. Das war ein normales Rennduell ohne Kontakt und ohne Schuldigen. Danach fährt er allein am Ende des Feldes."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
