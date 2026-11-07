@@ -674,9 +674,9 @@ function viewLogin(){
     '<div class="acts"><button class="btn primary" type="submit"'+(ui.busy?' disabled':'')+'>Anmelden</button></div>'+(ui.loginMsg?'<p class="warn" role="status">'+esc(ui.loginMsg)+'</p>':'')+'</form></section>'+
     '<section class="panel"><h3>So bekommst du einen Schlüssel</h3><ol class="steps">'+
     '<li>Melde dich bei GitHub an. Dein Konto braucht Schreibzugriff auf das Projekt <strong>'+esc(REPO)+'</strong>: als Owner oder weil du eingeladen wurdest.</li>'+
-    '<li><strong>Owner des Projekts:</strong> <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Fine-grained Token erstellen</a>. Bei „Repository access“ nur <strong>germanformulaleague</strong> wählen und bei „Repository permissions“ <strong>Contents</strong> auf „Read and write“ stellen.</li>'+
-    '<li><strong>Eingeladene Mitbesitzer:</strong> <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=GFL%20Verwaltung" target="_blank" rel="noopener">Classic Token erstellen</a>. Das Häkchen bei <strong>public_repo</strong> ist schon gesetzt.</li>'+
-    '<li>Ablaufdatum wählen, „Generate token“ klicken, den Schlüssel kopieren und oben einfügen. Gib ihn niemandem weiter. Er bleibt nur in deinem Browser gespeichert.</li></ol></section>';
+    '<li><a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=GFL%20Verwaltung" target="_blank" rel="noopener">Classic Token erstellen</a>. Prüfe, dass das Häkchen bei <strong>public_repo</strong> gesetzt ist. Sonst darf der Schlüssel nur lesen.</li>'+
+    '<li>Bei „Expiration“ ein Ablaufdatum wählen, ganz unten auf <strong>Generate token</strong> klicken und den ganzen Text, der mit <code>ghp_</code> beginnt, mit dem Kopier-Symbol kopieren.</li>'+
+    '<li>Den Schlüssel oben einfügen und anmelden. Gib ihn niemandem weiter. Er bleibt nur in deinem Browser gespeichert.</li></ol></section>';
 }
 function viewAdmin(){
   if(!auth.token) return viewLogin();
@@ -939,6 +939,9 @@ function login(token,remember,silent){
   ghFetch(GH).then(function(r){
     if(r.status===401)throw new Error('bad');
     if(!r.ok)throw new Error('repo');
+    /* Classic Token: Rechte stehen im Header. Ohne public_repo oder repo darf der Schlüssel nichts speichern. */
+    var scopes=r.headers.get('x-oauth-scopes');
+    if(scopes!==null&&!/(^|[\s,])(public_repo|repo)([\s,]|$)/.test(scopes))throw new Error('scope');
     return r.json();
   }).then(function(repo){
     if(!repo.permissions||!repo.permissions.push)throw new Error('perm');
@@ -951,8 +954,9 @@ function login(token,remember,silent){
   }).catch(function(e){
     auth.token='';auth.user='';ui.busy=false;
     var m=e&&e.message;
-    if(silent){if(m==='bad'||m==='perm')forgetToken();render();return;}
+    if(silent){if(m==='bad'||m==='perm'||m==='scope')forgetToken();render();return;}
     ui.loginMsg=m==='bad'?'Der Schlüssel ist ungültig oder abgelaufen.':
+      m==='scope'?'Dieser Schlüssel darf nur lesen. Erstelle einen neuen Classic Token und setze dabei das Häkchen bei „public_repo“ (Link unten).':
       m==='perm'?'Dieser Schlüssel darf das GFL-Projekt nicht ändern. Prüfe den Projektzugriff und die Schreibrechte (Contents: Read and write).':
       m==='repo'?'Mit diesem Schlüssel ist das GFL-Projekt nicht erreichbar. Wähle beim Erstellen das Projekt germanformulaleague aus.':
       'Die Anmeldung hat nicht geklappt. Prüfe deine Internetverbindung und versuche es noch einmal.';
@@ -970,7 +974,8 @@ function saveRemote(force){
       content:b64enc(JSON.stringify(draft,null,1)+'\n'),sha:auth.sha,branch:'main'})});
   }).then(function(r){
     if(r.status===409||r.status===422)throw new Error('conflict');
-    if(r.status===401||r.status===403||r.status===404)throw new Error('auth');
+    if(r.status===401)throw new Error('auth');
+    if(r.status===403||r.status===404)throw new Error('write');
     if(!r.ok)throw new Error('fail');
     return r.json();
   }).then(function(j){
@@ -979,7 +984,8 @@ function saveRemote(force){
   }).catch(function(e){
     ui.busy=false;var m=e&&e.message;
     if(m==='conflict'){ui.conflict=true;ui.msg='Jemand anderes hat in der Zwischenzeit gespeichert. Lade den neuesten Stand oder überschreibe ihn mit deiner Version.';}
-    else if(m==='auth')ui.msg='Dein Schlüssel ist abgelaufen oder darf nicht mehr speichern. Melde dich neu an.';
+    else if(m==='auth')ui.msg='Dein Schlüssel ist abgelaufen. Erstelle einen neuen und melde dich neu an. Deine Änderungen bleiben in diesem Browser erhalten.';
+    else if(m==='write')ui.msg='Dein Schlüssel darf nur lesen, nicht speichern. Erstelle einen Classic Token mit Häkchen bei „public_repo“, melde dich ab und mit dem neuen Schlüssel wieder an. Deine Änderungen bleiben in diesem Browser erhalten.';
     else ui.msg='Speichern hat nicht geklappt. Versuche es gleich noch einmal.';
     updateSavebar();
   });
