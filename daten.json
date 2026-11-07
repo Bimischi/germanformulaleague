@@ -117,7 +117,7 @@
      "team": "",
      "nat": "",
      "active": true,
-     "role": "stamm"
+     "role": "ersatz"
     },
     {
      "id": "ds4",
@@ -171,16 +171,8 @@
      "id": "dominik",
      "name": "F1Dominik_Kreft",
      "team": "",
-     "nat": "",
+     "nat": "pl",
      "active": true,
-     "role": "ersatz"
-    },
-    {
-     "id": "rocco",
-     "name": "Rocco_genti1",
-     "team": "",
-     "nat": "",
-     "active": false,
      "role": "ersatz"
     },
     {
@@ -212,7 +204,24 @@
      "time": "",
      "weather": "",
      "laps": "",
-     "results": []
+     "results": [
+      {
+       "d": "mesota",
+       "t": "mer",
+       "a": true,
+       "p": 1
+      },
+      {
+       "d": "white",
+       "t": "mer",
+       "a": true,
+       "p": 3
+      }
+     ],
+     "pole": "white",
+     "fl": "white",
+     "dotd": "white",
+     "ot": "tore"
     },
     {
      "id": "r02",
