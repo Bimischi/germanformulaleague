@@ -283,6 +283,24 @@
        "t": "fer",
        "a": true,
        "s": "DNS"
+      },
+      {
+       "d": "dominik",
+       "t": "",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "lewin",
+       "t": "",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "dbred",
+       "t": "",
+       "a": true,
+       "s": "DNS"
       }
      ],
      "dotd": "mesota",
