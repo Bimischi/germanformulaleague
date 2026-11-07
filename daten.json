@@ -204,7 +204,49 @@
      "time": "",
      "weather": "",
      "laps": "",
-     "results": []
+     "results": [
+      {
+       "d": "joker",
+       "t": "rb",
+       "a": true,
+       "p": 1
+      },
+      {
+       "d": "mesota",
+       "t": "mer",
+       "a": true,
+       "p": 2
+      },
+      {
+       "d": "luis",
+       "t": "wil",
+       "a": true,
+       "p": 3
+      },
+      {
+       "d": "fuchs",
+       "t": "fer",
+       "a": true,
+       "p": 4
+      },
+      {
+       "d": "white",
+       "t": "mer",
+       "a": true,
+       "p": 5
+      },
+      {
+       "d": "crash",
+       "t": "rbr",
+       "a": true,
+       "p": 6
+      }
+     ],
+     "dotd": "mesota",
+     "ot": "luis",
+     "clean": "luis",
+     "pole": "white",
+     "fl": "white"
     },
     {
      "id": "r02",
