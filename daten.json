@@ -86,7 +86,7 @@
      "id": "white",
      "name": "The_White_Epic",
      "team": "mer",
-     "nat": "",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
@@ -101,8 +101,8 @@
     {
      "id": "mesota",
      "name": "Mesota",
-     "team": "",
-     "nat": "",
+     "team": "mer",
+     "nat": "de",
      "active": true,
      "role": "stamm"
     },
