@@ -141,16 +141,16 @@
     {
      "id": "tore",
      "name": "Tore79",
-     "team": "",
-     "nat": "",
+     "team": "sau",
+     "nat": "it",
      "active": true,
      "role": "stamm"
     },
     {
      "id": "crash",
      "name": "Crashturtle2000",
-     "team": "rbr",
-     "nat": "de",
+     "team": "",
+     "nat": "",
      "active": true,
      "role": "stamm"
     },
