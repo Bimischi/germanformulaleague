@@ -290,6 +290,16 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .rd-an h5{margin:0 0 3px;font-size:15px}
 .rd-an p{margin:0;line-height:1.55;color:#CDD1D8}
 .rd-src{margin:0;font-size:12.5px;color:var(--muted)}
+.dlink{background:none;border:0;padding:0;font:inherit;font-weight:inherit;color:inherit;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:rgba(142,149,162,.45);text-underline-offset:3px}
+.dlink:hover{text-decoration-color:currentColor}
+.rlist{display:grid;gap:6px}
+.rli{display:flex;align-items:center;gap:10px;width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;color:var(--fg);font:inherit;text-align:left;min-width:0}
+button.rli{cursor:pointer}button.rli:hover{border-color:var(--muted)}
+.rli.off{opacity:.55}
+.rli-n{flex:1;min-width:0;display:flex;flex-direction:column}
+.rli-n small{color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rli-s{white-space:nowrap;display:flex;align-items:center;gap:6px}
+.chip:disabled{cursor:default;opacity:.5}
 
 /* Login */
 .login form{display:flex;flex-direction:column;gap:12px;max-width:480px}
@@ -314,7 +324,7 @@ function uid(){return 'x'+Math.random().toString(36).slice(2,9);}
    im eigenen Browser; veröffentlicht wird, indem die heruntergeladene daten.json im GitHub-Projekt ersetzt wird. */
 var DATA={version:1,seasons:[]},RATE=null;
 var draft=clone(DATA);
-var ui={view:'tabelle',season:null,cat:'fahrer',race:'all',rec:'alle',admSeason:null,admRace:null,confirm:null,canEdit:true,msg:'',stash:null,json:''};
+var ui={view:'tabelle',rSeason:'all',rRace:'all',season:null,cat:'fahrer',race:'all',rec:'alle',admSeason:null,admRace:null,confirm:null,canEdit:true,msg:'',stash:null,json:''};
 
 /* ---------- Konstanten ---------- */
 var LOGO='<svg class="logo" viewBox="0 0 1239 300" role="img" aria-label="GFL"><g transform="matrix(1 0 -.38 1 114 0)"><path fill="#fff" d="M350 0 L100 0 Q0 0 0 100 L0 200 Q0 300 100 300 L270 300 Q350 300 350 220 L350 125 L190 125 L148 190 L262 190 L262 200 Q262 225 237 225 L125 225 Q95 225 95 195 L95 105 Q95 75 125 75 L295 75 Z"/><path fill="#fff" transform="translate(382 0)" d="M335 0 L100 0 Q0 0 0 100 L0 300 L95 300 L95 190 L245 190 L290 125 L95 125 L95 105 Q95 75 125 75 L280 75 Z"/><path fill="#fff" transform="translate(750 0)" d="M0 0 L95 0 L95 225 L375 225 L320 300 L100 300 Q0 300 0 200 Z"/><path d="M477 125 H672 L627 190 H477 Z" fill="#E10600"/><path d="M845 225 H1125 L1070 300 H845 Z" fill="#FFCC00"/></g></svg>';
@@ -555,7 +565,7 @@ function viewDrivers(s){
     '<tr><th class="sx0">Pos</th><th class="sx1">Fahrer</th><th>Team</th><th class="num">Punkte</th><th class="num">Diff.</th><th class="num" title="Schnellste Runden">FL</th>'+raceHeads(races)+'</tr></thead><tbody>';
   rows.forEach(function(row){
     var d=drv(s,row.id);
-    h+='<tr><td class="sx0 pos">'+(anyDone?row.pos:'–')+'</td><td class="sx1 drv">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(dName(s,row.id))+'</td><td>'+tmTag(curTeam(s,row.id))+'</td>'+
+    h+='<tr><td class="sx0 pos">'+(anyDone?row.pos:'–')+'</td><td class="sx1 drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,row.id,ui.race)+'</td><td>'+tmTag(curTeam(s,row.id))+'</td>'+
       '<td class="num total">'+row.total+'</td><td class="num muted">'+(row.total===lead?'—':'−'+(lead-row.total))+'</td><td class="num">'+(row.fls||'<span class="muted">0</span>')+'</td>'+
       races.map(function(r){return '<td class="c">'+posCell(s,r,row.id)+'</td>';}).join('')+'</tr>';
   });
@@ -592,7 +602,7 @@ function viewCount(s,cat){
     '<tr><th class="sx0">Pos</th><th class="sx1">Fahrer</th><th>Team</th><th class="num">Anzahl</th>'+raceHeads(races)+'</tr></thead><tbody>';
   rows.forEach(function(row){
     var d=drv(s,row.id);
-    h+='<tr><td class="sx0 pos">'+row.pos+'</td><td class="sx1 drv">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(dName(s,row.id))+'</td><td>'+tmTag(curTeam(s,row.id))+'</td><td class="num total">'+row.n+'</td>'+
+    h+='<tr><td class="sx0 pos">'+row.pos+'</td><td class="sx1 drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,row.id,ui.race)+'</td><td>'+tmTag(curTeam(s,row.id))+'</td><td class="num total">'+row.n+'</td>'+
       races.map(function(r){
         if(!done(r))return '<td class="c"><span class="cell na">·</span></td>';
         return '<td class="c">'+(cat.test(r,resOf(r,row.id),row.id)?posCell(s,r,row.id):'<span class="cell na"></span>')+'</td>';
@@ -627,7 +637,7 @@ function viewRace(s,r){
     if(r.dotd===x.d)b.push('<span class="badge dotd">Driver of the Day</span>');
     if(r.ot===x.d)b.push('<span class="badge ot">Meiste Überholungen</span>');
     if(r.clean===x.d)b.push('<span class="badge clean">Sauberster Fahrer</span>');
-    h+='<tr><td>'+posCell(s,r,x.d)+'</td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(dName(s,x.d))+'</td><td>'+tmTag(t)+'</td>'+(hasTm?'<td class="num">'+esc(x.tm||'')+'</td>':'')+(hasBl?'<td class="num'+(r.fl===x.d?' flt':'')+'">'+esc(x.bl||'')+'</td>':'')+'<td class="num total">'+pts(s,r,x.d)+'</td><td><div class="badges">'+b.join('')+'</div></td></tr>';
+    h+='<tr><td>'+posCell(s,r,x.d)+'</td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,x.d,r.id)+'</td><td>'+tmTag(t)+'</td>'+(hasTm?'<td class="num">'+esc(x.tm||'')+'</td>':'')+(hasBl?'<td class="num'+(r.fl===x.d?' flt':'')+'">'+esc(x.bl||'')+'</td>':'')+'<td class="num total">'+pts(s,r,x.d)+'</td><td><div class="badges">'+b.join('')+'</div></td></tr>';
   });
   return h+'</tbody></table></div>';
 }
@@ -643,7 +653,7 @@ function viewQuali(s,r){
   var h='<div class="tbl-wrap"><table><thead><tr><th>Pos</th><th>Fahrer</th><th>Team</th><th class="num">Rundenzeit</th><th class="num">Abstand</th></tr></thead><tbody>';
   q.forEach(function(x){
     var d=drv(s,x.d),ms=parseT(x.tm),cls=x.p<=3?'p'+x.p:'out';
-    h+='<tr><td><span class="cell '+cls+'">'+x.p+'</span></td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(dName(s,x.d))+'</td><td>'+tmTag(qTeam(s,r,x.d))+'</td>'+
+    h+='<tr><td><span class="cell '+cls+'">'+x.p+'</span></td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,x.d,r.id)+'</td><td>'+tmTag(qTeam(s,r,x.d))+'</td>'+
       '<td class="num total">'+esc(x.tm||'–')+'</td><td class="num muted">'+(x.p===1?'Pole':(ms&&best?fmtGap(ms-best):''))+'</td></tr>';
   });
   return h+'</tbody></table></div>';
@@ -763,57 +773,115 @@ function viewRekorde(){
 
 /* ---------- Bewertung ---------- */
 var TIERS={S:'Elite',A:'Spitze',B:'Mittelfeld',C:'Ausbaufähig',D:'Einsteiger'};
-function rateSeason(){return draft.seasons.filter(function(x){return !x.demo;})[0]||S(ui.season);}
-function rateTier(f){var v=f.tempo+f.rv,l=(RATE&&RATE.niveaus)||[];for(var i=0;i<l.length;i++)if(v>=l[i].ab)return l[i].t;return 'D';}
-function rateList(){
+var RK=['tempo','rv','kon','sau'];
+function realSeasons(){return draft.seasons.filter(function(x){return !x.demo;});}
+function rateSeason(){return S(ui.rSeason)||realSeasons()[0]||S(ui.season);}
+function rateTier(v){var l=(RATE&&RATE.niveaus)||[];for(var i=0;i<l.length;i++)if(v>=l[i].ab)return l[i].t;return 'D';}
+function rateEntries(f,sid,rid){return (f.rennen||[]).filter(function(e){return (!sid||sid==='all'||e.s===sid)&&(!rid||rid==='all'||e.r===rid);});}
+function rateScore(f,sid,rid){
+  var es=rateEntries(f,sid,rid);if(!es.length)return null;
+  var o={id:f.id,f:f,n:es.length,e:es.length===1?es[0]:null};
+  RK.forEach(function(k){var t=0;es.forEach(function(e){t+=+e[k]||0;});o[k]=Math.round(t/es.length);});
+  o.total=o.tempo+o.rv+o.kon+o.sau;o.tier=rateTier(o.tempo+o.rv);return o;
+}
+function rateList(sid,rid){
   if(!RATE||!RATE.fahrer)return [];
   var ord='SABCD';
-  return RATE.fahrer.map(function(f){var x={};for(var k in f)x[k]=f[k];x.total=f.tempo+f.rv+f.kon+f.sau;x.tier=rateTier(f);return x;})
+  return RATE.fahrer.map(function(f){return rateScore(f,sid,rid);}).filter(Boolean)
     .sort(function(a,b){return ord.indexOf(a.tier)-ord.indexOf(b.tier)||b.total-a.total;});
 }
-function rateOf(id){var l=rateList();for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null;}
+function rateF(id){var l=(RATE&&RATE.fahrer)||[];for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null;}
+function rateOf(id,sid,rid){var f=rateF(id);return f?rateScore(f,sid,rid):null;}
 function tierBadge(t,big){return '<span class="tier t'+t+(big?' big':'')+'" title="Niveau '+t+' · '+(TIERS[t]||'')+'">'+t+'</span>';}
-function rateBtn(id){var f=rateOf(id);return f?'<button class="dc-rate" data-act="rate" data-id="'+esc(id)+'"><span>Bewertung ansehen</span><span>'+tierBadge(f.tier)+' <b>'+f.total+'</b></span></button>':'';}
+function rateBtn(id){var f=rateOf(id,'all','all');return f?'<button class="dc-rate" data-act="rateGo" data-id="'+esc(id)+'"><span>Bewertung ansehen</span><span>'+tierBadge(f.tier)+' <b>'+f.total+'</b></span></button>':'';}
+/* Fahrername als Link zur Bewertung, wenn es eine gibt */
+function dLink(s,id,rid){
+  var d=drv(s,id),name=esc(dName(s,id));
+  if(!s||s.demo||!rateOf(id,s.id,'all'))return name;
+  return '<button class="dlink" data-act="rateGo" data-id="'+esc(id)+'" data-season="'+esc(s.id)+'"'+(rid&&rateOf(id,s.id,rid)?' data-race="'+esc(rid)+'"':'')+' title="Bewertung ansehen">'+name+'</button>';
+}
 function rbar(v,max){return '<span class="rbar"><i style="width:'+Math.round(v/max*100)+'%"></i></span>';}
+function raceRated(sid,rid){return (RATE&&RATE.fahrer||[]).some(function(f){return rateEntries(f,sid,rid).length>0;});}
+function rName(r){return (r.slot?r.slot+' ':'')+(r.name||'').replace(/^Großer Preis (von |der |des )?/,'');}
 function viewBewertung(){
   if(!RATE) return emptyBox('Bewertung wird geladen','Einen Moment bitte.');
-  var s=rateSeason(),list=rateList(),sk=RATE.skala||[];
-  var h='<div class="sec-head"><div><h2>Fahrerbewertung</h2><p class="meta">'+esc(RATE.stand||'')+' · Tippe auf einen Fahrer für die ausführliche Analyse</p></div></div>';
-  h+='<details class="rinfo"><summary>So wird bewertet</summary><p>'+esc(RATE.basis||'')+'</p><ul>'+sk.map(function(k){return '<li><b>'+esc(k.name)+' ('+k.max+')</b> · '+esc(k.info)+'</li>';}).join('')+'</ul><p>'+esc(RATE.niveauInfo||'')+'</p><p class="tiers">'+
+  var seasons=realSeasons(),sid=S(ui.rSeason)&&!S(ui.rSeason).demo?ui.rSeason:'all',ss=S(sid);
+  var races=ss?sortedRaces(ss):[],rid=ss&&races.some(function(r){return r.id===ui.rRace;})?ui.rRace:'all';
+  ui.rSeason=sid;ui.rRace=rid;
+  var rr=rid!=='all'?races.filter(function(r){return r.id===rid;})[0]:null;
+  var list=rateList(sid,rid),sk=RATE.skala||[],dataS=ss||rateSeason();
+  var h='<section class="filters"><div class="frow"><span class="flab">Ansicht</span><div class="chips"><button class="chip" data-act="rSeason" data-id="all" aria-pressed="'+(sid==='all')+'">Gesamt</button>'+
+    seasons.map(function(x){return '<button class="chip" data-act="rSeason" data-id="'+esc(x.id)+'" aria-pressed="'+(sid===x.id)+'">'+esc(x.name)+'</button>';}).join('')+'</div></div>';
+  if(ss) h+='<div class="frow"><span class="flab">Rennen</span><div class="chips"><button class="chip" data-act="rRace" data-id="all" aria-pressed="'+(rid==='all')+'">Ganze Saison</button>'+
+    races.map(function(r){var ok=raceRated(ss.id,r.id);return '<button class="chip'+(ok?'':' off')+'" data-act="rRace" data-id="'+esc(r.id)+'" aria-pressed="'+(rid===r.id)+'"'+(ok?'':' disabled title="Noch nicht gewertet"')+'>'+flag(r.flag)+esc(r.short||r.name)+' <small>'+esc(r.slot||'')+'</small></button>';}).join('')+'</div></div>';
+  h+='</section>';
+  var nRated=0;(ss?[ss]:seasons).forEach(function(x){sortedRaces(x).forEach(function(r){if(raceRated(x.id,r.id))nRated++;});});
+  var title=rr?flag(rr.flag)+' '+esc(rr.name):ss?esc(ss.name):'Gesamtbewertung';
+  var meta=rr?'Bewertung nur für dieses Rennen'+(rr.track?' · '+esc(rr.track):''):ss?nRated+' von '+races.length+' Rennen gewertet · Durchschnitt der gewerteten Rennen':'Alle Saisons · '+nRated+' gewertete'+(nRated===1?'s Rennen':' Rennen')+' · '+esc(RATE.stand||'');
+  h+='<div class="sec-head"><div><h2>'+title+'</h2><p class="meta">'+meta+' · Tippe auf einen Fahrer</p></div></div>';
+  h+='<details class="rinfo"><summary>So wird bewertet</summary><p>'+esc(RATE.basis||'')+'</p><ul>'+sk.map(function(k){return '<li><b>'+esc(k.name)+' ('+k.max+')</b> · '+esc(k.info)+'</li>';}).join('')+'</ul><p>'+esc(RATE.niveauInfo||'')+' In der Gesamt- und Saisonansicht zählt der Durchschnitt aller gewerteten Rennen.</p><p class="tiers">'+
     (RATE.niveaus||[]).map(function(n){return tierBadge(n.t)+' '+esc(n.name)+(n.ab?' ab '+n.ab:'');}).join(' &nbsp; ')+'</p></details>';
-  h+='<div class="tbl-wrap"><table class="rtab"><thead><tr><th class="c">#</th><th>Fahrer</th><th class="c">Niveau</th>'+sk.map(function(k){return '<th>'+esc(k.name)+' <small>/'+k.max+'</small></th>';}).join('')+'<th class="c">Gesamt</th></tr></thead><tbody>';
-  list.forEach(function(f,i){
-    var d=drv(s,f.id),t=d?team(s,d.team):null,sel=ui.rate===f.id;
-    h+='<tr class="rrow'+(sel?' sel':'')+'" data-act="rate" data-id="'+esc(f.id)+'" style="--tc:'+esc(t?t.color:'#4A505C')+'"><td class="c pos">'+(i+1)+'</td>'+
-      '<td class="drv"><button class="rk-name" data-act="rate" data-id="'+esc(f.id)+'" aria-expanded="'+sel+'">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</button><span class="sub">'+(t?esc(t.name):'Ersatzfahrer')+'</span></td>'+
-      '<td class="c">'+tierBadge(f.tier)+'</td>'+
-      sk.map(function(k){return '<td class="rsc"><b>'+f[k.k]+'</b>'+rbar(f[k.k],k.max)+'</td>';}).join('')+
-      '<td class="c total">'+f.total+'</td></tr>';
-  });
-  h+='</tbody></table></div>';
-  var sel=ui.rate&&rateOf(ui.rate);
-  if(sel) h+=rateDetail(s,sel);
-  else h+='<p class="rhint">Wähle oben einen Fahrer, um Stärken, Schwächen und die komplette Analyse zu sehen.</p>';
-  var rated={};list.forEach(function(f){rated[f.id]=1;});
-  var rest=s?s.drivers.filter(function(d){return d.active!==false&&!rated[d.id];}):[];
-  if(rest.length) h+='<section class="dsec"><h3>Noch keine Wertung</h3><p class="meta">Diese Fahrer sind bisher kein gewertetes Rennen gefahren. Sie erscheinen hier nach ihrem ersten Einsatz.</p><div class="chips">'+
+  if(!list.length) h+=emptyBox('Noch keine Bewertung','Für diese Auswahl gibt es noch keine gewerteten Rennen.');
+  else{
+    h+='<div class="tbl-wrap"><table class="rtab"><thead><tr><th class="c">#</th><th>Fahrer</th><th class="c">Niveau</th>'+sk.map(function(k){return '<th>'+esc(k.name)+' <small>/'+k.max+'</small></th>';}).join('')+'<th class="c">Gesamt</th></tr></thead><tbody>';
+    list.forEach(function(f,i){
+      var d=drv(dataS,f.id),t=d?team(dataS,d.team):null,sel=ui.rate===f.id;
+      h+='<tr class="rrow'+(sel?' sel':'')+'" data-act="rate" data-id="'+esc(f.id)+'" style="--tc:'+esc(t?t.color:'#4A505C')+'"><td class="c pos">'+(i+1)+'</td>'+
+        '<td class="drv"><button class="rk-name" data-act="rate" data-id="'+esc(f.id)+'" aria-expanded="'+sel+'">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</button><span class="sub">'+(t?esc(t.name):'Ersatzfahrer')+(f.n>1?' · '+f.n+' Rennen':'')+'</span></td>'+
+        '<td class="c">'+tierBadge(f.tier)+'</td>'+sk.map(function(k){return '<td class="rsc"><b>'+f[k.k]+'</b>'+rbar(f[k.k],k.max)+'</td>';}).join('')+'<td class="c total">'+f.total+'</td></tr>';
+    });
+    h+='</tbody></table></div>';
+  }
+  var f=ui.rate&&rateF(ui.rate);
+  if(f) h+=rr?rateRaceDetail(ss,rr,f):rateGeneral(dataS,f,sid);
+  else if(list.length) h+='<p class="rhint">Wähle oben einen Fahrer, um '+(rr?'seine Analyse zu diesem Rennen':'die allgemeine Kritik und seine einzelnen Rennen')+' zu sehen.</p>';
+  var rated={};list.forEach(function(x){rated[x.id]=1;});
+  var rest=dataS?dataS.drivers.filter(function(d){return d.active!==false&&!rated[d.id];}):[];
+  if(rest.length&&list.length) h+='<section class="dsec"><h3>'+(rr?'In diesem Rennen nicht gewertet':'Noch keine Wertung')+'</h3><div class="chips">'+
     rest.map(function(d){return '<span class="chip off">'+(d.nat?flag(d.nat)+' ':'')+esc(d.name)+(d.role==='ersatz'?' <small>Ersatz</small>':'')+'</span>';}).join('')+'</div></section>';
   return h;
 }
-function rateDetail(s,f){
-  var d=drv(s,f.id),t=d?team(s,d.team):null,sk=RATE.skala||[],fk=f.fakten||{};
-  function li(a){return (a||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
-  var facts=[['Qualifying',fk.quali],['Start',fk.start],['Ziel',fk.ziel],['Beste Runde',fk.runde],['Boxenstopps',fk.stopps],['Warnungen & Strafen',fk.strafen]].filter(function(x){return x[1];});
-  var h='<section class="rd" id="rate-detail" style="--tc:'+esc(t?t.color:'#4A505C')+'">'+
-    '<div class="rd-head">'+tierBadge(f.tier,true)+'<div class="rd-name"><h3>'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</h3><p class="sub">'+(t?esc(t.name)+' · ':'')+'Niveau '+f.tier+' – '+esc(TIERS[f.tier]||'')+'</p></div>'+
-    '<div class="rd-total"><b>'+f.total+'</b><span>von 100</span></div><button class="btn small" data-act="rate" data-id="'+esc(f.id)+'">Schließen</button></div>';
-  if(f.kurz) h+='<p class="rd-kurz">'+esc(f.kurz)+'</p>';
-  if(facts.length) h+='<dl class="rd-facts">'+facts.map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('')+'</dl>';
-  h+='<div class="rd-scores">'+sk.map(function(k){return '<div class="rs"><div class="rs-top"><span>'+esc(k.name)+'</span><b>'+f[k.k]+' <small>/ '+k.max+'</small></b></div>'+rbar(f[k.k],k.max)+'<p>'+esc((f.noten||{})[k.k]||'')+'</p></div>';}).join('')+'</div>';
-  h+='<div class="rd-cols"><div class="rc rpos"><h4>Positiv</h4><ul>'+li(f.pos)+'</ul></div><div class="rc rneg"><h4>Negativ</h4><ul>'+li(f.neg)+'</ul></div><div class="rc rimp"><h4>Ausbaufähig</h4><ul>'+li(f.besser)+'</ul></div></div>';
-  if(f.analyse&&f.analyse.length) h+='<h4 class="rd-h">Ausführliche Analyse · Rennen 1 Australien</h4><div class="rd-an">'+f.analyse.map(function(a){return '<div><h5>'+esc(a.t)+'</h5><p>'+esc(a.x)+'</p></div>';}).join('')+'</div>';
-  if(f.quelle) h+='<p class="rd-src">Grundlage: '+esc(f.quelle)+'</p>';
+function rdHead(s,f,sc,label){
+  var d=drv(s,f.id),t=d?team(s,d.team):null;
+  return '<div class="rd-head">'+(sc?tierBadge(sc.tier,true):'')+'<div class="rd-name"><p class="eyebrow">'+label+'</p><h3>'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</h3><p class="sub">'+(t?esc(t.name):'Ersatzfahrer')+(sc?' · Niveau '+sc.tier+' – '+esc(TIERS[sc.tier]||''):'')+'</p></div>'+
+    (sc?'<div class="rd-total"><b>'+sc.total+'</b><span>von 100</span></div>':'')+'<button class="btn small" data-act="rate" data-id="'+esc(f.id)+'">Schließen</button></div>';
+}
+function rdScores(sc,noten){
+  return '<div class="rd-scores">'+(RATE.skala||[]).map(function(k){return '<div class="rs"><div class="rs-top"><span>'+esc(k.name)+'</span><b>'+sc[k.k]+' <small>/ '+k.max+'</small></b></div>'+rbar(sc[k.k],k.max)+(noten&&noten[k.k]?'<p>'+esc(noten[k.k])+'</p>':'')+'</div>';}).join('')+'</div>';
+}
+function liList(a){return (a||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
+function rdCols(a,b,c,la,lb,lc){return '<div class="rd-cols"><div class="rc rpos"><h4>'+la+'</h4><ul>'+liList(a)+'</ul></div><div class="rc rneg"><h4>'+lb+'</h4><ul>'+liList(b)+'</ul></div><div class="rc rimp"><h4>'+lc+'</h4><ul>'+liList(c)+'</ul></div></div>';}
+function rateGeneral(s,f,sid){
+  var sc=rateScore(f,sid,'all'),g=f.gesamt||{},d=drv(s,f.id),t=d?team(s,d.team):null;
+  var h='<section class="rd" id="rate-detail" style="--tc:'+esc(t?t.color:'#4A505C')+'">'+rdHead(s,f,sc,sid==='all'?'Allgemeine Kritik':'Allgemeine Kritik · '+esc(S(sid).name));
+  if(g.kritik) h+='<p class="rd-kurz">'+esc(g.kritik)+'</p>';
+  if(sc) h+=rdScores(sc,null);
+  h+=rdCols(g.staerken,g.schwaechen,g.fokus,'Stärken','Schwächen','Daran arbeiten');
+  (sid==='all'?realSeasons():[S(sid)]).forEach(function(x){
+    var rs=sortedRaces(x);if(!rs.length)return;
+    h+='<h4 class="rd-h">Rennen '+esc(x.name)+'</h4><div class="rlist">'+rs.map(function(r){
+      var e=rateEntries(f,x.id,r.id)[0],res=resOf(r,f.id);
+      var out=!done(r)?'noch nicht gefahren':!res?'nicht dabei':res.s?res.s:res.p?'P'+res.p:'–';
+      if(!e) return '<div class="rli off">'+flag(r.flag)+'<span class="rli-n"><b>'+esc(rName(r))+'</b><small>'+esc(out)+'</small></span><span class="muted">'+(done(r)&&res&&!res.s?'nicht gewertet':'–')+'</span></div>';
+      var es=rateScore(f,x.id,r.id);
+      return '<button class="rli" data-act="rateRace" data-id="'+esc(r.id)+'" data-season="'+esc(x.id)+'">'+flag(r.flag)+'<span class="rli-n"><b>'+esc(rName(r))+'</b><small>'+esc(out)+(e.kurz?' · '+esc(e.kurz):'')+'</small></span><span class="rli-s">'+tierBadge(es.tier)+' <b>'+es.total+'</b> ›</span></button>';
+    }).join('')+'</div>';
+  });
   return h+'</section>';
+}
+function rateRaceDetail(s,r,f){
+  var e=rateEntries(f,s.id,r.id)[0],d=drv(s,f.id),t=d?team(s,d.team):null;
+  var back='<button class="btn small" data-act="rRace" data-id="all">← Allgemeine Kritik und alle Rennen</button>';
+  if(!e) return '<section class="rd" id="rate-detail" style="--tc:'+esc(t?t.color:'#4A505C')+'">'+rdHead(s,f,null,esc(rName(r)))+'<p class="muted">Für dieses Rennen gibt es keine Wertung von '+esc(d?d.name:f.id)+'.</p><div>'+back+'</div></section>';
+  var sc=rateScore(f,s.id,r.id),fk=e.fakten||{};
+  var facts=[['Qualifying',fk.quali],['Start',fk.start],['Ziel',fk.ziel],['Beste Runde',fk.runde],['Boxenstopps',fk.stopps],['Warnungen & Strafen',fk.strafen]].filter(function(x){return x[1];});
+  var h='<section class="rd" id="rate-detail" style="--tc:'+esc(t?t.color:'#4A505C')+'">'+rdHead(s,f,sc,flag(r.flag)+' '+esc(rName(r))+' · '+esc(s.name));
+  if(e.kurz) h+='<p class="rd-kurz">'+esc(e.kurz)+'</p>';
+  if(facts.length) h+='<dl class="rd-facts">'+facts.map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('')+'</dl>';
+  h+=rdScores(sc,e.noten)+rdCols(e.pos,e.neg,e.besser,'Positiv','Negativ','Ausbaufähig');
+  if(e.analyse&&e.analyse.length) h+='<h4 class="rd-h">Ausführliche Analyse</h4><div class="rd-an">'+e.analyse.map(function(a){return '<div><h5>'+esc(a.t)+'</h5><p>'+esc(a.x)+'</p></div>';}).join('')+'</div>';
+  if(e.quelle) h+='<p class="rd-src">Grundlage: '+esc(e.quelle)+'</p>';
+  return h+'<div>'+back+'</div></section>';
 }
 
 /* ---------- Verwaltung ---------- */
@@ -1057,7 +1125,11 @@ function doAction(act,el){
     case 'sess':ui.sess=id;break;
     case 'admSess':ui.admSess=id;break;
     case 'rec':ui.rec=id;break;
-    case 'rate':ui.rate=(ui.view==='bewertung'&&ui.rate===id)?null:id;ui.rateScroll=!!ui.rate;if(ui.view!=='bewertung'){go('bewertung');return;}break;
+    case 'rate':ui.rate=ui.rate===id?null:id;ui.rateScroll=!!ui.rate;break;
+    case 'rSeason':ui.rSeason=id;ui.rRace='all';break;
+    case 'rRace':ui.rRace=id;ui.rateScroll=!!ui.rate;break;
+    case 'rateRace':ui.rSeason=el.dataset.season;ui.rRace=id;ui.rateScroll=true;break;
+    case 'rateGo':ui.rate=id;ui.rSeason=el.dataset.season||'all';ui.rRace=el.dataset.race||'all';ui.rateScroll=true;go('bewertung');return;
     case 'openRace':if(el.dataset.season)ui.season=el.dataset.season;ui.race=id;go('tabelle');return;
     case 'admSeason':ui.admSeason=id;ui.admRace=null;ui.confirm=null;break;
     case 'newSeason':{
@@ -1110,7 +1182,7 @@ function doAction(act,el){
   }
   if(NAV[act])navRender();else render();
 }
-var NAV={season:1,cat:1,race:1,sess:1,rec:1,admSeason:1};
+var NAV={season:1,cat:1,race:1,sess:1,rec:1,admSeason:1,rSeason:1,rRace:1,rateRace:1};
 
 /* ---------- GitHub: Login und Speichern ----------
    Die Owner melden sich mit einem eigenen GitHub-Zugangsschlüssel an. Der Schlüssel bleibt in ihrem Browser;
@@ -1283,7 +1355,7 @@ function load(){
     DATA=d;draft=clone(DATA);
     ui.season=defaultSeason();ui.admSeason=ui.season;
     readHash();render();
-    fetch("bewertung.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(b){if(b&&b.fahrer){RATE=b;if(ui.view==="bewertung"||ui.view==="fahrer")render();}}).catch(function(){});
+    fetch("bewertung.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(b){if(b&&b.fahrer){RATE=b;if(ui.view!=="verwaltung")render();}}).catch(function(){});
     var tok=storedToken();
     if(tok){var remember=false;try{remember=!!localStorage.getItem('gfl-token');}catch(e){}login(tok,remember,true);}
   }).catch(function(){
