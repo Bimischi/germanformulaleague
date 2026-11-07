@@ -201,7 +201,7 @@
      "dateLabel": "6.–8. November",
      "weekend": 1,
      "slot": "R1",
-     "time": "",
+     "time": "19:30",
      "weather": "",
      "laps": "",
      "results": [
@@ -303,7 +303,8 @@
        "tm": "1:19.119"
       }
      ],
-     "poleTime": "1:17.549"
+     "poleTime": "1:17.549",
+     "flTime": "1:19.964"
     },
     {
      "id": "r02",
