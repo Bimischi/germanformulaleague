@@ -114,10 +114,10 @@
     {
      "id": "luis",
      "name": "Mehlone",
-     "team": "",
-     "nat": "",
+     "team": "wil",
+     "nat": "pt",
      "active": true,
-     "role": "ersatz"
+     "role": "stamm"
     },
     {
      "id": "ds4",
