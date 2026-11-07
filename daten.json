@@ -20,25 +20,35 @@
         {"id":"wil","name":"Williams","color":"#64C4FF"},
         {"id":"rb","name":"Racing Bulls","color":"#6692FF"},
         {"id":"haa","name":"Haas","color":"#B6BABD"},
-        {"id":"aud","name":"Audi","color":"#F50537"},
-        {"id":"cad","name":"Cadillac","color":"#C9B037"}
+        {"id":"sau","name":"Kick Sauber","color":"#52E252"}
       ],
       "drivers": [
-        {"id":"joker","name":"JokerFinn06","team":"","nat":"","active":true},
-        {"id":"white","name":"The_White_Epic","team":"","nat":"","active":true},
-        {"id":"schuppi","name":"Schuppi2010","team":"","nat":"","active":true},
-        {"id":"mesota","name":"Mesota","team":"","nat":"","active":true},
-        {"id":"luis","name":"Luisloli89","team":"","nat":"","active":true},
-        {"id":"ds4","name":"Dualshock4759","team":"","nat":"","active":true},
-        {"id":"fuchs","name":"DON-FUCHSER88","team":"","nat":"","active":true},
-        {"id":"dbred","name":"DB_RedX","team":"","nat":"","active":true},
-        {"id":"tore","name":"Tore79","team":"","nat":"","active":true},
-        {"id":"crash","name":"Crashturtle2000","team":"","nat":"","active":true},
-        {"id":"lewin","name":"Lewin86535","team":"","nat":"","active":true},
-        {"id":"dominik","name":"F1Dominik_Kreft","team":"","nat":"","active":true},
-        {"id":"rocco","name":"Rocco_genti1","team":"","nat":"","active":true}
+        {"id":"joker","name":"JokerFinn06","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"white","name":"The_White_Epic","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"schuppi","name":"Schuppi2010","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"mesota","name":"Mesota","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"luis","name":"Luisloli89","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"ds4","name":"Dualshock4759","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"fuchs","name":"DON-FUCHSER88","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"dbred","name":"DB_RedX","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"tore","name":"Tore79","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"crash","name":"Crashturtle2000","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"lewin","name":"Lewin86535","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"dominik","name":"F1Dominik_Kreft","team":"","nat":"","active":true,"role":"stamm"},
+        {"id":"rocco","name":"Rocco_genti1","team":"","nat":"","active":true,"role":"stamm"}
       ],
-      "races": []
+      "races": [
+        {"id":"r01","name":"Großer Preis von Australien","short":"AUS","flag":"au","track":"Albert Park","date":"2026-11-06","dateLabel":"6.–8. November","weekend":1,"slot":"R1","time":"","weather":"","laps":"","results":[]},
+        {"id":"r02","name":"Großer Preis von Spanien","short":"ESP","flag":"es","track":"Barcelona","date":"2026-11-06","dateLabel":"6.–8. November","weekend":1,"slot":"R2","time":"","weather":"","laps":"","results":[]},
+        {"id":"r03","name":"Großer Preis von Kanada","short":"CAN","flag":"ca","track":"Montreal","date":"2026-11-13","dateLabel":"13.–15. November","weekend":2,"slot":"R1","time":"","weather":"","laps":"","results":[]},
+        {"id":"r04","name":"Großer Preis von Österreich","short":"AUT","flag":"at","track":"Red Bull Ring","date":"2026-11-13","dateLabel":"13.–15. November","weekend":2,"slot":"R2","time":"","weather":"","laps":"","results":[]},
+        {"id":"r05","name":"Großer Preis von Monza","short":"MZA","flag":"it","track":"Monza","date":"2026-11-20","dateLabel":"20.–22. November","weekend":3,"slot":"R1","time":"","weather":"","laps":"","results":[]},
+        {"id":"r06","name":"Großer Preis von Belgien","short":"BEL","flag":"be","track":"Spa-Francorchamps","date":"2026-11-20","dateLabel":"20.–22. November","weekend":3,"slot":"R2","time":"","weather":"","laps":"","results":[]},
+        {"id":"r07","name":"Großer Preis der Niederlande","short":"NED","flag":"nl","track":"Circuit Zandvoort","date":"2026-11-27","dateLabel":"27.–29. November","weekend":4,"slot":"R1","time":"","weather":"","laps":"","results":[]},
+        {"id":"r08","name":"Großer Preis von Italien","short":"ITA","flag":"it","track":"Imola","date":"2026-11-27","dateLabel":"27.–29. November","weekend":4,"slot":"R2","time":"","weather":"","laps":"","results":[]},
+        {"id":"r09","name":"Großer Preis von Abu Dhabi","short":"ABU","flag":"ae","track":"Yas Marina Circuit","date":"2026-12-04","dateLabel":"4.–6. Dezember","weekend":5,"slot":"R1","time":"","weather":"night","laps":"","results":[]},
+        {"id":"r10","name":"Großer Preis von Brasilien","short":"BRA","flag":"br","track":"São Paulo","date":"2026-12-04","dateLabel":"4.–6. Dezember","weekend":5,"slot":"R2","time":"","weather":"","laps":"","results":[]}
+      ]
     },
     {
       "id": "demo",
@@ -229,9 +239,9 @@
             {"d":"ds4","s":"DNF","t":"alp"}
           ]
         },
-        {"id":"d6","name":"Großer Preis von Miami","short":"MIA","flag":"us","track":"Miami","date":"2026-11-15","time":"20:00","weather":"dry","laps":29,"results":[]},
+        {"id":"d6","name":"Großer Preis von Miami","short":"MIA","flag":"us","track":"Miami","date":"2026-11-15","time":"20:00","weather":"","laps":29,"results":[]},
         {"id":"d7","name":"Großer Preis von Kanada","short":"CAN","flag":"ca","track":"Montreal","date":"2026-11-22","time":"20:00","weather":"mixed","laps":36,"results":[]},
-        {"id":"d8","name":"Großer Preis von Monaco","short":"MON","flag":"mc","track":"Monte Carlo","date":"2026-11-29","time":"20:00","weather":"dry","laps":40,"results":[]}
+        {"id":"d8","name":"Großer Preis von Monaco","short":"MON","flag":"mc","track":"Monte Carlo","date":"2026-11-29","time":"20:00","weather":"","laps":40,"results":[]}
       ]
     }
   ]
