@@ -145,6 +145,10 @@ tr.st td{text-align:center}
 .badge.fl{background:rgba(178,60,240,.18);color:#D9A2FA}
 .badge.pole{background:rgba(46,200,232,.15);color:#8FE3F4}
 .badge.dotd{background:rgba(255,204,0,.14);color:#FFE27A}
+.badge.ot{background:rgba(61,220,132,.15);color:#8FF0BC}
+.badge.clean{background:rgba(236,237,240,.12);color:var(--fg)}
+.fact.ot{border-color:rgba(61,220,132,.45)}
+.fact.clean{border-color:rgba(236,237,240,.35)}
 .badge.next{background:var(--red);color:#fff}
 .badge.open{background:var(--panel-2);color:var(--muted)}
 .badges{display:flex;gap:6px;flex-wrap:wrap}
@@ -314,6 +318,8 @@ var CATS=[
   {id:'team',label:'Teams'},
   {id:'fl',label:'Fastest Lap',title:'Schnellste Runden',test:function(r,x,d){return r.fl===d;}},
   {id:'dotd',label:'Driver of the Day',title:'Driver of the Day',test:function(r,x,d){return r.dotd===d;}},
+  {id:'ot',label:'Meiste Überholungen',title:'Meiste Überholungen',test:function(r,x,d){return r.ot===d;}},
+  {id:'clean',label:'Sauberster Fahrer',title:'Sauberster Fahrer',test:function(r,x,d){return r.clean===d;}},
   {id:'pole',label:'Pole',title:'Pole-Positions',test:function(r,x,d){return r.pole===d;}},
   {id:'podium',label:'Podien',title:'Podiumsplätze',test:function(r,x){return x&&!x.s&&x.p&&x.p<=3;}},
   {id:'siege',label:'Siege',title:'Rennsiege',test:function(r,x){return x&&!x.s&&x.p===1;}},
@@ -345,6 +351,9 @@ function pts(s,r,d){
   if(!x.s&&x.p) p+=(+s.points[x.p-1]||0);
   if(r.fl===d&&+s.flPoint&&!x.s&&x.p&&(!s.flTop10||x.p<=10)) p+=+s.flPoint;
   if(r.pole===d&&+s.polePoint&&x.s!=='DNS') p+=+s.polePoint;
+  if(r.clean===d&&+s.cleanPoint&&x.s!=='DNS') p+=+s.cleanPoint;
+  if(r.ot===d&&+s.otPoint&&x.s!=='DNS') p+=+s.otPoint;
+  if(x.a&&+s.attendPoint&&x.s!=='DNS') p+=+s.attendPoint;
   return p;
 }
 function cmpCnt(a,b){for(var i=0;i<a.length;i++){if(a[i]!==b[i])return b[i]-a[i];}return 0;}
@@ -402,6 +411,9 @@ function pointsText(s){
   var t=s.points.join(' · ');
   if(+s.flPoint) t+=' · +'+s.flPoint+' für die schnellste Runde'+(s.flTop10?' (nur Top 10)':'');
   if(+s.polePoint) t+=' · +'+s.polePoint+' für die Pole';
+  if(+s.cleanPoint) t+=' · +'+s.cleanPoint+' für den saubersten Fahrer';
+  if(+s.otPoint) t+=' · +'+s.otPoint+' für die meisten Überholungen';
+  if(+s.attendPoint) t+=' · +'+s.attendPoint+' fürs Dabeibleiben bis Rennende';
   return t;
 }
 
@@ -469,6 +481,9 @@ function posCell(s,r,d){
   if(r.pole===d){cls+=' pole';tip.push('Pole'+(r.poleTime?' '+r.poleTime:''));}
   if(r.fl===d){cls+=' fl';tip.push('Fastest Lap'+(r.flTime?' '+r.flTime:''));}
   if(r.dotd===d){cls+=' dotd';tip.push('Driver of the Day');}
+  if(r.ot===d)tip.push('Meiste Überholungen');
+  if(r.clean===d)tip.push('Sauberster Fahrer');
+  if(x.a)tip.push('bis Rennende dabei');
   return '<span class="cell '+cls+'" title="'+esc(tip.join(' · '))+'">'+esc(txt)+'</span>';
 }
 function viewDrivers(s){
@@ -537,13 +552,15 @@ function viewRace(s,r){
   function fact(cls,label,d,t){
     return '<div class="fact '+cls+'"><p class="eyebrow">'+label+'</p><div class="v">'+(d?esc(dName(s,d)):'<span class="muted">nicht eingetragen</span>')+(t?' <span class="t">'+esc(t)+'</span>':'')+'</div></div>';
   }
-  h+='<section class="facts">'+fact('win','Sieger',win&&!win.s?win.d:null)+fact('pole','Pole-Position',r.pole,r.poleTime)+fact('fl','Schnellste Runde',r.fl,r.flTime)+fact('dotd','Driver of the Day',r.dotd)+'</section>';
+  h+='<section class="facts">'+fact('win','Sieger',win&&!win.s?win.d:null)+fact('pole','Pole-Position',r.pole,r.poleTime)+fact('fl','Schnellste Runde',r.fl,r.flTime)+fact('dotd','Driver of the Day',r.dotd)+fact('ot','Meiste Überholungen',r.ot)+fact('clean','Sauberster Fahrer',r.clean)+'</section>';
   h+='<div class="tbl-wrap"><table><thead><tr><th>Pos</th><th>Fahrer</th><th>Team</th><th class="num">Punkte</th><th>Auszeichnungen</th></tr></thead><tbody>';
   order.forEach(function(x){
     var d=drv(s,x.d),t=team(s,x.t)||{name:'Ohne Team',color:'#4A505C'},b=[];
     if(r.pole===x.d)b.push('<span class="badge pole">Pole</span>');
     if(r.fl===x.d)b.push('<span class="badge fl">Fastest Lap</span>');
     if(r.dotd===x.d)b.push('<span class="badge dotd">Driver of the Day</span>');
+    if(r.ot===x.d)b.push('<span class="badge ot">Meiste Überholungen</span>');
+    if(r.clean===x.d)b.push('<span class="badge clean">Sauberster Fahrer</span>');
     h+='<tr><td>'+posCell(s,r,x.d)+'</td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(dName(s,x.d))+'</td><td>'+tmTag(t)+'</td><td class="num total">'+pts(s,r,x.d)+'</td><td><div class="badges">'+b.join('')+'</div></td></tr>';
   });
   return h+'</tbody></table></div>';
@@ -694,6 +711,9 @@ function viewAdmin(){
     '<label class="f">Punkte für Platz 1, 2, 3 …<input type="text" id="s-points" data-f="s-points" value="'+esc(s.points.join(', '))+'"></label>'+
     '<label class="f">Punkte für schnellste Runde<input type="number" min="0" step="1" id="s-fl" data-f="s-fl" value="'+esc(s.flPoint||0)+'"></label>'+
     '<label class="f">Punkte für Pole<input type="number" min="0" step="1" id="s-pole" data-f="s-pole" value="'+esc(s.polePoint||0)+'"></label>'+
+    '<label class="f">Punkte für saubersten Fahrer<input type="number" min="0" step="1" id="s-clean" data-f="s-clean" value="'+esc(s.cleanPoint||0)+'"></label>'+
+    '<label class="f">Punkte für meiste Überholungen<input type="number" min="0" step="1" id="s-ot" data-f="s-ot" value="'+esc(s.otPoint||0)+'"></label>'+
+    '<label class="f">Punkte für Anwesenheit bis Rennende<input type="number" min="0" step="1" id="s-attend" data-f="s-attend" value="'+esc(s.attendPoint||0)+'"></label>'+
     '</div><div class="acts"><label class="chk"><input type="checkbox" id="s-fltop" data-f="s-fltop"'+(s.flTop10?' checked':'')+'> Punkt für schnellste Runde nur bei Platz 1–10</label>'+
     '<label class="chk"><input type="checkbox" id="s-demo" data-f="s-demo"'+(s.demo?' checked':'')+'> Als Demo mit Beispieldaten kennzeichnen</label></div>'+
     '<div class="acts">'+askBtn('delSeason:'+s.id,'Saison löschen')+'</div></section>';
@@ -765,7 +785,7 @@ function raceEditor(s,r){
   if(r.poleTime&&!parseT(r.poleTime))warn.push('Die Pole-Zeit hat nicht das Format 1:18.113.');
   h+='<p>Platz oder Status je Fahrer wählen. Wer nicht dabei war, bleibt auf „–“.</p>';
   if(warn.length) h+='<p class="warn">'+warn.map(esc).join(' ')+'</p>';
-  h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Platz</th><th>Status</th><th>Team im Rennen</th><th class="c">Pole</th><th class="c">FL</th><th class="c">DotD</th><th class="num">Pkt</th></tr></thead><tbody>';
+  h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Platz</th><th>Status</th><th>Team im Rennen</th><th class="c">Pole</th><th class="c">FL</th><th class="c">DotD</th><th class="c" title="Meiste Überholungen">Überh.</th><th class="c" title="Sauberster Fahrer">Sauber</th><th class="c" title="Bis zum Rennende dabei (auch nach DNF)">Anwes.</th><th class="num">Pkt</th></tr></thead><tbody>';
   list.forEach(function(id){
     var x=resOf(r,id),d=drv(s,id),e=esc(id);
     h+='<tr><td class="drv">'+esc(dName(s,id))+'</td>'+
@@ -775,12 +795,17 @@ function raceEditor(s,r){
       '<td class="c"><input type="radio" name="r-pole" id="xpo-'+e+'" data-f="r-pole" value="'+e+'"'+(r.pole===id?' checked':'')+' aria-label="Pole"></td>'+
       '<td class="c"><input type="radio" name="r-fl" id="xfl-'+e+'" data-f="r-fl" value="'+e+'"'+(r.fl===id?' checked':'')+' aria-label="Fastest Lap"></td>'+
       '<td class="c"><input type="radio" name="r-dotd" id="xdo-'+e+'" data-f="r-dotd" value="'+e+'"'+(r.dotd===id?' checked':'')+' aria-label="Driver of the Day"></td>'+
+      '<td class="c"><input type="radio" name="r-ot" id="xot-'+e+'" data-f="r-ot" value="'+e+'"'+(r.ot===id?' checked':'')+' aria-label="Meiste Überholungen"></td>'+
+      '<td class="c"><input type="radio" name="r-clean" id="xcl-'+e+'" data-f="r-clean" value="'+e+'"'+(r.clean===id?' checked':'')+' aria-label="Sauberster Fahrer"></td>'+
+      '<td class="c"><input type="checkbox" id="xa-'+e+'" data-f="x-attend" data-id="'+e+'"'+(x&&x.a?' checked':'')+(x&&x.s!=='DNS'?'':' disabled')+' aria-label="Bis Rennende dabei"></td>'+
       '<td class="num">'+(x?pts(s,r,id):'')+'</td></tr>';
   });
   h+='<tr><td class="muted">Niemand</td><td></td><td></td><td></td>'+
     '<td class="c"><input type="radio" name="r-pole" id="xpo--" data-f="r-pole" value=""'+(!r.pole?' checked':'')+' aria-label="Keine Pole"></td>'+
     '<td class="c"><input type="radio" name="r-fl" id="xfl--" data-f="r-fl" value=""'+(!r.fl?' checked':'')+' aria-label="Keine Fastest Lap"></td>'+
-    '<td class="c"><input type="radio" name="r-dotd" id="xdo--" data-f="r-dotd" value=""'+(!r.dotd?' checked':'')+' aria-label="Kein Driver of the Day"></td><td></td></tr>';
+    '<td class="c"><input type="radio" name="r-dotd" id="xdo--" data-f="r-dotd" value=""'+(!r.dotd?' checked':'')+' aria-label="Kein Driver of the Day"></td>'+
+    '<td class="c"><input type="radio" name="r-ot" id="xot--" data-f="r-ot" value=""'+(!r.ot?' checked':'')+' aria-label="Keine Wertung Überholungen"></td>'+
+    '<td class="c"><input type="radio" name="r-clean" id="xcl--" data-f="r-clean" value=""'+(!r.clean?' checked':'')+' aria-label="Kein sauberster Fahrer"></td><td></td><td></td></tr>';
   h+='</tbody></table></div><div class="acts"><button class="btn small" data-act="closeRace">Schließen</button><button class="btn small" data-act="openRace" data-id="'+esc(r.id)+'" data-season="'+esc(s.id)+'">In der Tabelle ansehen</button>'+askBtn('delRace:'+r.id,'Rennen löschen')+'</div></section>';
   return h;
 }
@@ -791,7 +816,7 @@ function saveStash(){try{if(isDirty())localStorage.setItem('gfl-draft',JSON.stri
 function changed(){saveStash();updateSavebar();var dot=document.querySelector('.tabs a[href="#verwaltung"]');if(dot){var has=dot.querySelector('.dot');if(isDirty()&&!has)dot.insertAdjacentHTML('beforeend','<i class="dot" title="Unveröffentlichte Änderungen"></i>');if(!isDirty()&&has)has.remove();}}
 function setRes(s,r,d,patch){
   var x=resOf(r,d);
-  if(!x){var dd=drv(s,d);x={d:d,t:dd?dd.team:''};r.results.push(x);}
+  if(!x){var dd=drv(s,d);x={d:d,t:dd?dd.team:'',a:true};r.results.push(x);}
   Object.keys(patch).forEach(function(k){if(patch[k]===null||patch[k]==='')delete x[k];else x[k]=patch[k];});
   if(!x.p&&!x.s) r.results=r.results.filter(function(e){return e!==x;});
 }
@@ -806,6 +831,9 @@ function applyField(f,el){
     case 's-points':s.points=v.split(/[^0-9.]+/).filter(Boolean).map(Number);break;
     case 's-fl':s.flPoint=Math.max(0,+v||0);break;
     case 's-pole':s.polePoint=Math.max(0,+v||0);break;
+    case 's-clean':s.cleanPoint=Math.max(0,+v||0);break;
+    case 's-ot':s.otPoint=Math.max(0,+v||0);break;
+    case 's-attend':s.attendPoint=Math.max(0,+v||0);break;
     case 's-fltop':s.flTop10=v;break;
     case 's-demo':s.demo=v;break;
     case 't-name':if(t&&v.trim())t.name=v.trim();break;
@@ -835,11 +863,14 @@ function applyField(f,el){
       case 'r-pole':r.pole=v||null;break;
       case 'r-fl':r.fl=v||null;break;
       case 'r-dotd':r.dotd=v||null;break;
+      case 'r-ot':r.ot=v||null;break;
+      case 'r-clean':r.clean=v||null;break;
+      case 'x-attend':if(resOf(r,id))resOf(r,id).a=v;break;
       case 'x-pos':setRes(s,r,id,v?{p:+v,s:null}:{p:null});break;
       case 'x-status':setRes(s,r,id,v?{s:v,p:null}:{s:null});break;
       case 'x-team':setRes(s,r,id,{t:v});break;
     }
-    ['pole','fl','dotd'].forEach(function(k){if(!r[k])delete r[k];});
+    ['pole','fl','dotd','ot','clean'].forEach(function(k){if(!r[k])delete r[k];});
   }
   changed();
   if(el.tagName==='SELECT'||el.type==='checkbox'||el.type==='radio'||f==='r-date'||f==='r-poleTime'||f==='r-flTime') render();
@@ -1035,9 +1066,7 @@ function render(anim){
 }
 /* Weiche Überblendung beim Wechsel von Ansicht, Saison, Wertung oder Rennen */
 function navRender(){
-  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(!still&&document.startViewTransition){try{document.startViewTransition(function(){render();});return;}catch(e){}}
-  render(!still);
+  render(true);
 }
 var VIEWS=['tabelle','kalender','fahrer','rekorde','verwaltung'];
 function readHash(){var h=location.hash.replace('#','');ui.view=VIEWS.indexOf(h)>=0?h:'tabelle';}
