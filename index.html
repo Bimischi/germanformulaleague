@@ -230,6 +230,66 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .dc-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 10px;margin:0}
 .dc-stats dt{font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .dc-stats dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.dc-rate{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:6px 10px;font-weight:600;font-size:13.5px;color:var(--fg);text-align:left}
+.dc-rate:hover{border-color:var(--muted)}
+.dc-rate b{font-variant-numeric:tabular-nums}
+
+/* Bewertung */
+.tier{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:4px;font-family:var(--f-display);font-weight:800;font-size:16px;line-height:1;vertical-align:middle}
+.tier.big{width:52px;height:52px;font-size:32px;border-radius:6px;flex:none}
+.tier.tS{background:rgba(243,199,68,.18);color:#F3C744;box-shadow:inset 0 0 0 1px rgba(243,199,68,.55)}
+.tier.tA{background:rgba(46,200,232,.15);color:#8FE3F4;box-shadow:inset 0 0 0 1px rgba(46,200,232,.45)}
+.tier.tB{background:rgba(61,220,132,.13);color:#8FF0BC;box-shadow:inset 0 0 0 1px rgba(61,220,132,.4)}
+.tier.tC{background:rgba(255,154,80,.13);color:#FFB27A;box-shadow:inset 0 0 0 1px rgba(255,154,80,.4)}
+.tier.tD{background:rgba(142,149,162,.13);color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
+.rinfo{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px;color:var(--muted)}
+.rinfo summary{cursor:pointer;color:var(--fg);font-weight:600}
+.rinfo ul{margin:8px 0;padding-left:18px;display:grid;gap:4px}
+.rinfo b{color:var(--fg)}
+.rinfo .tiers{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.rtab tr.rrow{cursor:pointer}
+.rtab tr.rrow:hover td{background:var(--hover)}
+.rtab tr.rrow.sel td{background:#1F232C}
+.rtab tr.rrow td:first-child{box-shadow:inset 3px 0 0 var(--tc)}
+.rtab td.pos{font-family:var(--f-display);font-weight:800;font-size:17px;color:var(--muted);width:44px}
+.rk-name{background:none;border:0;padding:0;font:inherit;font-weight:700;color:var(--fg);cursor:pointer;text-align:left}
+.rk-name:hover{text-decoration:underline}
+.rsc{min-width:96px}
+.rsc b{display:inline-block;min-width:24px;font-variant-numeric:tabular-nums}
+.rbar{display:inline-block;vertical-align:middle;width:56px;height:6px;background:var(--panel-2);border-radius:3px;overflow:hidden;margin-left:6px}
+.rbar i{display:block;height:100%;background:var(--tc,var(--red));border-radius:3px}
+.rhint{color:var(--muted);text-align:center;padding:14px;border:1px dashed var(--line);border-radius:6px;margin:0}
+.chip.off{color:var(--muted);cursor:default}
+.rd{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--tc);border-radius:6px;padding:16px;display:grid;gap:16px;scroll-margin-top:12px}
+.rd-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.rd-name{flex:1;min-width:160px}
+.rd-name h3{margin:0;font-size:22px;font-family:var(--f-display);font-weight:800;letter-spacing:.02em;overflow-wrap:anywhere}
+.rd-total{text-align:right;line-height:1}
+.rd-total b{font-family:var(--f-display);font-size:34px;font-weight:800;display:block}
+.rd-total span{font-size:12px;color:var(--muted)}
+.rd-kurz{margin:0;font-size:16px;line-height:1.5;border-left:3px solid var(--tc);padding-left:12px}
+.rd-facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,150px),1fr));gap:8px;margin:0}
+.rd-facts div{background:var(--panel-2);border-radius:4px;padding:8px 10px;min-width:0}
+.rd-facts dt{font-family:var(--f-display);font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.rd-facts dd{margin:2px 0 0;font-weight:600;font-size:14px}
+.rd-scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.rs{min-width:0}
+.rs-top{display:flex;justify-content:space-between;align-items:baseline;font-weight:600}
+.rs-top small{color:var(--muted);font-weight:500}
+.rs .rbar{display:block;width:100%;height:8px;margin:6px 0}
+.rs p{margin:0;color:var(--muted);font-size:13.5px}
+.rd-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.rc{border-radius:6px;padding:12px 14px;background:var(--panel-2);border:1px solid var(--line)}
+.rc h4{margin:0 0 8px;font-family:var(--f-display);text-transform:uppercase;letter-spacing:.1em;font-size:14px}
+.rc ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.rc.rpos{border-color:rgba(61,220,132,.4)}.rc.rpos h4{color:#8FF0BC}
+.rc.rneg{border-color:rgba(255,120,110,.4)}.rc.rneg h4{color:var(--dnf-fg)}
+.rc.rimp{border-color:rgba(255,204,0,.35)}.rc.rimp h4{color:#FFE27A}
+.rd-h{margin:0;font-family:var(--f-display);text-transform:uppercase;letter-spacing:.1em;font-size:15px;color:var(--muted)}
+.rd-an{display:grid;gap:12px}
+.rd-an h5{margin:0 0 3px;font-size:15px}
+.rd-an p{margin:0;line-height:1.55;color:#CDD1D8}
+.rd-src{margin:0;font-size:12.5px;color:var(--muted)}
 
 /* Login */
 .login form{display:flex;flex-direction:column;gap:12px;max-width:480px}
@@ -252,7 +312,7 @@ function uid(){return 'x'+Math.random().toString(36).slice(2,9);}
 /* ---------- Daten ---------- */
 /* Die Ergebnisse stehen in daten.json neben dieser Datei. Die Verwaltung (#verwaltung) ändert nur einen Entwurf
    im eigenen Browser; veröffentlicht wird, indem die heruntergeladene daten.json im GitHub-Projekt ersetzt wird. */
-var DATA={version:1,seasons:[]};
+var DATA={version:1,seasons:[]},RATE=null;
 var draft=clone(DATA);
 var ui={view:'tabelle',season:null,cat:'fahrer',race:'all',rec:'alle',admSeason:null,admRace:null,confirm:null,canEdit:true,msg:'',stash:null,json:''};
 
@@ -421,7 +481,7 @@ function pointsText(s){
 
 /* ---------- Kopf, Filter ---------- */
 function header(){
-  var tabs=[['tabelle','Tabelle'],['kalender','Kalender'],['fahrer','Fahrer'],['rekorde','Rekorde']];
+  var tabs=[['tabelle','Tabelle'],['kalender','Kalender'],['fahrer','Fahrer'],['bewertung','Bewertung'],['rekorde','Rekorde']];
   if(auth.token) tabs.push(['verwaltung','Verwaltung']);
   var dirty=isDirty()&&!!auth.token;
   return '<header class="top"><div class="top-in"><a class="brand" href="#tabelle"><img class="emblem" src="logo.png" width="58" height="58" alt=""><span class="brand-name"><b>German Formula League</b><span>Standings</span></span></a><nav class="tabs" aria-label="Bereiche">'+
@@ -658,7 +718,7 @@ function driverCard(s,d,st){
   return '<article class="dcard" style="--tc:'+esc(t?t.color:'#4A505C')+'"><div class="dc-top"><div><h4>'+(d.nat?flag(d.nat)+' ':'')+esc(d.name)+'</h4><p class="sub">'+(t?esc(t.name):d.role==='ersatz'?'Ersatzfahrer':'Team folgt')+'</p></div>'+
     (st.starts?'<span class="dc-pos" title="Platz in der Fahrerwertung">P'+st.pos+'</span>':'')+'</div>'+
     '<dl class="dc-stats"><div><dt>Punkte</dt><dd>'+(st.total||0)+'</dd></div><div><dt>Rennen</dt><dd>'+(st.starts||0)+'</dd></div><div><dt>Siege</dt><dd>'+(st.wins||0)+'</dd></div>'+
-    '<div><dt>Podien</dt><dd>'+(st.pod||0)+'</dd></div><div><dt>Poles</dt><dd>'+(st.poles||0)+'</dd></div><div><dt>Bestes</dt><dd>'+(st.best?'P'+st.best:'–')+'</dd></div></dl></article>';
+    '<div><dt>Podien</dt><dd>'+(st.pod||0)+'</dd></div><div><dt>Poles</dt><dd>'+(st.poles||0)+'</dd></div><div><dt>Bestes</dt><dd>'+(st.best?'P'+st.best:'–')+'</dd></div></dl>'+rateBtn(d.id)+'</article>';
 }
 function viewFahrer(){
   var s=S(ui.season);
@@ -699,6 +759,61 @@ function viewRekorde(){
     });
   });
   return h+'</tbody></table></div>';
+}
+
+/* ---------- Bewertung ---------- */
+var TIERS={S:'Elite',A:'Spitze',B:'Mittelfeld',C:'Ausbaufähig',D:'Einsteiger'};
+function rateSeason(){return draft.seasons.filter(function(x){return !x.demo;})[0]||S(ui.season);}
+function rateTier(f){var v=f.tempo+f.rv,l=(RATE&&RATE.niveaus)||[];for(var i=0;i<l.length;i++)if(v>=l[i].ab)return l[i].t;return 'D';}
+function rateList(){
+  if(!RATE||!RATE.fahrer)return [];
+  var ord='SABCD';
+  return RATE.fahrer.map(function(f){var x={};for(var k in f)x[k]=f[k];x.total=f.tempo+f.rv+f.kon+f.sau;x.tier=rateTier(f);return x;})
+    .sort(function(a,b){return ord.indexOf(a.tier)-ord.indexOf(b.tier)||b.total-a.total;});
+}
+function rateOf(id){var l=rateList();for(var i=0;i<l.length;i++)if(l[i].id===id)return l[i];return null;}
+function tierBadge(t,big){return '<span class="tier t'+t+(big?' big':'')+'" title="Niveau '+t+' · '+(TIERS[t]||'')+'">'+t+'</span>';}
+function rateBtn(id){var f=rateOf(id);return f?'<button class="dc-rate" data-act="rate" data-id="'+esc(id)+'"><span>Bewertung ansehen</span><span>'+tierBadge(f.tier)+' <b>'+f.total+'</b></span></button>':'';}
+function rbar(v,max){return '<span class="rbar"><i style="width:'+Math.round(v/max*100)+'%"></i></span>';}
+function viewBewertung(){
+  if(!RATE) return emptyBox('Bewertung wird geladen','Einen Moment bitte.');
+  var s=rateSeason(),list=rateList(),sk=RATE.skala||[];
+  var h='<div class="sec-head"><div><h2>Fahrerbewertung</h2><p class="meta">'+esc(RATE.stand||'')+' · Tippe auf einen Fahrer für die ausführliche Analyse</p></div></div>';
+  h+='<details class="rinfo"><summary>So wird bewertet</summary><p>'+esc(RATE.basis||'')+'</p><ul>'+sk.map(function(k){return '<li><b>'+esc(k.name)+' ('+k.max+')</b> · '+esc(k.info)+'</li>';}).join('')+'</ul><p>'+esc(RATE.niveauInfo||'')+'</p><p class="tiers">'+
+    (RATE.niveaus||[]).map(function(n){return tierBadge(n.t)+' '+esc(n.name)+(n.ab?' ab '+n.ab:'');}).join(' &nbsp; ')+'</p></details>';
+  h+='<div class="tbl-wrap"><table class="rtab"><thead><tr><th class="c">#</th><th>Fahrer</th><th class="c">Niveau</th>'+sk.map(function(k){return '<th>'+esc(k.name)+' <small>/'+k.max+'</small></th>';}).join('')+'<th class="c">Gesamt</th></tr></thead><tbody>';
+  list.forEach(function(f,i){
+    var d=drv(s,f.id),t=d?team(s,d.team):null,sel=ui.rate===f.id;
+    h+='<tr class="rrow'+(sel?' sel':'')+'" data-act="rate" data-id="'+esc(f.id)+'" style="--tc:'+esc(t?t.color:'#4A505C')+'"><td class="c pos">'+(i+1)+'</td>'+
+      '<td class="drv"><button class="rk-name" data-act="rate" data-id="'+esc(f.id)+'" aria-expanded="'+sel+'">'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</button><span class="sub">'+(t?esc(t.name):'Ersatzfahrer')+'</span></td>'+
+      '<td class="c">'+tierBadge(f.tier)+'</td>'+
+      sk.map(function(k){return '<td class="rsc"><b>'+f[k.k]+'</b>'+rbar(f[k.k],k.max)+'</td>';}).join('')+
+      '<td class="c total">'+f.total+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  var sel=ui.rate&&rateOf(ui.rate);
+  if(sel) h+=rateDetail(s,sel);
+  else h+='<p class="rhint">Wähle oben einen Fahrer, um Stärken, Schwächen und die komplette Analyse zu sehen.</p>';
+  var rated={};list.forEach(function(f){rated[f.id]=1;});
+  var rest=s?s.drivers.filter(function(d){return d.active!==false&&!rated[d.id];}):[];
+  if(rest.length) h+='<section class="dsec"><h3>Noch keine Wertung</h3><p class="meta">Diese Fahrer sind bisher kein gewertetes Rennen gefahren. Sie erscheinen hier nach ihrem ersten Einsatz.</p><div class="chips">'+
+    rest.map(function(d){return '<span class="chip off">'+(d.nat?flag(d.nat)+' ':'')+esc(d.name)+(d.role==='ersatz'?' <small>Ersatz</small>':'')+'</span>';}).join('')+'</div></section>';
+  return h;
+}
+function rateDetail(s,f){
+  var d=drv(s,f.id),t=d?team(s,d.team):null,sk=RATE.skala||[],fk=f.fakten||{};
+  function li(a){return (a||[]).map(function(x){return '<li>'+esc(x)+'</li>';}).join('');}
+  var facts=[['Qualifying',fk.quali],['Start',fk.start],['Ziel',fk.ziel],['Beste Runde',fk.runde],['Boxenstopps',fk.stopps],['Warnungen & Strafen',fk.strafen]].filter(function(x){return x[1];});
+  var h='<section class="rd" id="rate-detail" style="--tc:'+esc(t?t.color:'#4A505C')+'">'+
+    '<div class="rd-head">'+tierBadge(f.tier,true)+'<div class="rd-name"><h3>'+(d&&d.nat?flag(d.nat)+' ':'')+esc(d?d.name:f.id)+'</h3><p class="sub">'+(t?esc(t.name)+' · ':'')+'Niveau '+f.tier+' – '+esc(TIERS[f.tier]||'')+'</p></div>'+
+    '<div class="rd-total"><b>'+f.total+'</b><span>von 100</span></div><button class="btn small" data-act="rate" data-id="'+esc(f.id)+'">Schließen</button></div>';
+  if(f.kurz) h+='<p class="rd-kurz">'+esc(f.kurz)+'</p>';
+  if(facts.length) h+='<dl class="rd-facts">'+facts.map(function(x){return '<div><dt>'+x[0]+'</dt><dd>'+esc(x[1])+'</dd></div>';}).join('')+'</dl>';
+  h+='<div class="rd-scores">'+sk.map(function(k){return '<div class="rs"><div class="rs-top"><span>'+esc(k.name)+'</span><b>'+f[k.k]+' <small>/ '+k.max+'</small></b></div>'+rbar(f[k.k],k.max)+'<p>'+esc((f.noten||{})[k.k]||'')+'</p></div>';}).join('')+'</div>';
+  h+='<div class="rd-cols"><div class="rc rpos"><h4>Positiv</h4><ul>'+li(f.pos)+'</ul></div><div class="rc rneg"><h4>Negativ</h4><ul>'+li(f.neg)+'</ul></div><div class="rc rimp"><h4>Ausbaufähig</h4><ul>'+li(f.besser)+'</ul></div></div>';
+  if(f.analyse&&f.analyse.length) h+='<h4 class="rd-h">Ausführliche Analyse · Rennen 1 Australien</h4><div class="rd-an">'+f.analyse.map(function(a){return '<div><h5>'+esc(a.t)+'</h5><p>'+esc(a.x)+'</p></div>';}).join('')+'</div>';
+  if(f.quelle) h+='<p class="rd-src">Grundlage: '+esc(f.quelle)+'</p>';
+  return h+'</section>';
 }
 
 /* ---------- Verwaltung ---------- */
@@ -942,6 +1057,7 @@ function doAction(act,el){
     case 'sess':ui.sess=id;break;
     case 'admSess':ui.admSess=id;break;
     case 'rec':ui.rec=id;break;
+    case 'rate':ui.rate=(ui.view==='bewertung'&&ui.rate===id)?null:id;ui.rateScroll=!!ui.rate;if(ui.view!=='bewertung'){go('bewertung');return;}break;
     case 'openRace':if(el.dataset.season)ui.season=el.dataset.season;ui.race=id;go('tabelle');return;
     case 'admSeason':ui.admSeason=id;ui.admRace=null;ui.confirm=null;break;
     case 'newSeason':{
@@ -1119,16 +1235,17 @@ function render(anim){
   var a=document.activeElement,fid=a&&a.id;
   if(!S(ui.season))ui.season=defaultSeason();
   var v=ui.view;
-  var body=v==='kalender'?viewKalender():v==='rekorde'?viewRekorde():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():viewTabelle();
+  var body=v==='kalender'?viewKalender():v==='bewertung'?viewBewertung():v==='rekorde'?viewRekorde():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():viewTabelle();
   document.getElementById('app').innerHTML=header()+'<main class="wrap'+(anim?' enter':'')+'">'+body+'</main>'+footer()+'<div id="savebar-slot"></div>';
   updateSavebar();
+  if(ui.rateScroll&&v==="bewertung"){ui.rateScroll=false;setTimeout(function(){var rd=document.getElementById("rate-detail");if(rd)rd.scrollIntoView({behavior:"smooth",block:"start"});},40);}
   if(fid){var el=document.getElementById(fid);if(el)try{el.focus({preventScroll:true});}catch(e){}}
 }
 /* Weiche Überblendung beim Wechsel von Ansicht, Saison, Wertung oder Rennen */
 function navRender(){
   render(true);
 }
-var VIEWS=['tabelle','kalender','fahrer','rekorde','verwaltung'];
+var VIEWS=['tabelle','kalender','fahrer','bewertung','rekorde','verwaltung'];
 function readHash(){var h=location.hash.replace('#','');ui.view=VIEWS.indexOf(h)>=0?h:'tabelle';}
 window.addEventListener('hashchange',function(){var before=ui.view;readHash();if(before!==ui.view){navRender();window.scrollTo(0,0);}});
 function go(view){
@@ -1166,6 +1283,7 @@ function load(){
     DATA=d;draft=clone(DATA);
     ui.season=defaultSeason();ui.admSeason=ui.season;
     readHash();render();
+    fetch("bewertung.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).then(function(b){if(b&&b.fahrer){RATE=b;if(ui.view==="bewertung"||ui.view==="fahrer")render();}}).catch(function(){});
     var tok=storedToken();
     if(tok){var remember=false;try{remember=!!localStorage.getItem('gfl-token');}catch(e){}login(tok,remember,true);}
   }).catch(function(){

@@ -1,0 +1,304 @@
+{
+ "stand": "Nach Saison 1 · Rennen 1 (Australien)",
+ "basis": "Ausgewertet wurde nur das Bild aus fünf Onboard-Videos von Rennen 1 in Melbourne (29 Runden): Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota und Mehlone. Dazu kommen der Ereignis-Reiter, die Boxenstopp-Liste und die Fahrertabelle aus dem Spiel. Bewertet werden nur Fahren und Fehler, nicht die Stimmen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet.",
+ "skala": [
+  {"k": "tempo", "name": "Tempo", "max": 40, "info": "Quali-Zeit, schnellste Rennrunde und typische Rennpace im Vergleich zum Feld."},
+  {"k": "rv", "name": "Rennvermögen", "max": 25, "info": "Start, Zweikämpfe, Strategie und was am Ende aus dem Startplatz gemacht wurde."},
+  {"k": "kon", "name": "Konstanz", "max": 20, "info": "Wie gleichmäßig die Runden sind, ob es Ausreißer, Dreher oder Einbrüche gibt."},
+  {"k": "sau", "name": "Sauberkeit", "max": 15, "info": "Track Limits, Warnungen, Strafen, Kontakte und Abflüge."}
+ ],
+ "niveaus": [
+  {"t": "S", "name": "Elite", "ab": 55},
+  {"t": "A", "name": "Spitze", "ab": 45},
+  {"t": "B", "name": "Mittelfeld", "ab": 35},
+  {"t": "C", "name": "Ausbaufähig", "ab": 24},
+  {"t": "D", "name": "Einsteiger", "ab": 0}
+ ],
+ "niveauInfo": "Das Niveau richtet sich nur nach Tempo plus Rennvermögen (höchstens 65 Punkte). Die Gesamtpunkte (höchstens 100) enthalten zusätzlich Konstanz und Sauberkeit. Sortiert wird erst nach Niveau, dann nach Gesamtpunkten.",
+ "fahrer": [
+  {
+   "id": "joker", "tempo": 37, "rv": 24, "kon": 18, "sau": 14,
+   "kurz": "Der klare Maßstab der Liga: Quali fast auf Pole, im Rennen das schnellste Dauertempo und ein fehlerfreier Start-Ziel-Sieg.",
+   "quelle": "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone, DON-FUCHSER88 und Crashturtle2000.",
+   "fakten": {"quali": "P2 · 1:17.566 (+0,017)", "start": "P2", "ziel": "P1 · Sieg", "runde": "1:20.395 (3. schnellste)", "stopps": "1 · Runde 12, Medium → Hard, 2,252 s", "strafen": "keine"},
+   "noten": {
+    "tempo": "Nur 0,017 s hinter der Pole, im Rennen rund 0,5 s pro Runde schneller als der Pole-Setter.",
+    "rv": "Gewinnt den Start in Kurve 1, führt danach jede Runde und baut den Vorsprung stetig aus.",
+    "kon": "Der Abstand nach hinten wächst gleichmäßig über beide Stints, ohne einen erkennbaren Einbruch.",
+    "sau": "Kein einziger Eintrag im Ereignis-Reiter. Ein Punkt Abzug, weil ohne eigenes Video nicht jede Kurve prüfbar ist."
+   },
+   "pos": [
+    "Quali P2 mit 1:17.566, nur 0,017 s hinter der Pole von The_White_Epic.",
+    "Gewinnt den Start und geht schon in Kurve 1 an der Pole vorbei in Führung.",
+    "Das beste Dauertempo im Feld: Der Vorsprung auf The_White_Epic wächst von 2,0 s (Runde 4) über 5,9 s (Runde 16) auf 14,0 s (Runde 28).",
+    "Wechsel in Runde 12 von Medium auf Hard in 2,252 s, danach ohne Druck bis ins Ziel.",
+    "Sieg mit 15,7 s Vorsprung auf Mesota.",
+    "Kein einziger Eintrag im Ereignis-Reiter: keine Warnung, keine Strafe, kein Kontakt."
+   ],
+   "neg": [
+    "Hat nach der Zielflagge die Session verlassen. Das Spiel führt ihn deshalb als „Rennen beendet“ auf P6. Auf der Website zählt der Sieg.",
+    "Die beste Rennrunde (1:20.395) ist 0,43 s langsamer als die schnellste Runde. Die Pace kam aus der Konstanz, nicht aus einer einzelnen Spitzenrunde."
+   ],
+   "besser": [
+    "Nach der Zielflagge in der Session bleiben, bis das Ergebnis gespeichert ist.",
+    "Im zweiten Stint eine schnelle Runde für den Bonuspunkt angreifen, wenn der Vorsprung groß genug ist."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Mit 1:17.566 auf P2, nur 0,017 s hinter The_White_Epic. Die Abstände dahinter: Italian Gamer +0,227, Crashturtle2000 +0,249, Mesota +0,421. JokerFinn06 und The_White_Epic waren die Einzigen, die unter 1:17.6 kamen."},
+    {"t": "Start und Runde 1", "x": "JokerFinn06 kommt besser weg als die Pole und übernimmt in Kurve 1 die Führung, ohne Kontakt. Während dahinter Mesota, The_White_Epic und Crashturtle2000 um die Plätze kämpfen, kann er sich direkt absetzen."},
+    {"t": "Rennverlauf und Pace", "x": "Laut Tower aus The_White_Epics Sicht: Runde 4 +2,0 s, Runde 12 +3,6 s, Runde 16 +5,9 s, Runde 20 +7,0 s, Runde 24 +8,9 s, Runde 28 +14,0 s Vorsprung. Das sind im Schnitt rund 0,5 s pro Runde auf den Fahrer mit der schnellsten Runde des Rennens. Die Runden waren also nicht spektakulär, aber extrem gleichmäßig."},
+    {"t": "Strategie und Boxenstopps", "x": "Medium zum Start, Wechsel in Runde 12 auf Hard (2,252 s). Damit hatte er für die zweite Hälfte den haltbaren Reifen, während The_White_Epic mit Medium 17 Runden überstehen musste. Die Strategie war die sicherste im Feld."},
+    {"t": "Zweikämpfe", "x": "Außer dem Startmanöver gegen The_White_Epic gab es keine Zweikämpfe. Er fuhr das ganze Rennen allein an der Spitze."},
+    {"t": "Fehler und Strafen", "x": "Keine. Der Ereignis-Reiter hat zwölf Einträge, keiner davon betrifft JokerFinn06. Einziger Haken ist der Session-Austritt nach der Zielflagge."},
+    {"t": "Fazit", "x": "Der Sieger und auch fahrerisch die Nummer 1 nach Rennen 1. Tempo auf Pole-Niveau, ein gewonnener Start und ein fehlerfreies Rennen mit dem besten Dauertempo. Kleine Unsicherheit: Es gibt kein Video aus seinem Cockpit."}
+   ]
+  },
+  {
+   "id": "mesota", "tempo": 31, "rv": 22, "kon": 17, "sau": 15,
+   "kurz": "Der sauberste Fahrer des Rennens und starker Racer: von P5 auf P2 ohne einen einzigen Eintrag im Ereignis-Reiter. Es fehlen noch ein paar Zehntel Tempo.",
+   "quelle": "Eigenes Onboard-Video (F1 Saison Starter) plus die Sichten von The_White_Epic und DON-FUCHSER88.",
+   "fakten": {"quali": "P5 · 1:17.970 (+0,421)", "start": "P5", "ziel": "P2 · +15,700", "runde": "1:21.161 (6. schnellste)", "stopps": "1 · Runde 12, Medium → Hard, 2,249 s", "strafen": "keine"},
+   "noten": {
+    "tempo": "0,42 s Rückstand im Quali, die beste Rennrunde 1,2 s über der schnellsten. Im zweiten Stint aber schneller als The_White_Epic.",
+    "rv": "Starker Start mit zwei Plätzen Gewinn, ein sauberes Überholmanöver gegen DON-FUCHSER88 und am Ende der Lohn mit P2.",
+    "kon": "Keine Dreher und keine Ausreißer. Abzug nur für den Zeitverlust durch das Pausenmenü in Runde 7.",
+    "sau": "Volle Punktzahl: keine Warnung, keine Strafe, kein Kontakt."
+   },
+   "pos": [
+    "Starker Start: von P5 an Italian Gamer und Crashturtle2000 vorbei auf P3, kurz sogar neben The_White_Epic um P2.",
+    "Sauberes Überholmanöver gegen DON-FUCHSER88 in Runde 16 im Windschatten vor Kurve 3, Rad an Rad ohne Kontakt.",
+    "Im zweiten Stint auf Hard rund 0,3 s pro Runde schneller als The_White_Epic (Abstand von 7,5 s auf 3,1 s verkürzt).",
+    "Boxenstopp in 2,249 s, einer der schnellsten im Feld.",
+    "Kein Eintrag im Ereignis-Reiter: keine Track-Limit-Warnung, keine Strafe, kein Kontakt.",
+    "Hat Crashturtle2000 während des Rennens wieder in die Session eingeladen.",
+    "Driver of the Day."
+   ],
+   "neg": [
+    "Im Quali 0,42 s hinter der Pole, nur Startplatz 5.",
+    "Im ersten Stint auf Medium rund 0,5 s pro Runde langsamer als The_White_Epic (Abstand von 0,4 s auf 5,9 s).",
+    "Die beste Rennrunde (1:21.161) ist 1,2 s langsamer als die schnellste Runde des Rennens.",
+    "In Runde 7 bis 8 kosteten das Pausenmenü und die Einladung rund 2,4 s (Abstand zu The_White_Epic von 1,47 s auf 3,89 s).",
+    "Im Spiel steht Mesota auf P1, aber nur, weil JokerFinn06 nach der Zielflagge die Session verlassen hat. Auf der Strecke war er 15,7 s zurück."
+   ],
+   "besser": [
+    "Quali-Tempo: Zwei bis drei Zehntel mehr hätten Startplatz 3 bedeutet.",
+    "Im ersten Stint mehr riskieren. Dort ging der Anschluss an die Spitze verloren.",
+    "Das Menü während der Fahrt meiden, auch wenn es für einen guten Zweck war."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "1:17.970 und damit P5, 0,421 s hinter der Pole. Kein Abflug und kein Fehler im Bild, aber vor ihm lagen vier Fahrer innerhalb von 0,25 s. Mesota fehlte also kein Fehler, sondern Tempo."},
+    {"t": "Start und Runde 1", "x": "Einer der besten Starts im Feld. Mesota geht an Italian Gamer und Crashturtle2000 vorbei und schiebt sich kurz neben The_White_Epic auf P2. The_White_Epic kontert sofort, Mesota bleibt auf P3. Alles ohne Kontakt."},
+    {"t": "Rennverlauf und Pace", "x": "Im ersten Stint auf Medium verliert Mesota rund 0,5 s pro Runde auf The_White_Epic (Runde 1: 0,4 s, Runde 11: 5,9 s). In Runde 7 bis 8 öffnet er das Pausenmenü und lädt Crashturtle2000 wieder ein, das kostet etwa 2,4 s. Typische Runden liegen bei rund 1:22, die beste bei 1:21.161 ab Runde 19. Im zweiten Stint auf Hard dreht sich das Bild: Mesota holt rund 0,3 s pro Runde auf The_White_Epic auf, von 7,5 s auf 3,1 s."},
+    {"t": "Strategie und Boxenstopps", "x": "Wechsel in Runde 12 von Medium auf Hard in 2,249 s. Durch DON-FUCHSER88s frühen Stopp in Runde 9 lag Mesota danach kurz hinter ihm. Die Hard-Reifen hielten bis zum Ende ohne Probleme, das war die richtige Wahl."},
+    {"t": "Zweikämpfe", "x": "Runde 1: sauber an Italian Gamer und Crashturtle2000 vorbei. Runde 16: Windschatten auf DON-FUCHSER88, Überholmanöver vor Kurve 3. Fuchser hält innen dagegen, beide bleiben sauber. Runde 29: Mesota fährt unter Gelb regulär an der verunfallten The_White_Epic vorbei auf P2."},
+    {"t": "Fehler und Strafen", "x": "Keine Dreher, keine Abflüge, keine Mauerkontakte. Kein Eintrag im Ereignis-Reiter, also auch keine Track-Limit-Warnung. Der einzige Zeitverlust war das Pausenmenü."},
+    {"t": "Fazit", "x": "Ein sehr reifes Rennen: zwei Plätze am Start, ein sauberes Überholmanöver, null Fehler und das stärkste Tempo im zweiten Stint unter den Verfolgern. Zum Sieger fehlen vor allem Quali-Tempo und der erste Stint."}
+   ]
+  },
+  {
+   "id": "luis", "tempo": 32, "rv": 22, "kon": 17, "sau": 13,
+   "kurz": "Fehlerfreies Rennen mit den meisten Überholmanövern, von P6 aufs Podium. Das Quali hat er sich mit zwei Fehlern selbst verbaut.",
+   "quelle": "Eigenes Onboard-Video (F1 25 GFL R1 10 Melbourne, Spielname Luisloli89) plus die Sicht von Crashturtle2000.",
+   "fakten": {"quali": "P6 · 1:18.084 (+0,535)", "start": "P6", "ziel": "P3 · +18,087", "runde": "1:20.724 (4. schnellste)", "stopps": "1 · Runde 13, Medium → Hard, 2,252 s", "strafen": "keine"},
+   "noten": {
+    "tempo": "Rennpace auf Podiumsniveau, beste Runde 1:20.724. Das Quali-Ergebnis spiegelt das Tempo wegen zweier verlorener Runden nicht wider.",
+    "rv": "Drei Plätze gewonnen, die meisten Überholmanöver im Rennen und jeden Fehler der anderen genutzt.",
+    "kon": "Im Rennen keine Ausreißer. Abzug für die zwei Fehler im Quali.",
+    "sau": "Alle 29 Rennrunden sauber und sauberster Fahrer. Abzug für Abflug und Mauerkontakt im Quali."
+   },
+   "pos": [
+    "Alle 29 Rennrunden ohne Track-Limit-Verstoß („Saubere Runden x29“).",
+    "Sauberster Fahrer und die meisten Überholmanöver des Rennens.",
+    "Von Startplatz 6 aufs Podium auf P3.",
+    "Runde 1 und 2: an Crashturtle2000 und Italian Gamer vorbei, von P6 auf P4.",
+    "Beste Rennrunde 1:20.724, schneller als Mesota und DON-FUCHSER88.",
+    "Kein Kontakt mit anderen Autos im ganzen Rennen."
+   ],
+   "neg": [
+    "Quali Runde 2: Abflug in Kurve 1/2 ins Gras, fast bis zum Stillstand. Die Runde war verloren.",
+    "Quali Runde 4: Mauerkontakt in Kurve 6 mit Schaden, obwohl die Runde nur rund 0,9 s über der Bestzeit lag.",
+    "Dadurch nur Startplatz 6 (+0,535), obwohl das Tempo für weiter vorne gereicht hätte.",
+    "Schwacher erster Umlauf von 1:30.1 nach dem Start.",
+    "In der Gelbphase in Runde 25 gingen zwischen 5 und 15 s verloren.",
+    "The_White_Epic fuhr ihm im ersten Teil davon: Der Abstand wuchs von 4,2 s (Runde 3) auf 8,3 s (Runde 12)."
+   ],
+   "besser": [
+    "Im Quali erst eine sichere Runde setzen und dann angreifen. Beide Fehler passierten bei Pushrunden.",
+    "Der Start, um den ersten Umlauf schneller zu machen."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Endzeit 1:18.084 auf P6, 0,535 s hinter der Pole. Zwei Runden gingen verloren: In Runde 2 rutscht Mehlone in Kurve 1/2 ins Gras und fällt fast bis zum Stillstand ab (Delta +13,9 s). In Runde 4 trifft er in Kurve 6 die Mauer und hat Schaden, obwohl er nur 0,9 bis 1,0 s über seiner Bestzeit lag. Mit einer sauberen Runde wäre wohl P4 oder P5 drin gewesen."},
+    {"t": "Start und Runde 1", "x": "Der erste Umlauf dauert 1:30.1. Als Crashturtle2000 in Kurve 6 abfliegt, geht Mehlone sauber vorbei. In Runde 1 fährt er Rad an Rad mit DON-FUCHSER88 durch Kurve 1 bis 3, ohne Kontakt. In Runde 2 überholt er Italian Gamer und liegt auf P4."},
+    {"t": "Rennverlauf und Pace", "x": "Ab Runde 2 fährt er 1:22.2, später konstant 1:20.7 bis 1:22. The_White_Epic fährt im ersten Teil davon (4,2 s nach Runde 3, 8,3 s nach Runde 12, 12 bis 19 s in Runde 20 bis 28). In Runde 25 verliert er in der Gelbphase mehrere Sekunden. In der letzten Runde fliegt The_White_Epic ab, Mehlone geht vorbei auf P3."},
+    {"t": "Strategie und Boxenstopps", "x": "Wechsel in Runde 13 von Medium auf Hard in 2,252 s. Danach liegt er kurz auf P5 hinter DON-FUCHSER88, ab Runde 20 wieder auf P4. Ob er Fuchser überholt hat oder Fuchsers zweiter Stopp den Platz brachte, ist im Bild nicht eindeutig. Ein Stopp war die richtige Wahl."},
+    {"t": "Zweikämpfe", "x": "Die meisten Überholmanöver im Rennen. Gegen Crashturtle2000 nutzt er dessen Fehler, Italian Gamer überholt er in Runde 2, gegen DON-FUCHSER88 fährt er in Runde 1 Rad an Rad. Kein einziger Kontakt."},
+    {"t": "Fehler und Strafen", "x": "Im Rennen keine: 29 von 29 sauberen Runden, keine Warnung, kein Mauer- oder Fahrzeugkontakt. Beide Fehler passierten im Quali."},
+    {"t": "Fazit", "x": "Fahrerisch eines der stärksten Rennen: sauber, angriffslustig und mit Podiumspace. Mit einem fehlerfreien Quali kann Mehlone vorne mitfahren."}
+   ]
+  },
+  {
+   "id": "white", "tempo": 39, "rv": 15, "kon": 15, "sau": 13,
+   "kurz": "Das schnellste Auto im Feld: Pole und schnellste Runde. Ein verlorener Start und ein geplatzter Reifen in der letzten Runde kosteten P2.",
+   "quelle": "Eigenes Onboard-Video ((DE) IRacing blutiger Anfänger Class D, ist aber F1 25) plus die Sichten von Mesota und Mehlone.",
+   "fakten": {"quali": "P1 · Pole · 1:17.549", "start": "P1", "ziel": "P5 · +1:05,400", "runde": "1:19.964 · schnellste Runde", "stopps": "1 · Runde 13, Hard → Medium, 2,233 s (schnellster Stopp)", "strafen": "1 Warnung (Track Limits, Runde 4)"},
+   "noten": {
+    "tempo": "Fast volle Punktzahl: Pole und schnellste Rennrunde, 0,25 s vor der zweitschnellsten.",
+    "rv": "Verliert den Start und die Führung, verliert dann 0,5 s pro Runde auf den Sieger. Die Reifenstrategie kostet das sichere P2.",
+    "kon": "24 saubere Runden in Folge mit gleichmäßigen Zeiten. Am Ende bauen die Reifen stark ab.",
+    "sau": "Nur eine Track-Limit-Warnung, kein Kontakt. Der Dreher geht auf den Reifenschaden zurück."
+   },
+   "pos": [
+    "Pole mit 1:17.549, 0,017 s vor JokerFinn06.",
+    "Schnellste Rennrunde mit 1:19.964, als Einziger unter 1:20.",
+    "Schnellster Boxenstopp des Feldes mit 2,233 s.",
+    "Kontert Mesota in Runde 1 sofort und holt P2 zurück.",
+    "Lange gleichmäßig: 24 saubere Runden in Folge, P2 bis zur letzten Runde ohne Wackler.",
+    "Nur eine Track-Limit-Warnung im ganzen Rennen, kein Kontakt."
+   ],
+   "neg": [
+    "Verliert den Start von der Pole und die Führung in Kurve 1 an JokerFinn06.",
+    "Verliert danach rund 0,5 s pro Runde auf den Sieger (2,0 s in Runde 4, 14,0 s in Runde 28).",
+    "Muss mit Medium 17 Runden fahren. Der Verschleiß steigt auf über 80 %, die Rundenzeiten fallen am Ende auf 1:23.5.",
+    "Letzte Runde: schleichender Plattfuß hinten links, Dreher bei Kurve 9/10, Reifen platzt, Ausflug ins Kiesbett.",
+    "Statt sicherem P2 nur P5, das kostet rund 55 s und drei Plätze."
+   ],
+   "besser": [
+    "Reifenmanagement auf langen Stints, vor allem beim weicheren Reifen am Ende.",
+    "Strategie: Hard zum Schluss statt Medium, oder früher stoppen.",
+    "Der Start von der Pole, um die Führung zu halten.",
+    "Am Tempo fehlt nichts."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Pole mit 1:17.549. Im Zeitfahren davor lag er bei etwa 1:17.6, er wurde also im Quali noch schneller. JokerFinn06 lag nur 0,017 s dahinter, Italian Gamer 0,227 s und Crashturtle2000 0,249 s."},
+    {"t": "Start und Runde 1", "x": "The_White_Epic kommt schlechter weg als JokerFinn06 und verliert die Führung in Kurve 1 ohne Gegenwehr. Mesota schiebt ihn kurz auf P3, er kontert aber sofort sauber und liegt wieder auf P2. Kein Kontakt."},
+    {"t": "Rennverlauf und Pace", "x": "Typische Runden in der Rennmitte bei 1:21 bis 1:22, die schnellste Runde mit 1:19.964 mitten im Stint. Auf JokerFinn06 verliert er stetig: 2,0 s nach Runde 4, 3,6 s nach Runde 12, 5,9 s nach Runde 16, 7,0 s nach Runde 20, 8,9 s nach Runde 24, 14,0 s nach Runde 28. Mesota hält er lange 4 bis 6 s hinter sich, im zweiten Stint holt Mesota aber auf. In Runde 26 bis 28 fallen die Zeiten auf 1:23.5."},
+    {"t": "Strategie und Boxenstopps", "x": "Start auf Hard, Wechsel in Runde 13 auf Medium in 2,233 s, der schnellste Stopp im Feld. Die Medium-Reifen mussten danach 17 Runden halten. Nach dem Rennen zeigt die Anzeige vorne links 82 % und hinten links 81 % Verschleiß. Das war der Hauptfehler: Die Konkurrenten fuhren zum Schluss auf Hard."},
+    {"t": "Zweikämpfe", "x": "Gegen JokerFinn06 am Start gibt es keine echte Gegenwehr. Gegen Mesota in Runde 1 ein sauberer, sofortiger Konter. Danach fährt er allein, ohne Druck auf den Führenden."},
+    {"t": "Fehler und Strafen", "x": "Eine Track-Limit-Warnung in Runde 4, sonst nichts. Letzte Runde: Funkmeldung „schleichender Plattfuß hinten links“, Dreher bei Kurve 9/10, dann platzt der Reifen und das Auto landet im Kiesbett. Mesota, Mehlone und DON-FUCHSER88 fahren vorbei. Kein Fahrfehler im eigentlichen Sinne, sondern die Folge der Reifenwahl."},
+    {"t": "Fazit", "x": "Vom reinen Tempo her der schnellste Fahrer der Liga. Was fehlt, sind Starts, Rennhärte gegen den Führenden und vor allem das Reifenmanagement. Mit der Pace ist jedes Wochenende ein Podium möglich."}
+   ]
+  },
+  {
+   "id": "ds4", "tempo": 36, "rv": 11, "kon": 10, "sau": 9,
+   "kurz": "Großes Tempo mit P3 im Quali und der zweitschnellsten Runde, aber ein Dreher, ein Frontflügelwechsel und eine Strafe ließen nur P6 zu.",
+   "quelle": "Kein eigenes Video. Bewertet aus den Sichten von DON-FUCHSER88, Mesota, Mehlone und Crashturtle2000 sowie aus dem Ereignis-Reiter. Im Spiel heißt er Dualshock4759.",
+   "fakten": {"quali": "P3 · 1:17.776 (+0,227)", "start": "P3", "ziel": "P6 · +1:08,420", "runde": "1:20.216 (2. schnellste)", "stopps": "2 · Runde 6 (Frontflügel, 7,440 s) und Runde 18 (2,252 s)", "strafen": "3 Warnungen, 3 s Zeitstrafe"},
+   "noten": {
+    "tempo": "Quali P3 und zweitschnellste Rennrunde, nur 0,25 s über der schnellsten.",
+    "rv": "Von P3 auf P6: Er verliert am Start Plätze, dreht sich in Runde 2 und muss wegen eines Frontflügels früh an die Box.",
+    "kon": "Dreher, früher Reparaturstopp und gehäufte Warnungen in Runde 21. Die gute Pace kommt nur phasenweise an.",
+    "sau": "Die meisten Warnungen hinter Crashturtle2000, dazu eine 3-s-Strafe."
+   },
+   "pos": [
+    "Quali P3 mit 1:17.776, nur 0,227 s hinter der Pole.",
+    "Zweitschnellste Rennrunde mit 1:20.216, schneller als der Sieger.",
+    "Kämpft sich nach Dreher und Reparatur zurück und kommt ins Ziel.",
+    "Zweiter Boxenstopp in Runde 18 mit sauberen 2,252 s."
+   ],
+   "neg": [
+    "Runde 1: Track-Limit-Warnung, außerdem geht Mesota am Start vorbei.",
+    "Runde 2: Dreher in Kurve 11 ohne Fremdeinwirkung, gelbe Flagge. DON-FUCHSER88 und Mehlone gehen vorbei.",
+    "Runde 6: Boxenstopp mit Frontflügelwechsel, 7,440 s Standzeit. Dadurch fällt er weit zurück.",
+    "Runde 21: Track Limits und eine abgekürzte Kurve in derselben Runde, dafür 3 s Zeitstrafe wegen mehrerer Warnungen.",
+    "Ins Ziel nur auf P6, über eine Minute hinter dem Sieger."
+   ],
+   "besser": [
+    "Die ersten Runden ruhiger angehen. Dreher und Flügelschaden passierten in der Startphase.",
+    "Track Limits, vor allem dann, wenn schon eine Warnung auf dem Konto ist.",
+    "Das Tempo reicht für das Podium. Was fehlt, ist ein fehlerfreies Rennen."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Mit 1:17.776 auf P3 und damit 0,227 s hinter der Pole, knapp vor Crashturtle2000 (+0,249) und deutlich vor Mesota (+0,421). Ein starkes Quali."},
+    {"t": "Start und Runde 1", "x": "Gleich in Runde 1 gibt es die erste Track-Limit-Warnung. Mesota geht in der ersten Runde vorbei, nach Crashturtle2000s Abflug kommen die Plätze in Bewegung. In Runde 2 dreht sich Italian Gamer allein in Kurve 11, es gibt Gelb. DON-FUCHSER88 und Mehlone gehen vorbei."},
+    {"t": "Rennverlauf und Pace", "x": "Wenn er frei fahren kann, ist er sehr schnell: Die beste Runde von 1:20.216 ist die zweitschnellste des Rennens, schneller als JokerFinn06 (1:20.395). Durch Dreher und frühen Stopp fährt er aber den größten Teil des Rennens ohne direkten Kampf um das Podium."},
+    {"t": "Strategie und Boxenstopps", "x": "Erster Stopp schon in Runde 6, mit neuem Frontflügel und Wechsel von Hard auf Medium. 7,440 s Standzeit. Der Flügelschaden passt zeitlich zum Dreher in Runde 2. Zweiter Stopp in Runde 18 auf neue Medium in 2,252 s. Damit war er der einzige Fahrer mit zwei Stopps neben DON-FUCHSER88."},
+    {"t": "Zweikämpfe", "x": "Am Start verliert er einen Platz an Mesota, nach seinem Dreher in Runde 2 zwei weitere an DON-FUCHSER88 und Mehlone. Kontakte mit anderen Autos sind in keiner Sicht zu sehen."},
+    {"t": "Fehler und Strafen", "x": "Runde 1: Warnung für Track Limits. Runde 2: Dreher in Kurve 11. Runde 21: Warnung für Track Limits und für eine abgekürzte Kurve, danach 3 s Zeitstrafe für mehrere Warnungen. Ins Ziel kommt er auf P6 mit +1:08,420 inklusive Strafe."},
+    {"t": "Fazit", "x": "Vom Tempo her einer der drei schnellsten Fahrer der Liga. Ohne Dreher und Flügelschaden wäre ein Podium realistisch gewesen. Die Baustelle ist ganz klar die Fehlerquote. Wichtig: Es gibt kein Video aus seinem Cockpit, die Wertung stützt sich auf die anderen Sichten und den Ereignis-Reiter."}
+   ]
+  },
+  {
+   "id": "fuchs", "tempo": 25, "rv": 19, "kon": 16, "sau": 13,
+   "kurz": "Clever und sauber: von P7 auf P4 mit gutem Undercut und fairen Zweikämpfen. Im reinen Tempo fehlt noch über eine Sekunde.",
+   "quelle": "Eigenes Onboard-Video (GFL SAISONAUFTAKT) plus die Sichten von Mesota, Mehlone und Crashturtle2000.",
+   "fakten": {"quali": "P7 · 1:19.119 (+1,570)", "start": "P7", "ziel": "P4 · +19,213", "runde": "1:21.286 (7. schnellste)", "stopps": "2 · Runde 9 (2,250 s) und Runde 19 (2,251 s)", "strafen": "1 Warnung (Track Limits, Runde 5)"},
+   "noten": {
+    "tempo": "1,57 s Rückstand im Quali, langsamste beste Rennrunde im Feld. Im Rennen aber nah an Mesota.",
+    "rv": "Drei Plätze gewonnen, guter Undercut, faire Zweikämpfe. Der zweite Stopp kostete wohl einen Platz.",
+    "kon": "Gleichmäßige Stints und ein starker Schlussstint ohne Ausreißer.",
+    "sau": "Nur eine Track-Limit-Warnung, kein Kontakt."
+   },
+   "pos": [
+    "Von Startplatz 7 auf P4.",
+    "Runde 1: Rad an Rad mit Mehlone durch Kurve 1 bis 3 ohne Kontakt, dann an Crashturtle2000 vorbei.",
+    "Runde 2: nutzt den Dreher von Italian Gamer und geht auf P5.",
+    "Undercut mit Stopp in Runde 9 bringt ihn vor Mesota und Mehlone.",
+    "Verteidigt in Runde 16 innen sauber gegen Mesota, kein Kontakt.",
+    "Starker Schlussstint: holt auf Mehlone von 18,7 s auf 1,1 s auf (davon rund 6 s durch die Gelbphase).",
+    "Beide Boxenstopps sauber mit 2,25 s."
+   ],
+   "neg": [
+    "Quali nur P7 mit 1:19.119, 1,57 s hinter der Pole. Vor allem Sektor 3 war langsam (34,107 s gegen 33,06 s).",
+    "Die beste Rennrunde (1:21.286) ist die langsamste beste Runde im Feld, 1,3 s über der schnellsten.",
+    "Runde 2 bis 9: hängt 0,2 bis 1,3 s hinter Mehlone, bekommt aber kein Überholmanöver durch.",
+    "Der zweite Stopp in Runde 19 (Medium auf Medium) kostete vermutlich P3. Im Ziel fehlten 1,1 s auf Mehlone.",
+    "Track-Limit-Warnung in Runde 5."
+   ],
+   "besser": [
+    "Reines Tempo, vor allem im Quali und in Sektor 3.",
+    "Die Strategie: Mit einem Stopp wäre ein Podium möglich gewesen.",
+    "Mehr Druck im Zweikampf, wenn man über Runden direkt hinter einem Gegner hängt."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Drei Versuche: 1:19.377, 1:19.119 und ein dritter Versuch mit +0,4 s Delta. Kein Abflug und kein Fehler, aber durchgehend langsamer als das Feld, am deutlichsten in Sektor 3 (34,107 s gegen 33,06 s). Mit 1,57 s Rückstand der größte Abstand im Quali."},
+    {"t": "Start und Runde 1", "x": "In Kurve 1 bis 3 fährt er Rad an Rad neben Mehlone, sauber und ohne Kontakt. Nach Crashturtle2000s Abflug geht er in Kurve 3 an ihm vorbei auf P6. In Runde 2 nutzt er den Dreher von Italian Gamer und liegt auf P5."},
+    {"t": "Rennverlauf und Pace", "x": "Typische Runden bei 1:22 bis 1:23, die beste Runde 1:21.286 spätestens ab Runde 22. Von Runde 2 bis 9 hängt er 0,2 bis 1,3 s hinter Mehlone, ohne vorbeizukommen. Ab Runde 20 holt er stark auf: von 18,7 s auf 1,1 s, etwa 6 s davon durch die Gelbphase in Runde 25. In der letzten Runde fährt er an der verunfallten The_White_Epic vorbei."},
+    {"t": "Strategie und Boxenstopps", "x": "Erster Stopp schon in Runde 9 von Hard auf Medium (2,250 s). Der Undercut funktioniert: Er kommt vor Mesota und Mehlone heraus. Zweiter Stopp in Runde 19 von Medium auf Medium (2,251 s) ohne Reparatur. Das war eine Strategieentscheidung und keine Panne, kostete aber vermutlich den Platz vor Mehlone."},
+    {"t": "Zweikämpfe", "x": "Durchweg fair: Rad an Rad mit Mehlone in Runde 1, Überholmanöver gegen Crashturtle2000 und Italian Gamer, und in Runde 16 eine saubere Verteidigung innen gegen Mesota, der im Windschatten vor Kurve 3 vorbeigeht. Kein Kontakt."},
+    {"t": "Fehler und Strafen", "x": "Eine Track-Limit-Warnung in Runde 5, die Szene selbst ist im Video nicht zu finden. Sonst keine Fehler."},
+    {"t": "Fazit", "x": "Ein cleverer und sehr fairer Racer, der aus dem Startplatz das Maximum herausholt. Das Ergebnis ist besser als das Tempo, deshalb nur Niveau B. Mit mehr Quali-Tempo und einem Stopp wird er ein Podiumskandidat."}
+   ]
+  },
+  {
+   "id": "crash", "tempo": 30, "rv": 8, "kon": 6, "sau": 4,
+   "kurz": "Starkes Quali mit P4, danach lief fast alles schief: Abflug in Runde 1, Verbindungsabbruch, langsamer Boxenstopp und 9 s Strafen.",
+   "quelle": "Eigenes Onboard-Video (F1 Rennen Turtle) plus die Sichten von Mehlone, Mesota und DON-FUCHSER88 sowie der Ereignis-Reiter.",
+   "fakten": {"quali": "P4 · 1:17.798 (+0,249)", "start": "P4", "ziel": "P7 · +1 Runde", "runde": "1:20.905 (5. schnellste)", "stopps": "1 · Runde 20, Hard → Soft, 8,271 s (Frontflügel)", "strafen": "4 Warnungen, 9 s Zeitstrafen"},
+   "noten": {
+    "tempo": "Starkes Quali nur 0,25 s hinter der Pole und 1:20.905 auf Soft. Auf Hard aber 3 bis 4 s pro Runde zu langsam.",
+    "rv": "Verliert in Runde 1 drei Plätze durch eigenen Fehler und ist danach nie mehr im Kampf.",
+    "kon": "Große Schwankungen zwischen Hard und Soft und ein Mittelteil ohne Bezug zum Feld.",
+    "sau": "Abflug in Runde 1, sechs Einträge im Ereignis-Reiter und 9 s Strafen für abgekürzte Kurven."
+   },
+   "pos": [
+    "Starkes Quali: P4 mit 1:17.798, nur 0,249 s hinter der Pole.",
+    "Mit 1:20.905 auf Soft die fünftschnellste Rennrunde.",
+    "Gibt nach dem Verbindungsabbruch nicht auf, kommt zurück und fährt das Rennen zu Ende.",
+    "Für den Verbindungsabbruch gibt es keinen Abzug beim Tempo."
+   ],
+   "neg": [
+    "Runde 1: Abflug in Kurve 6 ins Gras mit leichtem Schaden. Mehlone, Italian Gamer und DON-FUCHSER88 gehen vorbei, von P4 auf P7.",
+    "Runde 2 bis 8: Verbindungsabbruch. Erst eine Einladung von Mesota brachte ihn zurück, danach mit großem Rückstand auf P7.",
+    "Runde 9 bis 19 auf Hard: Rundenzeiten von 1:27.4 bis 1:24.2, also 3 bis 4 s langsamer als das Feld.",
+    "Runde 20: Boxenstopp mit Frontflügelwechsel, 8,271 s, laut Spiel langsamer, weil er zu früh in die Box eingebogen ist.",
+    "Runde 25 bis 28: sechs Einträge für abgekürzte Kurven, dafür insgesamt 9 s Zeitstrafen.",
+    "Ins Ziel mit einer Runde Rückstand, 54 s hinter P6 in Runde 28."
+   ],
+   "besser": [
+    "Die erste Runde. Der Abflug in Kurve 6 hat das ganze Rennen bestimmt.",
+    "Streckenlimits: Kurven nicht abkürzen, vor allem nach der ersten Warnung.",
+    "Tempo auf dem harten Reifen.",
+    "Die Boxeneinfahrt, um nicht zu früh einzubiegen."
+   ],
+   "analyse": [
+    {"t": "Qualifying", "x": "Drei Versuche, Bestzeit 1:17.798 und damit P4, nur 0,249 s hinter der Pole und knapp hinter Italian Gamer (+0,227). Das zeigt, dass das Tempo grundsätzlich da ist."},
+    {"t": "Start und Runde 1", "x": "In Kurve 6 kommt Crashturtle2000 links ins Gras und beschädigt das Auto leicht. Mehlone und Italian Gamer ziehen vorbei, kurz danach in Kurve 3 auch DON-FUCHSER88. Nach einer Runde liegt er auf P7, drei Plätze schlechter als gestartet. Das war ein eigener Fehler."},
+    {"t": "Rennverlauf und Pace", "x": "In Runde 2 bricht die Verbindung ab. Nachdem Mesota ihm während des Rennens eine Einladung schickt, ist er ab Runde 8 wieder dabei, auf P7 mit Hard-Reifen. Der Abstand nach vorne wächst von 6,2 s (Runde 8) auf 40 s (Runde 20) und 54 s (Runde 28). Auf Hard fährt er 1:27.4, 1:25.0, 1:24.9, 1:24.3 und 1:24.2, viel langsamer als das Feld. Auf Soft gelingt dann eine 1:20.905."},
+    {"t": "Strategie und Boxenstopps", "x": "Ein Stopp in Runde 20 von Hard auf Soft mit neuem Frontflügel, 8,271 s Standzeit. Das Spiel meldet, der Stopp war langsamer als geplant, weil er zu früh in die Box eingebogen ist."},
+    {"t": "Zweikämpfe", "x": "Nur in Runde 1, und dort verliert er nach seinem Fehler drei Plätze ohne Kontakt. Danach fährt er allein am Ende des Feldes."},
+    {"t": "Fehler und Strafen", "x": "Abflug in Runde 1. Im Ereignis-Reiter: Runde 25 Warnung, Runde 26 Warnung, Runde 27 zweimal 3 s Strafe, Runde 28 Warnung und 3 s für mehrere Warnungen, alles für abgekürzte Kurven. Insgesamt 9 s Zeitstrafen. Kurz vor der letzten Strafe ist er am Ausgang von Kurve 1/2 weit über die Kerbs gefahren."},
+    {"t": "Fazit", "x": "Das Quali zeigt Potenzial für die Top 4, das Rennen war aber eine Kette aus Fehlern und Pech. Mit einer sauberen ersten Runde und ohne Track-Limit-Probleme kann Crashturtle2000 deutlich weiter vorne landen. Den Verbindungsabbruch zählt die Wertung nicht als Fahrfehler."}
+   ]
+  }
+ ]
+}
