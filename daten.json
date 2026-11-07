@@ -212,24 +212,7 @@
      "time": "",
      "weather": "",
      "laps": "",
-     "results": [
-      {
-       "d": "mesota",
-       "t": "mer",
-       "a": true,
-       "p": 1
-      },
-      {
-       "d": "white",
-       "t": "mer",
-       "a": true,
-       "p": 3
-      }
-     ],
-     "pole": "white",
-     "fl": "white",
-     "dotd": "white",
-     "ot": "tore"
+     "results": []
     },
     {
      "id": "r02",
