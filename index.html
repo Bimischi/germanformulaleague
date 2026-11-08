@@ -16,9 +16,7 @@
 <link rel="canonical" href="https://germanformulaleague.com/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsOrganization","name":"German Formula League","alternateName":"GFL","sport":"Sim Racing","url":"https://germanformulaleague.com/","logo":"https://germanformulaleague.com/logo.png","sameAs":["https://discord.gg/K2BtH2Ebwy","https://www.youtube.com/@mesota07"]}</script>
 <link rel="preload" href="logo.png" as="image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link id="gfl-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap">
+<link id="gfl-fonts" rel="stylesheet" href="fonts/fonts.css">
 <style id="gfl-style">
 /* Layout: Timing-Tower. Dunkles Kopfband mit schrägen Reitern (Neigung wie im GFL-Logo), Filterleisten, breite Ergebnis-Matrix mit festen Fahrerspalten */
 :root{
@@ -333,6 +331,12 @@ button.rli{cursor:pointer}button.rli:hover{border-color:var(--muted)}
 .steps a{color:var(--gold)}
 .who{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:14px;color:var(--muted)}
 .foot a{color:var(--muted)}
+.legal{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 20px 18px;max-width:820px;line-height:1.6}
+.legal h3{font-family:var(--f-display);text-transform:uppercase;letter-spacing:.08em;font-size:15px;margin:18px 0 4px}
+.legal p{margin:0 0 6px;color:#CDD1D8;overflow-wrap:anywhere}
+.legal a{color:var(--fg)}
+.legal-foot{margin-top:18px!important;font-size:13px;color:var(--muted)!important}
+.missing{color:#FFB27A;font-style:italic;font-weight:500}
 </style>
 </head>
 <body>
@@ -929,6 +933,44 @@ function rateRaceDetail(s,r,f){
   return h+'<div>'+back+'</div></section>';
 }
 
+/* ---------- Impressum und Datenschutz ---------- */
+var IMP_FIELDS=[['name','Vor- und Nachname','Max Mustermann'],['strasse','Straße und Hausnummer','Musterstraße 1'],['ort','PLZ und Ort','12345 Musterstadt'],['email','E-Mail','kontakt@beispiel.de'],['telefon','Telefon (oder zweiter Kontaktweg)','+49 …'],['verantwortlich','Verantwortlich nach § 18 MStV (leer = gleiche Person)','']];
+function imp(){return (draft&&draft.impressum)||{};}
+function impV(k){var v=imp()[k];return v?esc(v):'<span class="missing">wird ergänzt</span>';}
+function impAddr(){return impV('name')+'<br>'+impV('strasse')+'<br>'+impV('ort');}
+function legalWrap(title,body){return '<div class="sec-head"><div><h2>'+title+'</h2></div></div><article class="legal">'+body+'</article>';}
+function viewImpressum(){
+  var i=imp(),b='';
+  b+='<h3>Angaben gemäß § 5 DDG</h3><p>'+impAddr()+'</p>';
+  b+='<h3>Kontakt</h3><p>E-Mail: '+(i.email?'<a href="mailto:'+esc(i.email)+'">'+esc(i.email)+'</a>':impV('email'))+'<br>Telefon: '+impV('telefon')+'</p>';
+  b+='<h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3><p>'+(i.verantwortlich?esc(i.verantwortlich):impV('name'))+'<br>'+impV('strasse')+'<br>'+impV('ort')+'</p>';
+  b+='<h3>Über diese Seite</h3><p>Die German Formula League (GFL) ist eine private, nicht kommerzielle Sim-Racing-Liga. Diese Seite zeigt Ergebnisse, Tabellen und Fahrerbewertungen der Liga. Es gibt keine Verbindung zur Formel 1, zur FIA, zu Electronic Arts oder Codemasters. Genannte Marken, Team- und Streckennamen gehören ihren jeweiligen Inhabern.</p>';
+  b+='<h3>Haftung für Inhalte</h3><p>Die Inhalte wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität können wir jedoch keine Gewähr übernehmen. Fahrerbewertungen sind Einschätzungen der Liga-Leitung auf Grundlage der Rennvideos.</p>';
+  b+='<h3>Haftung für Links</h3><p>Diese Seite enthält Links zu externen Seiten wie Discord, YouTube oder Twitch. Auf deren Inhalte haben wir keinen Einfluss, verantwortlich ist der jeweilige Anbieter. Werden uns Rechtsverstöße bekannt, entfernen wir den Link umgehend.</p>';
+  b+='<p class="legal-foot"><a href="#datenschutz">Zur Datenschutzerklärung</a></p>';
+  return legalWrap('Impressum',b);
+}
+function viewDatenschutz(){
+  var i=imp(),b='';
+  b+='<p>Diese Erklärung beschreibt, welche personenbezogenen Daten beim Besuch dieser Seite verarbeitet werden. Wir verwenden keine Cookies, keine Analyse- oder Tracking-Werkzeuge und keine Werbung.</p>';
+  b+='<h3>1. Verantwortlicher</h3><p>'+impAddr()+'<br>E-Mail: '+(i.email?'<a href="mailto:'+esc(i.email)+'">'+esc(i.email)+'</a>':impV('email'))+'</p>';
+  b+='<h3>2. Hosting über GitHub Pages</h3><p>Diese Seite wird bei GitHub Pages gehostet, einem Dienst der GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf verarbeitet GitHub technisch notwendige Daten, insbesondere Ihre IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite sowie Browser- und Geräteangaben (Server-Logfiles). Das dient der Auslieferung und Sicherheit der Seite. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist ein sicherer und zuverlässiger Betrieb. Dabei kann es zu einer Übermittlung in die USA kommen. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert (Art. 45 DSGVO). Weitere Informationen: <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.</p>';
+  b+='<h3>3. Domain</h3><p>Die Domain germanformulaleague.com ist bei der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur registriert. IONOS leitet die Domain per DNS an GitHub Pages weiter und betreibt dafür keinen eigenen Webserver.</p>';
+  b+='<h3>4. Schriftarten</h3><p>Die verwendeten Schriften (Barlow und Saira Condensed) liegen direkt auf dieser Seite. Beim Laden wird keine Verbindung zu Google oder anderen Schriftanbietern aufgebaut.</p>';
+  b+='<h3>5. Lokaler Speicher im Browser</h3><p>Für normale Besucher speichert die Seite nichts. Nur wenn sich die Liga-Leitung im Bereich „Verwaltung“ anmeldet, werden der GitHub-Zugangsschlüssel und ein ungespeicherter Entwurf im lokalen Speicher des eigenen Browsers abgelegt. Das ist für die Anmeldung technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Beim Speichern werden die Daten an die Programmierschnittstelle von GitHub (api.github.com) übertragen. Mit „Abmelden“ wird der Schlüssel gelöscht.</p>';
+  b+='<h3>6. Fahrernamen, Ergebnisse und Bewertungen</h3><p>Die Seite zeigt die Spielernamen der Ligamitglieder, ihre Ergebnisse, Rundenzeiten und Fahrerbewertungen. Das ist für den Ligabetrieb und die Darstellung der Wertung erforderlich. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist die Organisation und Darstellung der Liga. Ligamitglieder können der Veröffentlichung jederzeit widersprechen und die Änderung oder Löschung ihrer Daten verlangen.</p>';
+  b+='<h3>7. Externe Links</h3><p>Links zu Discord, YouTube, Twitch und anderen Diensten sind einfache Verweise. Erst wenn Sie einen solchen Link anklicken, werden Daten an den jeweiligen Anbieter übertragen. Dann gilt dessen Datenschutzerklärung.</p>';
+  b+='<h3>8. Ihre Rechte</h3><p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen die Verarbeitung (Art. 21). Wenden Sie sich dazu an die oben genannte Kontaktadresse. Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Behörde Ihres Bundeslandes.</p>';
+  b+='<p class="legal-foot">Stand: November 2026 · <a href="#impressum">Zum Impressum</a></p>';
+  return legalWrap('Datenschutzerklärung',b);
+}
+function impAdminPanel(){
+  var i=imp(),miss=['name','strasse','ort','email'].filter(function(k){return !i[k];}).length;
+  return '<section class="panel"><h3>Impressum</h3><p>Diese Angaben erscheinen öffentlich im Impressum und in der Datenschutzerklärung. Nötig sind Name, eine zustellbare Anschrift (kein Postfach), E-Mail und ein zweiter Kontaktweg.'+(miss?' <strong class="missing">Es fehlen noch '+miss+' Pflichtangaben.</strong>':'')+'</p><div class="fgrid">'+
+    IMP_FIELDS.map(function(x){return '<label class="f">'+x[1]+'<input type="text" id="imp-'+x[0]+'" data-f="imp-'+x[0]+'" value="'+esc(i[x[0]]||'')+'"'+(x[2]?' placeholder="'+esc(x[2])+'"':'')+'></label>';}).join('')+
+    '</div><div class="acts"><a class="btn small" href="#impressum">Impressum ansehen</a><a class="btn small" href="#datenschutz">Datenschutz ansehen</a></div></section>';
+}
+
 /* ---------- Verwaltung ---------- */
 function opts(list,cur){return list.map(function(o){return '<option value="'+esc(o[0])+'"'+(String(o[0])===String(cur==null?'':cur)?' selected':'')+'>'+esc(o[1])+'</option>';}).join('');}
 function askBtn(key,label){
@@ -998,6 +1040,7 @@ function viewAdmin(){
   h+='<div class="acts"><button class="btn small" data-act="addRace">+ Rennen</button></div></section>';
   var r=null;s.races.forEach(function(x){if(x.id===ui.admRace)r=x;});
   if(r) h+=raceEditor(s,r);
+  h+=impAdminPanel();
   // Sicherung
   h+='<section class="panel"><h3>Sicherung</h3><p>Lade die Daten als JSON, um sie zu kopieren oder zu sichern. Eingefügtes JSON ersetzt den ganzen Entwurf.</p>'+
     '<textarea id="json-io" aria-label="Daten als JSON" spellcheck="false">'+esc(ui.json)+'</textarea>'+
@@ -1104,6 +1147,7 @@ function setRes(s,r,d,patch){
   if(!x.p&&!x.s) r.results=r.results.filter(function(e){return e!==x;});
 }
 function applyField(f,el){
+  if(f.indexOf('imp-')===0){draft.impressum=draft.impressum||{};var ik=f.slice(4),iv=el.value.trim();if(iv)draft.impressum[ik]=iv;else delete draft.impressum[ik];if(!Object.keys(draft.impressum).length)delete draft.impressum;changed();return;}
   var s=S(ui.admSeason);if(!s)return;
   var v=el.type==='checkbox'?el.checked:el.value,id=el.dataset.id,r=null;
   s.races.forEach(function(x){if(x.id===ui.admRace)r=x;});
@@ -1346,13 +1390,13 @@ function updateSavebar(){
 /* ---------- Rendern ---------- */
 function footer(){
   var s=S(ui.season);
-  return '<footer class="foot"><div class="foot-in"><span>German Formula League · <a href="#verwaltung">'+(auth.token?'Verwaltung'+(auth.user?' ('+esc(auth.user)+')':''):'Login Liga-Leitung')+'</a>'+footSocials()+'</span>'+(s?'<span>Punkte '+esc(s.name)+': '+esc(pointsText(s))+'</span>':'')+'</div></footer>';
+  return '<footer class="foot"><div class="foot-in"><span>German Formula League · <a href="#verwaltung">'+(auth.token?'Verwaltung'+(auth.user?' ('+esc(auth.user)+')':''):'Login Liga-Leitung')+'</a> · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a>'+footSocials()+'</span>'+(s?'<span>Punkte '+esc(s.name)+': '+esc(pointsText(s))+'</span>':'')+'</div></footer>';
 }
 function render(anim){
   var a=document.activeElement,fid=a&&a.id;
   if(!S(ui.season))ui.season=defaultSeason();
   var v=ui.view;
-  var body=v==='kalender'?viewKalender():v==='bewertung'?viewBewertung():v==='rekorde'?viewRekorde():v==='socials'?viewSocials():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():viewTabelle();
+  var body=v==='kalender'?viewKalender():v==='bewertung'?viewBewertung():v==='rekorde'?viewRekorde():v==='socials'?viewSocials():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():v==='impressum'?viewImpressum():v==='datenschutz'?viewDatenschutz():viewTabelle();
   document.getElementById('app').innerHTML=header()+'<main class="wrap'+(anim?' enter':'')+'">'+body+'</main>'+footer()+'<div id="savebar-slot"></div>';
   updateSavebar();
   if(ui.rateScroll&&v==="bewertung"){ui.rateScroll=false;setTimeout(function(){var rd=document.getElementById("rate-detail");if(rd)rd.scrollIntoView({behavior:"smooth",block:"start"});},40);}
@@ -1362,7 +1406,7 @@ function render(anim){
 function navRender(){
   render(true);
 }
-var VIEWS=['tabelle','kalender','fahrer','bewertung','rekorde','socials','verwaltung'];
+var VIEWS=['tabelle','kalender','fahrer','bewertung','rekorde','socials','verwaltung','impressum','datenschutz'];
 function readHash(){var h=location.hash.replace('#','');ui.view=VIEWS.indexOf(h)>=0?h:'tabelle';}
 window.addEventListener('hashchange',function(){var before=ui.view;readHash();if(before!==ui.view){navRender();window.scrollTo(0,0);}});
 function go(view){
