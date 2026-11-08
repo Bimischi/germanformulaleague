@@ -41,7 +41,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Kopfband */
 .top{background:#0A0B0D;position:relative}
-.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--red) 0 78%,var(--bg) 78% 79%,var(--gold) 79% 86%,var(--bg) 86%)}
+.top::after{content:none}
 .top-in{max-width:1280px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:16px 19px;display:flex;align-items:center;justify-content:space-between;gap:16px 28px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:14px;text-decoration:none}
 .logo{height:30px;width:auto;display:block}
@@ -264,23 +264,23 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .ch-tab b{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:19px;line-height:1.1}
 .ch-tab small{font-size:12.5px}
 .ch-tab:hover{border-color:var(--muted)}
-.ch-tab[aria-selected="true"]{color:var(--fg);background:var(--panel-2);border-color:var(--red)}
-.ch-tab[aria-selected="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--red)}
+.ch-tab[aria-selected="true"]{color:var(--fg);background:var(--panel-2);border-color:#4A505C}
+.ch-tab[aria-selected="true"]::after{content:none}
 .ch-left{margin:0;color:var(--muted);font-size:14px}.ch-left b{color:var(--fg);font-family:var(--f-display);font-size:20px;margin-right:4px}
 .podium{display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:10px;align-items:end}
 .pod{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-top:4px solid var(--tc);border-radius:8px;padding:14px 14px 16px;min-width:0;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:2px}
 .pod.empty{visibility:hidden}
-.pod.p1{padding-top:22px;padding-bottom:22px;box-shadow:0 0 0 1px rgba(243,199,68,.25),0 12px 32px rgba(0,0,0,.35)}
+.pod.p1{padding-top:22px;padding-bottom:22px;box-shadow:0 12px 32px rgba(0,0,0,.35)}
 .pod-pos{position:absolute;right:10px;top:2px;font-family:var(--f-display);font-weight:800;font-size:64px;line-height:1;color:rgba(255,255,255,.07)}
-.pod.p1 .pod-pos{color:rgba(243,199,68,.22);font-size:80px}
+.pod.p1 .pod-pos{color:rgba(255,255,255,.1);font-size:80px}
 .pod-name{font-weight:700;font-size:17px;overflow-wrap:anywhere;position:relative}
 .pod.p1 .pod-name{font-size:20px}
 .pod-pts{display:flex;align-items:baseline;gap:6px;margin-top:8px}
 .pod-pts b{font-family:var(--f-display);font-weight:800;font-size:34px;line-height:1}
-.pod.p1 .pod-pts b{font-size:44px;color:var(--p1)}
+.pod.p1 .pod-pts b{font-size:44px}
 .pod-pts span{color:var(--muted);font-size:13px}
 .pod-gap{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.pod.p1 .pod-gap{color:var(--p1);font-weight:600}
+.pod.p1 .pod-gap{color:var(--fg);font-weight:600}
 .ch-list{display:grid;gap:6px}
 .ch-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto 84px;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--tc);border-radius:6px;padding:10px 14px 10px 8px;position:relative}
 .ch-pos{font-family:var(--f-display);font-weight:800;font-size:24px;text-align:center;color:var(--muted)}
@@ -357,8 +357,8 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .rd-an h5{margin:0 0 3px;font-size:15px}
 .rd-an p{margin:0;line-height:1.55;color:#CDD1D8}
 .rd-src{margin:0;font-size:12.5px;color:var(--muted)}
-.dlink{background:none;border:0;padding:0;font:inherit;font-weight:inherit;color:inherit;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:rgba(142,149,162,.45);text-underline-offset:3px}
-.dlink:hover{text-decoration-color:currentColor}
+.dlink{background:none;border:0;padding:0;font:inherit;font-weight:inherit;color:inherit;cursor:pointer;text-align:left;text-decoration:none;text-underline-offset:3px}
+.dlink:hover{text-decoration:underline;text-underline-offset:3px}
 .rlist{display:grid;gap:6px}
 .rli{display:flex;align-items:center;gap:10px;width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:9px 12px;color:var(--fg);font:inherit;text-align:left;min-width:0}
 button.rli{cursor:pointer}button.rli:hover{border-color:var(--muted)}
