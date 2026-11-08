@@ -32,6 +32,7 @@
    "cleanPoint": 1,
    "otPoint": 1,
    "attendPoint": 1,
+   "dotdPoint": 1,
    "teams": [
     {
      "id": "rbr",

@@ -245,6 +245,17 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr));gap:16px}
 .tblock{display:flex;flex-direction:column;gap:8px;min-width:0}
 .tblock .tname{margin:0;font-weight:700;font-size:15px}
+.recgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.reccard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px;min-width:0}
+.reccard h4{margin:0 0 8px;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.reccard ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.reccard li{display:flex;justify-content:space-between;align-items:center;gap:10px;min-width:0}
+.reccard li .rn{display:flex;align-items:center;gap:8px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.reccard li .rn i{width:4px;height:16px;border-radius:2px;flex:none}
+.reccard li b{white-space:nowrap}
+.reccard li b small{color:var(--muted);font-weight:500}
+.reccard li.lead .rn{font-weight:700}
+.reccard li.lead b{color:var(--gold)}
 .dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,215px),1fr));gap:10px}
 .dcard{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--tc);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .dc-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
@@ -505,6 +516,7 @@ function pts(s,r,d){
   if(r.pole===d&&+s.polePoint&&x.s!=='DNS') p+=+s.polePoint;
   if(r.clean===d&&+s.cleanPoint&&x.s!=='DNS') p+=+s.cleanPoint;
   if(r.ot===d&&+s.otPoint&&x.s!=='DNS') p+=+s.otPoint;
+  if(r.dotd===d&&+s.dotdPoint&&x.s!=='DNS') p+=+s.dotdPoint;
   if(x.a&&+s.attendPoint&&x.s!=='DNS') p+=+s.attendPoint;
   return p;
 }
@@ -565,12 +577,13 @@ function pointsText(s){
   if(+s.polePoint) t+=' · +'+s.polePoint+' für die Pole';
   if(+s.cleanPoint) t+=' · +'+s.cleanPoint+' für den saubersten Fahrer';
   if(+s.otPoint) t+=' · +'+s.otPoint+' für die meisten Überholungen';
+  if(+s.dotdPoint) t+=' · +'+s.dotdPoint+' für Driver of the Day';
   if(+s.attendPoint) t+=' · +'+s.attendPoint+' fürs Dabeibleiben bis Rennende';
   return t;
 }
 
 /* ---------- Championship ---------- */
-function maxPerRace(s){return (+s.points[0]||0)+(+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.attendPoint||0);}
+function maxPerRace(s){return (+s.points[0]||0)+(+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.dotdPoint||0)+(+s.attendPoint||0);}
 function viewChampionship(){
   var s=S(ui.season);
   if(!s) return emptyBox('Noch keine Saison','Lege in der Verwaltung die erste Saison an.');
@@ -900,10 +913,61 @@ function viewFahrer(){
   h+='</section><section class="dsec"><h3>Ersatzfahrer</h3>'+(ersatz.length?cards(ersatz):emptyBox('Noch keine Ersatzfahrer','Sobald Ersatzfahrer feststehen, erscheinen sie hier.'))+'</section>';
   return h;
 }
+/* Fahrer-Rekorde: Zähler je Fahrer über die gewählten Saisons */
+var REC_CATS=[
+  {k:'wins',t:'Meiste Siege',u:['Sieg','Siege']},
+  {k:'poles',t:'Meiste Pole-Positions',u:['Pole','Poles']},
+  {k:'pods',t:'Meiste Podien',u:['Podium','Podien']},
+  {k:'fls',t:'Meiste schnellste Runden',u:['schnellste Runde','schnellste Runden']},
+  {k:'dotd',t:'Meiste Driver of the Day',u:['Mal','Mal']},
+  {k:'clean',t:'Meiste Auszeichnungen sauberster Fahrer',u:['Mal','Mal']},
+  {k:'ot',t:'Meiste Auszeichnungen meiste Überholungen',u:['Mal','Mal']},
+  {k:'pts',t:'Meiste Punkte',u:['Punkt','Punkte']},
+  {k:'best',t:'Meiste Punkte in einem Rennen',u:['Punkt','Punkte'],max:true},
+  {k:'starts',t:'Meiste Rennen',u:['Rennen','Rennen']},
+  {k:'fin',t:'Meiste Zielankünfte',u:['Zielankunft','Zielankünfte']},
+  {k:'dnf',t:'Meiste Ausfälle',u:['Ausfall','Ausfälle']}];
+function driverRecords(seasons){
+  var map={};
+  seasons.forEach(function(s){sortedRaces(s).filter(done).forEach(function(r){
+    function get(id){var d=drv(s,id);if(!map[id])map[id]={id:id,name:d?d.name:'Unbekannt',t:null,wins:0,poles:0,pods:0,fls:0,dotd:0,clean:0,ot:0,pts:0,best:0,starts:0,fin:0,dnf:0};var m=map[id];if(d)m.name=d.name;var td=d&&team(s,d.team);if(td)m.t=td;return m;}
+    r.results.forEach(function(x){
+      if(x.s==='DNS')return;var m=get(x.d),p=pts(s,r,x.d);
+      m.starts++;m.pts+=p;if(p>m.best)m.best=p;
+      if(!x.s&&x.p){m.fin++;if(x.p===1)m.wins++;if(x.p<=3)m.pods++;}
+      if(x.s==='DNF'||x.s==='DSQ')m.dnf++;
+    });
+    [['pole','poles'],['fl','fls'],['dotd','dotd'],['clean','clean'],['ot','ot']].forEach(function(a){if(r[a[0]])get(r[a[0]])[a[1]]++;});
+  });});
+  return Object.keys(map).map(function(k){return map[k];});
+}
+function recCards(rows){
+  return '<div class="recgrid">'+REC_CATS.map(function(c){
+    var l=rows.filter(function(m){return m[c.k]>0;}).sort(function(a,b){return b[c.k]-a[c.k]||a.name.localeCompare(b.name,'de');});
+    var top=l.length?l[0][c.k]:0,list=l.slice(0,3);
+    return '<article class="reccard"><h4>'+esc(c.t)+'</h4>'+(list.length?'<ol>'+list.map(function(m){
+      return '<li class="'+(m[c.k]===top?'lead':'')+'"><span class="rn">'+(m.t?'<i style="background:'+esc(m.t.color)+'"></i>':'')+esc(m.name)+'</span><b>'+m[c.k]+' <small>'+esc(c.u[m[c.k]===1?0:1])+'</small></b></li>';}).join('')+'</ol>':'<p class="muted">Noch kein Eintrag</p>')+'</article>';
+  }).join('')+'</div>';
+}
 function viewRekorde(){
-  var list=collectRecords(draft.seasons.filter(function(s){return !s.demo;})),demo=false;
+  var real=draft.seasons.filter(function(s){return !s.demo;});
+  var top=['strecke','saison','allzeit'].indexOf(ui.recTop)>=0?ui.recTop:'strecke';ui.recTop=top;
+  var h='<section class="filters"><div class="frow"><span class="flab">Kategorie</span><div class="chips">'+
+    [['strecke','Streckenrekorde'],['saison','Saisonrekorde'],['allzeit','Allzeitrekorde']].map(function(f){return '<button class="chip" data-act="recTop" data-id="'+f[0]+'" aria-pressed="'+(top===f[0])+'">'+f[1]+'</button>';}).join('')+'</div></div>';
+  if(top!=='strecke'){
+    var ss=top==='saison'?(real.filter(function(x){return x.id===ui.recSeason;})[0]||real[0]):null;
+    if(ss)ui.recSeason=ss.id;
+    if(top==='saison'&&real.length>1) h+='<div class="frow"><span class="flab">Saison</span><div class="chips">'+real.map(function(x){return '<button class="chip" data-act="recSeason" data-id="'+esc(x.id)+'" aria-pressed="'+(ss&&ss.id===x.id)+'">'+esc(x.name)+'</button>';}).join('')+'</div></div>';
+    h+='</section>';
+    var seasons=top==='saison'?(ss?[ss]:[]):real,rows=driverRecords(seasons);
+    var nR=0;seasons.forEach(function(x){nR+=sortedRaces(x).filter(done).length;});
+    h+='<div class="sec-head"><div><h2>'+(top==='saison'?(ss?esc(ss.name):'Saisonrekorde'):'Allzeitrekorde')+'</h2><p class="meta">'+(top==='saison'?'Bestwerte dieser Saison':'Bestwerte über alle Saisons')+' · '+nR+' gefahrene'+(nR===1?'s Rennen':' Rennen')+' · die Top 3 je Kategorie, Gleichstand nach Name</p></div></div>';
+    if(!rows.length) return h+emptyBox('Noch keine Rekorde','Sobald Rennergebnisse eingetragen sind, erscheinen hier die Bestwerte der Fahrer.');
+    return h+recCards(rows);
+  }
+  var list=collectRecords(real),demo=false;
   if(!list.length){list=collectRecords(draft.seasons.filter(function(s){return s.demo;}));demo=list.length>0;}
-  var h='<section class="filters"><div class="frow"><span class="flab">Rekorde</span><div class="chips">'+
+  h+='<div class="frow"><span class="flab">Rekorde</span><div class="chips">'+
     [['alle','Alle'],['quali','Qualirekorde'],['rennen','Rennrekorde']].map(function(f){return '<button class="chip" data-act="rec" data-id="'+f[0]+'" aria-pressed="'+(ui.rec===f[0])+'">'+f[1]+'</button>';}).join('')+'</div></div></section>';
   if(demo) h+='<p class="banner"><strong>Beispieldaten:</strong> Es gibt noch keine echten Zeiten, deshalb stammen diese Rekorde aus der Demo-Saison.</p>';
   h+='<div class="sec-head"><div><h2>Streckenrekorde</h2><p class="meta">Qualirekord ist die schnellste Pole-Zeit, Rennrekord die schnellste Rennrunde. Beides entsteht automatisch aus den eingetragenen Zeiten aller Saisons.</p></div></div>';
@@ -1123,6 +1187,7 @@ function viewAdmin(){
     '<label class="f">Punkte für Pole<input type="number" min="0" step="1" id="s-pole" data-f="s-pole" value="'+esc(s.polePoint||0)+'"></label>'+
     '<label class="f">Punkte für saubersten Fahrer<input type="number" min="0" step="1" id="s-clean" data-f="s-clean" value="'+esc(s.cleanPoint||0)+'"></label>'+
     '<label class="f">Punkte für meiste Überholungen<input type="number" min="0" step="1" id="s-ot" data-f="s-ot" value="'+esc(s.otPoint||0)+'"></label>'+
+    '<label class="f">Punkte für Driver of the Day<input type="number" min="0" step="1" id="s-dotd" data-f="s-dotd" value="'+esc(s.dotdPoint||0)+'"></label>'+
     '<label class="f">Punkte für Anwesenheit bis Rennende<input type="number" min="0" step="1" id="s-attend" data-f="s-attend" value="'+esc(s.attendPoint||0)+'"></label>'+
     '</div><div class="acts"><label class="chk"><input type="checkbox" id="s-fltop" data-f="s-fltop"'+(s.flTop10?' checked':'')+'> Punkt für schnellste Runde nur bei Platz 1–10</label>'+
     '<label class="chk"><input type="checkbox" id="s-demo" data-f="s-demo"'+(s.demo?' checked':'')+'> Als Demo mit Beispieldaten kennzeichnen</label></div>'+
@@ -1276,6 +1341,7 @@ function applyField(f,el){
     case 's-clean':s.cleanPoint=Math.max(0,+v||0);break;
     case 's-ot':s.otPoint=Math.max(0,+v||0);break;
     case 's-attend':s.attendPoint=Math.max(0,+v||0);break;
+    case 's-dotd':s.dotdPoint=Math.max(0,+v||0);break;
     case 's-fltop':s.flTop10=v;break;
     case 's-demo':s.demo=v;break;
     case 't-name':if(t&&v.trim())t.name=v.trim();break;
@@ -1329,6 +1395,8 @@ function doAction(act,el){
     case 'sess':ui.sess=id;break;
     case 'admSess':ui.admSess=id;break;
     case 'rec':ui.rec=id;break;
+    case 'recTop':ui.recTop=id;break;
+    case 'recSeason':ui.recSeason=id;break;
     case 'champ':ui.champ=id;break;
     case 'rate':ui.rate=ui.rate===id?null:id;ui.rateScroll=!!ui.rate;break;
     case 'rSeason':ui.rSeason=id;ui.rRace='all';break;
@@ -1340,7 +1408,7 @@ function doAction(act,el){
     case 'newSeason':{
       var base=S(ui.admSeason)||draft.seasons[0];
       var ns={id:uid(),name:'Saison '+(draft.seasons.filter(function(x){return !x.demo;}).length+1),game:base?base.game:'F1 26',demo:false,
-        points:base?base.points.slice():[25,18,15,12,10,8,6,4,2,1],flPoint:base?base.flPoint:1,flTop10:base?!!base.flTop10:true,polePoint:base?base.polePoint:0,
+        points:base?base.points.slice():[25,18,15,12,10,8,6,4,2,1],flPoint:base?base.flPoint:1,flTop10:base?!!base.flTop10:true,polePoint:base?base.polePoint:0,cleanPoint:base?base.cleanPoint:0,otPoint:base?base.otPoint:0,dotdPoint:base?base.dotdPoint:0,attendPoint:base?base.attendPoint:0,
         teams:base?clone(base.teams):[],drivers:base?clone(base.drivers.filter(function(d){return d.active!==false;})):[],races:[]};
       draft.seasons.unshift(ns);ui.admSeason=ns.id;ui.admRace=null;changed();break;}
     case 'addTeam':s=S(ui.admSeason);if(s){var nt={id:uid(),name:'Neues Team',color:'#8E95A2'};s.teams.push(nt);changed();render();var el1=document.getElementById('tn-'+nt.id);if(el1){el1.focus();el1.select();}return;}break;
