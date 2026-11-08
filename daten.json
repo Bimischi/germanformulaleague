@@ -381,7 +381,42 @@
      "time": "14:45",
      "weather": "",
      "laps": "",
-     "results": []
+     "results": [],
+     "quali": [
+      {
+       "d": "white",
+       "p": 1
+      },
+      {
+       "d": "joker",
+       "p": 2
+      },
+      {
+       "d": "mesota",
+       "p": 3
+      },
+      {
+       "d": "luis",
+       "p": 4
+      },
+      {
+       "d": "ds4",
+       "p": 5
+      },
+      {
+       "d": "tore",
+       "p": 6
+      },
+      {
+       "d": "fuchs",
+       "p": 7
+      },
+      {
+       "d": "x886tela",
+       "p": 8
+      }
+     ],
+     "pole": "white"
     },
     {
      "id": "r03",
