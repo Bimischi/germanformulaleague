@@ -1,5 +1,11 @@
 {
  "version": 1,
+ "impressum": {
+  "name": "Dustin Lucas",
+  "strasse": "Hopfenmarkt 3",
+  "ort": "06449 Aschersleben",
+  "email": "gfl.ligaleitung@gmail.com"
+ },
  "seasons": [
   {
    "id": "s1",
