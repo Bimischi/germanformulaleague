@@ -31,22 +31,22 @@
                     {
                         "t":  "S",
                         "name":  "Elite",
-                        "ab":  55
+                        "ab":  88
                     },
                     {
                         "t":  "A",
                         "name":  "Spitze",
-                        "ab":  45
+                        "ab":  78
                     },
                     {
                         "t":  "B",
                         "name":  "Mittelfeld",
-                        "ab":  35
+                        "ab":  65
                     },
                     {
                         "t":  "C",
                         "name":  "Ausbaufähig",
-                        "ab":  24
+                        "ab":  50
                     },
                     {
                         "t":  "D",
@@ -54,7 +54,7 @@
                         "ab":  0
                     }
                 ],
-    "niveauInfo":  "Das Niveau richtet sich nur nach Tempo plus Rennvermögen (höchstens 65 Punkte). Die Gesamtpunkte (höchstens 100) enthalten zusätzlich Konstanz und Sauberkeit. Sortiert wird erst nach Niveau, dann nach Gesamtpunkten.",
+    "niveauInfo":  "Das Niveau richtet sich nach den Gesamtpunkten (höchstens 100) aus Tempo, Rennvermögen, Konstanz und Sauberkeit. Dabei zählt immer auch, warum ein Ergebnis zustande kam, zum Beispiel Fehler anderer Fahrer oder ausgenutzte Spielfehler. Sortiert wird nach Gesamtpunkten.",
     "fahrer":  [
                    {
                        "id":  "joker",
@@ -219,21 +219,21 @@
                    {
                        "id":  "mesota",
                        "gesamt":  {
-                                      "kritik":  "Mesota ist nach zwei Rennen der konstanteste Podiumsfahrer: zweimal auf dem Podium, kein einziger Eintrag im Ereignis-Reiter und starke Starts. Zur Spitze fehlt vor allem Tempo auf Soft und Hard, im Quali liegen bis zu vier Zehntel. Im Schlussstint auf Medium war er in beiden Rennen stark.",
+                                      "kritik":  "Mesota steht nach zwei Rennen zweimal auf dem Podium, ohne einen einzigen Eintrag im Ereignis-Reiter und mit starken Starts. In Barcelona kosteten ihn aber zwei Ausritte rund 6 s und damit wohl P2. Zur Spitze fehlt außerdem Tempo auf Soft und Hard, im Quali liegen bis zu vier Zehntel. Im Schlussstint auf Medium war er in beiden Rennen stark.",
                                       "staerken":  [
                                                        "Starts und erste Runde",
-                                                       "Sauberkeit: in zwei Rennen keine Warnung",
+                                                       "Keine Warnung, keine Strafe in zwei Rennen",
                                                        "Faire und entschlossene Zweikämpfe",
                                                        "Starke Schlussstints"
                                                    ],
                                       "schwaechen":  [
+                                                         "Ausritte unter Druck (Barcelona Runde 3 und 17)",
                                                          "Quali-Tempo",
-                                                         "Tempo auf Soft und Hard",
-                                                         "Positionen im ersten Stint verloren"
+                                                         "Tempo auf Soft und Hard"
                                                      ],
                                       "fokus":  [
-                                                    "Im Quali zwei bis drei Zehntel finden",
-                                                    "Den ersten Stint auf Soft besser verwalten"
+                                                    "In Zweikämpfen und in der letzten Kurve auf der Strecke bleiben",
+                                                    "Im Quali zwei bis drei Zehntel finden"
                                                 ]
                                   },
                        "rennen":  [
@@ -316,10 +316,10 @@
                                           "s":  "s1",
                                           "r":  "r02",
                                           "tempo":  33,
-                                          "rv":  21,
-                                          "kon":  18,
-                                          "sau":  15,
-                                          "kurz":  "Fehlerfreies Podium mit einem sauberen Überholmanöver in der letzten Runde, für mehr fehlte auf Soft und Hard das Tempo.",
+                                          "rv":  20,
+                                          "kon":  15,
+                                          "sau":  14,
+                                          "kurz":  "Podium mit einem sauberen Überholmanöver in der letzten Runde, aber zwei Ausritte kosteten Platz 3 früh und später den Puffer auf Mehlone.",
                                           "quelle":  "Eigenes Video (Mesota), dazu die Videos von The_White_Epic, Mehlone und DON-FUCHSER88 sowie der Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P3 · 1:13.865 (+0,234)",
@@ -331,26 +331,27 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Quali nur 0,027 s hinter JokerFinn06, viertbeste Rennrunde, auf Soft und Hard aber klar langsamer als The_White_Epic.",
-                                                        "rv":  "Guter Start und ein entschlossenes Manöver gegen DON-FUCHSER88 in der letzten Runde, dafür früh zwei Plätze auf Soft verloren.",
-                                                        "kon":  "Gleichmäßig über alle Stints, besonders stark im Medium-Schlussstint.",
-                                                        "sau":  "32 saubere Runden, kein Eintrag im Ereignis-Reiter."
+                                                        "rv":  "Guter Start und ein entschlossenes Manöver gegen DON-FUCHSER88 in der letzten Runde, dafür nach dem eigenen Ausritt in Runde 3 P3 verloren.",
+                                                        "kon":  "Zwei Ausritte, in Runde 3 (rund 1,5 s) und Runde 17 (rund 4,7 s), sonst gleichmäßig und stark im Medium-Schlussstint.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter und laut Spiel 33 saubere Runden. Ein Punkt Abzug für den eigenen Ausritt in Runde 3."
                                                     },
                                           "pos":  [
                                                       "Quali P3 mit 1:13.865, nur 0,027 s hinter P2.",
                                                       "Starker Start, JokerFinn06 in Kurve 1 außen überholt.",
                                                       "Zwei schnelle Stopps mit 2,233 und 2,249 s.",
+                                                      "Wich in Runde 12 dem Dreher von Italian Gamer direkt vor ihm sauber aus.",
                                                       "Im Medium-Schlussstint schneller als DON-FUCHSER88 und Mehlone, 5,5 s auf DON-FUCHSER88 aufgeholt.",
-                                                      "Sauberes Überholmanöver gegen DON-FUCHSER88 in der letzten Runde (Kurve 7) zum Podium.",
-                                                      "Kein Eintrag im Ereignis-Reiter, 32 saubere Runden."
+                                                      "Sauberes Überholmanöver gegen DON-FUCHSER88 in der letzten Runde (Kurve 10) zum Podium."
                                                   ],
                                           "neg":  [
-                                                      "Auf Soft in Runde 3 und 4 Plätze an JokerFinn06 und Italian Gamer verloren.",
-                                                      "Auf Hard 9 bis 17 s hinter The_White_Epic, Mehlone ging mit DRS vorbei.",
+                                                      "Runde 3: Ausritt in der letzten Kurve durch die Auslaufzone, rund 1,5 s verloren und P3 an Italian Gamer abgegeben.",
+                                                      "Runde 17: Rad an Rad mit DON-FUCHSER88 in Kurve 10 ins Kiesbett, rund 4,7 s verloren. Dadurch kam Mehlone von 6,8 s auf 2,1 s heran und ging in Runde 20 vorbei.",
+                                                      "Auf Hard 9 bis 17 s hinter The_White_Epic.",
                                                       "Der zweite Stopp warf ihn hinter DON-FUCHSER88 zurück."
                                                   ],
                                           "besser":  [
-                                                         "Den Soft-Start besser verwalten, um die frühen Plätze zu halten.",
-                                                         "Prüfen, ob ein früherer zweiter Stopp oder eine Ein-Stopp-Variante mehr gebracht hätte."
+                                                         "In der letzten Kurve und in Kurve 10 unter Druck sicherer bleiben, beide Ausritte kosteten zusammen über 6 s.",
+                                                         "Den Soft-Start besser verwalten, um die frühen Plätze zu halten."
                                                      ],
                                           "analyse":  [
                                                           {
@@ -363,7 +364,7 @@
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Auf Soft fiel er bis Runde 4 auf P4 zurück (JokerFinn06 in Runde 3, Italian Gamer in Runde 4, beide sauber). Nach dem frühen Stopp lag er in Runde 16 auf P2, verlor auf Hard aber Zeit auf die Spitze. Im Medium-Schlussstint holte er rund 1 s pro Runde auf Mehlone auf."
+                                                              "x":  "In Runde 3 überholte ihn JokerFinn06 sauber. Am Ende von Runde 3 kam er in der letzten Kurve weit raus durch die Auslaufzone (214 auf 176 km/h) und verlor P3 an Italian Gamer. Nach dem frühen Stopp lag er auf P2. In Runde 17 griff DON-FUCHSER88 in Kurve 10 innen an, beide landeten Rad an Rad im Kiesbett, Mesota kam vorne zurück, verlor aber rund 4,7 s. Mehlone kam so bis auf 2,1 s heran und überholte in Runde 20. Im Medium-Schlussstint holte er rund 1 s pro Runde auf Mehlone auf."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
@@ -375,11 +376,11 @@
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Keine. Der Zähler für saubere Runden stand vor der letzten Runde bei 32. In Runde 14 fuhr ein Mercedes in Kurve 3 weit raus, ob das Mesota war, ist nicht sicher."
+                                                              "x":  "Keine Strafe, und laut Spiel waren alle 33 Runden sauber, die Ausritte zählten nicht als Track-Limit-Verstoß. Trotzdem zwei Ausritte: Runde 3 als eigener Fehler, Runde 17 im Zweikampf mit DON-FUCHSER88. Eine Berührung ist dort nicht eindeutig zu sehen."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Fehlerfreies Podium mit Kampfgeist am Schluss. Für mehr fehlte auf Soft und Hard das Tempo."
+                                                              "x":  "Ein Podium mit Kampfgeist am Schluss. Ohne die zwei Ausritte wäre P2 realistisch gewesen, denn Mehlone hätte sonst rund 6,8 s statt 2,1 s aufholen müssen."
                                                           }
                                                       ]
                                       }
@@ -388,7 +389,7 @@
                    {
                        "id":  "luis",
                        "gesamt":  {
-                                      "kritik":  "Mehlone ist der stärkste Rennfahrer der Liga: zweimal auf dem Podium, beide Male mit den meisten Überholmanövern und als sauberster Fahrer, in Barcelona zusätzlich Fahrer des Tages. Seine Stärke ist das Rennen, mit guter Strategie und sauberen Manövern. Die Quali hat sich in Barcelona verbessert, im reinen Renntempo fehlt aber noch etwas auf die Schnellsten.",
+                                      "kritik":  "Mehlone ist ein starker, sauberer Rennfahrer: zweimal auf dem Podium, beide Male mit den meisten Überholmanövern und als sauberster Fahrer. Seine Stärke ist das Rennen, mit guter Strategie und sauberen Manövern. Die Ergebnisse sind aber etwas besser als sein Tempo: In beiden Rennen haben ihm Fehler anderer Plätze gebracht, und im reinen Renntempo fehlt noch einiges auf die Schnellsten.",
                                       "staerken":  [
                                                        "Sauberkeit im Rennen",
                                                        "Überholen und Aufholjagden",
@@ -483,10 +484,10 @@
                                           "s":  "s1",
                                           "r":  "r02",
                                           "tempo":  30,
-                                          "rv":  23,
+                                          "rv":  21,
                                           "kon":  18,
                                           "sau":  14,
-                                          "kurz":  "Nach unverschuldetem Absturz auf P8 mit einer Ein-Stopp-Strategie bis auf P2: das cleverste Rennen des Tages.",
+                                          "kurz":  "Nach unverschuldetem Absturz auf P8 mit einer Ein-Stopp-Strategie bis auf P2. Geholfen haben aber auch die Fehler anderer: JokerFinn06s Flügelschaden und Mesotas Ausritt in Runde 17.",
                                           "quelle":  "Eigenes Video (Mehlone, Gamertag Luisloli89), dazu die Videos von Mesota, The_White_Epic und DON-FUCHSER88 sowie der Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P4 · 1:13.999 (+0,368, beste S1 der Session)",
@@ -498,7 +499,7 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Solides Quali mit der besten S1, aber die beste Rennrunde ist die langsamste der Top 5, auch wegen Medium und Hard.",
-                                                        "rv":  "Nach der Kollision in Runde 1 von P8 bis auf P2, mit sauberen Überholmanövern gegen DON-FUCHSER88 und Mesota.",
+                                                        "rv":  "Nach der Kollision in Runde 1 von P8 bis auf P2, mit sauberen Überholmanövern gegen DON-FUCHSER88 und Mesota. Zwei Plätze kamen aber vor allem durch Fehler anderer: JokerFinn06s Flügelschaden und Mesotas Ausritt in Runde 17, der ihn von 6,8 s auf 2,1 s heranbrachte.",
                                                         "kon":  "Gleichmäßige Runden über lange Stints, gegen Ende aber ohne Reserve gegen frische Reifen.",
                                                         "sau":  "Kein Eintrag gegen ihn. Die Kollision in Runde 1 geht auf Italian Gamer."
                                                     },
@@ -512,6 +513,7 @@
                                                   ],
                                           "neg":  [
                                                       "Die reine Rennpace lag deutlich hinter The_White_Epic, Mesota und Italian Gamer.",
+                                                      "P2 kam auch durch Fehler anderer zustande: Ohne Mesotas Ausritt in Runde 17 hätte er 6,8 s statt 2,1 s aufholen müssen.",
                                                       "Beim Start P4 an Italian Gamer verloren, dann in Kurve 2 ins Gras gedrängt.",
                                                       "Am Ende gegen The_White_Epic auf frischen Reifen chancenlos."
                                                   ],
@@ -542,11 +544,11 @@
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Keine eigenen. Der einzige Vorfall war die Kollision in Runde 1, für die Italian Gamer verwarnt wurde."
+                                                              "x":  "Keine eigenen. Der einzige Vorfall war die Kollision in Runde 1, für die Italian Gamer verwarnt wurde. Mesota hat den Verdacht geäußert, Mehlone habe einen DRS-Fehler im Spiel ausgenutzt. Im Bild ist das nicht nachweisbar: Bei beiden Überholmanövern lag er 0,25 bis 0,45 s hinter dem Vordermann, ohne Gelbphase und ohne auffälligen Topspeed. Mesota hat das Boost-System in derselben Szene genauso eingesetzt. Dafür gibt es deshalb keinen Abzug."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Ein starkes, kluges Rennen trotz Tempo-Nachteil. P2 und die drei Auszeichnungen sind verdient."
+                                                              "x":  "Ein kluges Rennen trotz Tempo-Nachteil, mit der besten Strategie im Feld. Zur Wahrheit gehört aber auch, dass P2 erst durch die Fehler von JokerFinn06 und Mesota möglich wurde."
                                                           }
                                                       ]
                                       }
@@ -814,7 +816,7 @@
                                           "r":  "r02",
                                           "tempo":  34,
                                           "rv":  15,
-                                          "kon":  15,
+                                          "kon":  13,
                                           "sau":  10,
                                           "kurz":  "Tempo für das Podium und die drittschnellste Runde, aber eine Kollision in Runde 1 und am Ende nur P5.",
                                           "quelle":  "Kein eigenes Video von Rennen 2. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone und DON-FUCHSER88 sowie dem Ereignis- und Boxenstopp-Reiter.",
@@ -829,7 +831,7 @@
                                           "noten":  {
                                                         "tempo":  "Drittschnellste Rennrunde und auf Soft stark genug, um Mesota zu überholen. Im Quali 0,8 s zurück.",
                                                         "rv":  "Gewinnt beim Start einen Platz, verursacht aber die Kollision mit Mehlone und kommt nicht über P5 hinaus.",
-                                                        "kon":  "Ohne eigenes Video schwer zu prüfen, die Abstände zeigen keine großen Einbrüche.",
+                                                        "kon":  "In Runde 12 ein Dreher ohne Fremdeinwirkung in Kurve 10/11, sonst keine großen Einbrüche.",
                                                         "sau":  "Der einzige Eintrag im Ereignis-Reiter des Rennens geht auf ihn: Kollision mit Mehlone."
                                                     },
                                           "pos":  [
@@ -840,6 +842,7 @@
                                                   ],
                                           "neg":  [
                                                       "Kollision mit Mehlone in Kurve 1/2 in Runde 1, Mehlone fiel dadurch auf P8 zurück.",
+                                                      "Dreher ohne Fremdeinwirkung in Runde 12 in Kurve 10/11, Mesota musste ausweichen.",
                                                       "Im Quali 0,785 s hinter der Pole.",
                                                       "Trotz der drittbesten Rennpace nur P5."
                                                   ],
@@ -982,7 +985,7 @@
                                           "tempo":  27,
                                           "rv":  18,
                                           "kon":  15,
-                                          "sau":  14,
+                                          "sau":  13,
                                           "kurz":  "Solides Rennen von P7 auf P4, aber ein Abflug in Runde 17 und die letzte Runde kosteten das Podium.",
                                           "quelle":  "Eigenes Video (Stream von DON-FUCHSER88, ohne Quali), dazu die Videos von The_White_Epic, Mesota und Mehlone.",
                                           "fakten":  {
@@ -997,7 +1000,7 @@
                                                         "tempo":  "Quali P7 mit 0,9 s Rückstand, beste Rennrunde klar hinter The_White_Epic, Mesota und Italian Gamer.",
                                                         "rv":  "Guter Start mit Plätzen gewonnen und lange am Mesota-Zug dran, aber P3 in der letzten Runde verloren.",
                                                         "kon":  "Gleichmäßige Runden, aber ein teurer Abflug ins Kiesbett in Runde 17.",
-                                                        "sau":  "Keine Warnung, kein Kontakt. Abzug nur für den Abflug ohne Fremdbeteiligung."
+                                                        "sau":  "Keine Warnung. Abzug für den Angriff in Kurve 10 in Runde 17, bei dem er und Mesota im Kiesbett landeten."
                                                     },
                                           "pos":  [
                                                       "Beim Start gut reagiert, als Tore79 vor ihm quer über die Strecke kam.",
@@ -1007,7 +1010,7 @@
                                                       "Keine Track-Limit-Warnung im ganzen Rennen."
                                                   ],
                                           "neg":  [
-                                                      "Abflug ins Kiesbett in Runde 17, rund 7 s verloren, danach überholte ihn Mehlone.",
+                                                      "Angriff innen auf Mesota in Kurve 10 in Runde 17, beide im Kiesbett, rund 7 s verloren, danach überholte ihn Mehlone.",
                                                       "In der letzten Runde P3 an Mesota verloren.",
                                                       "In 15 Runden hinter Mesota keinen Weg vorbei gefunden."
                                                   ],
@@ -1026,7 +1029,7 @@
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Von Runde 2 bis 16 fast ununterbrochen 0,3 bis 0,8 s hinter Mesota. Typische Runden 1:17,5 bis 1:18,5, im Schnitt rund 0,7 s pro Runde langsamer als The_White_Epic. In Runde 17 ein Abflug ins Kiesbett in Sektor 3 (1:25,550 statt etwa 1:18), danach fiel er von P3 auf P4."
+                                                              "x":  "Von Runde 2 bis 16 fast ununterbrochen 0,3 bis 0,8 s hinter Mesota. Typische Runden 1:17,5 bis 1:18,5, im Schnitt rund 0,7 s pro Runde langsamer als The_White_Epic. In Runde 17 griff er Mesota in Kurve 10 innen an, beide fuhren Rad an Rad ins Kiesbett. Mesota kam vorne zurück, DON-FUCHSER88 verlor rund 7 s (1:25,550 statt etwa 1:18) und danach P3 an Mehlone."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
@@ -1038,7 +1041,7 @@
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Ein Abflug ins Kiesbett in Runde 17. Vor der Boxeneinfahrt kurz die Warnung zum Tempolimit, ohne Strafe."
+                                                              "x":  "Runde 17: Angriff innen auf Mesota in Kurve 10, beide fuhren Rad an Rad ins Kiesbett. Eine Berührung ist nicht eindeutig zu sehen, das Spiel gab keine Strafe. Vor der Boxeneinfahrt kurz die Warnung zum Tempolimit, ohne Strafe."
                                                           },
                                                           {
                                                               "t":  "Fazit",

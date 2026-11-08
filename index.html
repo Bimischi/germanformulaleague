@@ -998,7 +998,7 @@ function rateScore(f,sid,rid){
   var es=rateEntries(f,sid,rid);if(!es.length)return null;
   var o={id:f.id,f:f,n:es.length,e:es.length===1?es[0]:null};
   RK.forEach(function(k){var t=0;es.forEach(function(e){t+=+e[k]||0;});o[k]=Math.round(t/es.length);});
-  o.total=o.tempo+o.rv+o.kon+o.sau;o.tier=rateTier(o.tempo+o.rv);return o;
+  o.total=o.tempo+o.rv+o.kon+o.sau;o.tier=rateTier(o.total);return o;
 }
 function rateList(sid,rid){
   if(!RATE||!RATE.fahrer)return [];
