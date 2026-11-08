@@ -381,7 +381,98 @@
      "time": "14:45",
      "weather": "",
      "laps": 33,
-     "results": [],
+     "results": [
+      {
+       "d": "white",
+       "t": "mer",
+       "a": true,
+       "p": 1
+      },
+      {
+       "d": "mesota",
+       "t": "mer",
+       "a": true,
+       "p": 3
+      },
+      {
+       "d": "luis",
+       "t": "wil",
+       "a": true,
+       "p": 2
+      },
+      {
+       "d": "fuchs",
+       "t": "fer",
+       "a": true,
+       "p": 4
+      },
+      {
+       "d": "ds4",
+       "t": "sau",
+       "a": true,
+       "p": 5
+      },
+      {
+       "d": "xw9zsshm",
+       "t": "rb",
+       "a": true,
+       "p": 6
+      },
+      {
+       "d": "joker",
+       "t": "rb",
+       "a": true,
+       "p": 7
+      },
+      {
+       "d": "tore",
+       "t": "sau",
+       "a": true,
+       "p": 8
+      },
+      {
+       "d": "x886tela",
+       "t": "mcl",
+       "a": true,
+       "s": "DNF"
+      },
+      {
+       "d": "x0ts2jvy",
+       "t": "rbr",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "dominik",
+       "t": "",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "lewin",
+       "t": "",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "crash",
+       "t": "rbr",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "dbred",
+       "t": "",
+       "a": true,
+       "s": "DNS"
+      },
+      {
+       "d": "schuppi",
+       "t": "fer",
+       "a": true,
+       "s": "DNS"
+      }
+     ],
      "quali": [
       {
        "d": "white",
@@ -425,7 +516,11 @@
       }
      ],
      "pole": "white",
-     "poleTime": "1:13.631"
+     "poleTime": "1:13.631",
+     "clean": "luis",
+     "ot": "luis",
+     "dotd": "luis",
+     "fl": "joker"
     },
     {
      "id": "r03",
