@@ -520,7 +520,8 @@
      "clean": "luis",
      "ot": "luis",
      "dotd": "luis",
-     "fl": "joker"
+     "fl": "joker",
+     "flTime": "1:15.155"
     },
     {
      "id": "r03",
