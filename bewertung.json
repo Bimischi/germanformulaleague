@@ -1,6 +1,6 @@
 {
-    "stand":  "Stand nach Saison 1 · Rennen 1 (Australien)",
-    "basis":  "Ausgewertet wurde nur das Bild aus fünf Onboard-Videos von Rennen 1 in Melbourne (29 Runden): Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota und Mehlone. Dazu kommen der Ereignis-Reiter, die Boxenstopp-Liste und die Fahrertabelle aus dem Spiel. Bewertet werden nur Fahren und Fehler, nicht die Stimmen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet.",
+    "stand":  "Stand nach Saison 1 · Rennen 2 (Spanien)",
+    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 in Melbourne (29 Runden): Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota und Mehlone. Rennen 2 in Barcelona (33 Runden): Videos von The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Bewertet werden nur Fahren und Fehler, nicht die Stimmen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet.",
     "skala":  [
                   {
                       "k":  "tempo",
@@ -59,19 +59,19 @@
                    {
                        "id":  "joker",
                        "gesamt":  {
-                                      "kritik":  "JokerFinn06 ist nach dem ersten Rennen der Maßstab der Liga. Seine größte Stärke ist das Dauertempo: keine einzelne Rekordrunde, aber Runde für Runde rund eine halbe Sekunde schneller als der Rest. Dazu kommen ein starker Start und kein einziger Eintrag im Ereignis-Reiter. Fahrerische Schwächen sind kaum zu erkennen, der einzige Kritikpunkt ist organisatorisch: das Verlassen der Session nach der Zielflagge.",
+                                      "kritik":  "JokerFinn06 hat wohl das beste Dauertempo der Liga: Sieg in Melbourne, in Barcelona die schnellste Runde und lange in Führung. Ein einzelner Vorfall mit Frontflügelschaden kostete dort aber über eine Runde. Wenn er solche Fehler vermeidet und nach dem Rennen in der Session bleibt, ist er ein Titelkandidat.",
                                       "staerken":  [
                                                        "Dauertempo über ganze Stints",
-                                                       "Starts und erste Runde",
-                                                       "Fehlerfreies Fahren ohne Warnungen"
+                                                       "Schnellste Runden",
+                                                       "Strategie mit langen Stints"
                                                    ],
                                       "schwaechen":  [
-                                                         "Die einzelne Spitzenrunde liegt etwas hinter den Schnellsten",
-                                                         "Session nach der Zielflagge verlassen"
+                                                         "Einzelner teurer Fehler in Barcelona",
+                                                         "Session nach der Zielflagge verlassen (Melbourne)"
                                                      ],
                                       "fokus":  [
-                                                    "In der Session bleiben, bis das Ergebnis gespeichert ist",
-                                                    "Bei großem Vorsprung den Bonuspunkt für die schnellste Runde mitnehmen"
+                                                    "In Führung Risiko rausnehmen",
+                                                    "Bei Schaden sofort an die Box"
                                                 ]
                                   },
                        "rennen":  [
@@ -144,27 +144,96 @@
                                                               "x":  "Der Sieger und auch fahrerisch die Nummer 1 nach Rennen 1. Tempo auf Pole-Niveau, ein gewonnener Start und ein fehlerfreies Rennen mit dem besten Dauertempo. Kleine Unsicherheit: Es gibt kein Video aus seinem Cockpit."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  38,
+                                          "rv":  12,
+                                          "kon":  8,
+                                          "sau":  9,
+                                          "kurz":  "Schnellste Runde und lange auf Siegkurs, dann ein Vorfall mit Frontflügelschaden in Runde 13 und am Ende nur P7.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone und DON-FUCHSER88 sowie dem Boxenstopp-Reiter.",
+                                          "fakten":  {
+                                                         "quali":  "P2 · 1:13.838 (+0,207)",
+                                                         "start":  "P2",
+                                                         "ziel":  "P7 · +1 Runde",
+                                                         "runde":  "1:15.155 (schnellste Runde)",
+                                                         "stopps":  "2 · Runde 14 Medium → Hard mit neuem Frontflügel (7,440 s), Runde 24 Hard → Soft (2,252 s)",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "P2 im Quali und die schnellste Runde des Rennens, das Tempo für den Sieg war da.",
+                                                        "rv":  "Lag in Runde 13 mit 7,7 s in Führung, verlor nach dem Vorfall aber über eine Runde.",
+                                                        "kon":  "Ein großer Einbruch in Runde 13 und 14 kostete das Rennen.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter. Abzug, weil der Frontflügelschaden auf einen Fehler oder Kontakt hindeutet, der in keinem Video zu sehen ist."
+                                                    },
+                                          "pos":  [
+                                                      "P2 im Quali mit 1:13.838.",
+                                                      "Schnellste Runde des Rennens mit 1:15.155.",
+                                                      "Auf Medium lange draußen und in Runde 11 bis 13 in Führung, zeitweise mit 7,7 s Vorsprung.",
+                                                      "Sauberes Überholmanöver gegen Mesota in Runde 3."
+                                                  ],
+                                          "neg":  [
+                                                      "In Runde 13 ein Vorfall in Sektor 2 mit Gelbphase und Frontflügelschaden.",
+                                                      "Langsame Runde zur Box und 7,440 s Stopp für den neuen Flügel, danach eine Runde Rückstand.",
+                                                      "Am Ende nur P7, keine Punkte vom Siegniveau."
+                                                  ],
+                                          "besser":  [
+                                                         "In Führung liegend Risiko rausnehmen, der Vorsprung war groß genug.",
+                                                         "Bei Schaden früher an die Box, um die langsame Runde abzukürzen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P2 mit 1:13.838, 0,207 s hinter The_White_Epic."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "In Kurve 1 von Mesota außen überholt, in Runde 3 holte er sich P2 sauber zurück."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Medium kam er in Runde 5 bis 10 auf 2,5 s an The_White_Epic heran und übernahm nach dessen Stopp die Führung. In Runde 13 folgt in Sektor 2 eine Gelbphase, danach ist er 6,4 s hinter Mehlone und langsam. Den Vorfall selbst zeigt keines der Videos."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Medium, Hard, Soft. Der erste Stopp in Runde 14 dauerte wegen des neuen Frontflügels 7,440 s. Ab Runde 20 wurde er überrundet."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Gegen Mesota am Start und in Runde 3 sauber, sonst kaum Duelle zu sehen."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Kein Eintrag im Ereignis-Reiter. Der Frontflügelschaden in Runde 13 spricht für einen Abflug oder Mauerkontakt, die Ursache ist nicht sichtbar."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Tempo auf Siegniveau, aber ein einzelner Fehler hat das Rennen gekostet. Unsicherheit: kein eigenes Video, die Ursache in Runde 13 bleibt offen."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "mesota",
                        "gesamt":  {
-                                      "kritik":  "Mesota ist ein kompletter Racer mit viel Rennverstand: starke Starts, saubere Überholmanöver und kein einziger Eintrag im Ereignis-Reiter. Zur Spitze fehlt vor allem reines Tempo, im Quali einige Zehntel und im ersten Stint rund eine halbe Sekunde pro Runde. Im zweiten Stint auf Hard war er dagegen schneller als der Pole-Setter, das Potenzial ist also da.",
+                                      "kritik":  "Mesota ist nach zwei Rennen der konstanteste Podiumsfahrer: zweimal auf dem Podium, kein einziger Eintrag im Ereignis-Reiter und starke Starts. Zur Spitze fehlt vor allem Tempo auf Soft und Hard, im Quali liegen bis zu vier Zehntel. Im Schlussstint auf Medium war er in beiden Rennen stark.",
                                       "staerken":  [
                                                        "Starts und erste Runde",
-                                                       "Sauberkeit: keine Warnung, keine Strafe",
+                                                       "Sauberkeit: in zwei Rennen keine Warnung",
                                                        "Faire und entschlossene Zweikämpfe",
-                                                       "Starker zweiter Stint"
+                                                       "Starke Schlussstints"
                                                    ],
                                       "schwaechen":  [
                                                          "Quali-Tempo",
-                                                         "Tempo im ersten Stint auf Medium",
-                                                         "Ablenkung durch das Menü während der Fahrt"
+                                                         "Tempo auf Soft und Hard",
+                                                         "Positionen im ersten Stint verloren"
                                                      ],
                                       "fokus":  [
                                                     "Im Quali zwei bis drei Zehntel finden",
-                                                    "Den ersten Stint aggressiver fahren"
+                                                    "Den ersten Stint auf Soft besser verwalten"
                                                 ]
                                   },
                        "rennen":  [
@@ -242,25 +311,97 @@
                                                               "x":  "Ein sehr reifes Rennen: zwei Plätze am Start, ein sauberes Überholmanöver, null Fehler und das stärkste Tempo im zweiten Stint unter den Verfolgern. Zum Sieger fehlen vor allem Quali-Tempo und der erste Stint."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  33,
+                                          "rv":  21,
+                                          "kon":  18,
+                                          "sau":  15,
+                                          "kurz":  "Fehlerfreies Podium mit einem sauberen Überholmanöver in der letzten Runde, für mehr fehlte auf Soft und Hard das Tempo.",
+                                          "quelle":  "Eigenes Video (Mesota), dazu die Videos von The_White_Epic, Mehlone und DON-FUCHSER88 sowie der Ereignis- und Boxenstopp-Reiter.",
+                                          "fakten":  {
+                                                         "quali":  "P3 · 1:13.865 (+0,234)",
+                                                         "start":  "P3",
+                                                         "ziel":  "P3 · +25,119",
+                                                         "runde":  "1:16.270 (4. schnellste)",
+                                                         "stopps":  "2 · Runde 8 Soft → Hard (2,233 s), Runde 25 Hard → Medium (2,249 s)",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali nur 0,027 s hinter JokerFinn06, viertbeste Rennrunde, auf Soft und Hard aber klar langsamer als The_White_Epic.",
+                                                        "rv":  "Guter Start und ein entschlossenes Manöver gegen DON-FUCHSER88 in der letzten Runde, dafür früh zwei Plätze auf Soft verloren.",
+                                                        "kon":  "Gleichmäßig über alle Stints, besonders stark im Medium-Schlussstint.",
+                                                        "sau":  "32 saubere Runden, kein Eintrag im Ereignis-Reiter."
+                                                    },
+                                          "pos":  [
+                                                      "Quali P3 mit 1:13.865, nur 0,027 s hinter P2.",
+                                                      "Starker Start, JokerFinn06 in Kurve 1 außen überholt.",
+                                                      "Zwei schnelle Stopps mit 2,233 und 2,249 s.",
+                                                      "Im Medium-Schlussstint schneller als DON-FUCHSER88 und Mehlone, 5,5 s auf DON-FUCHSER88 aufgeholt.",
+                                                      "Sauberes Überholmanöver gegen DON-FUCHSER88 in der letzten Runde (Kurve 7) zum Podium.",
+                                                      "Kein Eintrag im Ereignis-Reiter, 32 saubere Runden."
+                                                  ],
+                                          "neg":  [
+                                                      "Auf Soft in Runde 3 und 4 Plätze an JokerFinn06 und Italian Gamer verloren.",
+                                                      "Auf Hard 9 bis 17 s hinter The_White_Epic, Mehlone ging mit DRS vorbei.",
+                                                      "Der zweite Stopp warf ihn hinter DON-FUCHSER88 zurück."
+                                                  ],
+                                          "besser":  [
+                                                         "Den Soft-Start besser verwalten, um die frühen Plätze zu halten.",
+                                                         "Prüfen, ob ein früherer zweiter Stopp oder eine Ein-Stopp-Variante mehr gebracht hätte."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P3 mit 1:13.865, nur 0,027 s hinter JokerFinn06, mit sechs Versuchen die meisten im Feld. In S2 und S3 lag er hinter The_White_Epic."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Sauberer Start, JokerFinn06 in Kurve 1 außen überholt. Ende Runde 1 auf P2 knapp hinter The_White_Epic."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Soft fiel er bis Runde 4 auf P4 zurück (JokerFinn06 in Runde 3, Italian Gamer in Runde 4, beide sauber). Nach dem frühen Stopp lag er in Runde 16 auf P2, verlor auf Hard aber Zeit auf die Spitze. Im Medium-Schlussstint holte er rund 1 s pro Runde auf Mehlone auf."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Soft, Hard, Medium. Der frühe erste Stopp in Runde 8 war ein Undercut. Der zweite in Runde 25 kostete erst den Platz an DON-FUCHSER88, die frischen Mediums brachten ihn aber zurück."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Alle Duelle ohne Berührung. Gewonnen gegen JokerFinn06 (Start) und DON-FUCHSER88 (letzte Runde, erst neben ihm nach Kurve 5, dann innen in Kurve 7), verloren gegen JokerFinn06, Italian Gamer und Mehlone."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine. Der Zähler für saubere Runden stand vor der letzten Runde bei 32. In Runde 14 fuhr ein Mercedes in Kurve 3 weit raus, ob das Mesota war, ist nicht sicher."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Fehlerfreies Podium mit Kampfgeist am Schluss. Für mehr fehlte auf Soft und Hard das Tempo."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "luis",
                        "gesamt":  {
-                                      "kritik":  "Mehlone ist im Rennen einer der stärksten und saubersten Fahrer der Liga: fehlerfrei, angriffslustig und mit Podiumspace. Seine Schwachstelle ist das Qualifying, wo er beim Pushen Fehler macht und sich so schlechtere Startplätze einhandelt. Gelingt ein sauberes Quali, gehört er zu den Siegkandidaten.",
+                                      "kritik":  "Mehlone ist der stärkste Rennfahrer der Liga: zweimal auf dem Podium, beide Male mit den meisten Überholmanövern und als sauberster Fahrer, in Barcelona zusätzlich Fahrer des Tages. Seine Stärke ist das Rennen, mit guter Strategie und sauberen Manövern. Die Quali hat sich in Barcelona verbessert, im reinen Renntempo fehlt aber noch etwas auf die Schnellsten.",
                                       "staerken":  [
-                                                       "Sauberkeit im Rennen (29 von 29 Runden)",
-                                                       "Überholen, die meisten Manöver im Feld",
-                                                       "Konstante Rennpace"
+                                                       "Sauberkeit im Rennen",
+                                                       "Überholen und Aufholjagden",
+                                                       "Strategie (Ein-Stopp in Barcelona)"
                                                    ],
                                       "schwaechen":  [
-                                                         "Fehler unter Druck im Quali",
-                                                         "Langsamer erster Umlauf nach dem Start"
+                                                         "Reines Renntempo auf Hard",
+                                                         "Fehler unter Druck im Quali (Melbourne)",
+                                                         "Positionsverluste in Runde 1"
                                                      ],
                                       "fokus":  [
-                                                    "Im Quali erst eine sichere Runde setzen",
-                                                    "Den Start verbessern"
+                                                    "Mehr Tempo auf den harten Reifen finden",
+                                                    "In Runde 1 mehr Abstand halten"
                                                 ]
                                   },
                        "rennen":  [
@@ -337,28 +478,97 @@
                                                               "x":  "Fahrerisch eines der stärksten Rennen: sauber, angriffslustig und mit Podiumspace. Mit einem fehlerfreien Quali kann Mehlone vorne mitfahren."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  30,
+                                          "rv":  23,
+                                          "kon":  18,
+                                          "sau":  14,
+                                          "kurz":  "Nach unverschuldetem Absturz auf P8 mit einer Ein-Stopp-Strategie bis auf P2: das cleverste Rennen des Tages.",
+                                          "quelle":  "Eigenes Video (Mehlone, Gamertag Luisloli89), dazu die Videos von Mesota, The_White_Epic und DON-FUCHSER88 sowie der Ereignis- und Boxenstopp-Reiter.",
+                                          "fakten":  {
+                                                         "quali":  "P4 · 1:13.999 (+0,368, beste S1 der Session)",
+                                                         "start":  "P4",
+                                                         "ziel":  "P2 · +5,719",
+                                                         "runde":  "1:17.297",
+                                                         "stopps":  "1 · Runde 15, Medium → Hard, 2,252 s",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Solides Quali mit der besten S1, aber die beste Rennrunde ist die langsamste der Top 5, auch wegen Medium und Hard.",
+                                                        "rv":  "Nach der Kollision in Runde 1 von P8 bis auf P2, mit sauberen Überholmanövern gegen DON-FUCHSER88 und Mesota.",
+                                                        "kon":  "Gleichmäßige Runden über lange Stints, gegen Ende aber ohne Reserve gegen frische Reifen.",
+                                                        "sau":  "Kein Eintrag gegen ihn. Die Kollision in Runde 1 geht auf Italian Gamer."
+                                                    },
+                                          "pos":  [
+                                                      "Beste erste Sektorzeit im Quali (21,731).",
+                                                      "Von P8 nach Runde 1 bis auf P2 nach vorne gefahren.",
+                                                      "Als Einziger mit nur einem Stopp, die Strategie ging voll auf.",
+                                                      "Saubere Überholmanöver gegen tomtom, Leokobra, DON-FUCHSER88 (Kurve 1) und Mesota (DRS auf der Geraden).",
+                                                      "Mehrere Runden in Führung (Runde 13 bis 15 und 25 bis 29).",
+                                                      "Sauberster Fahrer, meiste Überholmanöver und Fahrer des Tages."
+                                                  ],
+                                          "neg":  [
+                                                      "Die reine Rennpace lag deutlich hinter The_White_Epic, Mesota und Italian Gamer.",
+                                                      "Beim Start P4 an Italian Gamer verloren, dann in Kurve 2 ins Gras gedrängt.",
+                                                      "Am Ende gegen The_White_Epic auf frischen Reifen chancenlos."
+                                                  ],
+                                          "besser":  [
+                                                         "Runde 1 mit etwas mehr Abstand angehen, um nicht in Startkollisionen zu geraten.",
+                                                         "Mehr Tempo auf Hard finden, über Bremspunkte und Reifenführung."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "Mit 1:13.999 auf P4, nur 0,13 s hinter P2 und P3. Die schnellste S1 der Session zeigt Potenzial, in S2 (30,166) ging die Zeit verloren. Anders als in Rennen 1 ohne Fehler im Quali."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Beim Start an Italian Gamer verloren. In Kurve 1/2 fährt Italian Gamer innen neben ihn, es kommt zur Berührung, und Mehlone wird über den Randstein ins Gras gedrückt. Das Spiel gab Italian Gamer die Warnung. Ende Runde 1 lag er auf P8."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Medium blieb er lange draußen, rückte durch die Stopps der anderen und JokerFinn06s Problem bis Runde 13 an die Spitze. Auf Medium 1:17,8 bis 1:19, auf Hard 1:17,3 bis 1:18. Gegen The_White_Epic fehlten im Schnitt 1 bis 1,5 s pro Runde."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Start auf Medium, ein Stopp in Runde 15 auf Hard in 2,252 s. Als Einziger im Feld mit nur einem Stopp, das war der Schlüssel zu P2."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "tomtom (Runde 2/3), Leokobra (Runde 4/5), DON-FUCHSER88 (Runde 17/18, Kurve 1) und Mesota (Runde 19/20, DRS) überholt, alles ohne Berührung. Gegen The_White_Epic in Runde 29/30 fair gekontert, dann aber ohne Antwort."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine eigenen. Der einzige Vorfall war die Kollision in Runde 1, für die Italian Gamer verwarnt wurde."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein starkes, kluges Rennen trotz Tempo-Nachteil. P2 und die drei Auszeichnungen sind verdient."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "white",
                        "gesamt":  {
-                                      "kritik":  "The_White_Epic ist der schnellste Fahrer im Feld, Pole und schnellste Rennrunde sprechen eine klare Sprache. Was ihn bisher Ergebnisse kostet, sind Rennhandwerk und Strategie: der Start von der Pole, kein Druck auf den Führenden und vor allem das Reifenmanagement auf langen Stints. Bekommt er das in den Griff, ist er ein Titelkandidat.",
+                                      "kritik":  "The_White_Epic ist nach zwei Rennen der schnellste Fahrer der Liga: zwei Pole-Positions und in beiden Rennen eine der zwei schnellsten Runden. In Melbourne kosteten Start und Reifenmanagement noch das Podium, in Barcelona war davon nichts mehr zu sehen: Start gehalten, saubere Stopps, Sieg auf der Strecke zurückgeholt. Bleibt das so, ist er der Titelfavorit.",
                                       "staerken":  [
-                                                       "Eine-Runde-Tempo (Pole)",
-                                                       "Spitzenpace im Rennen (schnellste Runde)",
+                                                       "Eine-Runde-Tempo (zwei Poles)",
+                                                       "Spitzenpace im Rennen",
                                                        "Sauber, kaum Warnungen",
-                                                       "Schnellster Boxenstopp"
+                                                       "Schnelle Boxenstopps"
                                                    ],
                                       "schwaechen":  [
-                                                         "Starts",
-                                                         "Reifenmanagement und Strategie",
-                                                         "Kein Druck auf den Führenden"
+                                                         "Reifenmanagement auf langen Stints (Melbourne)",
+                                                         "Soft-Reifen im ersten Stint bauen früh ab"
                                                      ],
                                       "fokus":  [
                                                     "Reifen auf langen Stints schonen",
-                                                    "Zum Schluss die härtere Mischung wählen",
-                                                    "Starts üben"
+                                                    "Ein-Stopp-Strategien prüfen"
                                                 ]
                                   },
                        "rennen":  [
@@ -436,25 +646,94 @@
                                                               "x":  "Vom reinen Tempo her der schnellste Fahrer der Liga. Was fehlt, sind Starts, Rennhärte gegen den Führenden und vor allem das Reifenmanagement. Mit der Pace ist jedes Wochenende ein Podium möglich."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  38,
+                                          "rv":  23,
+                                          "kon":  19,
+                                          "sau":  15,
+                                          "kurz":  "Pole, Start-Ziel-Sieg und 33 saubere Runden: das kompletteste Rennen der bisherigen Saison.",
+                                          "quelle":  "Eigenes Video (Stream von The_White_Epic), dazu die Videos von Mesota, Mehlone und DON-FUCHSER88.",
+                                          "fakten":  {
+                                                         "quali":  "P1 · 1:13.631 (Pole, +0,207 vor JokerFinn06)",
+                                                         "start":  "P1",
+                                                         "ziel":  "P1 · Sieg, 5,7 s vor Mehlone",
+                                                         "runde":  "1:15.746 (2. schnellste)",
+                                                         "stopps":  "2 · Runde 10 Soft → Medium, Runde 24 Medium → Medium, je 2,2 s",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Pole mit 0,2 s Vorsprung und die zweitschnellste Rennrunde, im Schlussstint klar das schnellste Auto.",
+                                                        "rv":  "Holte die Führung nach beiden Stopps zurück, zuletzt mit einem sauberen DRS-Manöver gegen Mehlone.",
+                                                        "kon":  "33 von 33 Runden sauber, gleichmäßige Stints ohne Ausreißer.",
+                                                        "sau":  "Keine Warnung, kein Kontakt, keine Strafe."
+                                                    },
+                                          "pos":  [
+                                                      "Pole mit 1:13.631, 0,207 s vor JokerFinn06.",
+                                                      "Start gewonnen und nach Runde 1 mit 1,1 s Vorsprung in Führung.",
+                                                      "Zwei Boxenstopps mit je 2,2 s ohne Fehler.",
+                                                      "Im letzten Stint 1 bis 1,8 s pro Runde schneller als Mehlone, 7,9 s in vier Runden aufgeholt.",
+                                                      "Sauberes Duell gegen Mehlone in Runde 29/30 mit Konter und DRS-Überholmanöver.",
+                                                      "33 saubere Runden, kein Eintrag im Ereignis-Reiter."
+                                                  ],
+                                          "neg":  [
+                                                      "In Runde 5 bis 10 kam JokerFinn06 auf Medium wieder auf 2,5 s heran, die Soft-Reifen bauten früh ab.",
+                                                      "Der zweite Stopp kostete die Führung, der Sieg musste auf der Strecke zurückgeholt werden."
+                                                  ],
+                                          "besser":  [
+                                                         "Den ersten Stint auf Soft so fahren, dass die Reifen länger halten.",
+                                                         "Prüfen, ob eine Ein-Stopp-Strategie wie bei Mehlone schneller gewesen wäre."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "Pole mit 1:13.631. Dahinter JokerFinn06 +0,207, Mesota +0,234 und Mehlone +0,368. Nach der Bestzeit fuhr er keine weitere Runde mehr."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Führung ohne Hektik gehalten, nach Runde 1 lag er 1,1 s vor JokerFinn06."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Soft baute er bis zu 4 s Vorsprung auf, danach kam JokerFinn06 auf Medium wieder heran. Ab Runde 16 führte er souverän mit 15 bis 17 s. Typische Runden lagen bei 1:16 bis 1:17, auf frischen Reifen bei 1:15,7 bis 1:16."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Soft, Medium, Medium mit Stopps in Runde 10 und 24, je 2,2 s. Nach dem zweiten Stopp lag er hinter dem Ein-Stopper Mehlone, holte 7,9 s in vier Runden auf und ging in Runde 30 vorbei."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Ein echtes Duell gegen Mehlone in Runde 29/30: Er geht kurz vorbei, Mehlone kontert, dann gelingt das Überholmanöver mit DRS auf der Start-Ziel-Geraden. Fair und ohne Kontakt. Überrundungen von Tore79 und TomTom liefen problemlos."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine. Der Zähler für saubere Runden stand am Ende bei 33."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein nahezu fehlerfreies Rennen und ein verdienter Sieg. Die Schwächen aus Rennen 1, Start und Strategie, waren diesmal kein Thema."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "ds4",
                        "gesamt":  {
-                                      "kritik":  "Italian Gamer hat Tempo für die Top 3: P3 im Quali und die zweitschnellste Rennrunde. Das Problem ist die Fehlerquote. Dreher, Flügelschaden und Track-Limit-Strafen haben ein starkes Ergebnis verhindert. Mehr Ruhe in der Startphase und Disziplin bei den Streckenlimits würden sofort Punkte bringen.",
+                                      "kritik":  "Italian Gamer hat Tempo für die Top 3: in beiden Rennen eine der drei schnellsten Runden. Das Problem bleibt die erste Runde: In Melbourne ein Dreher, in Barcelona eine Kollision mit Mehlone. Bei den Streckenlimits war er in Barcelona deutlich sauberer. Mit ruhigeren Starts sind Podien drin.",
                                       "staerken":  [
-                                                       "Quali-Tempo",
-                                                       "Spitzenrunden im Rennen"
+                                                       "Spitzenrunden im Rennen",
+                                                       "Quali-Tempo"
                                                    ],
                                       "schwaechen":  [
-                                                         "Fehler in der Startphase",
-                                                         "Track Limits und Strafen",
+                                                         "Fehler und Kontakte in Runde 1",
                                                          "Konstanz"
                                                      ],
                                       "fokus":  [
                                                     "Die ersten Runden sicher fahren",
-                                                    "Streckenlimits einhalten, vor allem nach einer Warnung"
+                                                    "In Zweikämpfen mehr Platz lassen"
                                                 ]
                                   },
                        "rennen":  [
@@ -529,26 +808,95 @@
                                                               "x":  "Vom Tempo her einer der drei schnellsten Fahrer der Liga. Ohne Dreher und Flügelschaden wäre ein Podium realistisch gewesen. Die Baustelle ist ganz klar die Fehlerquote. Wichtig: Es gibt kein Video aus seinem Cockpit, die Wertung stützt sich auf die anderen Sichten und den Ereignis-Reiter."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  34,
+                                          "rv":  15,
+                                          "kon":  15,
+                                          "sau":  10,
+                                          "kurz":  "Tempo für das Podium und die drittschnellste Runde, aber eine Kollision in Runde 1 und am Ende nur P5.",
+                                          "quelle":  "Kein eigenes Video von Rennen 2. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone und DON-FUCHSER88 sowie dem Ereignis- und Boxenstopp-Reiter.",
+                                          "fakten":  {
+                                                         "quali":  "P5 · 1:14.416 (+0,785)",
+                                                         "start":  "P5",
+                                                         "ziel":  "P5 · +26,635",
+                                                         "runde":  "1:16.055 (3. schnellste)",
+                                                         "stopps":  "2 · Runde 9 Soft → Hard, Runde 24 Hard → Soft, je 2,252 s",
+                                                         "strafen":  "1 Warnung (Kollision mit Mehlone, Runde 1)"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Drittschnellste Rennrunde und auf Soft stark genug, um Mesota zu überholen. Im Quali 0,8 s zurück.",
+                                                        "rv":  "Gewinnt beim Start einen Platz, verursacht aber die Kollision mit Mehlone und kommt nicht über P5 hinaus.",
+                                                        "kon":  "Ohne eigenes Video schwer zu prüfen, die Abstände zeigen keine großen Einbrüche.",
+                                                        "sau":  "Der einzige Eintrag im Ereignis-Reiter des Rennens geht auf ihn: Kollision mit Mehlone."
+                                                    },
+                                          "pos":  [
+                                                      "Drittschnellste Rennrunde mit 1:16.055.",
+                                                      "Auf Soft in Runde 4 sauber an Mesota vorbei.",
+                                                      "Zwei Boxenstopps mit je 2,252 s.",
+                                                      "Im Ziel nur 0,33 s hinter DON-FUCHSER88."
+                                                  ],
+                                          "neg":  [
+                                                      "Kollision mit Mehlone in Kurve 1/2 in Runde 1, Mehlone fiel dadurch auf P8 zurück.",
+                                                      "Im Quali 0,785 s hinter der Pole.",
+                                                      "Trotz der drittbesten Rennpace nur P5."
+                                                  ],
+                                          "besser":  [
+                                                         "In Runde 1 mehr Platz lassen, wenn innen kein ganzer Platz frei ist.",
+                                                         "Das Soft-Tempo in Quali-Runden umsetzen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P5 mit 1:14.416, 0,785 s hinter der Pole. Im Vergleich zu Rennen 1 (P3) ein Rückschritt."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Gewinnt beim Start P4 von Mehlone. In Kurve 1/2 fährt er innen neben Mehlone, es kommt zur Berührung, und Mehlone landet im Gras. Das Spiel gab ihm dafür eine Warnung."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Soft stark, in Runde 4 vor Mesota. Mit 1:16.055 die drittschnellste Runde des Rennens. Die genaue Rundenfolge ist ohne eigenes Video nicht prüfbar."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Soft, Hard, Soft mit Stopps in Runde 9 und 24. Im Schlussstint auf Soft kam er bis auf 0,33 s an DON-FUCHSER88 heran."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Gewinnt den Platz gegen Mesota sauber, die Startszene mit Mehlone war dagegen sein Fehler."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Eine Warnung für die Kollision mit Mehlone. Anders als in Rennen 1 keine Track-Limit-Strafen."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Sauberer als in Rennen 1, das Tempo ist klar da. Mit einer ruhigeren ersten Runde wäre ein Platz weiter vorne möglich gewesen. Unsicherheit: kein eigenes Video."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "fuchs",
                        "gesamt":  {
-                                      "kritik":  "DON-FUCHSER88 holt mit Köpfchen mehr heraus, als sein Tempo hergibt: gute Strategie, faire Zweikämpfe und kaum Fehler. Ihm fehlt aber deutlich Tempo, über eineinhalb Sekunden im Quali und die langsamste beste Rennrunde im Feld. Ergebnis und Punkte sind daher besser als die reine Fahrleistung.",
+                                      "kritik":  "DON-FUCHSER88 holt mit Köpfchen mehr heraus, als sein Tempo hergibt: gute Strategie, faire Zweikämpfe und kaum Fehler, in zwei Rennen zweimal P4 auf der Strecke. Ihm fehlt aber weiter Tempo: im Quali 0,9 bis 1,6 s und im Rennen rund 0,7 s pro Runde auf die Spitze. In Barcelona kostete ihn ein Abflug in Runde 17 zudem das Podium.",
                                       "staerken":  [
-                                                       "Rennverstand und Strategie (Undercut)",
-                                                       "Faire Zweikämpfe",
-                                                       "Konstante Stints"
+                                                       "Rennverstand und Strategie",
+                                                       "Faire Zweikämpfe ohne Kontakt",
+                                                       "Kaum Warnungen"
                                                    ],
                                       "schwaechen":  [
                                                          "Quali-Tempo",
-                                                         "Sektor 3",
-                                                         "Spitzentempo im Rennen"
+                                                         "Spitzentempo im Rennen",
+                                                         "Positionen in der Schlussphase verteidigen"
                                                      ],
                                       "fokus":  [
                                                     "Tempo im Zeitfahren trainieren",
-                                                    "Ein-Stopp-Strategie prüfen"
+                                                    "Unter Druck sicherer anbremsen"
                                                 ]
                                   },
                        "rennen":  [
@@ -625,6 +973,76 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Ein cleverer und sehr fairer Racer, der aus dem Startplatz das Maximum herausholt. Das Ergebnis ist besser als das Tempo, deshalb nur Niveau B. Mit mehr Quali-Tempo und einem Stopp wird er ein Podiumskandidat."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  27,
+                                          "rv":  18,
+                                          "kon":  15,
+                                          "sau":  14,
+                                          "kurz":  "Solides Rennen von P7 auf P4, aber ein Abflug in Runde 17 und die letzte Runde kosteten das Podium.",
+                                          "quelle":  "Eigenes Video (Stream von DON-FUCHSER88, ohne Quali), dazu die Videos von The_White_Epic, Mesota und Mehlone.",
+                                          "fakten":  {
+                                                         "quali":  "P7 · 1:14.536 (+0,905)",
+                                                         "start":  "P7",
+                                                         "ziel":  "P4 · +26,304 (laut Spiel)",
+                                                         "runde":  "1:17.024",
+                                                         "stopps":  "2 · Runde 8 Medium → Hard, Runde 20 Hard → Medium, je 2,252 s",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali P7 mit 0,9 s Rückstand, beste Rennrunde klar hinter The_White_Epic, Mesota und Italian Gamer.",
+                                                        "rv":  "Guter Start mit Plätzen gewonnen und lange am Mesota-Zug dran, aber P3 in der letzten Runde verloren.",
+                                                        "kon":  "Gleichmäßige Runden, aber ein teurer Abflug ins Kiesbett in Runde 17.",
+                                                        "sau":  "Keine Warnung, kein Kontakt. Abzug nur für den Abflug ohne Fremdbeteiligung."
+                                                    },
+                                          "pos":  [
+                                                      "Beim Start gut reagiert, als Tore79 vor ihm quer über die Strecke kam.",
+                                                      "Von P7 auf P4, insgesamt drei Plätze gewonnen.",
+                                                      "Zwei Stopps mit je 2,252 s.",
+                                                      "Viele Runden fehlerfrei im DRS-Fenster hinter Mesota.",
+                                                      "Keine Track-Limit-Warnung im ganzen Rennen."
+                                                  ],
+                                          "neg":  [
+                                                      "Abflug ins Kiesbett in Runde 17, rund 7 s verloren, danach überholte ihn Mehlone.",
+                                                      "In der letzten Runde P3 an Mesota verloren.",
+                                                      "In 15 Runden hinter Mesota keinen Weg vorbei gefunden."
+                                                  ],
+                                          "besser":  [
+                                                         "Unter Druck in Sektor 3 sicherer anbremsen.",
+                                                         "Den letzten Medium-Stint kürzer planen oder in den Schlussrunden die Ausfahrten von Kurve 4 und 5 besser schützen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "Nicht im Video. Laut Ergebnis P7 mit 1:14.536 und 0,905 s Rückstand, der zweitgrößte Abstand im Feld."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Direkt nach dem Start verliert Tore79 die Kontrolle und kreuzt knapp vor ihm die Strecke. DON-FUCHSER88 weicht aus und geht vorbei, nach Runde 1 liegt er auf P5."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Von Runde 2 bis 16 fast ununterbrochen 0,3 bis 0,8 s hinter Mesota. Typische Runden 1:17,5 bis 1:18,5, im Schnitt rund 0,7 s pro Runde langsamer als The_White_Epic. In Runde 17 ein Abflug ins Kiesbett in Sektor 3 (1:25,550 statt etwa 1:18), danach fiel er von P3 auf P4."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Medium, Hard, Medium mit Stopps in Runde 8 und 20, je 2,252 s. Der frühe zweite Stopp brachte ihn vor Italian Gamer und Mesota, für 13 Runden auf Medium reichte es gegen den später gestoppten Mesota aber nicht."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Hart, aber fair, ohne Kontakt. Verlor die direkten Duelle gegen Mehlone (nach dem eigenen Fehler) und Mesota (letzte Runde, sauber). Italian Gamer kam im Ziel bis auf 0,33 s heran."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Ein Abflug ins Kiesbett in Runde 17. Vor der Boxeneinfahrt kurz die Warnung zum Tempolimit, ohne Strafe."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Wieder ein Rennen mit gutem Rennverstand und sauberen Zweikämpfen. Das Tempo reicht aber noch nicht, um das Podium gegen die Schnelleren zu halten."
                                                           }
                                                       ]
                                       }
@@ -722,6 +1140,267 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Das Quali zeigt Potenzial für die Top 4, das Rennen war aber eine Kette aus Fehlern und Pech. Mit einer sauberen ersten Runde und ohne Track-Limit-Probleme kann Crashturtle2000 deutlich weiter vorne landen. Den Verbindungsabbruch zählt die Wertung nicht als Fahrfehler."
+                                                          }
+                                                      ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "xw9zsshm",
+                       "gesamt":  {
+                                      "kritik":  "Leokobra ist in Barcelona ohne Quali-Zeit von hinten gestartet und hat fehlerfrei P6 erreicht. Zum Mittelfeld fehlt noch fast eine Sekunde pro Runde. Ein eigenes Video gibt es noch nicht, die Bewertung ist daher vorläufig.",
+                                      "staerken":  [
+                                                       "Fehlerfreies Rennen",
+                                                       "Saubere Boxenstopps"
+                                                   ],
+                                      "schwaechen":  [
+                                                         "Rennpace",
+                                                         "Keine Quali-Zeit gesetzt"
+                                                     ],
+                                      "fokus":  [
+                                                    "Eine Quali-Runde setzen",
+                                                    "Rundenzeiten verbessern"
+                                                ]
+                                  },
+                       "rennen":  [
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  22,
+                                          "rv":  15,
+                                          "kon":  13,
+                                          "sau":  13,
+                                          "kurz":  "Ohne Quali-Zeit von P9 gestartet und unauffällig auf P6 gefahren.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone und DON-FUCHSER88 sowie dem Boxenstopp-Reiter. Gamertag im Spiel: Leokobraa.",
+                                          "fakten":  {
+                                                         "quali":  "keine Zeit (Startplatz 9)",
+                                                         "start":  "P9",
+                                                         "ziel":  "P6 · +48,898",
+                                                         "runde":  "1:17.829",
+                                                         "stopps":  "2 · Runde 9 Soft → Soft, Runde 20 Soft → Medium, je 2,25 s",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Beste Runde 2,7 s hinter der schnellsten, ohne Quali-Vergleich.",
+                                                        "rv":  "Von P9 auf P6, auch durch die Probleme von JokerFinn06, Tore79 und TomTom.",
+                                                        "kon":  "Keine sichtbaren Einbrüche, aber ohne eigenes Video kaum prüfbar.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter."
+                                                    },
+                                          "pos":  [
+                                                      "Von P9 auf P6 nach vorne gefahren.",
+                                                      "Zwei saubere Stopps.",
+                                                      "Kein Eintrag im Ereignis-Reiter."
+                                                  ],
+                                          "neg":  [
+                                                      "Keine Quali-Zeit gesetzt, daher vom letzten Platz gestartet.",
+                                                      "Beste Rennrunde 1:17.829, fast eine Sekunde langsamer als die der Plätze 3 bis 5.",
+                                                      "Im Ziel 48,9 s hinter dem Sieger."
+                                                  ],
+                                          "besser":  [
+                                                         "Eine Quali-Runde setzen, um weiter vorne zu starten.",
+                                                         "Rennpace an die Gruppe um DON-FUCHSER88 heranbringen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "Keine Zeit, Start von P9."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "In den ersten Runden von Mehlone überholt (Runde 4/5), sonst keine Szene zu sehen."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Allein im hinteren Mittelfeld. Die Plätze gewann er vor allem durch die Probleme von JokerFinn06, Tore79 und TomTom."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Soft, Soft, Medium mit Stopps in Runde 9 und 20, je 2,25 s."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Keine sichtbaren Duelle außer dem Überholmanöver von Mehlone."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine erkennbar."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein ruhiges erstes Rennen ohne Fehler. Die Datenlage ist dünn, weil es kein eigenes Video gibt."
+                                                          }
+                                                      ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "tore",
+                       "gesamt":  {
+                                      "kritik":  "Tore79 hat in Barcelona mit P6 im Quali gezeigt, dass er das Tempo für das Mittelfeld hat. Das Rennen war aber nach einem Dreher direkt nach dem Start und einem Frontflügelschaden gelaufen. Ein eigenes Video gibt es noch nicht, die Bewertung ist daher vorläufig.",
+                                      "staerken":  [
+                                                       "Quali-Tempo"
+                                                   ],
+                                      "schwaechen":  [
+                                                         "Fehler beim Start",
+                                                         "Konstanz im Rennen"
+                                                     ],
+                                      "fokus":  [
+                                                    "Ruhigere Starts",
+                                                    "Bis zum Ergebnis in der Session bleiben"
+                                                ]
+                                  },
+                       "rennen":  [
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  27,
+                                          "rv":  6,
+                                          "kon":  5,
+                                          "sau":  8,
+                                          "kurz":  "Starkes Quali auf P6, dann ein Dreher direkt nach dem Start, Frontflügelschaden und zwei Runden Rückstand.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von DON-FUCHSER88, Mesota, Mehlone und The_White_Epic sowie dem Boxenstopp-Reiter. Gamertag im Spiel: Tore79RS.",
+                                          "fakten":  {
+                                                         "quali":  "P6 · 1:14.502 (+0,871)",
+                                                         "start":  "P6",
+                                                         "ziel":  "P8 · +2 Runden",
+                                                         "runde":  "1:17.004",
+                                                         "stopps":  "2 · Runde 7 Hard → Soft mit neuem Frontflügel (7,436 s), Runde 20 Soft → Soft (2,241 s)",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Im Quali nur 0,03 s vor DON-FUCHSER88 und mit 1:17.004 eine ordentliche beste Rennrunde.",
+                                                        "rv":  "Nach dem Dreher am Start nie mehr im Kampf, am Ende zwei Runden zurück.",
+                                                        "kon":  "Starker Einbruch gleich zu Beginn und weitere Zeitverluste, die im Bild nicht zu sehen sind.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter, aber der Dreher am Start brachte DON-FUCHSER88 in Gefahr."
+                                                    },
+                                          "pos":  [
+                                                      "P6 im Quali mit 1:14.502, vor DON-FUCHSER88 und TomTom.",
+                                                      "Beste Rennrunde 1:17.004, schneller als die von Mehlone und DON-FUCHSER88."
+                                                  ],
+                                          "neg":  [
+                                                      "Verliert direkt nach dem Start die Kontrolle und kreuzt knapp vor DON-FUCHSER88 die Strecke.",
+                                                      "Frontflügelschaden, Reparatur in Runde 7 mit 7,436 s Standzeit.",
+                                                      "Zwei Runden Rückstand im Ziel, danach die Session aufgegeben."
+                                                  ],
+                                          "besser":  [
+                                                         "Den Start ruhiger angehen, vor allem auf kalten Hard-Reifen.",
+                                                         "Bis zum Ergebnisbildschirm in der Session bleiben."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P6 mit 1:14.502, 0,871 s hinter der Pole. Ein gutes Quali für den ersten Einsatz in der Saison."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Auf dem Weg zu Kurve 1 verliert er die Kontrolle und kreuzt knapp vor DON-FUCHSER88 die Strecke, danach Gelb in Sektor 1. Nach Runde 1 liegt er auf P9 mit 8,4 s Rückstand."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Schon in Runde 9 lag er über eine Minute zurück. Weitere Zeitverluste sind im Bild nicht zu sehen, am Ende fehlten zwei Runden."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Start auf Hard, in Runde 7 neuer Frontflügel und Soft (7,436 s), in Runde 20 noch einmal Soft."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Keine sichtbaren Duelle."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Dreher am Start und Frontflügelschaden. Nach dem Rennen hat er die Session aufgegeben, das Spiel führt ihn deshalb als „Rennen beendet“."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Das Quali zeigt solides Tempo, das Rennen war nach dem Start gelaufen. Die Datenlage ist dünn, weil es kein eigenes Video gibt."
+                                                          }
+                                                      ]
+                                      }
+                                  ]
+                   },
+                   {
+                       "id":  "x886tela",
+                       "gesamt":  {
+                                      "kritik":  "TomTom liegt im Tempo noch deutlich hinter dem Feld, fast 3 s im Quali. In Barcelona fuhr er ohne Kontakt, verließ aber etwa in Runde 20 die Session. Ein eigenes Video gibt es noch nicht, die Bewertung ist daher vorläufig.",
+                                      "staerken":  [
+                                                       "Kein Kontakt mit anderen Fahrern"
+                                                   ],
+                                      "schwaechen":  [
+                                                         "Grundtempo",
+                                                         "Rennen nicht zu Ende gefahren"
+                                                     ],
+                                      "fokus":  [
+                                                    "Zeitfahren auf den Ligastrecken",
+                                                    "Bis zum Ende in der Session bleiben"
+                                                ]
+                                  },
+                       "rennen":  [
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r02",
+                                          "tempo":  14,
+                                          "rv":  7,
+                                          "kon":  7,
+                                          "sau":  11,
+                                          "kurz":  "Deutlich langsamer als das Feld und mit drei Stopps, auf der Website als Ausfall gewertet.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von DON-FUCHSER88, Mesota, Mehlone und The_White_Epic sowie dem Boxenstopp-Reiter. Gamertag im Spiel: tomtom_Z™.",
+                                          "fakten":  {
+                                                         "quali":  "P8 · 1:16.503 (+2,872)",
+                                                         "start":  "P8",
+                                                         "ziel":  "DNF laut Website (im Spiel P8, +1 Runde)",
+                                                         "runde":  "1:18.988",
+                                                         "stopps":  "3 · Runde 8 Soft → Hard, Runde 20 Hard → Soft, Runde 21 Soft → Medium",
+                                                         "strafen":  "keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Fast 3 s pro Runde im Quali und die langsamste beste Rennrunde im Feld.",
+                                                        "rv":  "Im Rennen von Anfang an hinten und nach Runde 20 die Session verlassen.",
+                                                        "kon":  "Zwei Stopps in direkt aufeinanderfolgenden Runden deuten auf ein Problem hin.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter, bei Überrundungen keine Probleme."
+                                                    },
+                                          "pos":  [
+                                                      "Kein Eintrag im Ereignis-Reiter.",
+                                                      "Überrundungen liefen ohne Probleme."
+                                                  ],
+                                          "neg":  [
+                                                      "Im Quali 2,872 s hinter der Pole.",
+                                                      "Langsamste beste Rennrunde im Feld (1:18.988).",
+                                                      "Zwei Stopps in Runde 20 und 21 hintereinander.",
+                                                      "Hat laut Einblendung etwa in Runde 20 die Session verlassen."
+                                                  ],
+                                          "besser":  [
+                                                         "Im Zeitfahren Bremspunkte und Linie für Barcelona üben.",
+                                                         "Bis zum Ende in der Session bleiben."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P8 mit 1:16.503, 2,872 s hinter der Pole."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "In Runde 2/3 von Mehlone überholt, sonst keine Szene zu sehen."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Immer am Ende des Feldes, ab Runde 21 überrundet."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Soft, Hard, Soft, Medium. Die Stopps in Runde 20 und 21 direkt hintereinander, der Grund ist nicht zu sehen."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Keine sichtbaren Duelle."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Kein Eintrag im Ereignis-Reiter. Laut Einblendung hat er etwa in Runde 20 die Session verlassen, das Spiel wertet ihn trotzdem als ins Ziel gekommen (P8, +1 Runde). Die Website führt ihn als Ausfall."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Noch deutlich hinter dem Tempo des Feldes. Die Datenlage ist dünn, weil es kein eigenes Video gibt."
                                                           }
                                                       ]
                                       }
