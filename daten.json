@@ -197,31 +197,9 @@
      "active": true
     },
     {
-     "id": "x886tela",
-     "name": "TomTom",
-     "team": "mcl",
-     "nat": "de",
-     "active": true,
-     "role": "ersatz"
-    },
-    {
      "id": "xdqaca26",
      "name": "Danolo Frenzi",
      "team": "fer",
-     "nat": "de",
-     "active": true
-    },
-    {
-     "id": "xidro5u3",
-     "name": "Max Pospíšilová",
-     "team": "haa",
-     "nat": "",
-     "active": true
-    },
-    {
-     "id": "xvzv58j4",
-     "name": "Jonas",
-     "team": "mcl",
      "nat": "de",
      "active": true
     }
@@ -339,26 +317,8 @@
        "s": "DNS"
       },
       {
-       "d": "x886tela",
-       "t": "",
-       "a": true,
-       "s": "DNS"
-      },
-      {
        "d": "xdqaca26",
        "t": "fer",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "xidro5u3",
-       "t": "haa",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "xvzv58j4",
-       "t": "mcl",
        "a": true,
        "s": "DNS"
       }
@@ -487,12 +447,6 @@
        "bl": "1:17.004"
       },
       {
-       "d": "x886tela",
-       "t": "mcl",
-       "a": true,
-       "s": "DNF"
-      },
-      {
        "d": "x0ts2jvy",
        "t": "rbr",
        "a": true,
@@ -525,18 +479,6 @@
       {
        "d": "schuppi",
        "t": "fer",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "xidro5u3",
-       "t": "haa",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "xvzv58j4",
-       "t": "mcl",
        "a": true,
        "s": "DNS"
       },
@@ -582,11 +524,6 @@
        "d": "fuchs",
        "p": 7,
        "tm": "1:14.536"
-      },
-      {
-       "d": "x886tela",
-       "p": 8,
-       "tm": "1:16.503"
       }
      ],
      "pole": "white",
@@ -666,11 +603,6 @@
         "d": "x0ts2jvy",
         "t": "rbr",
         "p": 1
-       },
-       {
-        "d": "xidro5u3",
-        "t": "haa",
-        "p": 2
        },
        {
         "d": "mesota",
