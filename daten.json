@@ -203,6 +203,13 @@
      "nat": "",
      "active": true,
      "role": "ersatz"
+    },
+    {
+     "id": "xdqaca26",
+     "name": "Danolo Frenzi",
+     "team": "fer",
+     "nat": "de",
+     "active": true
     }
    ],
    "races": [
