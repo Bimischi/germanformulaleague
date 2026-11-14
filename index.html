@@ -611,7 +611,7 @@ function pointsText(s){
   if(+s.otPoint) t+=' · +'+s.otPoint+' für die meisten Überholungen';
   if(+s.dotdPoint) t+=' · +'+s.dotdPoint+' für Driver of the Day';
   if(+s.attendPoint) t+=' · +'+s.attendPoint+' fürs Dabeibleiben bis Rennende';
-  if(s.races.some(function(r){return r.sprint;})) t+=' · Sprint: '+(s.sprintPoints&&s.sprintPoints.length?s.sprintPoints.map(fmtP).join(' · '):'50 % der Rennpunkte');
+  if(s.races.some(function(r){return r.sprint;})) t+=' · Sprint: '+(s.sprintPoints&&s.sprintPoints.length?s.sprintPoints.map(fmtP).join(' · '):sprintPts(s).join(' · '));
   if(s.races.some(function(r){return r.full;})) t+=' · 100-%-Rennen: doppelte Platzierungspunkte';
   return t;
 }
@@ -756,8 +756,10 @@ function raceHeads(races){
   }).join('');
 }
 function posCell(s,r,d,noSpr){
+  var x=resOf(r,d),sx0=sprintRes(r,d);
+  if((!done(r)||!x)&&sx0&&!noSpr) return '<span class="cell na" title="'+esc((r.short||r.name)+' · Sprint '+(sx0.s||'P'+sx0.p)+' · '+fmtP(sPts(s,r,d))+' Pkt'+(done(r)?'':' · Hauptrennen noch offen'))+'">'+(done(r)?'–':'·')+'</span><small class="spr" title="Sprint">S'+esc(sx0.s||sx0.p)+'</small>';
   if(!done(r)) return '<span class="cell na">·</span>';
-  var x=resOf(r,d);if(!x) return '<span class="cell na" title="Nicht teilgenommen">–</span>';
+  if(!x) return '<span class="cell na" title="Nicht teilgenommen">–</span>';
   var cls,txt,tip=[r.short||r.name];
   if(x.s){cls=x.s.toLowerCase();txt=x.s;tip.push(x.s);}
   else{txt=x.p;cls=x.p<=3?'p'+x.p:(+s.points[x.p-1]?'pz':'out');tip.push('P'+x.p);}
@@ -1233,7 +1235,7 @@ function viewAdmin(){
     '<label class="f">Name<input type="text" id="s-name" data-f="s-name" value="'+esc(s.name)+'"></label>'+
     '<label class="f">Spiel<input type="text" id="s-game" data-f="s-game" value="'+esc(s.game||'')+'" placeholder="z. B. F1 26"></label>'+
     '<label class="f">Punkte für Platz 1, 2, 3 …<input type="text" id="s-points" data-f="s-points" value="'+esc(s.points.join(', '))+'"></label>'+
-    '<label class="f">Sprintpunkte (leer = automatisch 50 %)<input type="text" id="s-sprint" data-f="s-sprint" value="'+esc((s.sprintPoints||[]).join(', '))+'" placeholder="leer = 50 % der Rennpunkte"></label>'+
+    '<label class="f">Sprintpunkte (leer = automatisch halbe Rennpunkte, aufgerundet)<input type="text" id="s-sprint" data-f="s-sprint" value="'+esc((s.sprintPoints||[]).join(', '))+'" placeholder="leer = halbe Rennpunkte, aufgerundet"></label>'+
     '<label class="f">Punkte für schnellste Runde<input type="number" min="0" step="1" id="s-fl" data-f="s-fl" value="'+esc(s.flPoint||0)+'"></label>'+
     '<label class="f">Punkte für Pole<input type="number" min="0" step="1" id="s-pole" data-f="s-pole" value="'+esc(s.polePoint||0)+'"></label>'+
     '<label class="f">Punkte für saubersten Fahrer<input type="number" min="0" step="1" id="s-clean" data-f="s-clean" value="'+esc(s.cleanPoint||0)+'"></label>'+
@@ -1361,10 +1363,10 @@ function resultEditor(s,r,list,posOpts,teamOpts){
   return h+'</tbody></table></div>';
 }
 /* ---------- Sprint ---------- */
-/* Sprint: ohne eigene Liste gibt es 50 % der Rennpunkte (halbe Punkte möglich) */
-function sprintPts(s){return (s.sprintPoints&&s.sprintPoints.length)?s.sprintPoints:s.points.map(function(p){return p/2;});}
+/* Sprint: ohne eigene Liste gibt es die Hälfte der Rennpunkte, immer aufgerundet */
+function sprintPts(s){return (s.sprintPoints&&s.sprintPoints.length)?s.sprintPoints:s.points.map(function(p){return Math.ceil(p/2);});}
 function fmtP(n){n=Math.round((+n||0)*10)/10;return String(n).replace('.',',');}
-function sprintInfo(s){return s.sprintPoints&&s.sprintPoints.length?'eigene Sprintpunkte: '+s.sprintPoints.map(fmtP).join(' · '):'50 % der Rennpunkte: '+sprintPts(s).map(fmtP).join(' · ');}
+function sprintInfo(s){return s.sprintPoints&&s.sprintPoints.length?'eigene Sprintpunkte: '+s.sprintPoints.map(fmtP).join(' · '):'die Hälfte der Rennpunkte (aufgerundet): '+sprintPts(s).map(fmtP).join(' · ');}
 function sprintRes(r,d){var l=r.sprint&&r.sprint.results||[];for(var i=0;i<l.length;i++)if(l[i].d===d)return l[i];return null;}
 function sprintDone(r){return !!(r&&r.sprint&&r.sprint.results&&r.sprint.results.length);}
 function counted(r){return done(r)||sprintDone(r);}
