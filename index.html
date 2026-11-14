@@ -65,6 +65,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 /* Socials: Karten mit schrägem Icon-Block wie die Reiter */
 .soc-sec{display:grid;gap:10px}
+.soc-who{display:grid;gap:8px;margin-top:6px}
+.soc-who h3{margin:0;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:20px;color:var(--fg)}
 .soc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px}
 .soc{display:flex;align-items:center;gap:18px;padding:18px 20px 18px 22px;background:var(--panel);border:1px solid var(--line);border-radius:6px;text-decoration:none;position:relative;overflow:hidden;min-width:0}
 .soc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--sc)}
@@ -675,11 +677,12 @@ var SOCIALS=[
   {id:'ytgfl',grp:'liga',name:'YouTube',color:'#FF0000',url:'https://www.youtube.com/@GermanFormulaLeague',handle:'@GermanFormulaLeague',text:'Offizieller Kanal der Liga: Rennen, Highlights und News',cta:'Abonnieren',icon:YT_ICON},
   {id:'discord',grp:'liga',name:'Discord',color:'#5865F2',url:'https://discord.gg/K2BtH2Ebwy',handle:'discord.gg/K2BtH2Ebwy',text:'Liga-Server: Anmeldung, Absprachen, Ergebnisse und Stewarding',cta:'Beitreten',
    icon:'M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.028C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z'},
-  {id:'ytmesota',grp:'creator',name:'YouTube · Mesota',color:'#FF0000',url:'https://www.youtube.com/@mesota07',handle:'@mesota07',text:'Rennvideos und Onboards aus der GFL von Mesota',cta:'Ansehen',icon:YT_ICON},
-  {id:'ytwhite',grp:'creator',name:'YouTube · TheWhiteEpic',color:'#FF0000',url:'https://www.youtube.com/@thewhiteepic',handle:'@thewhiteepic',text:'YouTube-Kanal von The_White_Epic',cta:'Ansehen',icon:YT_ICON},
-  {id:'twwhite',grp:'creator',name:'Twitch · the_white_epic',color:'#9146FF',url:'https://www.twitch.tv/the_white_epic',handle:'twitch.tv/the_white_epic',text:'Livestreams von The_White_Epic',cta:'Zuschauen',icon:TW_ICON},
-  {id:'ytmw',grp:'creator',name:'YouTube · m_w0609',color:'#FF0000',url:'https://www.youtube.com/@m_w0609',handle:'@m_w0609',text:'YouTube-Kanal von m_w0609',cta:'Ansehen',icon:YT_ICON},
-  {id:'twmw',grp:'creator',name:'Twitch · m_w0609',color:'#9146FF',url:'https://www.twitch.tv/m_w0609',handle:'twitch.tv/m_w0609',text:'Livestreams von m_w0609',cta:'Zuschauen',icon:TW_ICON}
+  {id:'ytwhite',grp:'creator',who:'TheWhiteEpic',name:'YouTube · TheWhiteEpic',color:'#FF0000',url:'https://www.youtube.com/@thewhiteepic',handle:'@thewhiteepic',text:'Videos von The_White_Epic',cta:'Ansehen',icon:YT_ICON},
+  {id:'twwhite',grp:'creator',who:'TheWhiteEpic',name:'Twitch · the_white_epic',color:'#9146FF',url:'https://www.twitch.tv/the_white_epic',handle:'twitch.tv/the_white_epic',text:'Livestreams von The_White_Epic',cta:'Zuschauen',icon:TW_ICON},
+  {id:'ytmesota',grp:'creator',who:'Mesota',name:'YouTube · Mesota',color:'#FF0000',url:'https://www.youtube.com/@mesota07',handle:'@mesota07',text:'Rennvideos und Onboards aus der GFL von Mesota',cta:'Ansehen',icon:YT_ICON},
+  {id:'twmesota',grp:'creator',who:'Mesota',name:'Twitch · Dark_Mesota',color:'#9146FF',url:'https://www.twitch.tv/dark_mesota',handle:'twitch.tv/dark_mesota',text:'Livestreams von Mesota',cta:'Zuschauen',icon:TW_ICON},
+  {id:'ytmw',grp:'creator',who:'m_w0609',name:'YouTube · m_w0609',color:'#FF0000',url:'https://www.youtube.com/@m_w0609',handle:'@m_w0609',text:'Videos von m_w0609',cta:'Ansehen',icon:YT_ICON},
+  {id:'twmw',grp:'creator',who:'m_w0609',name:'Twitch · m_w0609',color:'#9146FF',url:'https://www.twitch.tv/m_w0609',handle:'twitch.tv/m_w0609',text:'Livestreams von m_w0609',cta:'Zuschauen',icon:TW_ICON}
 ];
 function socIcon(x){return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+x.icon+'"/></svg>';}
 function socCard(x){return '<a class="soc" href="'+esc(x.url)+'" target="_blank" rel="noopener" style="--sc:'+x.color+'"><span class="soc-ic">'+socIcon(x)+'</span><span class="soc-tx"><b>'+esc(x.name)+'</b><span>'+esc(x.text)+'</span><small>'+esc(x.handle)+'</small></span><span class="soc-go"><span>'+esc(x.cta)+'</span></span></a>';}
@@ -687,7 +690,12 @@ function viewSocials(){
   var h='<div class="sec-head"><div><h2>Socials</h2><p class="meta">Komm in die Community der German Formula League</p></div></div>';
   [['liga','Offiziell','Die Kanäle der Liga'],['creator','Creator','Kanäle aus dem Fahrerfeld']].forEach(function(g){
     var l=SOCIALS.filter(function(x){return x.grp===g[0];});if(!l.length)return;
-    h+='<section class="soc-sec"><p class="eyebrow">'+g[1]+' · '+g[2]+'</p><div class="soc-grid">'+l.map(socCard).join('')+'</div></section>';
+    var body;
+    if(g[0]==='creator'){
+      var who=[];l.forEach(function(x){if(who.indexOf(x.who)<0)who.push(x.who);});
+      body=who.map(function(w){return '<div class="soc-who"><h3>'+esc(w)+'</h3><div class="soc-grid">'+l.filter(function(x){return x.who===w;}).map(socCard).join('')+'</div></div>';}).join('');
+    } else body='<div class="soc-grid">'+l.map(socCard).join('')+'</div>';
+    h+='<section class="soc-sec"><p class="eyebrow">'+g[1]+' · '+g[2]+'</p>'+body+'</section>';
   });
   return h;
 }function footSocials(){
