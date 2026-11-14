@@ -209,6 +209,13 @@ select:disabled{opacity:.4}
 .erow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .erow input[type="text"]{flex:1 1 170px}
 .erow select{flex:0 1 190px}
+.drow{display:grid;grid-template-columns:minmax(150px,1fr) 170px 150px 140px 70px 92px;gap:8px;align-items:center}
+.drow select{width:100%;min-width:0}
+.drow>.btn{justify-self:end}
+.drow .confirm,.trow .confirm{grid-column:1/-1;justify-content:flex-end}
+.trow{display:grid;grid-template-columns:44px minmax(150px,1fr) 92px;gap:8px;align-items:center}
+.trow>.btn{justify-self:end}
+@media (max-width:860px){.drow{grid-template-columns:1fr 1fr}.drow input[type="text"]{grid-column:1/-1}.drow>.btn{justify-self:start}}
 .acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .warn{color:var(--gold);font-size:13.5px;margin:0}
 .ok{color:var(--ok)}
@@ -663,11 +670,16 @@ function viewChampionship(){
 /* ---------- Kopf, Filter ---------- */
 /* ---------- Socials ---------- */
 var YT_ICON='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z';
+var TW_ICON='M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z';
 var SOCIALS=[
   {id:'ytgfl',grp:'liga',name:'YouTube',color:'#FF0000',url:'https://www.youtube.com/@GermanFormulaLeague',handle:'@GermanFormulaLeague',text:'Offizieller Kanal der Liga: Rennen, Highlights und News',cta:'Abonnieren',icon:YT_ICON},
   {id:'discord',grp:'liga',name:'Discord',color:'#5865F2',url:'https://discord.gg/K2BtH2Ebwy',handle:'discord.gg/K2BtH2Ebwy',text:'Liga-Server: Anmeldung, Absprachen, Ergebnisse und Stewarding',cta:'Beitreten',
    icon:'M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.028C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z'},
-  {id:'ytmesota',grp:'creator',name:'YouTube · Mesota',color:'#FF0000',url:'https://www.youtube.com/@mesota07',handle:'@mesota07',text:'Rennvideos und Onboards aus der GFL von Mesota',cta:'Ansehen',icon:YT_ICON}
+  {id:'ytmesota',grp:'creator',name:'YouTube · Mesota',color:'#FF0000',url:'https://www.youtube.com/@mesota07',handle:'@mesota07',text:'Rennvideos und Onboards aus der GFL von Mesota',cta:'Ansehen',icon:YT_ICON},
+  {id:'ytwhite',grp:'creator',name:'YouTube · TheWhiteEpic',color:'#FF0000',url:'https://www.youtube.com/@thewhiteepic',handle:'@thewhiteepic',text:'YouTube-Kanal von The_White_Epic',cta:'Ansehen',icon:YT_ICON},
+  {id:'twwhite',grp:'creator',name:'Twitch · the_white_epic',color:'#9146FF',url:'https://www.twitch.tv/the_white_epic',handle:'twitch.tv/the_white_epic',text:'Livestreams von The_White_Epic',cta:'Zuschauen',icon:TW_ICON},
+  {id:'ytmw',grp:'creator',name:'YouTube · m_w0609',color:'#FF0000',url:'https://www.youtube.com/@m_w0609',handle:'@m_w0609',text:'YouTube-Kanal von m_w0609',cta:'Ansehen',icon:YT_ICON},
+  {id:'twmw',grp:'creator',name:'Twitch · m_w0609',color:'#9146FF',url:'https://www.twitch.tv/m_w0609',handle:'twitch.tv/m_w0609',text:'Livestreams von m_w0609',cta:'Zuschauen',icon:TW_ICON}
 ];
 function socIcon(x){return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="'+x.icon+'"/></svg>';}
 function socCard(x){return '<a class="soc" href="'+esc(x.url)+'" target="_blank" rel="noopener" style="--sc:'+x.color+'"><span class="soc-ic">'+socIcon(x)+'</span><span class="soc-tx"><b>'+esc(x.name)+'</b><span>'+esc(x.text)+'</span><small>'+esc(x.handle)+'</small></span><span class="soc-go"><span>'+esc(x.cta)+'</span></span></a>';}
@@ -1180,8 +1192,8 @@ function impAdminPanel(){
 
 /* ---------- Verwaltung ---------- */
 function opts(list,cur){return list.map(function(o){return '<option value="'+esc(o[0])+'"'+(String(o[0])===String(cur==null?'':cur)?' selected':'')+'>'+esc(o[1])+'</option>';}).join('');}
-function askBtn(key,label){
-  if(ui.confirm===key) return '<span class="confirm">Wirklich? <button class="btn small danger" data-act="do" data-key="'+esc(key)+'">Ja, '+esc(label.toLowerCase())+'</button><button class="btn small" data-act="ask" data-key="">Abbrechen</button></span>';
+function askBtn(key,label,note){
+  if(ui.confirm===key) return '<span class="confirm">Wirklich?'+(note?' '+esc(note):'')+' <button class="btn small danger" data-act="do" data-key="'+esc(key)+'">Ja, '+esc(label.toLowerCase())+'</button><button class="btn small" data-act="ask" data-key="">Abbrechen</button></span>';
   return '<button class="btn small danger" data-act="ask" data-key="'+esc(key)+'">'+esc(label)+'</button>';
 }
 function usedTeam(s,tid){return s.races.some(function(r){return (r.results||[]).some(function(x){return x.t===tid;});});}
@@ -1225,19 +1237,19 @@ function viewAdmin(){
     '<div class="acts">'+askBtn('delSeason:'+s.id,'Saison löschen')+'</div></section>';
   // Teams
   h+='<section class="panel"><h3>Teams</h3><div class="erows">'+s.teams.map(function(t){
-    return '<div class="erow"><input type="color" id="tc-'+esc(t.id)+'" data-f="t-color" data-id="'+esc(t.id)+'" value="'+esc(t.color)+'" aria-label="Farbe '+esc(t.name)+'">'+
+    return '<div class="erow trow"><input type="color" id="tc-'+esc(t.id)+'" data-f="t-color" data-id="'+esc(t.id)+'" value="'+esc(t.color)+'" aria-label="Farbe '+esc(t.name)+'">'+
       '<input type="text" id="tn-'+esc(t.id)+'" data-f="t-name" data-id="'+esc(t.id)+'" value="'+esc(t.name)+'" aria-label="Teamname">'+
-      (usedTeam(s,t.id)?'<span class="muted" style="font-size:13px">hat Ergebnisse</span>':'<button class="btn small danger" data-act="delTeam" data-id="'+esc(t.id)+'">Entfernen</button>')+'</div>';
+      askBtn('delTeam:'+t.id,'Entfernen',usedTeam(s,t.id)?'Die Ergebnisse bleiben, zählen aber für kein Team mehr.':'')+'</div>';
   }).join('')+'</div><div class="acts"><button class="btn small" data-act="addTeam">+ Team</button></div></section>';
   // Fahrer
   var teamOpts=[['','Ohne Team']].concat(s.teams.map(function(t){return [t.id,t.name];}));
   h+='<section class="panel"><h3>Fahrer</h3><p>Inaktive Fahrer bleiben mit ihren Ergebnissen in der Tabelle und werden als „Ehemaliger“ geführt.</p><div class="erows">'+s.drivers.map(function(d){
-    return '<div class="erow"><input type="text" id="dn-'+esc(d.id)+'" data-f="d-name" data-id="'+esc(d.id)+'" value="'+esc(d.name)+'" aria-label="Fahrername">'+
+    return '<div class="erow drow"><input type="text" id="dn-'+esc(d.id)+'" data-f="d-name" data-id="'+esc(d.id)+'" value="'+esc(d.name)+'" aria-label="Fahrername">'+
       '<select id="dt-'+esc(d.id)+'" data-f="d-team" data-id="'+esc(d.id)+'" aria-label="Team">'+opts(teamOpts,d.team)+'</select>'+
       '<select id="dx-'+esc(d.id)+'" data-f="d-nat" data-id="'+esc(d.id)+'" aria-label="Nationalität">'+opts(NATS,d.nat)+'</select>'+
       '<select id="dr-'+esc(d.id)+'" data-f="d-role" data-id="'+esc(d.id)+'" aria-label="Rolle">'+opts([['stamm','Stammfahrer'],['ersatz','Ersatzfahrer']],d.role==='ersatz'?'ersatz':'stamm')+'</select>'+
       '<label class="chk"><input type="checkbox" id="da-'+esc(d.id)+'" data-f="d-active" data-id="'+esc(d.id)+'"'+(d.active!==false?' checked':'')+'> aktiv</label>'+
-      (usedDriver(s,d.id)?'':'<button class="btn small danger" data-act="delDriver" data-id="'+esc(d.id)+'">Entfernen</button>')+'</div>';
+      askBtn('delDriver:'+d.id,'Entfernen',usedDriver(s,d.id)?'Alle Ergebnisse von '+(d.name||'diesem Fahrer')+' in dieser Saison werden mit gelöscht.':'')+'</div>';
   }).join('')+'</div><div class="acts"><button class="btn small" data-act="addDriver">+ Fahrer</button></div></section>';
   // Rennen
   var races=sortedRaces(s);
@@ -1534,6 +1546,22 @@ function doAction(act,el){
     case 'do':{
       var key=el.dataset.key||'',parts=key.split(':');ui.confirm=null;
       if(parts[0]==='delSeason'){draft.seasons=draft.seasons.filter(function(x){return x.id!==parts[1];});ui.admSeason=draft.seasons[0]?draft.seasons[0].id:null;ui.admRace=null;if(!S(ui.season))ui.season=defaultSeason();}
+      if(parts[0]==='delDriver'){s=S(ui.admSeason);var dd=parts[1];if(s){
+        s.drivers=s.drivers.filter(function(d){return d.id!==dd;});
+        var nf=function(x){return x.d!==dd;};
+        s.races.forEach(function(r){
+          r.results=(r.results||[]).filter(nf);
+          if(r.quali)r.quali=r.quali.filter(nf);
+          if(r.sprint)r.sprint.results=(r.sprint.results||[]).filter(nf);
+          if(r.pole===dd){delete r.pole;delete r.poleTime;}
+          if(r.fl===dd){delete r.fl;delete r.flTime;}
+          ['dotd','ot','clean'].forEach(function(k){if(r[k]===dd)delete r[k];});
+        });}}
+      if(parts[0]==='delTeam'){s=S(ui.admSeason);var dt=parts[1];if(s){
+        s.teams=s.teams.filter(function(t){return t.id!==dt;});
+        s.drivers.forEach(function(d){if(d.team===dt)d.team='';});
+        s.races.forEach(function(r){(r.results||[]).concat(r.quali||[],r.sprint&&r.sprint.results||[]).forEach(function(x){if(x.t===dt)x.t='';});});
+      }}
       if(parts[0]==='delSprint'){s=S(ui.admSeason);if(s)s.races.forEach(function(x){if(x.id===parts[1])delete x.sprint;});ui.admSess='rennen';}
       if(parts[0]==='delRace'){s=S(ui.admSeason);if(s)s.races=s.races.filter(function(x){return x.id!==parts[1];});ui.admRace=null;if(ui.race===parts[1])ui.race='all';}
       if(parts[0]==='discard'){draft=clone(DATA);ui.admRace=null;if(!S(ui.season))ui.season=defaultSeason();if(!S(ui.admSeason))ui.admSeason=ui.season;}
