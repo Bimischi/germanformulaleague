@@ -1,6 +1,6 @@
 {
     "stand":  "Stand nach Saison 1 · Rennen 4 (Österreich)",
-    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota und DON-FUCHSER88. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet. Strafen wegen blauer Flaggen werden nicht gewertet. In Kanada sind die Gastfahrer CHERNOSHTANOV und waltherjonas28 samt aller durch sie entstandenen Strafen herausgerechnet, Mesotas 10-s-Strafe für die gelbe Flagge war ein Spielfehler.",
+    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota, Mehlone und DON-FUCHSER88. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet. Strafen wegen blauer Flaggen werden nicht gewertet. In Kanada sind die Gastfahrer CHERNOSHTANOV und waltherjonas28 samt aller durch sie entstandenen Strafen herausgerechnet, Mesotas 10-s-Strafe für die gelbe Flagge war ein Spielfehler.",
     "skala":  [
                   {
                       "k":  "tempo",
@@ -608,7 +608,7 @@
                                           "tempo":  28,
                                           "rv":  17,
                                           "kon":  16,
-                                          "sau":  12,
+                                          "sau":  11,
                                           "kurz":  "Guter Start bis P3, dann zwei Kontakte in Runde 1 und ein Flügelwechsel. Danach fehlerfrei zurück auf P5.",
                                           "quelle":  "Eigenes Video (Mesota) mit Ergebnis-, Ereignis- und Boxenstopp-Reiter, dazu die Videos von Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88.",
                                           "fakten":  {
@@ -623,7 +623,7 @@
                                                         "tempo":  "Gutes Quali, aber die langsamste beste Rennrunde der Top 5.",
                                                         "rv":  "Nach dem Schaden von P9 zurück auf P5, teils durch Fehler anderer.",
                                                         "kon":  "Nach Runde 1 keine eigenen Fehler und gleichmäßige Runden.",
-                                                        "sau":  "Zwei Kontakte in Runde 1, in beiden eher Betroffener als Verursacher, dazu eine Verwarnung."
+                                                        "sau":  "Zwei Kontakte in Runde 1. Mit Max war Mesota Betroffener. Mit Mehlone war es ein Rennunfall, aus Mehlones Sicht schnitt Mesota eng vor ihm rein. Das Spiel verwarnte beide."
                                                     },
                                           "pos":  [
                                                       "Quali P4 mit 1:05.336.",
@@ -632,11 +632,11 @@
                                                       "Drei schnelle Stopps."
                                                   ],
                                           "neg":  [
-                                                      "Runde 1: Kontakt mit Max in Kurve 3 und mit Mehlone in Kurve 4, Frontflügel kaputt, Extra-Stopp.",
+                                                      "Runde 1: Kontakt mit Max in Kurve 3 und danach ein Rennunfall mit Mehlone in Kurve 4, Frontflügel kaputt, Extra-Stopp.",
                                                       "Die Rennpace reichte nicht für die Top 4, 51 s Rückstand."
                                                   ],
                                           "besser":  [
-                                                         "In Runde 1 in Kurve 3 und 4 mehr Abstand halten, wenn Autos außen einlenken oder innen stechen.",
+                                                         "In Runde 1 nach dem Überholen nicht zu eng vor das andere Auto ziehen und in Kurve 3 und 4 mehr Platz lassen.",
                                                          "Mehr Tempo auf Medium und Hard finden."
                                                      ],
                                           "analyse":  [
@@ -646,7 +646,7 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Starker Start bis auf P3. In Kurve 3 lenkte Max außen ein, leichter Kontakt, die Verwarnung ging an Max. In Kurve 4 schob sich Mehlone innen vor ihn. Es kam zum Kontakt, Mesota wurde Richtung Mauer gedrängt und beschädigte den Frontflügel. Beide wurden verwarnt, aus Mesotas Sicht wirkt Mehlone eher als Verursacher. Ende Runde 1 lag er auf P7."
+                                                              "x":  "Starker Start bis auf P3. In Kurve 3 lenkte Max außen ein, leichter Kontakt, die Verwarnung ging an Max. Danach zog Mesota links an Mehlone vorbei und wechselte eng nach rechts vor ihn. Kurz darauf gingen beide hintereinander rechts neben die Strecke, im Gras gab es Kontakt. Mesota drehte Richtung Mauer und beschädigte den Frontflügel. Aus Mesotas Sicht wirkte es, als hätte Mehlone innen gestochen. Mehlones eigenes Video zeigt aber, dass er hinter Mesota lag. Das Spiel verwarnte beide, wir werten es als Rennunfall. Ende Runde 1 lag Mesota auf P7."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
@@ -658,7 +658,7 @@
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Beide Kontakte waren in Runde 1, danach gab es keine Auffälligkeiten."
+                                                              "x":  "Beide Kontakte waren in Runde 1: mit Max als Betroffener, mit Mehlone als Rennunfall. Danach gab es keine Auffälligkeiten."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
@@ -675,7 +675,7 @@
                    {
                        "id":  "luis",
                        "gesamt":  {
-                                      "kritik":  "Mehlone ist ein kluger Rennfahrer mit guten Strategien, zweimal auf dem Podium. Sein Grundtempo liegt aber deutlich hinter der Spitze, und viele Plätze kamen durch Fehler anderer. In Österreich verursachte er in Runde 1 selbst einen Kontakt mit Mesota.",
+                                      "kritik":  "Mehlone ist ein kluger Rennfahrer mit guten Strategien, zweimal auf dem Podium in den ersten beiden Rennen und Sprint-P3 in Kanada. Sein Grundtempo liegt aber deutlich hinter der Spitze, und viele Plätze kamen durch Fehler anderer. In Österreich kam ein klarer Minuspunkt dazu: ein später Divebomb gegen Leokobra in Runde 23 ohne Entschuldigung und ohne Platzrückgabe.",
                                       "staerken":  [
                                                        "Strategie (Ein-Stopp-Rennen)",
                                                        "Ruhe in chaotischen Phasen",
@@ -683,11 +683,12 @@
                                                    ],
                                       "schwaechen":  [
                                                          "Grundtempo in Quali und Rennen",
-                                                         "Risiko in Runde 1 (Österreich)"
+                                                         "Späte Bremsmanöver im Zweikampf (Österreich)",
+                                                         "Keine Entschuldigung nach eigenem Kontakt"
                                                      ],
                                       "fokus":  [
                                                     "Quali-Tempo verbessern, vor allem in Sektor 2",
-                                                    "In Runde 1 nur stechen, wenn Platz ist"
+                                                    "Nur mit Überlappung vor dem Bremspunkt angreifen und nach Kontakt den Platz zurückgeben"
                                                 ]
                                   },
                        "rennen":  [
@@ -839,73 +840,6 @@
                                       },
                                       {
                                           "s":  "s1",
-                                          "r":  "r04",
-                                          "tempo":  27,
-                                          "rv":  13,
-                                          "kon":  12,
-                                          "sau":  10,
-                                          "kurz":  "Kontakt mit Mesota in Runde 1, Dreher und Flügelwechsel, danach nur P7 mit einer Runde Rückstand.",
-                                          "quelle":  "Kein eigenes Video von Rennen 4. Bewertet aus den Sichten von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
-                                          "fakten":  {
-                                                         "quali":  "P8 · 1:05.804 (+1,146)",
-                                                         "start":  "P8",
-                                                         "ziel":  "P7 · +1 Runde",
-                                                         "runde":  "1:08.978",
-                                                         "stopps":  "2 · Runde 1 auf Hard mit neuem Frontflügel (7,440 s), Runde 16 auf Medium (2,252 s)",
-                                                         "strafen":  "Kollisionswarnung in Runde 1 (mit Mesota), Track-Limit-Warnung"
-                                                     },
-                                          "noten":  {
-                                                        "tempo":  "Quali P8, Rennrunde im Mittelfeld.",
-                                                        "rv":  "Nach Runde 1 nie mehr im Kampf um die Punkteränge vorne.",
-                                                        "kon":  "Dreher in Runde 1, danach unauffällig.",
-                                                        "sau":  "Schob sich in Kurve 4 innen vor Mesota, Kontakt mit Frontflügelschaden bei beiden. Dazu ein Kontakt durch Leokobra in Runde 23."
-                                                    },
-                                          "pos":  [
-                                                      "Nach dem frühen Schaden das Rennen ruhig zu Ende gefahren.",
-                                                      "Kein weiterer Fehler nach Runde 1."
-                                                  ],
-                                          "neg":  [
-                                                      "Runde 1: in Kurve 4 innen vor Mesota gesetzt, Kontakt, Dreher, Flügelwechsel schon nach Runde 1.",
-                                                      "Im Quali 1,1 s hinter der Pole.",
-                                                      "Eine Runde Rückstand im Ziel."
-                                                  ],
-                                          "besser":  [
-                                                         "In Runde 1 nur stechen, wenn ein ganzer Platz frei ist.",
-                                                         "Quali-Tempo verbessern."
-                                                     ],
-                                          "analyse":  [
-                                                          {
-                                                              "t":  "Qualifying",
-                                                              "x":  "P8 mit 1:05.804, 1,1 s hinter der Pole."
-                                                          },
-                                                          {
-                                                              "t":  "Start und Runde 1",
-                                                              "x":  "In Kurve 4 schob er sich innen vor Mesota. Es kam zum Kontakt, Mesota wurde Richtung Mauer gedrängt, Mehlone drehte sich. Beide wurden verwarnt, Mehlone wirkt eher als Verursacher. Flügelwechsel noch in Runde 1."
-                                                          },
-                                                          {
-                                                              "t":  "Rennverlauf und Pace",
-                                                              "x":  "Danach im hinteren Mittelfeld. In Runde 23 kollidierte Leokobra mit ihm (Verwarnung für Leokobra)."
-                                                          },
-                                                          {
-                                                              "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Erzwungener Stopp in Runde 1, dann Medium in Runde 16."
-                                                          },
-                                                          {
-                                                              "t":  "Zweikämpfe",
-                                                              "x":  "Die Szene mit Mesota war die einzige strittige Aktion von ihm."
-                                                          },
-                                                          {
-                                                              "t":  "Fehler und Strafen",
-                                                              "x":  "Kontakt mit Dreher in Runde 1, eine Track-Limit-Warnung in Runde 30, die bei Medium kaum zählt."
-                                                          },
-                                                          {
-                                                              "t":  "Fazit",
-                                                              "x":  "Ein schwaches Rennen, das schon in Runde 1 gelaufen war. Unsicherheit: kein eigenes Video."
-                                                          }
-                                                      ]
-                                      },
-                                      {
-                                          "s":  "s1",
                                           "r":  "r03",
                                           "tempo":  22,
                                           "rv":  19,
@@ -976,6 +910,78 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Ein kluges, solides Wochenende mit Sprint-P3 und P4 im Hauptrennen. Das Ergebnis kam auch durch Fehler anderer und das Safety-Car-Timing, im reinen Tempo liegt er weiter hinten."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r04",
+                                          "tempo":  24,
+                                          "rv":  15,
+                                          "kon":  13,
+                                          "sau":  7,
+                                          "kurz":  "Gut durch das Startchaos, dann ein Rennunfall mit Mesota und ein Flügelwechsel nach Runde 1. In Runde 23 räumte er Leokobra mit einem späten Divebomb ab, ohne sich zu entschuldigen.",
+                                          "quelle":  "Eigenes Video (Mehlone, Gamertag Luisloli89, Quali und Rennen), dazu die Videos von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Den Ton haben wir nur bei den zwei Kontaktszenen angehört, um zu prüfen, ob er sich entschuldigt.",
+                                          "fakten":  {
+                                                         "quali":  "P8 · 1:05.804 (+1,146)",
+                                                         "start":  "P8",
+                                                         "ziel":  "P7 · +1 Runde",
+                                                         "runde":  "1:08.978",
+                                                         "stopps":  "2 · Runde 1 mit neuem Frontflügel (7,440 s), Runde 16 (2,252 s). Welche Reifen er jeweils bekam, zeigen Tower und Boxenstopp-Reiter unterschiedlich.",
+                                                         "strafen":  "keine Zeitstrafe. Track-Limit-Warnung in Runde 30, Aufforderung zur Platzrückgabe in Runde 35"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali P8 mit 1,1 s Rückstand, im Trockenen solides Mittelfeld-Tempo, die beste Runde 1,8 s hinter der schnellsten.",
+                                                        "rv":  "Gut durch das Chaos in Kurve 3, aber der späte Divebomb in Runde 23 war ungeschickt, und im Regen kostete das Draußenbleiben auf Slicks P6.",
+                                                        "kon":  "Keine Dreher und gleichmäßige Stints im Trockenen, im Regen auf Slicks deutlich langsamer.",
+                                                        "sau":  "Der Kontakt mit Leokobra in Runde 23 geht klar auf ihn, ohne Entschuldigung und ohne den Platz zurückzugeben. Dazu die Aufforderung zur Platzrückgabe in Runde 35. Runde 1 mit Mesota zählt nicht gegen ihn."
+                                                    },
+                                          "pos":  [
+                                                      "Im Chaos von Kurve 3 in Runde 1 ruhig geblieben, dem Dreher von Danolo Frenzi direkt vor ihm ausgewichen und zwei Plätze gewonnen.",
+                                                      "Nach dem Kontakt mit Mesota und dem Einschlag in die Werbebande nicht gedreht, sondern das Auto zur Box gebracht.",
+                                                      "Vom letzten Platz nach dem Flügelwechsel bis Runde 3 zurück auf P8.",
+                                                      "Gleichmäßige Runden um 1:09 im Trockenen, beste Runde 1:08.978.",
+                                                      "Durch das Draußenbleiben im Regen mehrere Runden auf P6."
+                                                  ],
+                                          "neg":  [
+                                                      "Runde 23: kam mit 329 km/h aus dem Windschatten, bremste viel zu spät und traf Leokobra beim Anbremsen von Kurve 3 am Heck. Leokobra drehte sich, Mehlone behielt den Platz.",
+                                                      "Nach dem Divebomb keine Entschuldigung, im Gegenteil, er freute sich über das Manöver.",
+                                                      "Im Regen auf Slicks geblieben und in der letzten Runde P6 an Danolo Frenzi auf Intermediates verloren.",
+                                                      "In Runde 35 über die Kerbs neben dem überrundeten Tore79, danach die Aufforderung, den Platz zurückzugeben."
+                                                  ],
+                                          "besser":  [
+                                                         "Früher aus dem Windschatten ziehen und nur angreifen, wenn vor dem Bremspunkt schon Überlappung da ist.",
+                                                         "Nach einem Kontakt den Platz zurückgeben und sich entschuldigen.",
+                                                         "Bei mehreren Runden Regen früher auf Intermediates wechseln."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P8 mit 1:05.804, nur 0,04 s hinter Max, aber 1,1 s hinter der Pole. In einem so engen Feld war das solide, mehr aber nicht. Bis P5 und P6 fehlten nur rund 0,4 s."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Er kam gut weg und blieb im Chaos von Kurve 3 ruhig: Ein Racing Bull und ein weiteres Auto standen quer, Danolo Frenzi drehte sich direkt vor ihm. Mehlone wich allem aus und gewann zwei Plätze. Direkt danach kam Mesota links neben ihn, zog vorbei und nach rechts vor seine Nase. Wenig später gingen beide hintereinander rechts neben die Strecke, im Gras gab es Kontakt, vermutlich Mehlones linkes Vorderrad gegen Mesotas rechtes Hinterrad. Mesota drehte Richtung Mauer, Mehlone traf eine Werbebande. Aus Mehlones Sicht hat er nicht innen gestochen und sich nicht gedreht, er lag hinter Mesota. Das Spiel verwarnte beide. Wir werten das als Rennunfall, der eher auf Mesotas engen Spurwechsel zurückgeht."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Nach dem Flügelwechsel am Ende von Runde 1 war er Letzter, bis Runde 3 aber wieder P8. Im Trockenen fuhr er gleichmäßige Runden um 1:09 und verbesserte sich bis Runde 22 auf 1:08.978, das war Mittelfeld-Tempo. In Runde 23 folgte der Divebomb gegen Leokobra, danach P7. Als ab etwa Runde 26 der Regen kam, blieb er draußen und lag während der Reifenwechsel der anderen auf P6. In den letzten Runden verlor er auf Slicks aber 1,5 bis 2 s pro Viertelrunde."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Der Stopp in Runde 1 (7,4 s Stillstand) war wegen des Flügelschadens erzwungen. Der zweite Stopp in Runde 16 war geplant. Im Regen blieb er bis zum Ende auf Slicks. Das brachte kurz P6, kostete diesen Platz aber in der letzten Runde an Danolo Frenzi auf Intermediates."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Runde 1 war ein Rennunfall mit Mesota. In Runde 23 verursachte Mehlone den Kontakt selbst: Mit 329 km/h und Boost zog er aus dem Windschatten, als Leokobra schon für Kurve 3 bremste, und traf ihn am rechten Hinterrad. Leokobra drehte sich, Mehlone bremste erst nach dem Kontakt und behielt den Platz. Das Spiel verwarnte merkwürdigerweise Leokobra. Andere Duelle, etwa mit Danolo Frenzi, waren sauber."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine Dreher, aber der Einschlag in die Bande in Runde 1, der klare Kontakt in Runde 23 und die Aufforderung zur Platzrückgabe in Runde 35. Nach beiden Kontaktszenen ist im Ton keine Entschuldigung zu hören. Nach Runde 1 beschwerte er sich über Mesota, nach Runde 23 freute er sich über den Divebomb. Keine Zeitstrafe im Ergebnis."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "P7 entspricht ungefähr seinem Tempo, ohne den Schaden in Runde 1 wäre P6 realistisch gewesen. Der Schwachpunkt dieses Rennens ist die Sauberkeit: Der Divebomb in Runde 23 ohne Entschuldigung und ohne Platzrückgabe zählt klar gegen ihn. Runde 1 zählt dagegen nicht gegen Mehlone."
                                                           }
                                                       ]
                                       }
@@ -2165,7 +2171,7 @@
                                           "tempo":  29,
                                           "rv":  13,
                                           "kon":  12,
-                                          "sau":  11,
+                                          "sau":  13,
                                           "kurz":  "Starkes Quali auf P6, dann in Runde 1 zweimal getroffen und nach dem Flügelwechsel nur P8.",
                                           "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Leokobraa.",
                                           "fakten":  {
@@ -2174,24 +2180,24 @@
                                                          "ziel":  "P8 · +1 Runde",
                                                          "runde":  "1:08.928",
                                                          "stopps":  "3 · Runde 2 auf Hard mit neuem Frontflügel (7,438 s), Runde 13 auf Medium, Runde 26 auf Medium",
-                                                         "strafen":  "Kollisionswarnung in Runde 23 (mit Mehlone)"
+                                                         "strafen":  "Kollisionswarnung in Runde 23 (laut Video war Mehlone der Verursacher)"
                                                      },
                                           "noten":  {
                                                         "tempo":  "Starkes Quali mit 0,8 s Rückstand und eine ordentliche Rennrunde.",
                                                         "rv":  "Nach dem Schaden in Runde 1 nicht mehr nach vorne gekommen.",
                                                         "kon":  "Drei Stopps, sonst keine großen Einbrüche zu sehen.",
-                                                        "sau":  "In Runde 1 Opfer von Danolo Frenzi und Tore79, in Runde 23 selbst mit Kontakt gegen Mehlone."
+                                                        "sau":  "In Runde 1 Opfer von Danolo Frenzi und Tore79, in Runde 23 Opfer eines späten Divebombs von Mehlone. Das Spiel verwarnte ihn dafür trotzdem."
                                                     },
                                           "pos":  [
                                                       "Quali P6, deutlich verbessert gegenüber Barcelona.",
                                                       "Ordentliche Rennrunde mit 1:08.928."
                                                   ],
                                           "neg":  [
-                                                      "In Runde 23 Kontakt mit Mehlone, Verwarnung.",
+                                                      "In Runde 23 von Mehlone beim Anbremsen von Kurve 3 abgeschossen, dabei gedreht und einen Platz verloren.",
                                                       "Eine Runde Rückstand im Ziel."
                                                   ],
                                           "besser":  [
-                                                         "Nach einem Schaden ruhig bleiben und keine riskanten Manöver setzen.",
+                                                         "In Runde 1 im Chaos mehr Abstand halten, um Schäden zu vermeiden.",
                                                          "Das Quali-Tempo ins Rennen mitnehmen."
                                                      ],
                                           "analyse":  [
@@ -2213,11 +2219,11 @@
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "In Runde 23 Kontakt mit Mehlone, die Verwarnung ging an Leokobra."
+                                                              "x":  "In Runde 23 kam Mehlone mit 329 km/h aus dem Windschatten, als Leokobra schon für Kurve 3 bremste, und traf ihn am Heck. Leokobra drehte sich und verlor den Platz. Das Spiel verwarnte Leokobra, Mehlones Video zeigt aber Mehlone als Verursacher."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Eine Kollisionswarnung, keine Zeitstrafe."
+                                                              "x":  "Eine Kollisionswarnung in Runde 23, die laut Video aber Mehlone hätte bekommen müssen. Keine Zeitstrafe."
                                                           },
                                                           {
                                                               "t":  "Fazit",
