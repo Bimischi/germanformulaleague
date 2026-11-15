@@ -333,11 +333,65 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .ch-pts small{color:var(--muted);font-size:12.5px;font-variant-numeric:tabular-nums}
 .ch-alive{position:absolute;right:110px;top:6px;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--dnf-fg)}
 .ch-note{margin:0;color:var(--muted);font-size:13px}
+.ch-hint{margin:0 0 -4px;color:var(--muted);font-size:13px}
+.ch-row{grid-template-columns:48px minmax(0,1fr) auto 84px 30px}
+.ch-row.tw-on{cursor:pointer}
+.ch-row.tw-on:hover{border-color:#3A3F4B;border-left-color:var(--tc)}
+.ch-row.open{background:var(--panel-2);border-bottom-left-radius:0;border-bottom-right-radius:0}
+.ch-more{width:30px;height:30px;display:grid;place-items:center;background:transparent;border:1px solid var(--line);border-radius:5px;color:var(--muted);cursor:pointer;padding:0}
+.ch-more svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.ch-more:hover{color:var(--fg);border-color:var(--muted)}
+.ch-row.open .ch-more svg{transform:rotate(180deg)}
+.ch-alive{right:140px}
+.tw{margin:-6px 0 4px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--tc,#4A505C);border-top:0;border-radius:0 0 6px 6px;padding:16px 18px 18px;display:grid;gap:14px}
+.tw-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tw-head h3{margin:0;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:20px}
+.tw-chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;background:var(--panel-2);color:var(--muted);border:1px solid var(--line)}
+.tw-chip.ok{color:#8FF0BC;border-color:rgba(61,220,132,.4);background:rgba(61,220,132,.1)}
+.tw-chip.no{color:var(--dnf-fg);border-color:rgba(255,120,110,.4);background:rgba(255,120,110,.08)}
+.tw-txt{margin:0;font-size:15px;max-width:75ch}
+.tw-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.tw-facts span{background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:9px 12px;color:var(--muted);font-size:12.5px;display:flex;flex-direction:column;gap:2px}
+.tw-facts b{font-family:var(--f-display);font-weight:800;font-size:24px;color:var(--fg);line-height:1;font-variant-numeric:tabular-nums}
+.tw-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:12px}
+.tw-box{background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0;display:grid;gap:12px;align-content:start}
+.tw-box h4{margin:0;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:var(--muted)}
+.tw-tab{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
+.tw-tab th{white-space:normal;overflow-wrap:anywhere;vertical-align:bottom;text-align:left;font-weight:600;color:var(--muted);font-size:12px;padding:0 6px 6px;border-bottom:1px solid var(--line)}
+.tw-tab td{padding:7px 6px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.tw-tab tr:last-child td{border-bottom:0}
+.tw .ok{color:#8FF0BC}.tw .no{color:var(--dnf-fg)}
+.tw-sl{display:grid;gap:6px;font-size:14px}
+.tw-sl b{color:var(--fg);font-family:var(--f-display);font-size:18px;margin-left:4px}
+.tw-sl input{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:#2F343F;margin:8px 0;cursor:pointer}
+.tw-sl input::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--sc);border:3px solid var(--fg)}
+.tw-sl input::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--sc);border:3px solid var(--fg)}
+.tw-scale{display:flex;justify-content:space-between;color:var(--muted);margin-top:-4px}
+.tw-res{margin:0;font-size:14.5px}
+.tw-leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted)}
+.tw-leg span{display:inline-flex;align-items:center;gap:6px}
+.tw-leg i{width:14px;height:4px;border-radius:2px;display:inline-block}
+.tw-chart{width:100%;height:auto;display:block}
+.tw-gl{stroke:var(--line);stroke-width:1}
+.tw-yl{fill:var(--muted);font-size:11px;text-anchor:end}
+.tw-xl{fill:var(--muted);font-size:10.5px;text-anchor:middle}
+.tw-now{stroke:var(--muted);stroke-dasharray:2 4}
+.tw-nowl{fill:var(--muted);font-size:10px;text-anchor:middle}
+.tw-ln{fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.tw-ln.dash{stroke-dasharray:6 6;opacity:.85}
+.tw-end{font-size:13px;font-weight:700}
+.tw-note{margin:0;color:var(--muted);font-size:12.5px}
+@media (max-width:820px){.tw-grid{grid-template-columns:1fr}.tw-facts{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){
+  .ch-row{grid-template-columns:36px minmax(0,1fr) 64px 28px}
+  .tw{padding:14px 12px}
+  .tw-xl{font-size:10px}
+}
 @media (max-width:640px){
   .ch-tab b{font-size:15px}.ch-tab{padding:10px 12px}
   .podium{grid-template-columns:1fr;gap:8px}.pod{order:2}.pod.p1{order:1}.pod.p3{order:3}.pod.empty{display:none}
   .pod.p1 .pod-pos{font-size:64px}
-  .ch-row{grid-template-columns:36px minmax(0,1fr) 64px;gap:8px}.ch-st{display:none}.ch-pos{font-size:20px}
+  .ch-row{grid-template-columns:36px minmax(0,1fr) 64px 28px;gap:8px}.ch-st{display:none}.ch-pos{font-size:20px}
   .ch-alive{position:static;grid-column:2/-1;margin-top:-4px}
 }/* Bewertung */
 .tier{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:4px;font-family:var(--f-display);font-weight:800;font-size:16px;line-height:1;vertical-align:middle}
@@ -616,6 +670,116 @@ function pointsText(s){
   return t;
 }
 
+/* ---------- Weg zum Titel ----------
+   Rechnet mit den Punkte-Einstellungen der Saison: Platzierungspunkte (100-%-Rennen doppelt),
+   Anwesenheitspunkt, eingetragene Sprints. Bonuspunkte gehen nur ins Maximum ein. */
+function twEvents(s){var ev=[];sortedRaces(s).forEach(function(r){if(r.sprint)ev.push({r:r,sp:1,done:sprintDone(r)});ev.push({r:r,sp:0,done:done(r)});});return ev;}
+function twBonus(s){return (+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.dotdPoint||0);}
+function twPlace(s,e,p){if(!p)return 0;if(e.sp)return +sprintPts(s)[p-1]||0;return (+s.points[p-1]||0)*(e.r.full?2:1)+(+s.attendPoint||0);}
+function twProj(s,e,p,teams){return teams?(p?twPlace(s,e,p)+twPlace(s,e,p+1):0):twPlace(s,e,p);}
+function twMax(s,e,teams){return twProj(s,e,1,teams)+(e.sp?0:twBonus(s));}
+function twRemain(s,teams){return twEvents(s).filter(function(e){return !e.done;}).reduce(function(a,e){return a+twMax(s,e,teams);},0);}
+function twGot(s,e,id,teams){
+  if(!teams)return e.sp?sPts(s,e.r,id):rPts(s,e.r,id);
+  var l=e.sp?(e.r.sprint.results||[]):(e.r.results||[]),p=0;
+  l.forEach(function(x){if((x.t||'')===id)p+=e.sp?sPts(s,e.r,x.d):rPts(s,e.r,x.d);});return p;
+}
+function twAvg(s,id,teams){
+  var n=0,sum=0;sortedRaces(s).filter(done).forEach(function(r){r.results.forEach(function(x){if(x.s||!x.p)return;if(teams?(x.t||'')===id:x.d===id){sum+=x.p;n++;}});});
+  if(!n)return 3;var a=teams?Math.round(sum/n-0.5):Math.round(sum/n);return Math.min(s.points.length,Math.max(1,a));
+}
+function twLbl(p,teams){return !p?'Ausfall':teams?'P'+p+' + P'+(p+1):'P'+p;}
+function chRows(s,mode){
+  if(mode==='teams')return teamRows(s).filter(function(r){return r.id||r.total>0;});
+  return driverRows(s).filter(function(r){return r.starts>0||r.total>0||drv(s,r.id)&&drv(s,r.id).role!=='ersatz';});
+}
+function twCtx(){
+  var s=S(ui.season);if(!s||!ui.chOpen)return null;
+  var teams=ui.champ==='teams',mode=teams?'teams':'drivers';
+  if(ui.chOpen.indexOf(mode+':')!==0)return null;
+  var id=ui.chOpen.slice(mode.length+1),rows=chRows(s,mode),me=null;
+  rows.forEach(function(r){if(r.id===id)me=r;});if(!me)return null;
+  var ev=twEvents(s);
+  return {s:s,teams:teams,rows:rows,me:me,riv:me===rows[0]?rows[1]||null:rows[0],ev:ev,open:ev.filter(function(e){return !e.done;}),
+    maxP:Math.max(1,s.points.length-(teams?1:0)),
+    name:function(r){return teams?(team(s,r.id)||{name:'Ohne Team'}).name:dName(s,r.id);},
+    col:function(r){return teams?(team(s,r.id)||{color:'#4A505C'}).color:curTeam(s,r.id).color;}};
+}
+function twSum(c,r,p){return r.total+c.open.reduce(function(a,e){return a+twProj(c.s,e,p,c.teams);},0);}
+function twNeed(c,L){
+  var rf=twSum(c,c.riv,L);
+  if(c.me.total>rf)return 0;
+  for(var q=c.maxP;q>=1;q--){if(!c.teams&&q===L)continue;if(twSum(c,c.me,q)>rf)return q;}
+  return -1;
+}
+function twChart(c){
+  var s=c.s,ev=c.ev,n=ev.length,sm=window.innerWidth<640,W=sm?380:640,H=sm?250:230,pl=sm?32:40,pr=sm?42:60,pt=14,pb=30;
+  function ser(r,p){var v=[0],t=0;ev.forEach(function(e){t+=e.done?twGot(s,e,r.id,c.teams):twProj(s,e,p,c.teams);v.push(t);});return v;}
+  var a=ser(c.me,ui.twMe),b=c.riv?ser(c.riv,ui.twRiv):null;
+  var mx=Math.max.apply(null,a.concat(b||[]))||10;
+  var step=[5,10,20,25,50,100,200].filter(function(x){return mx/x<=5;})[0]||500,top=Math.ceil(mx/step)*step;
+  function X(i){return (pl+i*(W-pl-pr)/n).toFixed(1);}
+  function Y(v){return (pt+(1-v/top)*(H-pt-pb)).toFixed(1);}
+  var g='';for(var v=0;v<=top;v+=step)g+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" class="tw-gl"/><text x="'+(pl-7)+'" y="'+(+Y(v)+4)+'" class="tw-yl">'+v+'</text>';
+  var last=0;ev.forEach(function(e,i){if(e.done)last=i+1;});
+  if(last>0&&last<n)g+='<line x1="'+X(last)+'" x2="'+X(last)+'" y1="'+pt+'" y2="'+(H-pb)+'" class="tw-now"/><text x="'+X(last)+'" y="'+(pt-3)+'" class="tw-nowl">jetzt</text>';
+  ev.forEach(function(e,i){if(!e.sp)g+='<text x="'+X(i+1)+'" y="'+(H-10)+'" class="tw-xl">'+esc(e.r.short||'')+'</text>';});
+  function path(v,dash){var d='';ev.forEach(function(e,i){if(!e.done!==dash)return;d+='M'+X(i)+' '+Y(v[i])+'L'+X(i+1)+' '+Y(v[i+1]);});return d;}
+  var ya=+Y(a[n]),yb=b?+Y(b[n]):0;
+  if(b&&Math.abs(ya-yb)<15){if(ya<=yb){ya-=(15-(yb-ya))/2;yb=ya+15;}else{yb-=(15-(ya-yb))/2;ya=yb+15;}}
+  function line(v,col,ye){return '<path d="'+path(v,false)+'" stroke="'+col+'" class="tw-ln"/><path d="'+path(v,true)+'" stroke="'+col+'" class="tw-ln dash"/>'+
+    '<circle cx="'+X(n)+'" cy="'+Y(v[n])+'" r="4" fill="'+col+'"/><text x="'+(+X(n)+9)+'" y="'+(ye+4).toFixed(1)+'" class="tw-end" fill="'+col+'">'+fmtP(v[n])+'</text>';}
+  var ca=c.col(c.me),cb='#AEB3BD';
+  return '<div class="tw-leg"><span><i style="background:'+esc(ca)+'"></i>'+esc(c.name(c.me))+'</span>'+(b?'<span><i style="background:'+cb+'"></i>'+esc(c.name(c.riv))+'</span>':'')+'<span class="tw-dash">gestrichelt = Hochrechnung</span></div>'+
+    '<svg class="tw-chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Punkteverlauf mit Hochrechnung">'+g+(b?line(b,cb,yb):'')+line(a,esc(ca),ya)+'</svg>';
+}
+function twOut(c){
+  var h='';
+  if(c.open.length&&c.riv){
+    var fa=twSum(c,c.me,ui.twMe),fb=twSum(c,c.riv,ui.twRiv),d=fa-fb,na=esc(c.name(c.me)),nb=esc(c.name(c.riv));
+    h+='<p class="tw-res"><b>'+na+'</b> käme auf <b>'+fmtP(fa)+'</b> Punkte, <b>'+nb+'</b> auf <b>'+fmtP(fb)+'</b>. '+
+      (d>0?'<span class="ok">'+na+' läge '+fmtP(d)+' Punkte vorne.</span>':d<0?'<span class="no">'+nb+' läge '+fmtP(-d)+' Punkte vorne.</span>':'Gleichstand: Dann entscheiden die besseren Platzierungen.')+'</p>';
+  }
+  return h+twChart(c);
+}
+function twSlider(c,key,r){
+  var p=ui[key],v=p?p:c.maxP+1;
+  return '<label class="tw-sl" style="--sc:'+esc(key==='twMe'?c.col(r):'#AEB3BD')+'"><span>'+esc(c.name(r))+(c.teams?' holt':' fährt')+' im Schnitt <b id="lbl-'+key+'">'+twLbl(p,c.teams)+'</b></span>'+
+    '<input type="range" min="1" max="'+(c.maxP+1)+'" step="1" value="'+v+'" data-tw="'+key+'" aria-label="Durchschnittlicher Platz '+esc(c.name(r))+'">'+
+    '<span class="tw-scale"><small>'+twLbl(1,c.teams)+'</small><small>Ausfall</small></span></label>';
+}
+function twPanel(c){
+  var s=c.s,me=c.me,riv=c.riv,lead=c.rows[0],na=esc(c.name(me)),rem=c.open.reduce(function(a,e){return a+twMax(s,e,c.teams);},0);
+  var nR=c.open.filter(function(e){return !e.sp;}).length,nS=c.open.length-nR;
+  var chip,txt;
+  if(!c.open.length){chip=me.pos===1?'<span class="tw-chip ok">Meister</span>':'<span class="tw-chip">Saison beendet</span>';txt=me.pos===1?na+' hat die Meisterschaft gewonnen.':na+' beendet die Saison auf Platz '+me.pos+'.';}
+  else if(me===lead){
+    var m=riv?me.total-riv.total:0;
+    if(!riv||m>rem){chip='<span class="tw-chip ok">Titel sicher</span>';txt=na+' ist Meister, egal wie die restlichen Rennen laufen.';}
+    else{chip='<span class="tw-chip ok">Führung</span>';txt=na+' führt mit '+fmtP(m)+' Punkten vor '+esc(c.name(riv))+'. Es sind noch bis zu '+fmtP(rem)+' Punkte zu holen. Sicher ist der Titel, sobald der Vorsprung größer ist als die Punkte, die noch zu holen sind.';}
+  } else {
+    var gap=lead.total-me.total,ln=esc(c.name(lead));
+    if(me.total+rem<lead.total){chip='<span class="tw-chip no">Raus</span>';txt=na+' kann '+ln+' nicht mehr einholen: '+fmtP(gap)+' Punkte Rückstand, aber nur noch höchstens '+fmtP(rem)+' Punkte zu holen.';}
+    else{chip='<span class="tw-chip">Im Rennen</span>';txt=fmtP(gap)+' Punkte Rückstand auf '+ln+'. Bei '+c.open.length+' offenen Wertungen sind das im Schnitt '+fmtP(Math.ceil(gap/c.open.length*10)/10)+' Punkte pro Wertung mehr als '+ln+'.';}
+  }
+  var h='<div class="tw" id="tw" style="--tc:'+esc(c.col(me))+'"><div class="tw-head"><h3>Weg zum Titel</h3>'+chip+'</div><p class="tw-txt">'+txt+'</p>';
+  h+='<div class="tw-facts"><span><b>'+fmtP(me.total)+'</b>Punkte</span><span><b>'+(me===lead?(riv?'+'+fmtP(me.total-riv.total):'–'):'−'+fmtP(lead.total-me.total))+'</b>'+(me===lead?'Vorsprung':'Rückstand')+'</span>'+
+    '<span><b>'+nR+'</b>Rennen offen'+(nS?' + '+nS+' Sprint'+(nS>1?'s':''):'')+'</span><span><b>'+fmtP(rem)+'</b>Punkte max. zu holen</span></div>';
+  if(c.open.length&&riv){
+    var Ls=[1,2,3,4,5,6].filter(function(L){return L<=c.maxP;}).concat([0]),rn=esc(c.name(riv));
+    h+='<div class="tw-grid"><div class="tw-box"><h4>Was '+na+' braucht</h4><table class="tw-tab"><thead><tr><th>'+rn+(c.teams?' holt':' fährt')+' im Schnitt …</th><th>… dann braucht '+na+'</th></tr></thead><tbody>'+
+      Ls.map(function(L){var q=twNeed(c,L);
+        return '<tr><td>'+twLbl(L,c.teams)+'</td><td>'+(q===0?'<span class="ok">Titel auch mit Ausfällen</span>':q<0?'<span class="no">reicht nicht</span>':'<b>'+twLbl(q,c.teams)+'</b> oder besser')+'</td></tr>';}).join('')+
+      '</tbody></table></div>'+
+      '<div class="tw-box"><h4>Selbst durchspielen</h4>'+twSlider(c,'twMe',me)+twSlider(c,'twRiv',riv)+'<div id="tw-out">'+twOut(c)+'</div></div></div>';
+  } else h+='<div class="tw-box">'+twChart(c)+'</div>';
+  var bon=twBonus(s);
+  h+='<p class="tw-note">Gerechnet mit den Punkten der Saison: Platzierungspunkte'+(+s.attendPoint?' plus Anwesenheitspunkt':'')+(s.races.some(function(r){return r.full;})?', 100-%-Rennen doppelt':'')+(nS?', eingetragene Sprints':'')+'. '+
+    (bon?'Bonuspunkte (bis zu +'+bon+' pro Rennen) sind in der Hochrechnung nicht drin und können es noch drehen. ':'')+
+    (c.teams?'Bei Teams zählen zwei Fahrer: „P3 + P4“ heißt, die Fahrer kommen auf diesen Plätzen ins Ziel. ':'')+'Bei Punktgleichheit entscheiden die besseren Platzierungen.</p></div>';
+  return h;
+}
+
 /* ---------- Championship ---------- */
 function maxPerRace(s){return (+s.points[0]||0)+(+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.dotdPoint||0)+(+s.attendPoint||0);}
 function viewChampionship(){
@@ -630,12 +794,11 @@ function viewChampionship(){
   if(next) meta+=' · Nächstes Rennen: '+flag(next.flag)+' '+esc(next.short||next.name)+' '+esc(next.slot||'')+', '+esc(dLabel(next));
   else if(all.length) meta+=' · Saison beendet';
   h+='<div class="sec-head"><div><h2>'+(mode==='teams'?"Constructors' Championship":"Drivers' Championship")+'</h2><p class="meta">'+esc(s.name)+(s.game?' · '+esc(s.game):'')+' · '+meta+'</p></div>'+
-    (left&&fin.length&&mode==='drivers'?'<p class="ch-left"><b>'+left*maxPerRace(s)+'</b> Punkte noch zu vergeben</p>':'')+'</div>';
-  var rows=mode==='teams'?teamRows(s):driverRows(s);
-  if(mode==='teams') rows=rows.filter(function(r){return r.id||r.total>0;});
-  if(mode==='drivers') rows=rows.filter(function(r){return r.starts>0||drv(s,r.id)&&drv(s,r.id).role!=='ersatz';});
+    (twRemain(s,mode==='teams')&&all.some(counted)?'<p class="ch-left"><b>'+fmtP(twRemain(s,mode==='teams'))+'</b> Punkte '+(mode==='teams'?'pro Team':'pro Fahrer')+' noch zu holen</p>':'')+'</div>';
+  var rows=chRows(s,mode);
   if(!rows.length) return h+emptyBox('Noch keine Wertung','Sobald Ergebnisse eingetragen sind, erscheint hier die Meisterschaft.');
-  var lead=rows[0].total||0,remain=left*maxPerRace(s);
+  var lead=rows[0].total||0,remain=twRemain(s,mode==='teams');
+  var twc=twCtx();
   function item(r){
     if(mode==='teams'){
       var t=team(s,r.id)||{name:'Ohne Team',color:'#4A505C'};
@@ -645,7 +808,7 @@ function viewChampionship(){
     var d=drv(s,r.id),t2=curTeam(s,r.id);
     return {color:t2.color,name:(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,r.id),sub:esc(t2.name)+(d&&d.role==='ersatz'?' · Ersatz':''),wins:r.cnt[0],pod:r.cnt[0]+r.cnt[1]+r.cnt[2]};
   }
-  var started=fin.length>0;
+  var started=all.some(counted);
   if(started){
     var top=rows.slice(0,3),ord=[top[1],top[0],top[2]];
     h+='<div class="podium">'+ord.map(function(r,k){
@@ -654,15 +817,18 @@ function viewChampionship(){
       return '<div class="pod p'+place+'" style="--tc:'+esc(it.color)+'"><span class="pod-pos">'+r.pos+'</span><div class="pod-name">'+it.name+'</div><div class="sub">'+it.sub+'</div><div class="pod-pts"><b>'+fmtP(r.total)+'</b><span>Punkte</span></div><div class="pod-gap">'+(r.total===lead?(r.pos===1?'Führung':'gleichauf'):'−'+fmtP(lead-r.total))+'</div></div>';
     }).join('')+'</div>';
   }
+  if(started) h+='<p class="ch-hint">'+(mode==='teams'?'Team':'Fahrer')+' anklicken: Was braucht '+(mode==='teams'?'das Team':'er')+' noch für den Titel?</p>';
   h+='<div class="ch-list">';
   rows.forEach(function(r){
     var it=item(r),w=lead?Math.max(2,Math.round(r.total/lead*100)):0;
-    var out=mode==='drivers'&&started&&r.pos>1&&r.total+remain<lead;
-    h+='<div class="ch-row'+(r.pos<=3&&started?' top':'')+'" style="--tc:'+esc(it.color)+'"><span class="ch-pos">'+(started?r.pos:'–')+'</span>'+
+    var out=started&&r.pos>1&&r.total+remain<lead,key=mode+':'+r.id,open=!!(twc&&ui.chOpen===key);
+    h+='<div class="ch-row'+(r.pos<=3&&started?' top':'')+(started?' tw-on':'')+(open?' open':'')+'" style="--tc:'+esc(it.color)+'"'+(started?' data-act="chOpen" data-id="'+esc(key)+'"':'')+'><span class="ch-pos">'+(started?r.pos:'–')+'</span>'+
       '<div class="ch-who"><div class="ch-name">'+it.name+'</div><div class="sub">'+it.sub+'</div><span class="ch-bar"><i style="width:'+w+'%"></i></span></div>'+
       '<div class="ch-st"><span title="Siege"><b>'+it.wins+'</b> Siege</span><span title="Podien"><b>'+it.pod+'</b> Podien</span></div>'+
       '<div class="ch-pts"><b>'+fmtP(r.total)+'</b><small>'+(started?(r.pos===1?'Leader':'−'+fmtP(lead-r.total)):'Punkte')+'</small></div>'+
+      (started?'<button class="ch-more" data-act="chOpen" data-id="'+esc(key)+'" aria-expanded="'+open+'" aria-label="Weg zum Titel für '+it.name.replace(/<[^>]*>/g,'').trim()+'"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>':'<span></span>')+
       (out?'<span class="ch-alive out" title="Kann den Leader rechnerisch nicht mehr einholen">kein Titel mehr möglich</span>':'')+'</div>';
+    if(open) h+=twPanel(twc);
   });
   h+='</div>';
   h+='<p class="ch-note">'+(mode==='teams'?'Die Konstrukteurswertung zählt alle Punkte der Fahrer, die im jeweiligen Rennen für das Team gefahren sind.':'Punkte: '+esc(pointsText(s)))+(mode==='drivers'&&left?' · Pro Rennen sind maximal '+maxPerRace(s)+' Punkte möglich.':'')+'</p>';
@@ -1520,7 +1686,12 @@ function doAction(act,el){
     case 'rec':ui.rec=id;break;
     case 'recTop':ui.recTop=id;break;
     case 'recSeason':ui.recSeason=id;break;
-    case 'champ':ui.champ=id;break;
+    case 'champ':ui.champ=id;ui.chOpen=null;break;
+    case 'chOpen':{
+      if(ui.chOpen===id){ui.chOpen=null;break;}
+      ui.chOpen=id;var c0=twCtx();
+      if(c0){ui.twMe=twAvg(c0.s,c0.me.id,c0.teams);ui.twRiv=c0.riv?twAvg(c0.s,c0.riv.id,c0.teams):1;}
+      render();setTimeout(function(){var t=document.getElementById('tw');if(t&&t.getBoundingClientRect().bottom>window.innerHeight)t.scrollIntoView({behavior:'smooth',block:'nearest'});},30);return;}
     case 'rate':ui.rate=ui.rate===id?null:id;ui.rateScroll=!!ui.rate;break;
     case 'rSeason':ui.rSeason=id;ui.rRace='all';break;
     case 'rRace':ui.rRace=id;ui.rateScroll=!!ui.rate;break;
@@ -1756,7 +1927,13 @@ document.addEventListener('submit',function(e){
   }
 });
 document.addEventListener('change',function(e){var el=e.target;if(el&&el.dataset&&el.dataset.f)applyField(el.dataset.f,el);});
-document.addEventListener('input',function(e){if(e.target&&e.target.id==='json-io')ui.json=e.target.value;});
+document.addEventListener('input',function(e){
+  if(e.target&&e.target.id==='json-io')ui.json=e.target.value;
+  var k=e.target&&e.target.dataset&&e.target.dataset.tw;
+  if(k){var c=twCtx();if(!c)return;var v=+e.target.value;ui[k]=v>c.maxP?0:v;
+    var lb=document.getElementById('lbl-'+k);if(lb)lb.textContent=twLbl(ui[k],c.teams);
+    var o=document.getElementById('tw-out');if(o)o.innerHTML=twOut(c);}
+});
 
 function checkStash(){
   try{var raw=localStorage.getItem('gfl-draft');if(!raw)return;
