@@ -1170,7 +1170,7 @@
                                                       "Keine selbst verursachte Kollision im ganzen Wochenende."
                                                   ],
                                           "neg":  [
-                                                      "Sprint: Dreher ohne Gegnerkontakt in Runde 2 (Kurve 6/7), von P3 auf P6.",
+                                                      "Sprint: Dreher ohne Gegnerkontakt in Runde 2 (Kurve 6/7), von P3 zurückgefallen, Ziel P5.",
                                                       "Frontflügelstopp in Runde 15 (7,4 s), die Ursache ist nicht zu sehen.",
                                                       "In der letzten Runde in Kurve 1 die Innenbahn nicht zugemacht, waltherjonas28 traf ihn, Dreher und P4 auf der Straße."
                                                   ],
@@ -1185,7 +1185,7 @@
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 7 in Runde 1 bis auf P3. In Runde 2 drehte er sich im Bereich Kurve 6/7 ohne erkennbaren Gegnerkontakt und fiel auf P6. Ziel auf P6, offiziell P5."
+                                                              "x":  "Von Startplatz 7 in Runde 1 bis auf P3. In Runde 2 drehte er sich im Bereich Kurve 6/7 ohne erkennbaren Gegnerkontakt und fiel zurück. Ziel auf P5."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
@@ -1938,7 +1938,7 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Starkes Quali mit 0,74 s Rückstand, die Rennrunde ordentlich.",
-                                                        "rv":  "Im Sprint drei Plätze verloren, im Rennen durch eigene Fehler eine Runde zurück.",
+                                                        "rv":  "Im Sprint zwei Plätze verloren, im Rennen durch eigene Fehler eine Runde zurück.",
                                                         "kon":  "Kontakt in Runde 1, Mauer in Runde 6, Zurücksetzen und fünf Stopps.",
                                                         "sau":  "Auffahrunfall in Runde 1, zweimal blaue Flaggen ignoriert und zwei Abkürzungen mit Aufforderung, den Platz zurückzugeben."
                                                     },
@@ -1963,7 +1963,7 @@
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 4 auf P7 im Spiel zurückgefallen, offiziell P6."
+                                                              "x":  "Von Startplatz 4 auf P6 zurückgefallen."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
