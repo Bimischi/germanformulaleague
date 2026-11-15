@@ -1,6 +1,6 @@
 {
     "stand":  "Stand nach Saison 1 · Rennen 4 (Österreich)",
-    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota und DON-FUCHSER88. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet.",
+    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota und DON-FUCHSER88. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet. Strafen wegen blauer Flaggen werden nicht gewertet. In Kanada sind die Gastfahrer CHERNOSHTANOV und waltherjonas28 samt aller durch sie entstandenen Strafen herausgerechnet, Mesotas 10-s-Strafe für die gelbe Flagge war ein Spielfehler.",
     "skala":  [
                   {
                       "k":  "tempo",
@@ -222,67 +222,69 @@
                                           "rv":  8,
                                           "kon":  6,
                                           "sau":  8,
-                                          "kurz":  "Pole und schnellste Runde eines Ligafahrers, dann Kontakte im Sprint, Strafe in der Boxengasse und Totalschaden in Runde 16.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Pole und schnellste Rennrunde, aber Kontakte im Sprint, eine Strafe in der Boxengasse und ein Totalschaden in Runde 16. Ein Wochenende mit Siegtempo und ohne Ergebnis.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Die Gastfahrer sind herausgerechnet.",
                                           "fakten":  {
                                                          "quali":  "P1 · 1:10.602 (Pole)",
                                                          "start":  "Sprint P3 · Rennen P1",
-                                                         "ziel":  "Sprint P7 · Rennen P8 (im Spiel DNF)",
-                                                         "runde":  "1:13.235 (schnellste eines Ligafahrers)",
+                                                         "ziel":  "Sprint P7 · Rennen P8 (im Spiel ausgefallen)",
+                                                         "runde":  "1:13.235 (schnellste Runde)",
                                                          "stopps":  "1 · Runde 11 Medium → Medium (2,252 s)",
-                                                         "strafen":  "10 s Rasen in der Boxengasse (Runde 11), Kollisionswarnungen im Sprint, Totalschaden in Runde 16"
+                                                         "strafen":  "10 s für Rasen in der Boxengasse (Runde 11), Kollisionswarnungen im Sprint, Track-Limit-Warnung, Totalschaden in Runde 16"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Pole und die schnellste Rennrunde eines Ligafahrers.",
-                                                        "rv":  "Im Sprint nach Kontakten zurückgefallen, im Rennen ausgefallen.",
-                                                        "kon":  "Kontakte, Strafe und ein Totalschaden, kein sauberes Rennen zu Ende gebracht.",
-                                                        "sau":  "Zwei Kollisionen im Sprint und 10 s für Rasen in der Boxengasse."
+                                                        "tempo":  "Pole und die schnellste Rennrunde, damit der Schnellste des Wochenendes auf eine Runde.",
+                                                        "rv":  "Im Sprint nach Kontakten von P3 auf P7, im Hauptrennen von der Pole ausgefallen.",
+                                                        "kon":  "Kontakte, eine Strafe und ein Totalschaden, kein Rennen sauber zu Ende gebracht.",
+                                                        "sau":  "Zwei Kollisionen im Sprint mit Verwarnung und 10 s für das Fahren über den Rasen in der Boxengasse."
                                                     },
                                           "pos":  [
-                                                      "Pole mit 1:10.602.",
-                                                      "Schnellste Rennrunde eines Ligafahrers (1:13.235)."
+                                                      "Pole mit 1:10.602, die dritte Pole der Saison.",
+                                                      "Schnellste Rennrunde (1:13.235).",
+                                                      "Im Hauptrennen bis zum Unfall vorne mit dabei."
                                                   ],
                                           "neg":  [
-                                                      "Sprint Runde 1: Kontakte mit Mesota und Danolo Frenzi, Frontflügelwechsel, von P3 auf P7.",
-                                                      "10 s für Rasen in der Boxengasse in Runde 11.",
+                                                      "Sprint Runde 1: Kontakt mit Mesota (Verwarnung für Joker) und mit Danolo Frenzi (beide verwarnt), dann Frontflügelwechsel.",
+                                                      "10 s Strafe für Rasen in der Boxengasse in Runde 11.",
                                                       "Totalschaden in Runde 16, danach hat er die Session verlassen."
                                                   ],
                                           "besser":  [
-                                                         "In Runde 1 im Sprint mehr Abstand halten.",
-                                                         "Boxeneinfahrt sauber treffen."
+                                                         "In Sprints in Runde 1 mehr Abstand halten.",
+                                                         "Boxeneinfahrt sauber treffen.",
+                                                         "In Führung oder mit Tempovorteil Risiko rausnehmen."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "Pole mit 1:10.602, 0,069 s vor The_White_Epic. Im Spiel war nur der Gast CHERNOSHTANOV schneller."
+                                                              "x":  "Pole mit 1:10.602, 0,069 s vor The_White_Epic. Die dritte Pole von JokerFinn06 in vier Rennen."
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 3. In Runde 1 Kontakte mit Mesota (Verwarnung für Joker) und mit Danolo Frenzi (beide verwarnt), Frontflügelwechsel und P8 im Spiel, offiziell P7."
+                                                              "x":  "Von Startplatz 3 in der umgedrehten Aufstellung. In Runde 1 kam es zu Kontakten mit Mesota (Verwarnung für Joker) und Danolo Frenzi (beide verwarnt). Er musste mit Frontflügelschaden an die Box (7,45 s) und wurde offiziell nur P7."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen von P1 gestartet, Details sind ohne eigenes Video nicht zu sehen."
+                                                              "x":  "Im Hauptrennen von der Pole gestartet. Ohne eigenes Video sind Details nicht zu sehen, er blieb aber vorne dabei."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Lag vorne mit, fuhr die schnellste Runde eines Ligafahrers und bekam in Runde 10 eine Track-Limit-Warnung."
+                                                              "x":  "Er lag vorne mit und fuhr die schnellste Runde des Rennens. In Runde 10 bekam er eine Track-Limit-Warnung, die bei Medium kaum zählt."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Ein Stopp in Runde 11 auf Medium, dabei über den Rasen in der Boxengasse und 10 s Strafe."
+                                                              "x":  "Ein Stopp in Runde 11 auf Medium (2,252 s). Dabei fuhr er in der Boxengasse über den Rasen und bekam 10 s Strafe."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Die Kontakte im Sprint gehen zumindest teilweise auf ihn. Im Rennen ist ohne eigenes Video nichts zu beurteilen."
+                                                              "x":  "Die Kontakte im Sprint gehen zumindest teilweise auf ihn. Im Hauptrennen ist ohne eigenes Video nichts zu beurteilen."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Totalschaden in Runde 16, danach Safety Car. Die Ursache ist in keinem Video zu sehen. Danach hat er die Session verlassen, im Spiel DNF, auf der Website P8."
+                                                              "x":  "Totalschaden in Runde 16, danach kam das Safety Car. Die Ursache ist in keinem Video zu sehen. Danach hat er die Session verlassen. Im Spiel ausgefallen, auf der Website als P8 gewertet."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Tempo für den Sieg, aber ein Wochenende voller Fehler. Unsicherheit: kein eigenes Video, die Ursache des Unfalls bleibt offen."
+                                                              "x":  "Tempo für den Sieg, aber ein Wochenende voller Fehler. Unsicherheit: Es gibt kein eigenes Video, die Ursache des Unfalls bleibt offen."
                                                           }
                                                       ]
                                       },
@@ -293,32 +295,33 @@
                                           "rv":  24,
                                           "kon":  18,
                                           "sau":  14,
-                                          "kurz":  "Pole, Sieg und sauberster Fahrer: ein fehlerfreies Rennen, auch im Regen.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Pole, Sieg und sauberster Fahrer: ein fehlerfreies Rennen auch im Regen, das beste Rennen von JokerFinn06 seit Melbourne.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P1 · 1:04.658 (Pole)",
                                                          "start":  "P1",
-                                                         "ziel":  "P1 · Sieg, 1,1 s vor The_White_Epic",
+                                                         "ziel":  "P1 · Sieg, 1,078 s vor The_White_Epic",
                                                          "runde":  "1:08.157",
                                                          "stopps":  "2 · Runde 11 auf Medium (2,251 s), Runde 30 auf Intermediates (2,252 s)",
                                                          "strafen":  "keine"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Pole mit 0,3 s Vorsprung, im Rennen aber 1 s langsamer als The_White_Epics schnellste Runde.",
-                                                        "rv":  "Start gewonnen, im Regen den Wechsel richtig getimt und The_White_Epic fünf Runden lang hinter sich gehalten.",
-                                                        "kon":  "Kein Fehler, auch nicht im Regen.",
-                                                        "sau":  "Kein Eintrag im Ereignis-Reiter, sauberster Fahrer. Ein Punkt Abzug, weil ohne eigenes Video nicht alles prüfbar ist."
+                                                        "tempo":  "Pole mit 0,3 s Vorsprung, im Rennen aber 1 s langsamer als die schnellste Runde von The_White_Epic.",
+                                                        "rv":  "Start gewonnen, den Wechsel auf Intermediates richtig getimt und The_White_Epic fünf Runden lang hinter sich gehalten.",
+                                                        "kon":  "Kein Fehler im ganzen Rennen, auch nicht in der Regenphase.",
+                                                        "sau":  "Kein Eintrag im Ereignis-Reiter, vom Spiel als sauberster Fahrer ausgezeichnet. Ein Punkt Abzug nur, weil ohne eigenes Video nicht jede Kurve prüfbar ist."
                                                     },
                                           "pos":  [
                                                       "Pole mit 1:04.658, 0,316 s vor The_White_Epic.",
-                                                      "Start gewonnen und vorne geblieben.",
+                                                      "Start gewonnen und vorne aus dem Chaos in Kurve 3 herausgekommen.",
+                                                      "Im ersten Stint knapp vorne, im zweiten Stint 4 bis 5 s Vorsprung.",
                                                       "Beim Wechsel auf Intermediates in Runde 30 vor The_White_Epic geblieben.",
-                                                      "Fünf Runden unter Druck fehlerfrei verteidigt.",
+                                                      "Fünf Runden mit The_White_Epic 0,24 bis 0,58 s dahinter fehlerfrei verteidigt.",
                                                       "Kein Eintrag im Ereignis-Reiter, sauberster Fahrer."
                                                   ],
                                           "neg":  [
                                                       "Die beste Rennrunde war 1 s langsamer als die von The_White_Epic.",
-                                                      "Im zweiten Stint 4 bis 5 s Vorsprung, den Sieg entschied letztlich die Position beim Reifenwechsel."
+                                                      "Der Sieg hing am Ende an der Position beim Reifenwechsel, nicht an einem Tempovorteil."
                                                   ],
                                           "besser":  [
                                                          "Im Rennen mehr Spitzentempo zeigen, um nicht von der Boxenstrategie abhängig zu sein.",
@@ -327,31 +330,31 @@
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "Pole mit 1:04.658, 0,316 s vor The_White_Epic."
+                                                              "x":  "Pole mit 1:04.658, 0,316 s vor The_White_Epic und 0,65 s vor Crashturtle2000. Die vierte Pole in vier Rennen für JokerFinn06 oder The_White_Epic, diesmal klar für ihn."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Start gewonnen, vorne aus dem Chaos in Kurve 3 heraus."
+                                                              "x":  "Er gewann den Start und kam vorne heraus, während dahinter in Kurve 3 und 4 mehrere Kollisionen passierten. Damit hatte er von Anfang an freie Fahrt."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Im ersten Stint führte er knapp, nach den Stopps 4 bis 5 s vor The_White_Epic. Ab Runde 26 kam Regen."
+                                                              "x":  "Im ersten Stint führte er knapp, The_White_Epic lag oft unter einer Sekunde dahinter. Nach seinem Stopp in Runde 11 und dem späteren Stopp von The_White_Epic baute er 4 bis 5 s Vorsprung auf. Ab etwa Runde 26 begann es zu regnen."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Medium in Runde 11, Intermediates in Runde 30. Er kam 0,44 s vor dem früher gewechselten The_White_Epic aus der Box."
+                                                              "x":  "Medium in Runde 11, Intermediates in Runde 30, beide Stopps mit 2,25 s. The_White_Epic wechselte eine Runde früher auf Intermediates und holte rund 4 s auf, JokerFinn06 kam aber 0,44 s vor ihm aus der Box. Das war der entscheidende Moment des Rennens."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Fünf Runden mit The_White_Epic 0,24 bis 0,58 s dahinter, ohne Fehler und ohne Kontakt."
+                                                              "x":  "Die letzten fünf Runden fuhr The_White_Epic 0,24 bis 0,58 s hinter ihm. JokerFinn06 machte keinen Fehler und ließ keine Angriffsmöglichkeit zu."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Keine."
+                                                              "x":  "Keine. Kein einziger Eintrag im Ereignis-Reiter, auch keine Track-Limit-Warnung."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Ein makelloses Rennen nach dem Fehler-Wochenende in Kanada. Unsicherheit: kein eigenes Video."
+                                                              "x":  "Ein makelloses Rennen nach dem Fehler-Wochenende in Kanada. Pole, Sieg und sauberster Fahrer, mehr geht nicht. Unsicherheit: kein eigenes Video."
                                                           }
                                                       ]
                                       }
@@ -360,20 +363,20 @@
                    {
                        "id":  "mesota",
                        "gesamt":  {
-                                      "kritik":  "Mesota sammelt regelmäßig Podien und hat viel Kampfgeist, mit den meisten Überholungen in Kanada. Seit Barcelona häufen sich aber Kontakte in Runde 1 und teure Fehler: Ausritte in Barcelona, zwei Kollisionen und eine ignorierte gelbe Flagge in Kanada, ein Flügelschaden in Österreich. Im Rennen fehlen außerdem einige Zehntel auf die Spitze.",
+                                      "kritik":  "Mesota ist der konstanteste Podiumsfahrer der Liga: dreimal P2 auf der Website (Melbourne, Kanada im Rennen und im Sprint), dazu P3 in Barcelona, und in Kanada die meisten Überholungen. Seine Stärken sind Starts, Aufholjagden und Kampfgeist. Was ihn Siege kostet, sind Kontakte in der ersten Runde: In Kanada und Österreich musste er jeweils schon früh den Frontflügel wechseln. Dazu fehlen im Rennen einige Zehntel auf die Spitze.",
                                       "staerken":  [
                                                        "Starts",
                                                        "Aufholjagden und Überholmanöver",
-                                                       "Schnelle Boxenstopps"
+                                                       "Schnelle Boxenstopps",
+                                                       "Konstante Podien"
                                                    ],
                                       "schwaechen":  [
                                                          "Kontakte in Runde 1",
-                                                         "Flaggen- und Strafen-Disziplin",
                                                          "Rennpace auf Medium und Hard"
                                                      ],
                                       "fokus":  [
                                                     "In Runde 1 Platz lassen statt Lücken zu erzwingen",
-                                                    "Unter Gelb konsequent vom Gas"
+                                                    "Zwei bis drei Zehntel im Rennen finden"
                                                 ]
                                   },
                        "rennen":  [
@@ -528,72 +531,74 @@
                                           "s":  "s1",
                                           "r":  "r03",
                                           "tempo":  31,
-                                          "rv":  21,
-                                          "kon":  13,
-                                          "sau":  8,
-                                          "kurz":  "Starkes Comeback von P9 bis auf Platz 2 der Straße, aber eine wilde erste Runde und eine ignorierte gelbe Flagge kosteten Punkte.",
-                                          "quelle":  "Eigenes Video (Mesota) mit allen Ergebnis-, Ereignis- und Boxenstopp-Reitern von Sprint und Rennen, dazu die Videos von The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88.",
+                                          "rv":  22,
+                                          "kon":  14,
+                                          "sau":  11,
+                                          "kurz":  "Sprint P2 und im Hauptrennen nach einem frühen Flügelwechsel von P9 bis auf P2 gekämpft. Die 10-s-Strafe für die gelbe Flagge war ein Spielfehler und zählt nicht, die zwei Kontakte in Runde 1 schon.",
+                                          "quelle":  "Eigenes Video (Mesota) mit allen Ergebnis-, Ereignis- und Boxenstopp-Reitern von Sprint und Rennen, dazu die Videos von The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88. Die Gastfahrer CHERNOSHTANOV und waltherjonas28 sind herausgerechnet. Die 10-s-Strafe wegen der gelben Flagge in Runde 21 und die daraus folgende nicht erfüllte Strafe waren laut Liga ein Fehler des Spiels und werden nicht gewertet.",
                                           "fakten":  {
                                                          "quali":  "P3 · 1:10.872 (+0,270)",
                                                          "start":  "Sprint P5 · Rennen P3",
-                                                         "ziel":  "Sprint P3 · Rennen P2 (auf der Straße P2, im Spiel P3)",
+                                                         "ziel":  "Sprint P2 · Rennen P2",
                                                          "runde":  "1:13.749",
                                                          "stopps":  "2 · Runde 1 Hard → Medium mit neuem Frontflügel (8,283 s), Runde 13 Medium → Hard (2,249 s)",
-                                                         "strafen":  "10 s gelbe Flagge ignoriert (Runde 21), 10 s nicht erfüllte Strafe, 2 Kollisionswarnungen in Runde 1"
+                                                         "strafen":  "2 Kollisionswarnungen in Runde 1 (mit Crashturtle2000 und The_White_Epic). Die 10-s-Strafe für die gelbe Flagge war ein Spielfehler und ist nicht gewertet."
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Gute Quali und im Sprint vorne dabei, im Rennen rund 0,4 s langsamer als The_White_Epic.",
-                                                        "rv":  "Comeback von P9 bis auf P2 der Straße, meiste Überholungen, harter Kampf in der letzten Runde.",
-                                                        "kon":  "Runde 1 mit Schaden und Extra-Stopp, dazu der teure Flaggenfehler.",
-                                                        "sau":  "Zwei Kollisionswarnungen in Runde 1 (mit Crashturtle2000 und The_White_Epic) und eine ignorierte gelbe Flagge mit 10 s."
+                                                        "tempo":  "Gutes Quali mit nur 0,27 s Rückstand, im Sprint vorne mit dabei. Im Hauptrennen etwa 0,4 s pro Runde langsamer als The_White_Epic.",
+                                                        "rv":  "Sprint P2 und im Hauptrennen das beste Comeback des Tages: von P9 nach dem Flügelwechsel bis auf P2, mit den meisten Überholmanövern im Feld.",
+                                                        "kon":  "Die erste Runde des Hauptrennens war zu wild und kostete einen Flügel und einen Extra-Stopp. Danach war das Rennen fehlerfrei.",
+                                                        "sau":  "Zwei Kontakte in Runde 1 gehen laut Spiel auf ihn. Die gelbe Flagge zählt nicht, weil die Strafe ein Spielfehler war."
                                                     },
                                           "pos":  [
-                                                      "Sprint: von Startplatz 5 nach Runde 1 auf P2, offiziell P3.",
-                                                      "Im Rennen nach dem frühen Flügelwechsel von P9 bis auf P2 der Straße.",
+                                                      "Sprint: von Startplatz 5 nach Runde 1 auf P2 hinter Max und den Platz ins Ziel gebracht.",
+                                                      "Quali P3 mit 1:10.872, 0,27 s hinter der Pole.",
+                                                      "Im Hauptrennen nach dem Flügelwechsel in Runde 1 von P9 bis auf P2 nach vorne gefahren.",
                                                       "Meiste Überholungen des Rennens.",
-                                                      "Zäher Kampf um den Sieg in der letzten Runde gegen waltherjonas28."
+                                                      "Nach der Safety-Car-Phase stark: Runde 19 P4, Runde 20 P3, Runde 23 P2.",
+                                                      "Zweiter Stopp in Runde 13 in 2,249 s, danach mit Hard bis ins Ziel."
                                                   ],
                                           "neg":  [
-                                                      "Runde 1 zu wild: Kontakte mit Crashturtle2000 und The_White_Epic, Frontflügel kaputt, Boxenstopp schon in Runde 1.",
-                                                      "Gelbe Flagge in Runde 21 ignoriert, 10 s Strafe. Das kostete im Spiel den Sieg.",
-                                                      "Dazu eine nicht erfüllte Strafe mit weiteren 10 s."
+                                                      "Runde 1 im Hauptrennen zu wild: Kontakt mit Crashturtle2000 und danach mit The_White_Epic, beide Male Verwarnung für Mesota.",
+                                                      "Der Frontflügelschaden aus Runde 1 erzwang einen Stopp schon in Runde 1 (8,283 s) und warf ihn auf P9 zurück.",
+                                                      "Im Rennen rund 0,4 s pro Runde langsamer als The_White_Epic."
                                                   ],
                                           "besser":  [
-                                                         "In Runde 1 Platz lassen statt Lücken zu erzwingen.",
-                                                         "Unter Gelb konsequent vom Gas gehen und Strafen sofort abbauen."
+                                                         "In Runde 1 Platz lassen statt Lücken zu erzwingen. Ohne die zwei Kontakte wäre ein Sieg realistisch gewesen.",
+                                                         "Im Sprint-Rhythmus auch ins Hauptrennen gehen: dort war der Start sauber und brachte zwei Plätze."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P3 mit 1:10.872, 0,27 s hinter der Pole."
+                                                              "x":  "P3 mit 1:10.872, nur 0,27 s hinter JokerFinn06 und 0,2 s hinter The_White_Epic. Eine gute Ausgangslage für den Sprint mit umgedrehter Startaufstellung und für das Hauptrennen."
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 5 nach Runde 1 auf P2 hinter Max. JokerFinn06 kollidierte in Runde 1 mit ihm (Verwarnung für Joker). In Runde 3 ging der Gast waltherjonas28 vorbei, Ziel P4 im Spiel, offiziell P3."
+                                                              "x":  "Von Startplatz 5 kam Mesota in Runde 1 sauber durch das Feld bis auf P2 hinter Max. JokerFinn06 berührte ihn dabei, die Verwarnung ging an Joker. Danach hielt er den Platz bis ins Ziel. Ohne die Gastfahrer ist das ein klarer Sprint-P2."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen von P5 in Kurve 1/2 bis auf P2, dann Kontakt mit Crashturtle2000 und danach mit The_White_Epic, beide Male Verwarnung für Mesota. Mit beschädigtem Frontflügel an die Box, danach P9."
+                                                              "x":  "Im Hauptrennen startete er von P3 stark und war in Kurve 1/2 schon auf P2. Dann wurde es zu eng: Zuerst kam es zum Kontakt mit Crashturtle2000, kurz darauf mit The_White_Epic. Beide Male gab das Spiel Mesota die Verwarnung. Mit beschädigtem Frontflügel ging es schon nach Runde 1 an die Box, danach lag er auf P9."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Stetig nach vorne: Runde 14 P6, nach dem Safety Car Runde 20 P3, Runde 23 P2. In den letzten Runden P2 hinter waltherjonas28 mit mehreren Führungswechseln in der letzten Runde."
+                                                              "x":  "Ab Runde 2 begann die Aufholjagd: Runde 3 bis 6 P8, Runde 7 bis 13 P7, Runde 14 P6. Nach der Safety-Car-Phase ging es schnell: Runde 17 P5, Runde 19 P4, Runde 20 P3 und Runde 23 P2, 1,4 s hinter The_White_Epic. Bis ins Ziel hielt er P2 und war damit der Ligafahrer mit den meisten Überholungen."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Ungeplanter Stopp in Runde 1 (8,283 s), dann Hard ab Runde 13 (2,249 s). Mit nur zwei Stopps trotz des frühen Schadens."
+                                                              "x":  "Der erste Stopp war erzwungen (8,283 s mit Flügel, Hard auf Medium). Der zweite in Runde 13 auf Hard (2,249 s) war gut getimt, weil er damit ohne weiteren Stopp bis ins Ziel kam, während andere in der Schlussphase noch einmal reinmussten."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Viele Überholmanöver nach dem Rückfall, die meisten im Feld. Die Kontakte in Runde 1 gehen laut Spiel aber auf ihn."
+                                                              "x":  "Nach Runde 1 fuhr er viele saubere Überholmanöver, die meisten im ganzen Feld. Die beiden Kontakte am Start sind aber klar ein Minuspunkt. Ob er sich danach bei Crashturtle2000 und The_White_Epic entschuldigt hat, ist nicht geprüft."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Zwei Kollisionen in Runde 1, eine ignorierte gelbe Flagge in Runde 21 (10 s) und eine nicht erfüllte Strafe (10 s). Eine Kurven-Warnung in Runde 12 zählt bei Medium-Track-Limits kaum. Ob er sich nach den Kontakten entschuldigt hat, ist nicht geprüft."
+                                                              "x":  "Die 10-s-Strafe für das Ignorieren der gelben Flagge in Runde 21 und die nicht erfüllte Strafe danach waren laut Liga ein Spielfehler und werden nicht gewertet. Es bleiben die zwei Kollisionswarnungen aus Runde 1 und eine Kurven-Warnung in Runde 12, die bei Medium-Track-Limits kaum zählt."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Siegtempo und starker Kampfgeist, aber die Punkte hat er durch eigene Fehler verschenkt. P2 auf der Website ist ein gutes Ergebnis für ein unsauberes Rennen."
+                                                              "x":  "Ein starkes Wochenende mit zweimal P2. Das Tempo und der Kampfgeist waren da, die erste Runde des Hauptrennens hat aber wahrscheinlich den Sieg gekostet."
                                                           }
                                                       ]
                                       },
@@ -605,7 +610,7 @@
                                           "kon":  16,
                                           "sau":  12,
                                           "kurz":  "Guter Start bis P3, dann zwei Kontakte in Runde 1 und ein Flügelwechsel. Danach fehlerfrei zurück auf P5.",
-                                          "quelle":  "Eigenes Video (Mesota) mit Ergebnis-, Ereignis- und Boxenstopp-Reiter, dazu die Videos von The_White_Epic, Italian Gamer und DON-FUCHSER88.",
+                                          "quelle":  "Eigenes Video (Mesota) mit Ergebnis-, Ereignis- und Boxenstopp-Reiter, dazu die Videos von Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88.",
                                           "fakten":  {
                                                          "quali":  "P4 · 1:05.336 (+0,678)",
                                                          "start":  "P4",
@@ -617,13 +622,13 @@
                                           "noten":  {
                                                         "tempo":  "Gutes Quali, aber die langsamste beste Rennrunde der Top 5.",
                                                         "rv":  "Nach dem Schaden von P9 zurück auf P5, teils durch Fehler anderer.",
-                                                        "kon":  "Nach Runde 1 keine eigenen Fehler, gleichmäßige Runden.",
+                                                        "kon":  "Nach Runde 1 keine eigenen Fehler und gleichmäßige Runden.",
                                                         "sau":  "Zwei Kontakte in Runde 1, in beiden eher Betroffener als Verursacher, dazu eine Verwarnung."
                                                     },
                                           "pos":  [
-                                                      "Quali P4.",
+                                                      "Quali P4 mit 1:05.336.",
                                                       "Starker Start bis auf P3.",
-                                                      "Nach dem Schaden fehlerfrei durch das Rennen.",
+                                                      "Nach dem Schaden fehlerfrei durch das Rennen, auch im Regen.",
                                                       "Drei schnelle Stopps."
                                                   ],
                                           "neg":  [
@@ -637,23 +642,23 @@
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P4 mit 1:05.336, 0,68 s hinter der Pole."
+                                                              "x":  "P4 mit 1:05.336, 0,68 s hinter der Pole und nur 0,03 s hinter Crashturtle2000."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Starker Start bis auf P3. In Kurve 3 lenkte Max außen ein, leichter Kontakt (Verwarnung für Max). In Kurve 4 schob sich Mehlone innen vor ihn, Kontakt, Mesota wurde Richtung Mauer gedrängt und beschädigte den Frontflügel. Beide wurden verwarnt, Mehlone wirkt eher als Verursacher. Ende Runde 1 P7."
+                                                              "x":  "Starker Start bis auf P3. In Kurve 3 lenkte Max außen ein, leichter Kontakt, die Verwarnung ging an Max. In Kurve 4 schob sich Mehlone innen vor ihn. Es kam zum Kontakt, Mesota wurde Richtung Mauer gedrängt und beschädigte den Frontflügel. Beide wurden verwarnt, aus Mesotas Sicht wirkt Mehlone eher als Verursacher. Ende Runde 1 lag er auf P7."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Nach dem Flügelwechsel P9, dann über P6 auf P5. Runden um 1:09 bis 1:10, klar hinter den Top 4."
+                                                              "x":  "Nach dem Flügelwechsel in Runde 2 lag er auf P9 und arbeitete sich über P7 und P6 bis auf P5 vor. Seine Runden lagen um 1:09 bis 1:10, klar hinter den Top 4. Im Regen blieb er fehlerfrei."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Erzwungener Stopp in Runde 2, danach Medium in Runde 12 und Hard in Runde 27, alle Stopps schnell."
+                                                              "x":  "Der Stopp in Runde 2 war erzwungen und warf den Zwei-Stopp-Plan um. Danach Medium in Runde 12 und Hard in Runde 27, alle Stopps schnell."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Beide Kontakte in Runde 1, danach keine Auffälligkeiten."
+                                                              "x":  "Beide Kontakte waren in Runde 1, danach gab es keine Auffälligkeiten."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
@@ -661,7 +666,7 @@
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Ordentlich nach einem unglücklichen Start. P5 kam auch durch den Abflug von Italian Gamer, die Pace reichte nicht für mehr."
+                                                              "x":  "Ein ordentliches Ergebnis nach unglücklichem Start. P5 kam auch durch den Abflug von Italian Gamer, die Pace reichte nicht für mehr."
                                                           }
                                                       ]
                                       }
@@ -834,79 +839,6 @@
                                       },
                                       {
                                           "s":  "s1",
-                                          "r":  "r03",
-                                          "tempo":  22,
-                                          "rv":  18,
-                                          "kon":  16,
-                                          "sau":  12,
-                                          "kurz":  "Solide und meist sauber, mit Ein-Stopp unter Safety Car auf P4. Im Tempo deutlich hinter der Spitze.",
-                                          "quelle":  "Eigenes Video (Mehlone, Gamertag Luisloli89), dazu die Videos von Mesota, The_White_Epic, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
-                                          "fakten":  {
-                                                         "quali":  "P6 · 1:12.571 (+1,969)",
-                                                         "start":  "Sprint P6 · Rennen P6",
-                                                         "ziel":  "Sprint P4 · Rennen P4",
-                                                         "runde":  "1:14.963",
-                                                         "stopps":  "1 · Runde 16 unter Safety Car Hard → Medium mit neuem Frontflügel (7,440 s)",
-                                                         "strafen":  "Durchfahrtsstrafe für Rasen in der Safety-Car-Phase (Runde 16), Kollisionswarnung in Runde 1"
-                                                     },
-                                          "noten":  {
-                                                        "tempo":  "Fast 2 s hinter der Pole und im Rennen rund 1,5 s langsamer als die Spitze.",
-                                                        "rv":  "In Sprint und Rennen Plätze gewonnen, das Safety Car klug genutzt.",
-                                                        "kon":  "Gleichmäßige Abstände, nur ein Ausritt in Sprint-Runde 1.",
-                                                        "sau":  "Kontakt mit Danolo Frenzi in Runde 1 (beide verwarnt) und eine Durchfahrtsstrafe in der Safety-Car-Phase."
-                                                    },
-                                          "pos":  [
-                                                      "Dem Dreher von Crashturtle2000 direkt vor ihm in Runde 1 sauber ausgewichen.",
-                                                      "Nur ein Stopp, unter Safety Car gut getimt.",
-                                                      "Im Sprint an The_White_Epic vorbei.",
-                                                      "Saubere Zweikämpfe ohne strittige Szene."
-                                                  ],
-                                          "neg":  [
-                                                      "Großer Tempo-Rückstand in Quali und Rennen, vor allem in Sektor 2.",
-                                                      "Sprint-Runde 1: geradeaus durch die Schikane, ein Platz verloren.",
-                                                      "Durchfahrtsstrafe für das Fahren über den Rasen unter Safety Car."
-                                                  ],
-                                          "besser":  [
-                                                         "Den Quali-Rückstand in Sektor 2 angehen.",
-                                                         "Unter Safety Car auf der Strecke bleiben."
-                                                     ],
-                                          "analyse":  [
-                                                          {
-                                                              "t":  "Qualifying",
-                                                              "x":  "P6 unter den Ligafahrern mit 1:12.571, fast 2 s hinter der Pole. Sektor 2 war die größte Schwäche."
-                                                          },
-                                                          {
-                                                              "t":  "Sprint",
-                                                              "x":  "In Runde 1 geradeaus durch die Schikane Kurve 3/4 und einen Platz verloren, unter VSC wieder herangekommen. In Runde 2 an The_White_Epic vorbei, Ziel P5 im Spiel, offiziell P4."
-                                                          },
-                                                          {
-                                                              "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen drehte sich Crashturtle2000 direkt vor ihm. Mehlone bremste von 122 auf 38 km/h und wich sauber aus. Kontakt mit Danolo Frenzi, beide verwarnt."
-                                                          },
-                                                          {
-                                                              "t":  "Rennverlauf und Pace",
-                                                              "x":  "Ruhig auf P7/P8 mit dem Tempo von DON-FUCHSER88, rund 11 bis 12 s dahinter. Nach den Stopps der anderen P5 im Spiel, offiziell P4."
-                                                          },
-                                                          {
-                                                              "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Ein Stopp unter Safety Car in Runde 16, dabei auch ein neuer Frontflügel (7,4 s). Die meisten anderen brauchten zwei oder drei Stopps."
-                                                          },
-                                                          {
-                                                              "t":  "Zweikämpfe",
-                                                              "x":  "Sauber, keine strittige Szene."
-                                                          },
-                                                          {
-                                                              "t":  "Fehler und Strafen",
-                                                              "x":  "Ausritt in Sprint-Runde 1, Kontakt in Rennen-Runde 1 und eine Durchfahrtsstrafe, weil er unter Safety Car über den Rasen fuhr. Im eigenen Video war die Strafe nicht zu erkennen, sie steht aber im Ereignis-Reiter."
-                                                          },
-                                                          {
-                                                              "t":  "Fazit",
-                                                              "x":  "Solide und klug, das Ergebnis hat er auch Fehlern anderer und dem Safety-Car-Timing zu verdanken. Im reinen Tempo liegt er hinten."
-                                                          }
-                                                      ]
-                                      },
-                                      {
-                                          "s":  "s1",
                                           "r":  "r04",
                                           "tempo":  27,
                                           "rv":  13,
@@ -969,6 +901,81 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Ein schwaches Rennen, das schon in Runde 1 gelaufen war. Unsicherheit: kein eigenes Video."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r03",
+                                          "tempo":  22,
+                                          "rv":  19,
+                                          "kon":  16,
+                                          "sau":  12,
+                                          "kurz":  "Sprint P3 und im Hauptrennen mit nur einem Stopp unter Safety Car auf P4. Klug gefahren, im Tempo aber deutlich hinter der Spitze.",
+                                          "quelle":  "Eigenes Video (Mehlone, Gamertag Luisloli89, Sprint, Quali und Rennen), dazu die Videos von Mesota, The_White_Epic, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Die Gastfahrer sind herausgerechnet.",
+                                          "fakten":  {
+                                                         "quali":  "P6 · 1:12.571 (+1,969)",
+                                                         "start":  "Sprint P6 · Rennen P6",
+                                                         "ziel":  "Sprint P3 · Rennen P4",
+                                                         "runde":  "1:14.963",
+                                                         "stopps":  "1 · Runde 16 unter Safety Car Hard → Medium mit neuem Frontflügel (7,440 s)",
+                                                         "strafen":  "Durchfahrtsstrafe für Rasen in der Safety-Car-Phase (Runde 16), Kollisionswarnung in Runde 1 (mit Danolo Frenzi)"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Fast 2 s hinter der Pole und im Rennen rund 1,5 s langsamer als die Spitze. Sektor 2 war die größte Schwäche.",
+                                                        "rv":  "Im Sprint drei Plätze gewonnen, im Hauptrennen das Safety Car klug genutzt und mit nur einem Stopp auf P4.",
+                                                        "kon":  "Gleichmäßige Abstände im Rennen, nur ein Ausritt in Sprint-Runde 1.",
+                                                        "sau":  "Ein Kontakt mit Danolo Frenzi in Runde 1 (beide verwarnt) und eine Durchfahrtsstrafe für das Fahren über den Rasen unter Safety Car."
+                                                    },
+                                          "pos":  [
+                                                      "Sprint: von Startplatz 6 auf P3, das bisher beste Sprintergebnis von Mehlone.",
+                                                      "Im Hauptrennen dem Dreher von Crashturtle2000 direkt vor ihm sauber ausgewichen (von 122 auf 38 km/h).",
+                                                      "Nur ein Stopp, unter Safety Car gut getimt.",
+                                                      "Konstantes Tempo, in Runde 23 bis 29 im gleichen Rhythmus wie DON-FUCHSER88.",
+                                                      "Im Sprint sauber an The_White_Epic vorbei."
+                                                  ],
+                                          "neg":  [
+                                                      "Quali fast 2 s hinter der Pole, vor allem in Sektor 2 (23,37 statt 22,4 bis 22,7).",
+                                                      "Sprint-Runde 1: geradeaus durch die Schikane Kurve 3/4 und kurz einen Platz verloren.",
+                                                      "Kontakt mit Danolo Frenzi in Runde 1 des Hauptrennens.",
+                                                      "Durchfahrtsstrafe, weil er unter Safety Car über den Rasen fuhr."
+                                                  ],
+                                          "besser":  [
+                                                         "Den Quali-Rückstand in Sektor 2 angehen.",
+                                                         "Unter Safety Car und in der Boxeneinfahrt auf der Strecke bleiben."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P6 unter den Ligafahrern mit 1:12.571, fast 2 s hinter der Pole. Den größten Rückstand hatte er in Sektor 2 mit 23,37 s gegenüber 22,4 bis 22,7 s der Schnellsten."
+                                                          },
+                                                          {
+                                                              "t":  "Sprint",
+                                                              "x":  "Von Startplatz 6 fuhr er in Runde 1 geradeaus durch die Schikane Kurve 3/4 und verlor kurz einen Platz, unter der folgenden VSC-Phase kam er wieder heran. In Runde 2 ging er unter Gelb in Sektor 2 an The_White_Epic vorbei, ohne Kontakt. Danach hielt er den Platz sicher. Ohne die Gastfahrer ist das ein Sprint-P3."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Im Hauptrennen drehte sich Crashturtle2000 direkt vor ihm. Mehlone bremste von 122 auf 38 km/h herunter und wich sauber aus, verlor dabei aber einen Platz an Danolo Frenzi. Mit Danolo gab es einen Kontakt, beide wurden verwarnt."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Ruhig auf P7/P8 mit dem gleichen Tempo wie DON-FUCHSER88, rund 11 bis 12 s dahinter. Nach den Stopps der anderen rückte er bis auf P4 vor. Seine Rundenzeiten lagen rund 1,5 s hinter der Spitze."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Ein einziger Stopp unter Safety Car in Runde 16, dabei Medium und ein neuer Frontflügel (7,4 s). Die meisten anderen brauchten zwei oder drei Stopps, das brachte ihm Plätze."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Sauber, ohne strittige Szene außer dem Kontakt mit Danolo Frenzi in Runde 1, für den beide verwarnt wurden."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Ausritt in Sprint-Runde 1, Kontakt in Rennen-Runde 1 und eine Durchfahrtsstrafe, weil er unter Safety Car über den Rasen fuhr. Im eigenen Video war die Strafe nicht zu erkennen, sie steht aber im Ereignis-Reiter."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein kluges, solides Wochenende mit Sprint-P3 und P4 im Hauptrennen. Das Ergebnis kam auch durch Fehler anderer und das Safety-Car-Timing, im reinen Tempo liegt er weiter hinten."
                                                           }
                                                       ]
                                       }
@@ -1143,73 +1150,75 @@
                                           "s":  "s1",
                                           "r":  "r03",
                                           "tempo":  36,
-                                          "rv":  20,
+                                          "rv":  22,
                                           "kon":  13,
-                                          "sau":  12,
-                                          "kurz":  "Das schnellste Rennen eines Ligafahrers und lange in Führung, auf der Straße in der letzten Runde von einem Gast umgedreht. Offiziell der Sieg.",
-                                          "quelle":  "Eigenes Video (The_White_Epic), dazu die Videos von Mesota, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter aus Mesotas Video.",
+                                          "sau":  14,
+                                          "kurz":  "Das stärkste Hauptrennen der Ligafahrer: nach Frontflügelschaden lange in Führung und verdient gewonnen. Im Sprint kostete ein Dreher ohne Gegnerkontakt das Podium.",
+                                          "quelle":  "Eigenes Video (The_White_Epic, Sprint, Quali und Rennen), dazu die Videos von Mesota, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter aus Mesotas Video. Die beiden Gastfahrer CHERNOSHTANOV und waltherjonas28 sind herausgerechnet, ebenso alle Strafen, die durch sie entstanden sind.",
                                           "fakten":  {
                                                          "quali":  "P2 · 1:10.671 (+0,069)",
-                                                         "start":  "Sprint P6 · Rennen P2",
-                                                         "ziel":  "Sprint P5 · Rennen P1 (auf der Straße P4, im Spiel P2)",
+                                                         "start":  "Sprint P7 · Rennen P2",
+                                                         "ziel":  "Sprint P5 · Rennen P1 · Sieg",
                                                          "runde":  "1:13.327 (2. schnellste eines Ligafahrers)",
                                                          "stopps":  "2 · Runde 15 Hard → Medium mit neuem Frontflügel (7,440 s), Runde 29 Medium → Medium (2,238 s)",
-                                                         "strafen":  "3 s (Track Limits in Runde 35, nach dem Abdrängen)"
+                                                         "strafen":  "keine (die 3 s aus Runde 35 entstanden durch den Gast und zählen nicht), eine Kurven-Warnung in Runde 27"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Quali nur 0,07 s hinter der Pole, im Rennen die zweitschnellste Runde der Ligafahrer und lange vorne.",
-                                                        "rv":  "Führte die Runden 23 bis 28 und überholte in der letzten Runde noch einmal, verlor dann aber auf der Straße drei Plätze.",
-                                                        "kon":  "Allein-Dreher im Sprint in Runde 2 und ein Frontflügelstopp im Rennen.",
-                                                        "sau":  "Nur Track-Limit-Vergehen, keine Kollision selbst verursacht. Der Dreher in Runde 35 kam vom Kontakt eines Gastes."
+                                                        "tempo":  "Quali nur 0,069 s hinter der Pole und im Rennen die zweitschnellste Runde aller Ligafahrer. Über die Distanz war er zusammen mit Mesota der Schnellste im Feld.",
+                                                        "rv":  "Hielt sich in der chaotischen ersten Runde aus allem heraus, kam nach dem Flügelwechsel zurück an die Spitze und gewann. Im Sprint verlor er durch den eigenen Dreher drei Plätze.",
+                                                        "kon":  "Zwei teure Momente an einem Wochenende: der Dreher im Sprint und ein Frontflügelschaden im Rennen, der einen langsamen Stopp erzwang.",
+                                                        "sau":  "Keine Kollision selbst verursacht. In Runde 1 wurde er von Mesota berührt, nicht umgekehrt. Bei Medium-Track-Limits zählt die einzelne Kurven-Warnung kaum."
                                                     },
                                           "pos":  [
-                                                      "Quali P2, nur 0,069 s hinter der Pole.",
-                                                      "Im Rennen die zweitschnellste Runde der Ligafahrer (1:13.327).",
-                                                      "Nach dem Safety Car in Führung, Runde 23 bis 28 vorne.",
-                                                      "Starkes Überholmanöver in der Haarnadel gegen waltherjonas28 in der letzten Runde.",
-                                                      "Keine selbst verursachte Kollision im ganzen Wochenende."
+                                                      "Quali P2 mit 1:10.671, nur 0,069 s hinter der Pole von JokerFinn06.",
+                                                      "Im Rennen-Start ruhig geblieben und als Einer der Wenigen ohne eigenen Kontakt durch Runde 1 gekommen.",
+                                                      "Nach dem Safety Car in Runde 16 bis 20 übernahm er die Führung und führte die Runden 23 bis 28.",
+                                                      "Zweitschnellste Rennrunde aller Ligafahrer (1:13.327), gleichmäßig schnelle Stints auf Medium.",
+                                                      "Zweiter Stopp in Runde 29 in 2,238 s, danach in wenigen Runden zurück nach vorne.",
+                                                      "Sieg im Hauptrennen und damit der zweite Sieg der Saison."
                                                   ],
                                           "neg":  [
-                                                      "Sprint: Dreher ohne Gegnerkontakt in Runde 2 (Kurve 6/7), von P3 zurückgefallen, Ziel P5.",
-                                                      "Frontflügelstopp in Runde 15 (7,4 s), die Ursache ist nicht zu sehen.",
-                                                      "In der letzten Runde in Kurve 1 die Innenbahn nicht zugemacht, waltherjonas28 traf ihn, Dreher und P4 auf der Straße."
+                                                      "Sprint Runde 2: Dreher im Bereich Kurve 6/7 ohne Gegnerkontakt, dadurch von P3 auf P6 zurückgefallen.",
+                                                      "Frontflügelschaden, der in Runde 15 einen 7,4-s-Stopp erzwang. Woher der Schaden kam, ist im Bild nicht zu sehen, vermutlich vom Kontakt mit Mesota in Runde 1.",
+                                                      "Im Sprint nach dem Dreher keine Plätze mehr zurückgeholt."
                                                   ],
                                           "besser":  [
-                                                         "Nach einem Überholmanöver die Innenbahn defensiv schließen.",
-                                                         "Im Sprint die ersten Runden ruhiger angehen."
+                                                         "In Sprints die ersten Runden kontrollierter fahren, Sprintpunkte sind mit wenig Risiko zu holen.",
+                                                         "Nach einem Kontakt in Runde 1 den Flügel früh prüfen und den Stopp gezielt legen, statt mit Schaden weiterzufahren.",
+                                                         "Weiter so in Runde 1: Abstand halten und das Chaos vor sich passieren lassen."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P2 mit 1:10.671, nur 0,069 s hinter JokerFinn06. Im Spiel stand noch der Gast CHERNOSHTANOV vorne."
+                                                              "x":  "Mit 1:10.671 auf P2, nur 0,069 s hinter JokerFinn06. Dahinter folgten Mesota mit 0,2 s und Crashturtle2000 mit 0,67 s Rückstand. Damit war klar, dass The_White_Epic auch in Montreal um den Sieg fahren kann."
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 7 in Runde 1 bis auf P3. In Runde 2 drehte er sich im Bereich Kurve 6/7 ohne erkennbaren Gegnerkontakt und fiel zurück. Ziel auf P5."
+                                                              "x":  "Von Startplatz 7 in der umgedrehten Startaufstellung kam er in Runde 1 durch das Gewühl bis auf P3. In Runde 2 drehte er sich im Bereich Kurve 6/7, ohne dass ein Gegner in der Nähe war. Danach fiel er auf P6 im Spiel zurück und fand im kurzen Sprint keinen Weg mehr nach vorne. Offiziell P5."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen von P3 im Gewühl kurz auf P4/P5, Ende Runde 1 wieder P3. Mesota kollidierte dabei mit ihm, die Verwarnung ging an Mesota."
+                                                              "x":  "Im Hauptrennen von P2 gestartet. In Kurve 1/2 drängte sich das Feld zusammen, The_White_Epic fiel kurz auf P4/P5, kam aber ohne eigenen Fehler durch. Mesota berührte ihn in diesem Gewühl, die Verwarnung ging an Mesota. Ende Runde 1 lag er wieder auf P3."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "P3 bis Runde 13, dann kurz vorne. Nach dem Safety Car in Runde 16 bis 20 führte er die Runden 23 bis 28 und gehörte über das Rennen zu den Schnellsten."
+                                                              "x":  "In den ersten 13 Runden hielt er P3 mit Rundenzeiten auf Siegniveau. In Runde 15 musste er mit beschädigtem Frontflügel an die Box. Nach der Safety-Car-Phase (Runde 16 bis 20) war er wieder vorne dabei und übernahm in Runde 23 die Führung, die er bis zu seinem zweiten Stopp in Runde 28 hielt. Danach kämpfte er sich wieder an die Spitze und gewann."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Runde 15 Frontflügel und Medium (7,440 s), Runde 29 frische Medium (2,238 s). Danach P4, bis Runde 33 wieder auf P2."
+                                                              "x":  "Start auf Hard, in Runde 15 Medium und neuer Frontflügel (7,440 s), in Runde 29 frische Medium (2,238 s). Der zweite Stopp kostete kurz Plätze, mit den frischen Reifen war er danach aber der Schnellste auf der Strecke."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "In der letzten Runde ging er in der Haarnadel an waltherjonas28 vorbei und führte. In Kurve 1 kam der Gast innen daneben, berührte ihn und drehte ihn ins Gras. Das Spiel gab dem Gast nur eine Verwarnung, einen Platz gab er nicht zurück."
+                                                              "x":  "In Runde 1 ohne eigenen Kontakt. Am Ende des Rennens überholte er sauber in der Haarnadel. Alle Duelle mit Ligafahrern liefen ohne Berührung. Die Szene in Runde 35 mit dem Gast waltherjonas28 und die 3-s-Strafe daraus sind herausgerechnet."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Sprint-Dreher in Runde 2. Im Rennen eine Kurven-Warnung in Runde 27 und 3 s für Track Limits in Runde 35, als er nach dem Abdrängen über die Strecke zurückkam. Bei Medium-Track-Limits wiegt das wenig."
+                                                              "x":  "Der Dreher im Sprint war sein einziger echter Fahrfehler. Im Hauptrennen bleibt nur eine Kurven-Warnung in Runde 27, die bei Medium-Track-Limits kaum ins Gewicht fällt."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Der schnellste Ligafahrer des Wochenendes. Der Sieg auf der Website kam durch die Strafen anderer, auf der Straße hat ihn ein Gast um den Sieg gebracht. Eigene Abzüge gibt es für den Sprint-Dreher."
+                                                              "x":  "Ein starkes Wochenende mit dem Sieg im Hauptrennen. Er hatte Siegtempo, fuhr sauber und ließ sich vom Flügelschaden nicht aus der Ruhe bringen. Abzug gibt es nur für den Dreher im Sprint, der ein Podium gekostet hat."
                                                           }
                                                       ]
                                       },
@@ -1220,66 +1229,67 @@
                                           "rv":  21,
                                           "kon":  17,
                                           "sau":  14,
-                                          "kurz":  "Schnellster Mann im Feld und P2 nur 1,1 s hinter dem Sieger, geschlagen von der Position beim Wechsel auf Intermediates.",
-                                          "quelle":  "Eigenes Video (The_White_Epic), dazu die Videos von Mesota, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Der schnellste Fahrer im Feld mit der schnellsten Runde und P2, nur 1,1 s hinter dem Sieger. Geschlagen hat ihn die Position beim Wechsel auf Intermediates.",
+                                          "quelle":  "Eigenes Video (The_White_Epic, Quali und Rennen), dazu die Videos von Mesota, Mehlone, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P2 · 1:04.974 (+0,316)",
                                                          "start":  "P2",
                                                          "ziel":  "P2 · +1,078",
                                                          "runde":  "1:07.160 (schnellste Runde)",
                                                          "stopps":  "2 · Runde 14 auf Hard (2,236 s), Runde 29 auf Intermediates (2,243 s)",
-                                                         "strafen":  "Track-Limit-Warnung in Runde 36"
+                                                         "strafen":  "keine, eine Track-Limit-Warnung in der letzten Runde"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Schnellste Runde mit 1 s Vorsprung und Quali P2.",
-                                                        "rv":  "Konterte Crashturtle2000 in Runde 1 sofort, fand aber in fünf Runden keinen Weg an JokerFinn06 vorbei.",
-                                                        "kon":  "Sehr gleichmäßige Abstände über die Stints.",
-                                                        "sau":  "Kein Kontakt verursacht, nur eine Track-Limit-Warnung."
+                                                        "tempo":  "Schnellste Runde mit 1 s Vorsprung auf den Sieger und Quali P2.",
+                                                        "rv":  "Konterte den Angriff von Crashturtle2000 in Runde 1 sofort, fand in fünf Runden aber keinen Weg an JokerFinn06 vorbei.",
+                                                        "kon":  "Sehr gleichmäßige Abstände über alle Stints, kein Fehler im Regen.",
+                                                        "sau":  "Kein Kontakt verursacht, nur eine Track-Limit-Warnung in der letzten Runde."
                                                     },
                                           "pos":  [
-                                                      "Schnellste Runde des Rennens (1:07.160).",
-                                                      "Quali P2.",
-                                                      "In Runde 1 den Angriff von Crashturtle2000 in derselben Runde gekontert.",
+                                                      "Schnellste Runde des Rennens mit 1:07.160.",
+                                                      "Quali P2, deutlich vor dem Rest des Feldes.",
+                                                      "In Runde 1 den Angriff von Crashturtle2000 auf der Geraden zu Kurve 4 sofort gekontert.",
+                                                      "Während des Stopps von JokerFinn06 kurz in Führung.",
                                                       "Zwei saubere Stopps mit 2,2 s.",
-                                                      "Mutiger früher Wechsel auf Intermediates."
+                                                      "Mutiger früher Wechsel auf Intermediates, der rund 4 s brachte."
                                                   ],
                                           "neg":  [
                                                       "Ließ sich in Runde 1 in Kurve 3 innen überraschen.",
-                                                      "Der Undercut in Runde 29 reichte nicht, JokerFinn06 kam knapp davor heraus.",
-                                                      "Kein ernsthafter Angriff in den Schlussrunden."
+                                                      "Der Undercut in Runde 29 reichte nicht, JokerFinn06 kam 0,44 s davor heraus.",
+                                                      "In den letzten fünf Runden kein ernsthafter Überholversuch, obwohl er schneller war."
                                                   ],
                                           "besser":  [
                                                          "Die Innenlinie im Startgewühl besser schließen.",
-                                                         "In der Schlussphase früher einen Angriff vorbereiten."
+                                                         "In der Schlussphase früher einen Angriff vorbereiten, etwa über bessere Traktion aus Kurve 3 auf die lange Gerade."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P2 mit 1:04.974, 0,316 s hinter der Pole und deutlich vor dem Rest."
+                                                              "x":  "P2 mit 1:04.974, 0,316 s hinter JokerFinn06 und klar vor Crashturtle2000 (+0,336 auf ihn). Eine sehr gute Ausgangslage."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Crashturtle2000 ging in der Remus-Kehre innen vorbei, The_White_Epic holte sich P2 auf der Geraden sofort zurück. Das Spiel verwarnte Crashturtle2000 für den Kontakt."
+                                                              "x":  "Guter Start, JokerFinn06 blieb vorne. In der Remus-Kurve (Kurve 3) stach Crashturtle2000 innen vorbei, eng, das Spiel verwarnte Crashturtle2000 für einen Kontakt. The_White_Epic nutzte sofort den Windschatten und war vor Kurve 4 wieder Zweiter. Das kostete ihn kaum Zeit."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Im ersten Stint dicht hinter JokerFinn06, kurz in Führung während dessen Stopp, danach 4 bis 5 s dahinter. Das schnellste Auto im Feld."
+                                                              "x":  "Im ersten Stint lag er meist 0,06 bis 0,9 s hinter JokerFinn06 und führte kurz, als dieser an die Box ging. Danach fuhr er konstant 4 bis 5 s dahinter. Sein Vorsprung auf P3 wuchs von 2 s auf 9 bis 15 s. Mit der schnellsten Runde war er das schnellste Auto im Feld."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Hard in Runde 14, Intermediates in Runde 29, eine Runde früher als JokerFinn06. Er holte rund 4 s auf, kam aber 0,44 s dahinter raus."
+                                                              "x":  "Hard in Runde 14, eine Runde später als JokerFinn06, ohne Effekt. In Runde 29 ging er eine Runde früher als JokerFinn06 auf Intermediates und holte dadurch rund 4 s auf, kam aber 0,44 s dahinter aus der Box. Die Entscheidung war richtig, der Undercut aber knapp zu klein."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Sauberes Duell mit Crashturtle2000 in Runde 1 und fünf Runden hinter JokerFinn06 ohne Kontakt."
+                                                              "x":  "Das Duell mit Crashturtle2000 in Runde 1 war sauber und klug gelöst. Gegen JokerFinn06 blieb er fünf Runden in Schlagdistanz, ein Manöver kam aber nicht zustande."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Keine Fehler, nur eine Track-Limit-Warnung in der letzten Runde."
+                                                              "x":  "Keine sichtbaren Fehler und keine Strafen. Die Track-Limit-Warnung in der letzten Runde zählt bei Medium kaum."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Eines seiner stärksten Rennen. Geschlagen nur von der Track Position beim Reifenwechsel."
+                                                              "x":  "Eines seiner stärksten Rennen: schnellster Mann im Feld und nur durch die Track Position beim Reifenwechsel geschlagen."
                                                           }
                                                       ]
                                       }
@@ -1452,15 +1462,15 @@
                                           "rv":  18,
                                           "kon":  12,
                                           "sau":  10,
-                                          "kurz":  "Ohne Quali-Zeit von hinten bis auf P5 mit Top-3-Pace, dann Abflug mit Flügelschaden und nur P9.",
-                                          "quelle":  "Eigenes Video (Italian Gamer, Gamertag Dualshock4759), dazu die Videos von Mesota, The_White_Epic und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Ohne Quali-Zeit von hinten bis auf P5 mit Top-3-Pace, dann ein Abflug mit Flügelschaden und nur P9.",
+                                          "quelle":  "Eigenes Video (Italian Gamer, Gamertag Dualshock4759), dazu die Videos von Mesota, Mehlone, The_White_Epic und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P11 · keine Zeit (im Spiel disqualifiziert)",
                                                          "start":  "P11",
                                                          "ziel":  "P9 · +1 Runde",
                                                          "runde":  "1:07.903 (3. schnellste)",
                                                          "stopps":  "3 · Runde 13 auf Hard, Runde 26 auf Medium (je 2,252 s), Runde 31 auf Medium mit neuem Frontflügel (7,440 s)",
-                                                         "strafen":  "Quali-Disqualifikation wegen falscher Richtung, Kollisionswarnung in Runde 4 (mit Danolo Frenzi)"
+                                                         "strafen":  "Quali-Disqualifikation wegen falscher Fahrtrichtung, Kollisionswarnung in Runde 4 (mit Danolo Frenzi)"
                                                      },
                                           "noten":  {
                                                         "tempo":  "Drittschnellste Runde und von P11 aus lange auf P5.",
@@ -1469,13 +1479,14 @@
                                                         "sau":  "Im Quali entgegen der Fahrtrichtung gefahren, das ist gefährlich. Dazu ein Kontakt in Runde 4."
                                                     },
                                           "pos":  [
-                                                      "Drittschnellste Rennrunde (1:07.903).",
+                                                      "Drittschnellste Rennrunde mit 1:07.903.",
                                                       "Von P11 bis auf P5.",
                                                       "Fahrer des Tages und meiste Überholungen.",
-                                                      "Gute Boxenstopps mit 2,25 s."
+                                                      "Gute Boxenstopps mit 2,25 s.",
+                                                      "Im Regen sauber an DON-FUCHSER88 vorbei."
                                                   ],
                                           "neg":  [
-                                                      "Quali: Ausritt, leichter Mauerkontakt und dann entgegen der Fahrtrichtung gefahren, Disqualifikation.",
+                                                      "Quali: Ausritt, leichter Mauerkontakt und danach entgegen der Fahrtrichtung gefahren, Disqualifikation.",
                                                       "Runde 31 auf P5 liegend Abflug ins Kiesbett mit Flügelschaden, Absturz auf P9.",
                                                       "Kontakt mit Danolo Frenzi in Runde 4."
                                                   ],
@@ -1486,27 +1497,27 @@
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "In Runde 2 fuhr er in Kurve 6/7 weit raus ins Gras und berührte leicht die Mauer. Danach setzte er zurück und fuhr in die falsche Richtung, das Spiel disqualifizierte ihn. Start ohne Zeit von P11."
+                                                              "x":  "In seiner zweiten Runde fuhr er in Kurve 6/7 weit raus ins Gras und berührte leicht die Mauer. Danach setzte er zurück und fuhr in die falsche Richtung, das Spiel disqualifizierte ihn. Er startete ohne Zeit von P11."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Er nutzte das Chaos in Kurve 3 und 4 ohne eigenen Vorfall und kam weit nach vorne."
+                                                              "x":  "Er nutzte das Chaos in Kurve 3 und 4 ohne eigenen Vorfall und kam in der ersten Runde weit nach vorne."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "In Runde 4 ging er in Kurve 3 innen an der Szene zwischen Danolo Frenzi und DON-FUCHSER88 vorbei, mit leichtem Kontakt zu Danolo (Verwarnung). Danach fast durchgehend P5 mit Rundenzeiten auf Podiumsniveau."
+                                                              "x":  "In Runde 4 ging er in Kurve 3 innen an der Szene zwischen Danolo Frenzi und DON-FUCHSER88 vorbei, mit leichtem Kontakt zu Danolo (Verwarnung). Danach lag er fast durchgehend auf P5 und fuhr Rundenzeiten auf Podiumsniveau. In Runde 30 hatte er 7,4 s Vorsprung auf Mehlone und 13 s auf Mesota."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Zwei-Stopp-Plan mit Hard in Runde 13 und Medium in Runde 26. Der dritte Stopp war ein Notstopp für den Frontflügel."
+                                                              "x":  "Zwei-Stopp-Plan mit Hard in Runde 13 und Medium in Runde 26, jeweils 2,25 s. Der dritte Stopp war ein Notstopp für den Frontflügel."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Viele Überholmanöver, meist sauber. In Runde 33 ging er auf Intermediates im Regen sauber an DON-FUCHSER88 vorbei."
+                                                              "x":  "Viele Überholmanöver, meist sauber, die meisten im Feld. In Runde 33 ging er auf Intermediates im Regen sauber an DON-FUCHSER88 vorbei."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Quali-Disqualifikation und Abflug in Runde 31 kosteten Startplätze und rund 8 Punkte."
+                                                              "x":  "Die Quali-Disqualifikation und der Abflug in Runde 31 kosteten Startplätze und rund 8 Punkte."
                                                           },
                                                           {
                                                               "t":  "Fazit",
@@ -1688,42 +1699,42 @@
                                           "rv":  21,
                                           "kon":  16,
                                           "sau":  11,
-                                          "kurz":  "Von Startplatz 9 mit kluger Safety-Car-Strategie auf P3, im Spiel sogar Sieger. Das Ergebnis kam mehr aus Strategie und Strafen anderer als aus Tempo.",
-                                          "quelle":  "Eigenes Video (Stream von DON-FUCHSER88, ohne Sprint), dazu die Videos von Mesota, The_White_Epic und Mehlone sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Von Startplatz 9 auf P3 dank eines perfekt getimten Stopps unter Safety Car. Das Ergebnis kam aus Rennverstand und Strategie, nicht aus Tempo.",
+                                          "quelle":  "Eigenes Video (Stream von DON-FUCHSER88, Quali und Rennen, kein Sprint), dazu die Videos von Mesota, The_White_Epic und Mehlone sowie Ereignis- und Boxenstopp-Reiter. Die Gastfahrer sind herausgerechnet.",
                                           "fakten":  {
                                                          "quali":  "P7 · 1:12.662 (+2,060)",
                                                          "start":  "Sprint nicht gefahren · Rennen P7",
-                                                         "ziel":  "Rennen P3 (auf der Straße P3, im Spiel P1)",
+                                                         "ziel":  "Rennen P3",
                                                          "runde":  "1:14.677 (langsamste der ersten sieben)",
                                                          "stopps":  "2 · Runde 2 Hard → Medium mit neuem Frontflügel (7,440 s), Runde 16 unter Safety Car Medium → Hard (2,252 s)",
-                                                         "strafen":  "3 s Kurve abgekürzt (Runde 31), 1 Warnung in Runde 1"
+                                                         "strafen":  "3 s für Abkürzen in Runde 31, eine Warnung für Abkürzen in Runde 1"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Über 2 s hinter der Pole und die langsamste beste Runde der ersten sieben.",
-                                                        "rv":  "Von P9 auf P3 der Straße, der Stopp unter Safety Car war perfekt getimt.",
-                                                        "kon":  "Keine Dreher, stetiger Weg nach vorne, nur der frühe Frontflügelschaden.",
-                                                        "sau":  "Zwei Abkürzungen, eine davon mit 3 s, sonst keine Kontakte gesehen."
+                                                        "tempo":  "Über 2 s hinter der Pole im Quali und die langsamste beste Runde unter den ersten sieben. Im Tempo eine Stufe hinter der Spitze.",
+                                                        "rv":  "Von P9 nach Runde 2 stetig bis auf P3. Der Stopp unter Safety Car war der Schlüssel, dazu kamen Fehler anderer.",
+                                                        "kon":  "Keine Dreher, keine Mauerkontakte, ein gleichmäßiger Weg nach vorne. Nur der frühe Flügelschaden.",
+                                                        "sau":  "Keine Kontakte gesehen. Zwei Abkürzungen, eine davon mit 3 s Strafe, die bei Medium-Track-Limits ein echter Vorteil war."
                                                     },
                                           "pos":  [
-                                                      "Safety-Car-Phase in Runde 16 für einen günstigen Stopp genutzt.",
-                                                      "Von P9 nach Runde 2 stetig bis auf P3 nach vorne.",
-                                                      "Keine Kollision selbst verursacht.",
+                                                      "Den Stopp unter Safety Car in Runde 16 perfekt getimt und damit viele Plätze gewonnen.",
+                                                      "Von P9 nach dem Flügelwechsel stetig nach vorne: Runde 21 P6, Runde 23 P5, Runde 28 P4, Runde 30 P3.",
+                                                      "Keine Kollision und keine Dreher im ganzen Rennen.",
                                                       "Fahrer des Tages."
                                                   ],
                                           "neg":  [
-                                                      "Quali über 2 s hinter der Pole.",
-                                                      "Schwacher Start, in Sektor 1 auf P10.",
-                                                      "Frontflügelschaden schon in Runde 2, Ursache nicht zu sehen.",
-                                                      "3 s Strafe für Abkürzen in Runde 31, offiziell landete er hinter The_White_Epic und Mesota."
+                                                      "Quali über 2 s hinter der Pole, nur Danolo Frenzi war langsamer.",
+                                                      "Schwacher Start: in Sektor 1 nur P10.",
+                                                      "Frontflügelschaden schon in Runde 2, die Ursache ist im Bild nicht zu sehen.",
+                                                      "3 s Strafe für Abkürzen in Runde 31."
                                                   ],
                                           "besser":  [
-                                                         "Quali-Runde und Start trainieren.",
-                                                         "In der Schlussphase die Schikanen sauber nehmen, um keine Zeitstrafe zu riskieren."
+                                                         "Das Grundtempo im Zeitfahren verbessern, sonst bleibt er von Safety Cars und Fehlern anderer abhängig.",
+                                                         "In den Schlussrunden die Schikanen sauber fahren, um keine Zeitstrafe zu riskieren."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P7 unter den Ligafahrern mit 1:12.662, 2,06 s hinter der Pole."
+                                                              "x":  "P7 unter den Ligafahrern mit 1:12.662, 2,06 s hinter der Pole. Nur Danolo Frenzi war langsamer. Der Rückstand liegt in allen drei Sektoren."
                                                           },
                                                           {
                                                               "t":  "Sprint",
@@ -1731,27 +1742,27 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Schlechter Start, in Sektor 1 nur P10, Ende Runde 1 aber P7. Eine Warnung für Abkürzen über das Gras in Kurve 1/2."
+                                                              "x":  "Der Start war schwach, in Sektor 1 lag er nur auf P10. Im Chaos der ersten Kurven kam er aber ohne Kontakt durch und war am Ende von Runde 1 auf P7. Dabei kürzte er in Kurve 1/2 über das Gras ab und bekam eine Warnung."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Nach dem Flügelwechsel in Runde 2 auf P9, danach stetig nach vorne: Runde 21 P6, Runde 28 P4, Runde 30 P3. Sein Rundentempo lag aber klar hinter der Spitze."
+                                                              "x":  "In Runde 2 musste er mit beschädigtem Frontflügel an die Box und fiel auf P9 zurück. Danach fuhr er konstant, aber nicht schnell: P8 ab Runde 8, P7 in Runde 14. Nach dem Safety Car ging es nach vorne, weil andere noch stoppen mussten: Runde 21 P6, Runde 28 P4 und ab Runde 30 P3."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Der frühe Schaden kostete 7,4 s. Der zweite Stopp unter Safety Car in Runde 16 war perfekt getimt und der Schlüssel zum Ergebnis."
+                                                              "x":  "Der erste Stopp war erzwungen (7,440 s mit Flügel). Der zweite unter Safety Car in Runde 16 auf Hard (2,252 s) war perfekt getimt und brachte ihn ohne weiteren Stopp bis ins Ziel."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Keine strittigen Szenen gesehen. Die meisten Plätze kamen über Stopps und Strafen anderer."
+                                                              "x":  "Keine strittigen Szenen gesehen. Die meisten Plätze kamen über Stopps und Fehler anderer, nicht über Überholmanöver auf der Strecke."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Frontflügelschaden in Runde 2 (Ursache unklar), Abkürzen in Runde 1 (Warnung) und Runde 31 (3 s). Im Spiel Sieger, weil vor ihm waltherjonas28 (16 s), Mesota (10 s) und The_White_Epic (3 s) bestraft wurden. Auf der Website P3."
+                                                              "x":  "Frontflügelschaden in Runde 2 mit unklarer Ursache, eine Warnung für Abkürzen in Runde 1 und 3 s für Abkürzen in Runde 31."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Wieder ein Ergebnis aus Rennverstand und Glück, nicht aus Tempo. Sauber gefahren, aber ohne das Safety Car und die Strafen anderer wäre es kein Podium geworden."
+                                                              "x":  "Wieder ein Podium aus Rennverstand und Glück. Sauber gefahren, aber ohne Safety Car und die Probleme anderer wäre es kein P3 geworden."
                                                           }
                                                       ]
                                       },
@@ -1763,20 +1774,20 @@
                                           "kon":  13,
                                           "sau":  12,
                                           "kurz":  "Langsames Rennen auf P10, mit einem Flügelschaden durch Tore79 und ohne Wechsel auf Intermediates im Regen.",
-                                          "quelle":  "Eigenes Video (Stream von DON-FUCHSER88), dazu die Videos von Mesota, The_White_Epic und Italian Gamer sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "quelle":  "Eigenes Video (Stream von DON-FUCHSER88, Quali und Rennen), dazu die Videos von Mesota, Mehlone, The_White_Epic und Italian Gamer sowie Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P9 · 1:06.180 (+1,522)",
                                                          "start":  "P9",
                                                          "ziel":  "P10 · +1 Runde",
                                                          "runde":  "1:08.970",
                                                          "stopps":  "3 · Runde 5 auf Medium (2,251 s), Runde 7 auf Hard mit neuem Frontflügel (7,435 s), Runde 19 auf Medium (2,252 s)",
-                                                         "strafen":  "Kollisionswarnung in Runde 4 (mit Danolo Frenzi), Track-Limit-Warnung"
+                                                         "strafen":  "Kollisionswarnung in Runde 4 (mit Danolo Frenzi), Track-Limit-Warnungen in Runde 32"
                                                      },
                                           "noten":  {
                                                         "tempo":  "Quali 1,5 s und die beste Rennrunde 1,8 s hinter der Spitze.",
                                                         "rv":  "Schwacher Start, Plätze in Runde 1 vor allem durch Unfälle anderer, im Regen ohne Reifenwechsel überholt.",
                                                         "kon":  "Keine eigenen Dreher, aber drei Stopps und kein Zeitgewinn auf das Mittelfeld.",
-                                                        "sau":  "Verwicklung mit Danolo Frenzi in Runde 4 (Verwarnung), in Runde 7 Opfer von Tore79."
+                                                        "sau":  "Verwicklung mit Danolo Frenzi in Runde 4 mit Verwarnung, in Runde 7 Opfer von Tore79."
                                                     },
                                           "pos":  [
                                                       "Ruhig durch das Chaos in Runde 1 gekommen (P11 auf P8).",
@@ -1790,29 +1801,29 @@
                                                       "Überrundet."
                                                   ],
                                           "besser":  [
-                                                         "Startphase üben.",
+                                                         "Die Startphase üben, damit keine Plätze schon auf der Geraden verloren gehen.",
                                                          "Im Regen den Reifenwechsel rechtzeitig mitgehen."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P9 mit 1:06.180, 1,5 s hinter der Pole."
+                                                              "x":  "P9 mit 1:06.180, 1,5 s hinter der Pole. Nur Danolo Frenzi und der disqualifizierte Italian Gamer lagen dahinter."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Von P9 auf P11 nach dem Start, dann wich er dem Chaos in Kurve 3 aus und lag Ende Runde 1 auf P8."
+                                                              "x":  "Nach dem Start fiel er von P9 auf P11. In Kurve 3 entstand vor ihm ein Unfall mit Tore79, Leokobra und Mesota, dem er ausweichen konnte. Ende Runde 1 lag er auf P8, vor allem durch die Fehler anderer."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "In Runde 4 verhakte er sich in Kurve 3 mit Danolo Frenzi, beide verwarnt. In Runde 7 kollidierte Tore79 mit ihm (Verwarnung für Tore79), danach der Flügelwechsel. Danach im hinteren Mittelfeld, Danolo Frenzi 20 bis 34 s voraus."
+                                                              "x":  "In Runde 4 verhakte er sich in Kurve 3 mit Danolo Frenzi, beide verwarnt. In Runde 7 kollidierte Tore79 mit ihm (Verwarnung für Tore79), danach musste er den Frontflügel wechseln. Danach lag er im hinteren Mittelfeld, Danolo Frenzi 20 bis 34 s voraus."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Ein früher Stopp in Runde 5 auf Medium, dann der erzwungene Flügelwechsel in Runde 7 und Medium in Runde 19. Im Regen blieb er draußen, das brachte kurz P9, kostete dann aber den Platz gegen Italian Gamer."
+                                                              "x":  "Ein früher Stopp in Runde 5 auf Medium, dann der erzwungene Flügelwechsel in Runde 7 und Medium in Runde 19. Im Regen blieb er draußen auf Hard. Das brachte kurz P9, kostete dann aber den Platz gegen Italian Gamer."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Wenige Duelle, in Runde 33 im Regen ohne Gegenwehr gegen Italian Gamer."
+                                                              "x":  "Wenige Duelle. In Runde 33 hatte er im Regen auf Hard keine Gegenwehr gegen Italian Gamer auf Intermediates."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
@@ -1829,18 +1840,18 @@
                    {
                        "id":  "crash",
                        "gesamt":  {
-                                      "kritik":  "Crashturtle2000 hat Top-4-Tempo im Quali, das er lange nicht ins Ziel brachte: Abflug und Verbindungsabbruch in Melbourne, Auffahrunfall, Mauer und zwei ignorierte blaue Flaggen in Kanada. In Österreich zeigte er mit P3 und der zweitschnellsten Runde, was möglich ist, wenn er sauber bleibt.",
+                                      "kritik":  "Crashturtle2000 hat Top-4-Tempo im Quali, das er lange nicht ins Ziel brachte: Abflug und Verbindungsabbruch in Melbourne, Auffahrunfall und Mauerunfall in Kanada. In Österreich zeigte er mit P3 und der zweitschnellsten Runde, was möglich ist, wenn er fehlerfrei bleibt.",
                                       "staerken":  [
                                                        "Quali-Tempo",
                                                        "Spitzenrunden"
                                                    ],
                                       "schwaechen":  [
                                                          "Fehler und Kontakte in Runde 1",
-                                                         "Disziplin bei blauen Flaggen und Track Limits"
+                                                         "Track Limits und Platzrückgaben"
                                                      ],
                                       "fokus":  [
                                                     "In Runde 1 Abstand halten",
-                                                    "Als Überrundeter Platz machen"
+                                                    "Nach einem Fehler ruhig weiterfahren"
                                                 ]
                                   },
                        "rennen":  [
@@ -1925,69 +1936,69 @@
                                           "tempo":  26,
                                           "rv":  9,
                                           "kon":  7,
-                                          "sau":  5,
-                                          "kurz":  "Starkes Quali, dann Auffahrunfall in Runde 1, Mauerkontakt, fünf Stopps und zweimal blaue Flaggen ignoriert.",
-                                          "quelle":  "Eigenes Video vom Rennen (Crashturtle2000), Sprint aus den Sichten von Mehlone und Mesota, dazu Ereignis- und Boxenstopp-Reiter.",
+                                          "sau":  9,
+                                          "kurz":  "Starkes Quali, dann ein Rennen voller eigener Fehler: Auffahrunfall und Dreher in Runde 1, Mauerunfall in Runde 6 und fünf Stopps.",
+                                          "quelle":  "Eigenes Video vom Rennen (Crashturtle2000), Sprint aus den Sichten von Mehlone und Mesota, dazu Ereignis- und Boxenstopp-Reiter. Die Gastfahrer sind herausgerechnet, Kontakte mit ihnen zählen nur als eigener Fahrfehler. Blaue Flaggen werden in der Liga nicht gewertet.",
                                           "fakten":  {
                                                          "quali":  "P4 · 1:11.345 (+0,743)",
                                                          "start":  "Sprint P4 · Rennen P4",
                                                          "ziel":  "Sprint P6 · Rennen P7 (+1 Runde)",
                                                          "runde":  "1:14.199",
                                                          "stopps":  "5 · Runde 1 und 6 mit Frontflügel, Runde 15 mit Frontflügel, Runde 16 und 26",
-                                                         "strafen":  "2 × 10 s blaue Flagge ignoriert, 10 s nicht erfüllte Strafe, Kollisionswarnungen"
+                                                         "strafen":  "Kollisionswarnungen in Runde 1 (Mesota und Max mit ihm), Kurven-Warnung, zwei Aufforderungen zur Platzrückgabe"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Starkes Quali mit 0,74 s Rückstand, die Rennrunde ordentlich.",
+                                                        "tempo":  "Starkes Quali mit nur 0,74 s Rückstand und eine ordentliche beste Rennrunde.",
                                                         "rv":  "Im Sprint zwei Plätze verloren, im Rennen durch eigene Fehler eine Runde zurück.",
-                                                        "kon":  "Kontakt in Runde 1, Mauer in Runde 6, Zurücksetzen und fünf Stopps.",
-                                                        "sau":  "Auffahrunfall in Runde 1, zweimal blaue Flaggen ignoriert und zwei Abkürzungen mit Aufforderung, den Platz zurückzugeben."
+                                                        "kon":  "Dreher in Runde 1, Mauer in Runde 6, Zurücksetzen über das Menü und fünf Stopps.",
+                                                        "sau":  "Auffahrunfall in Runde 1 und zweimal die Schikane abgekürzt mit der Aufforderung, den Platz zurückzugeben."
                                                     },
                                           "pos":  [
-                                                      "Quali P4, nur 0,74 s hinter der Pole.",
-                                                      "Trotz Schäden und Problemen das Rennen beendet."
+                                                      "Quali P4 mit 1:11.345, nur 0,74 s hinter der Pole.",
+                                                      "Trotz Schäden und Problemen das Rennen beendet und Punkte geholt."
                                                   ],
                                           "neg":  [
-                                                      "Runde 1: fuhr in Kurve 3/4 auf den McLaren von waltherjonas28 auf, drehte sich und kostete auch Mehlone fast den Platz.",
-                                                      "Runde 6 Alleinunfall an der Mauer, danach fast eine Runde zurück.",
-                                                      "Zweimal blaue Flaggen ignoriert (je 10 s) beim Überrunden durch die Spitze.",
+                                                      "Runde 1: dicht auf das Auto vor ihm aufgefahren, Frontflügel kaputt und Dreher, von P6 auf P9.",
+                                                      "Runde 6: Alleinunfall an der rechten Mauer, Zurücksetzen und Reparatur, danach fast eine Runde zurück.",
                                                       "Zweimal die Schikane abgekürzt mit der Aufforderung, den Platz zurückzugeben."
                                                   ],
                                           "besser":  [
                                                          "In Runde 1 mehr Abstand zum Vordermann halten.",
-                                                         "Als Überrundeter die blauen Flaggen beachten und Platz machen."
+                                                         "Nach einem Fehler ruhig bleiben und das Rennen in Ruhe zu Ende fahren.",
+                                                         "Die letzte Schikane sauber anfahren und Plätze aktiv zurückgeben."
                                                      ],
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P4 unter den Ligafahrern mit 1:11.345, 0,74 s hinter der Pole. Das Tempo ist da."
+                                                              "x":  "P4 unter den Ligafahrern mit 1:11.345, nur 0,74 s hinter der Pole. Das Tempo für die Top 4 ist eindeutig da."
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 4 auf P6 zurückgefallen."
+                                                              "x":  "Von Startplatz 4 fiel er im kurzen Sprint zurück und kam offiziell auf P6 ins Ziel. Aus seiner Sicht gibt es kein Video vom Sprint."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "In Kurve 3/4 fuhr er dicht hinter dem McLaren von waltherjonas28 und traf ihn mit dem Frontflügel am Heck. Er drehte sich, Mehlone musste stark ausweichen. Kontakt auch mit Mesota und Max in Runde 1."
+                                                              "x":  "In Kurve 3/4 fuhr er dicht auf das Auto vor ihm auf und traf es mit dem Frontflügel am Heck. Er drehte sich, Mehlone musste stark ausweichen. Das Auto vor ihm war ein Gast und ist aus der Wertung genommen, der eigene Fehler bleibt aber. Auch Mesota und Max hatten in Runde 1 Kontakte mit ihm, die Verwarnungen gingen dort an die anderen."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Runde 6 Alleinunfall an der rechten Mauer, Zurücksetzen über das Menü und Reparatur. Danach praktisch eine Runde zurück und allein unterwegs."
+                                                              "x":  "In Runde 6 Alleinunfall an der rechten Mauer, Zurücksetzen über das Menü und Reparatur. Kurz danach wechselte er auf den Desktop zur Lenkradsoftware, vermutlich ein Hardwareproblem. Ab Runde 7 war er praktisch eine Runde zurück und fuhr allein am Ende des Feldes."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Fünf Stopps, getrieben von Schäden und Safety Car, keine echte Strategie."
+                                                              "x":  "Fünf Stopps, drei davon für Frontflügel. Es gab keine echte Strategie, die Stopps wurden von Schäden und dem Safety Car diktiert."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Beim Überrunden durch die Spitze zweimal die blaue Flagge ignoriert, je 10 s. Zweimal die Schikane abgekürzt mit Aufforderung, den Platz zurückzugeben."
+                                                              "x":  "Zweimal kürzte er die letzte Schikane ab und bekam die Aufforderung, den Platz zurückzugeben. Ob er das getan hat, ist im Bild unklar. Strafen wegen blauer Flaggen werden in der Liga nicht gewertet."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "Auffahrunfall, Mauer, zwei ignorierte blaue Flaggen, eine nicht erfüllte Strafe und eine Kurven-Warnung. Ob er sich bei waltherjonas28 entschuldigt hat, ist nicht geprüft."
+                                                              "x":  "Auffahrunfall und Dreher in Runde 1, Mauer in Runde 6 und eine Kurven-Warnung. Die Strafen aus den Szenen mit dem Gastfahrer sind herausgerechnet."
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Wieder ein Rennen mit Top-4-Tempo im Quali und vielen eigenen Fehlern. Die ignorierten blauen Flaggen wiegen in der Sauberkeit schwer. P7 gab es nur durch den Ausfall von JokerFinn06."
+                                                              "x":  "Wieder Top-4-Tempo im Quali und ein Rennen voller eigener Fehler. P7 kam nur durch den Ausfall von JokerFinn06 zustande."
                                                           }
                                                       ]
                                       },
@@ -1998,31 +2009,32 @@
                                           "rv":  21,
                                           "kon":  17,
                                           "sau":  12,
-                                          "kurz":  "Starkes Quali, Podium und die zweitschnellste Runde: das beste Rennen von Crashturtle2000 bisher.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
+                                          "kurz":  "Starkes Quali, Podium und die zweitschnellste Runde: das beste Rennen von Crashturtle2000 bisher, endlich ohne eigene Fehler.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von The_White_Epic, Mesota, Mehlone, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter.",
                                           "fakten":  {
                                                          "quali":  "P3 · 1:05.310 (+0,652)",
                                                          "start":  "P3",
                                                          "ziel":  "P3 · +16,800",
                                                          "runde":  "1:07.499 (2. schnellste)",
                                                          "stopps":  "2 · Runde 12 auf Hard (2,233 s), Runde 27 auf Medium (2,255 s)",
-                                                         "strafen":  "Kollisionswarnung in Runde 1 (mit The_White_Epic), Track-Limit-Warnung"
+                                                         "strafen":  "Kollisionswarnung in Runde 1 (mit The_White_Epic), Track-Limit-Warnung in Runde 33"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Quali P3 und die zweitschnellste Rennrunde.",
-                                                        "rv":  "Von P3 gestartet und P3 sicher ins Ziel gebracht, in Runde 1 kurz P2.",
-                                                        "kon":  "Keine Fehler, keine Reparaturen, gleichmäßiges Rennen.",
-                                                        "sau":  "Leichter Kontakt beim Angriff auf The_White_Epic in Runde 1 (Verwarnung), sonst sauber."
+                                                        "tempo":  "Quali P3 und die zweitschnellste Rennrunde, nur 0,34 s hinter der schnellsten.",
+                                                        "rv":  "Von P3 gestartet, in Runde 1 kurz P2 und P3 sicher ins Ziel gebracht.",
+                                                        "kon":  "Keine Fehler, keine Reparaturen, ein gleichmäßiges Rennen.",
+                                                        "sau":  "Leichter Kontakt beim Angriff auf The_White_Epic in Runde 1 mit Verwarnung, sonst sauber."
                                                     },
                                           "pos":  [
                                                       "Quali P3 mit 1:05.310.",
-                                                      "Zweitschnellste Rennrunde (1:07.499).",
+                                                      "Zweitschnellste Rennrunde mit 1:07.499.",
                                                       "Podium ohne Fehler und ohne Reparaturstopp.",
-                                                      "Mutiger Angriff in Runde 1 auf The_White_Epic."
+                                                      "Mutiger Angriff in Runde 1 auf The_White_Epic.",
+                                                      "Zwei saubere Stopps mit 2,23 und 2,25 s."
                                                   ],
                                           "neg":  [
-                                                      "Der Angriff in Kurve 3 in Runde 1 brachte einen leichten Kontakt und eine Verwarnung.",
-                                                      "Am Ende 16,8 s hinter der Spitze."
+                                                      "Der Angriff in Kurve 3 in Runde 1 war eng und brachte einen leichten Kontakt mit Verwarnung.",
+                                                      "Am Ende 16,8 s hinter dem Sieger."
                                                   ],
                                           "besser":  [
                                                          "Angriffe in Runde 1 mit etwas mehr Platz fahren.",
@@ -2031,19 +2043,19 @@
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P3 mit 1:05.310, 0,65 s hinter der Pole."
+                                                              "x":  "P3 mit 1:05.310, 0,65 s hinter der Pole und nur 0,34 s hinter The_White_Epic. Wie schon in Kanada zeigt Crashturtle2000 Top-Tempo im Quali."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Stach in der Remus-Kehre innen an The_White_Epic vorbei, eng, das Spiel verwarnte ihn für einen Kontakt. The_White_Epic konterte auf der Geraden."
+                                                              "x":  "In der Remus-Kurve stach er innen an The_White_Epic vorbei, eng, das Spiel verwarnte ihn für einen leichten Kontakt. The_White_Epic konterte auf der Geraden zu Kurve 4, danach lag Crashturtle2000 wieder auf P3. Anders als in den Rennen zuvor kam er ohne Schaden durch Runde 1."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Sicher auf P3, mit der zweitschnellsten Runde des Rennens."
+                                                              "x":  "Danach ein ruhiges, sicheres Rennen auf P3. Mit der zweitschnellsten Runde des Rennens war er eindeutig schneller als alle hinter ihm."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Zwei Stopps ohne Reparatur, Hard in Runde 12, Medium in Runde 27."
+                                                              "x":  "Zwei Stopps ohne Reparatur: Hard in Runde 12, Medium in Runde 27, jeweils um 2,25 s."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
@@ -2055,7 +2067,7 @@
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Endlich hat Crashturtle2000 sein Quali-Tempo ins Ziel gebracht. Unsicherheit: kein eigenes Video."
+                                                              "x":  "Endlich hat Crashturtle2000 sein Quali-Tempo ins Ziel gebracht. Das Podium ist völlig verdient. Unsicherheit: kein eigenes Video."
                                                           }
                                                       ]
                                       }
@@ -2154,8 +2166,8 @@
                                           "rv":  13,
                                           "kon":  12,
                                           "sau":  11,
-                                          "kurz":  "Starkes Quali auf P6, dann in Runde 1 zweimal getroffen und nach Flügelwechsel nur P8.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Leokobraa.",
+                                          "kurz":  "Starkes Quali auf P6, dann in Runde 1 zweimal getroffen und nach dem Flügelwechsel nur P8.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Leokobraa.",
                                           "fakten":  {
                                                          "quali":  "P6 · 1:05.459 (+0,801)",
                                                          "start":  "P6",
@@ -2165,14 +2177,14 @@
                                                          "strafen":  "Kollisionswarnung in Runde 23 (mit Mehlone)"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Starkes Quali mit 0,8 s Rückstand, ordentliche Rennrunde.",
+                                                        "tempo":  "Starkes Quali mit 0,8 s Rückstand und eine ordentliche Rennrunde.",
                                                         "rv":  "Nach dem Schaden in Runde 1 nicht mehr nach vorne gekommen.",
                                                         "kon":  "Drei Stopps, sonst keine großen Einbrüche zu sehen.",
                                                         "sau":  "In Runde 1 Opfer von Danolo Frenzi und Tore79, in Runde 23 selbst mit Kontakt gegen Mehlone."
                                                     },
                                           "pos":  [
                                                       "Quali P6, deutlich verbessert gegenüber Barcelona.",
-                                                      "Ordentliche Rennrunde (1:08.928)."
+                                                      "Ordentliche Rennrunde mit 1:08.928."
                                                   ],
                                           "neg":  [
                                                       "In Runde 23 Kontakt mit Mehlone, Verwarnung.",
@@ -2180,7 +2192,7 @@
                                                   ],
                                           "besser":  [
                                                          "Nach einem Schaden ruhig bleiben und keine riskanten Manöver setzen.",
-                                                         "Das Quali-Tempo im Rennen halten."
+                                                         "Das Quali-Tempo ins Rennen mitnehmen."
                                                      ],
                                           "analyse":  [
                                                           {
@@ -2189,11 +2201,11 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Chaos von Kurve 3 kollidierten Danolo Frenzi und Tore79 mit ihm, beide wurden verwarnt. Er musste in Runde 2 den Frontflügel wechseln."
+                                                              "x":  "Im Chaos von Kurve 3 kollidierten Danolo Frenzi und Tore79 mit ihm, beide wurden verwarnt. In Runde 2 musste er den Frontflügel wechseln."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Danach im hinteren Mittelfeld, ordentliche Rundenzeiten."
+                                                              "x":  "Danach im hinteren Mittelfeld, mit ordentlichen Rundenzeiten."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
@@ -2307,7 +2319,7 @@
                                           "kon":  4,
                                           "sau":  6,
                                           "kurz":  "Starkes Quali auf P5, dann zwei Kollisionen, zwei Flügelwechsel, fünf Stopps und zwei Runden Rückstand.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Tore79RS.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Tore79RS.",
                                           "fakten":  {
                                                          "quali":  "P5 · 1:05.346 (+0,688)",
                                                          "start":  "P5",
@@ -2320,7 +2332,7 @@
                                                         "tempo":  "Quali P5, nur 0,69 s hinter der Pole.",
                                                         "rv":  "Von P5 auf den letzten Platz mit zwei Runden Rückstand.",
                                                         "kon":  "Zwei Flügelschäden und fünf Stopps.",
-                                                        "sau":  "Zwei Kollisionen mit Verwarnung, in beiden Fällen der Verursacher: Leokobra in Runde 1 und DON-FUCHSER88 in Runde 7."
+                                                        "sau":  "Zwei Kollisionen mit Verwarnung, in beiden Fällen als Verursacher: Leokobra in Runde 1 und DON-FUCHSER88 in Runde 7."
                                                     },
                                           "pos":  [
                                                       "Starkes Quali auf P5, sein bestes bisher."
@@ -2341,7 +2353,7 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Chaos von Kurve 3 Kontakt mit Leokobra, die Verwarnung ging an Tore79. Neuer Frontflügel in Runde 2."
+                                                              "x":  "Im Chaos von Kurve 3 Kontakt mit Leokobra, die Verwarnung ging an Tore79. Neuer Frontflügel in Runde 2 (8,29 s)."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
@@ -2478,8 +2490,8 @@
                                           "rv":  16,
                                           "kon":  11,
                                           "sau":  10,
-                                          "kurz":  "Erstes Rennen: im Tempo klar hinten, im Sprint mit zwei Kontakten, im Hauptrennen aber durchgekommen und P5.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Danolo_Frenzi.",
+                                          "kurz":  "Erstes Rennen: im Tempo klar hinten und im Sprint mit zwei Kontakten, im Hauptrennen aber durchgekommen und P5.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Danolo_Frenzi. Die Gastfahrer sind herausgerechnet.",
                                           "fakten":  {
                                                          "quali":  "P8 · 1:13.121 (+2,519)",
                                                          "start":  "Sprint P1 (umgedrehte Startaufstellung) · Rennen P8",
@@ -2490,9 +2502,9 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Letzter im Quali mit 2,5 s Rückstand, auch im Rennen deutlich langsamer.",
-                                                        "rv":  "Im Rennen von P8 auf P5, auch dank der Ausfälle und Strafen anderer.",
+                                                        "rv":  "Im Hauptrennen von P8 auf P5, auch dank der Ausfälle und Strafen anderer.",
                                                         "kon":  "Im Sprint Flügelschaden in Runde 1, im Rennen ein zweiter Flügelwechsel.",
-                                                        "sau":  "Drei Kollisionen mit Verwarnung an einem Wochenende, das Spiel kürte ihn trotzdem zum saubersten Fahrer des Rennens."
+                                                        "sau":  "Drei Kollisionen mit Verwarnung an einem Wochenende. Das Spiel kürte ihn trotzdem zum saubersten Fahrer des Rennens."
                                                     },
                                           "pos":  [
                                                       "Im Hauptrennen von P8 auf P5.",
@@ -2519,11 +2531,11 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen Kontakt mit Mehlone, beide verwarnt. Er profitierte von Crashturtle2000s Dreher und ging an Mehlone vorbei."
+                                                              "x":  "Im Hauptrennen Kontakt mit Mehlone, beide verwarnt. Er profitierte vom Dreher von Crashturtle2000 und ging an Mehlone vorbei."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Im hinteren Feld, mit 1:14.595 als bester Runde rund 1,4 s hinter der Spitze. Die Plätze kamen durch Ausfälle (JokerFinn06) und Strafen anderer."
+                                                              "x":  "Im hinteren Feld, mit 1:14.595 als bester Runde rund 1,4 s hinter der Spitze. Die Plätze kamen durch den Ausfall von JokerFinn06 und die Strafen anderer."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
@@ -2551,7 +2563,7 @@
                                           "kon":  14,
                                           "sau":  10,
                                           "kurz":  "Langsamster im Feld, aber durch Fehler und Reparaturen der anderen auf P6.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Danolo_Frenzi.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: Danolo_Frenzi.",
                                           "fakten":  {
                                                          "quali":  "P10 · 1:07.478 (+2,820)",
                                                          "start":  "P10",
@@ -2586,11 +2598,11 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Kontakt mit Leokobra im Chaos von Kurve 3, die Verwarnung ging an Danolo Frenzi."
+                                                              "x":  "Kontakt mit Leokobra im Chaos von Kurve 3, die Verwarnung ging an Danolo Frenzi. Leokobra musste danach den Frontflügel wechseln."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "In Runde 4 verhakte er sich in Kurve 3 mit DON-FUCHSER88, ein Ferrari stand quer, Italian Gamer ging innen durch. DON-FUCHSER88 und Italian Gamer bekamen Verwarnungen für Kontakte mit ihm. Danach langsam, aber ohne Ausfall."
+                                                              "x":  "In Runde 4 verhakte er sich in Kurve 3 mit DON-FUCHSER88, ein Ferrari stand quer, Italian Gamer ging innen durch. DON-FUCHSER88 und Italian Gamer bekamen Verwarnungen für Kontakte mit ihm. Danach fuhr er langsam, aber ohne Ausfall."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
@@ -2606,7 +2618,7 @@
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Das Ergebnis ist besser als die Leistung. Viele vor ihm verloren Zeit mit Reparaturen. Unsicherheit: kein eigenes Video."
+                                                              "x":  "Das Ergebnis ist besser als die Leistung, weil viele vor ihm mit Reparaturen Zeit verloren. Unsicherheit: kein eigenes Video."
                                                           }
                                                       ]
                                       }
@@ -2638,7 +2650,7 @@
                                           "kon":  13,
                                           "sau":  10,
                                           "kurz":  "Sprintsieg im ersten Einsatz, im Hauptrennen aber mit Kontakt, Boxengassen-Strafe und drei Stopps nur P6.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: walthermaximilian18.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Mehlone, Crashturtle2000 und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: walthermaximilian18. Die Gastfahrer sind herausgerechnet.",
                                           "fakten":  {
                                                          "quali":  "P5 · 1:11.473 (+0,871)",
                                                          "start":  "Sprint P2 · Rennen P5",
@@ -2650,17 +2662,17 @@
                                           "noten":  {
                                                         "tempo":  "Quali P5 und eine Rennrunde nah an der Spitze, im Sprint vorne gehalten.",
                                                         "rv":  "Sprintsieg von Startplatz 2, im Hauptrennen aber von P5 nur auf P6.",
-                                                        "kon":  "Im Rennen drei Stopps und eine Strafe, die Linie riss ab.",
+                                                        "kon":  "Im Hauptrennen drei Stopps und eine Strafe, der Rhythmus riss ab.",
                                                         "sau":  "Kontakte in Sprint und Rennen und 10 s für Rasen in der Boxengasse."
                                                     },
                                           "pos":  [
-                                                      "Sprintsieg von Startplatz 2, vor allen Ligafahrern.",
+                                                      "Sprintsieg von Startplatz 2 im ersten Einsatz.",
                                                       "Quali P5, nur 0,87 s hinter der Pole.",
-                                                      "Gute beste Rennrunde mit 1:13.496."
+                                                      "Gute beste Rennrunde mit 1:13.496, die viertbeste der Ligafahrer."
                                                   ],
                                           "neg":  [
-                                                      "Kontakt mit Danolo Frenzi im Sprint und mit Crashturtle2000 in Rennen-Runde 1, jeweils verwarnt.",
-                                                      "10 s Strafe für das Fahren über den Rasen in der Boxengasse.",
+                                                      "Kontakt mit Danolo Frenzi im Sprint (beide verwarnt) und mit Crashturtle2000 in Runde 1 des Rennens (Verwarnung für Max).",
+                                                      "10 s Strafe für Rasen in der Boxengasse in Runde 27.",
                                                       "Drei Stopps im Hauptrennen kosteten Plätze."
                                                   ],
                                           "besser":  [
@@ -2670,31 +2682,31 @@
                                           "analyse":  [
                                                           {
                                                               "t":  "Qualifying",
-                                                              "x":  "P5 mit 1:11.473, 0,87 s hinter der Pole. Ein starker Einstand."
+                                                              "x":  "P5 mit 1:11.473, 0,87 s hinter der Pole. Ein starker Einstand in der Liga."
                                                           },
                                                           {
                                                               "t":  "Sprint",
-                                                              "x":  "Von Startplatz 2 übernahm er in Runde 1 die Führung und gewann den Sprint, nur 0,023 s vor dem Gast waltherjonas28. In Runde 1 Kontakt mit Danolo Frenzi, beide verwarnt."
+                                                              "x":  "Von Startplatz 2 übernahm er in Runde 1 die Führung und gab sie nicht mehr ab. In Runde 1 kam es zum Kontakt mit Danolo Frenzi, beide wurden verwarnt. Ein Sprintsieg im ersten Einsatz."
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "Im Rennen Kontakt mit Crashturtle2000 in Runde 1, die Verwarnung ging an Max."
+                                                              "x":  "Im Hauptrennen Kontakt mit Crashturtle2000 in Runde 1, die Verwarnung ging an Max."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Gute Rundenzeiten, aber durch die Stopps und die Strafe im Mittelfeld. Im Spiel P7, offiziell P6."
+                                                              "x":  "Gute Rundenzeiten, aber durch drei Stopps und die Strafe im Mittelfeld. Offiziell P6."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Drei Stopps (Runde 13, 27 und 33), alle schnell, aber einer zu viel."
+                                                              "x":  "Drei Stopps (Runde 13, 27 und 33), alle schnell, aber einer zu viel. Beim Stopp in Runde 27 fuhr er in der Boxengasse über den Rasen und bekam 10 s."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Zwei Kontakte mit Verwarnung, Schuld aus den Onboards nicht eindeutig."
+                                                              "x":  "Zwei Kontakte mit Verwarnung, die Schuld ist aus den Onboards nicht eindeutig."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
-                                                              "x":  "10 s für Rasen in der Boxengasse in Runde 27 und zwei Kollisionswarnungen."
+                                                              "x":  "10 s für Rasen in der Boxengasse und zwei Kollisionswarnungen."
                                                           },
                                                           {
                                                               "t":  "Fazit",
@@ -2710,7 +2722,7 @@
                                           "kon":  16,
                                           "sau":  11,
                                           "kurz":  "Von Startplatz 7 auf P4, aber mit einem Kontakt gegen Mesota in Runde 1.",
-                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: walthermaximilian18.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Sichten von Mesota, Mehlone, The_White_Epic, Italian Gamer und DON-FUCHSER88 sowie Ereignis- und Boxenstopp-Reiter. Gamertag im Spiel: walthermaximilian18.",
                                           "fakten":  {
                                                          "quali":  "P7 · 1:05.764 (+1,106)",
                                                          "start":  "P7",
@@ -2728,7 +2740,7 @@
                                           "pos":  [
                                                       "Von P7 auf P4.",
                                                       "Zwei saubere Stopps.",
-                                                      "Konstantes Rennen nach Runde 1."
+                                                      "Konstantes Rennen nach Runde 1, ohne Reparatur."
                                                   ],
                                           "neg":  [
                                                       "Kontakt mit Mesota in Kurve 3 in Runde 1, Verwarnung.",
@@ -2745,15 +2757,15 @@
                                                           },
                                                           {
                                                               "t":  "Start und Runde 1",
-                                                              "x":  "In Kurve 3 kam er außen neben Mesota und lenkte ein, die beiden fuhren Rad an Rad mit leichtem Kontakt durch den Scheitel. Er ging vorbei, das Spiel verwarnte ihn."
+                                                              "x":  "In Kurve 3 kam er außen neben Mesota und lenkte ein. Die beiden fuhren Rad an Rad mit leichtem Kontakt durch den Scheitel, er ging vorbei, das Spiel verwarnte ihn. Danach profitierte er von den Unfällen vor ihm."
                                                           },
                                                           {
                                                               "t":  "Rennverlauf und Pace",
-                                                              "x":  "Danach ein ruhiges Rennen, am Ende sicher auf P4."
+                                                              "x":  "Ein ruhiges Rennen ohne Reparatur, am Ende sicher auf P4."
                                                           },
                                                           {
                                                               "t":  "Strategie und Boxenstopps",
-                                                              "x":  "Hard in Runde 13, Medium in Runde 28."
+                                                              "x":  "Hard in Runde 13, Medium in Runde 28, beide Stopps um 2,24 s."
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
@@ -2765,7 +2777,7 @@
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Solides Rennen mit gutem Ergebnis, das auch von den Unfällen in Runde 1 profitierte. Unsicherheit: kein eigenes Video."
+                                                              "x":  "Ein solides Rennen mit gutem Ergebnis, das auch von den Unfällen in Runde 1 profitierte. Unsicherheit: kein eigenes Video."
                                                           }
                                                       ]
                                       }
