@@ -295,6 +295,8 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .full-toggle b{display:block;color:var(--fg);font-size:15px}
 .full-toggle.on{border-color:rgba(61,220,132,.5)}
 .badge.full{background:rgba(61,220,132,.15);color:#8FF0BC;margin-left:6px}
+.ed-tab.full.on{border-color:rgba(61,220,132,.55);background:rgba(61,220,132,.08);color:#8FF0BC}
+.ed-tab.full.on small{color:#8FF0BC}
 .badge.sprint{background:rgba(46,200,232,.15);color:#8FE3F4;margin-left:6px}.spr{display:block;font-size:10px;font-weight:700;color:#8FE3F4;line-height:1;margin-top:2px;letter-spacing:.03em}
 /* Championship */
 .ch-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -590,18 +592,18 @@ function curTeam(s,id){
 }
 function tmTag(t){return '<span class="tm"><i style="background:'+esc(t.color)+'"></i>'+esc(t.name)+'</span>';}
 function pts(s,r,d){return rPts(s,r,d)+sPts(s,r,d);}
-/* Hauptrennen: bei 100-%-Rennen zählen nur die Platzierungspunkte doppelt */
+/* Hauptrennen: bei 100-%-Rennen zählen alle Punkte doppelt (Platzierung, Boni, Anwesenheit) */
 function rPts(s,r,d){
   var x=resOf(r,d);if(!x)return 0;
-  var p=0;
-  if(!x.s&&x.p) p+=(+s.points[x.p-1]||0)*(r.full?2:1);
+  var p=0,m=r.full?2:1;
+  if(!x.s&&x.p) p+=(+s.points[x.p-1]||0);
   if(r.fl===d&&+s.flPoint&&!x.s&&x.p&&(!s.flTop10||x.p<=10)) p+=+s.flPoint;
   if(r.pole===d&&+s.polePoint&&x.s!=='DNS') p+=+s.polePoint;
   if(r.clean===d&&+s.cleanPoint&&x.s!=='DNS') p+=+s.cleanPoint;
   if(r.ot===d&&+s.otPoint&&x.s!=='DNS') p+=+s.otPoint;
   if(r.dotd===d&&+s.dotdPoint&&x.s!=='DNS') p+=+s.dotdPoint;
   if(x.a&&+s.attendPoint&&x.s!=='DNS') p+=+s.attendPoint;
-  return p;
+  return p*m;
 }
 function cmpCnt(a,b){for(var i=0;i<a.length;i++){if(a[i]!==b[i])return b[i]-a[i];}return 0;}
 function rank(rows,same){rows.forEach(function(r,i){r.pos=(i>0&&same(rows[i-1],r))?rows[i-1].pos:i+1;});}
@@ -665,8 +667,8 @@ function pointsText(s){
   if(+s.otPoint) t+=' · +'+s.otPoint+' für die meisten Überholungen';
   if(+s.dotdPoint) t+=' · +'+s.dotdPoint+' für Driver of the Day';
   if(+s.attendPoint) t+=' · +'+s.attendPoint+' fürs Dabeibleiben bis Rennende';
-  if(s.races.some(function(r){return r.sprint;})) t+=' · Sprint: '+(s.sprintPoints&&s.sprintPoints.length?s.sprintPoints.map(fmtP).join(' · '):sprintPts(s).join(' · '));
-  if(s.races.some(function(r){return r.full;})) t+=' · 100-%-Rennen: doppelte Platzierungspunkte';
+  if(s.races.some(function(r){return r.sprint;})) t+=' · Sprint: '+(s.sprintPoints&&s.sprintPoints.length?s.sprintPoints.map(fmtP).join(' · '):sprintPts(s).join(' · '))+(+s.attendPoint?' (+'+s.attendPoint+' Anwesenheit, keine Bonuspunkte)':'');
+  if(s.races.some(function(r){return r.full;})) t+=' · 100-%-Rennen: alle Punkte doppelt';
   return t;
 }
 
@@ -675,9 +677,9 @@ function pointsText(s){
    Anwesenheitspunkt, eingetragene Sprints. Bonuspunkte gehen nur ins Maximum ein. */
 function twEvents(s){var ev=[];sortedRaces(s).forEach(function(r){if(r.sprint)ev.push({r:r,sp:1,done:sprintDone(r)});ev.push({r:r,sp:0,done:done(r)});});return ev;}
 function twBonus(s){return (+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.dotdPoint||0);}
-function twPlace(s,e,p){if(!p)return 0;if(e.sp)return +sprintPts(s)[p-1]||0;return (+s.points[p-1]||0)*(e.r.full?2:1)+(+s.attendPoint||0);}
+function twPlace(s,e,p){if(!p)return 0;if(e.sp)return (+sprintPts(s)[p-1]||0)+(+s.attendPoint||0);return ((+s.points[p-1]||0)+(+s.attendPoint||0))*(e.r.full?2:1);}
 function twProj(s,e,p,teams){return teams?(p?twPlace(s,e,p)+twPlace(s,e,p+1):0):twPlace(s,e,p);}
-function twMax(s,e,teams){return twProj(s,e,1,teams)+(e.sp?0:twBonus(s));}
+function twMax(s,e,teams){return twProj(s,e,1,teams)+(e.sp?0:twBonus(s)*(e.r.full?2:1));}
 function twRemain(s,teams){return twEvents(s).filter(function(e){return !e.done;}).reduce(function(a,e){return a+twMax(s,e,teams);},0);}
 function twGot(s,e,id,teams){
   if(!teams)return e.sp?sPts(s,e.r,id):rPts(s,e.r,id);
@@ -1460,7 +1462,8 @@ function raceEditor(s,r){
   var tabs=[['rennen','Rennergebnis',done(r)?'eingetragen':'offen'],['quali','Qualifying',(r.quali&&r.quali.length)?'eingetragen':'offen']];
   if(r.sprint) tabs.push(['sprint','Sprint',sprintDone(r)?'eingetragen':'offen']);
   h+='<div class="ed-tabs" role="tablist">'+tabs.map(function(o){return '<button class="ed-tab" role="tab" data-act="admSess" data-id="'+o[0]+'" aria-selected="'+(sess===o[0])+'"><b>'+o[1]+'</b><small>'+o[2]+'</small></button>';}).join('')+
-    (r.sprint?'':'<button class="ed-tab add" data-act="addSprint" data-id="'+esc(r.id)+'"><b>+ Sprint</b><small>hinzufügen</small></button>')+'</div>';
+    (r.sprint?'':'<button class="ed-tab add" data-act="addSprint" data-id="'+esc(r.id)+'"><b>+ Sprint</b><small>hinzufügen</small></button>')+
+    '<button class="ed-tab full'+(r.full?' on':' add')+'" data-act="toggleFull" data-id="'+esc(r.id)+'" aria-pressed="'+!!r.full+'" title="'+(r.full?'Klicken, um wieder ein normales Rennen daraus zu machen':'Alle Punkte dieses Rennens zählen doppelt')+'"><b>'+(r.full?'100-%-Rennen':'+ 100-%-Rennen')+'</b><small>'+(r.full?'an · alle Punkte doppelt':'doppelte Punkte')+'</small></button></div>';
   var list=[],seen={};
   s.drivers.forEach(function(d){if(d.active!==false||resOf(r,d.id)||sprintRes(r,d.id)){seen[d.id]=1;list.push(d.id);}});
   r.results.forEach(function(x){if(!seen[x.d]){seen[x.d]=1;list.push(x.d);}});
@@ -1500,7 +1503,7 @@ function resultEditor(s,r,list,posOpts,teamOpts){
   for(var k=0;k<classified.length;k++){if(classified[k]!==k+1){warn.push('Die Plätze haben eine Lücke vor P'+classified[k]+'.');break;}}
   if(r.fl&&!parseT(r.flTime)&&r.flTime)warn.push('Die Zeit der schnellsten Runde hat nicht das Format 1:19.565.');
   if(r.poleTime&&!parseT(r.poleTime))warn.push('Die Pole-Zeit hat nicht das Format 1:18.113.');
-  var h='<label class="full-toggle'+(r.full?' on':'')+'"><input type="checkbox" id="r-full" data-f="r-full"'+(r.full?' checked':'')+'><span><b>100-%-Rennen</b> Die Punkte für die Platzierung zählen doppelt. Bonuspunkte (Pole, schnellste Runde, sauberster Fahrer, Überholungen, Anwesenheit) bleiben einfach.</span></label>';
+  var h='<label class="full-toggle'+(r.full?' on':'')+'"><input type="checkbox" id="r-full" data-f="r-full"'+(r.full?' checked':'')+'><span><b>100-%-Rennen</b> Alle Punkte zählen doppelt: Platzierung (P1 '+(2*(+s.points[0]||0))+' statt '+(+s.points[0]||0)+'), Pole, schnellste Runde, sauberster Fahrer, Überholungen, Driver of the Day und Anwesenheit.</span></label>';
   h+='<p>Platz oder Status je Fahrer wählen. Wer nicht dabei war, bleibt auf „–“. Zeiten sind freiwillig: Abstand wie „+3.214“ oder „+1 Runde“, beste Runde wie „1:19.565“.</p>';
   if(warn.length) h+='<p class="warn">'+warn.map(esc).join(' ')+'</p>';
   h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Platz</th><th>Status</th><th>Team im Rennen</th><th>Zeit / Abstand</th><th>Beste Runde</th><th class="c">Pole</th><th class="c">FL</th><th class="c">DotD</th><th class="c" title="Meiste Überholungen">Überh.</th><th class="c" title="Sauberster Fahrer">Sauber</th><th class="c" title="Bis zum Rennende dabei (auch nach DNF)">Anwes.</th><th class="num">Pkt</th></tr></thead><tbody>';
@@ -1536,7 +1539,8 @@ function sprintInfo(s){return s.sprintPoints&&s.sprintPoints.length?'eigene Spri
 function sprintRes(r,d){var l=r.sprint&&r.sprint.results||[];for(var i=0;i<l.length;i++)if(l[i].d===d)return l[i];return null;}
 function sprintDone(r){return !!(r&&r.sprint&&r.sprint.results&&r.sprint.results.length);}
 function counted(r){return done(r)||sprintDone(r);}
-function sPts(s,r,d){var x=sprintRes(r,d);if(!x||x.s||!x.p)return 0;return +sprintPts(s)[x.p-1]||0;}
+/* Sprint: Platzierungspunkte plus Anwesenheitspunkt (Standard an), keine Bonuspunkte */
+function sPts(s,r,d){var x=sprintRes(r,d);if(!x)return 0;var p=0;if(!x.s&&x.p)p+=+sprintPts(s)[x.p-1]||0;if(x.a!==false&&x.s!=='DNS'&&+s.attendPoint)p+=+s.attendPoint;return p;}
 function setSprint(s,r,d,patch){
   r.sprint=r.sprint||{results:[]};r.sprint.results=r.sprint.results||[];
   var x=sprintRes(r,d);
@@ -1548,9 +1552,9 @@ function sprintEditor(s,r,list,posOpts,teamOpts){
   var sp=r.sprint.results||[],count={},warn=[];
   sp.forEach(function(x){if(x.p&&!x.s)count[x.p]=(count[x.p]||0)+1;});
   Object.keys(count).forEach(function(p){if(count[p]>1)warn.push('P'+p+' ist '+count[p]+'-mal vergeben.');});
-  var h='<p>Sprint-Ergebnis eintragen. Der Sprint gibt '+esc(sprintInfo(s))+'. Das lässt sich bei der Saison ändern. Bonuspunkte gibt es nur im Hauptrennen.</p>';
+  var h='<p>Sprint-Ergebnis eintragen. Der Sprint gibt '+esc(sprintInfo(s))+'. Das lässt sich bei der Saison ändern. Dazu kommt der Anwesenheitspunkt fürs Dabeibleiben bis zum Ende. Pole, schnellste Runde, sauberster Fahrer, Überholungen und Driver of the Day gibt es nur im Hauptrennen.</p>';
   if(warn.length) h+='<p class="warn">'+warn.map(esc).join(' ')+'</p>';
-  h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Platz</th><th>Status</th><th>Team im Sprint</th><th>Zeit / Abstand</th><th class="num">Pkt</th></tr></thead><tbody>';
+  h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Platz</th><th>Status</th><th>Team im Sprint</th><th>Zeit / Abstand</th><th class="c" title="Bis zum Ende dabei (auch nach DNF)">Anwes.</th><th class="num">Pkt</th></tr></thead><tbody>';
   list.forEach(function(id){
     var x=sprintRes(r,id),d=drv(s,id),e=esc(id);
     h+='<tr><td class="drv">'+esc(dName(s,id))+'</td>'+
@@ -1558,6 +1562,7 @@ function sprintEditor(s,r,list,posOpts,teamOpts){
       '<td><select id="sps-'+e+'" data-f="sp-status" data-id="'+e+'" aria-label="Sprint-Status">'+opts([['','Gewertet'],['DNF','DNF'],['DSQ','DSQ'],['DNS','DNS']],x?x.s||'':'')+'</select></td>'+
       '<td><select id="spt-'+e+'" data-f="sp-team" data-id="'+e+'" aria-label="Team"'+(x?'':' disabled')+'>'+opts(teamOpts,x?x.t:(d?d.team:''))+'</select></td>'+
       '<td><input type="text" class="tin" id="sptm-'+e+'" data-f="sp-tm" data-id="'+e+'" placeholder="+1.204" value="'+esc(x&&x.tm||'')+'"'+(x?'':' disabled')+' aria-label="Zeit oder Abstand"></td>'+
+      '<td class="c"><input type="checkbox" id="spa-'+e+'" data-f="sp-attend" data-id="'+e+'"'+(x&&x.a!==false&&x.s!=='DNS'?' checked':'')+(x&&x.s!=='DNS'?'':' disabled')+' aria-label="Bis Sprint-Ende dabei"></td>'+
       '<td class="num">'+(x?fmtP(sPts(s,r,id)):'')+'</td></tr>';
   });
   return h+'</tbody></table></div><div class="acts">'+askBtn('delSprint:'+r.id,'Sprint entfernen')+'</div>';
@@ -1568,7 +1573,7 @@ function viewSprint(s,r){
   var hasTm=l.some(function(x){return x.tm;});
   var h='<div class="tbl-wrap"><table><thead><tr><th>Pos</th><th>Fahrer</th><th>Team</th>'+(hasTm?'<th class="num">Zeit / Abstand</th>':'')+'<th class="num">Punkte</th></tr></thead><tbody>';
   l.forEach(function(x){
-    var d=drv(s,x.d),t=team(s,x.t)||{name:'Ohne Team',color:'#4A505C'},cls=x.s?x.s.toLowerCase():x.p<=3?'p'+x.p:(sPts(s,r,x.d)?'pz':'out');
+    var d=drv(s,x.d),t=team(s,x.t)||{name:'Ohne Team',color:'#4A505C'},cls=x.s?x.s.toLowerCase():x.p<=3?'p'+x.p:(+sprintPts(s)[x.p-1]?'pz':'out');
     h+='<tr><td><span class="cell '+cls+'">'+esc(x.s||x.p)+'</span></td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,x.d,r.id)+'</td><td>'+tmTag(t)+'</td>'+(hasTm?'<td class="num">'+esc(x.tm||'')+'</td>':'')+'<td class="num total">'+fmtP(sPts(s,r,x.d))+'</td></tr>';
   });
   return h+'</tbody></table></div><p class="ch-note">Sprint: '+esc(sprintInfo(s))+'. Die Sprintpunkte zählen zusätzlich zu den Punkten aus dem Hauptrennen.</p>';
@@ -1669,6 +1674,7 @@ function applyField(f,el){
       case 'sp-status':setSprint(s,r,id,v?{s:v,p:null}:{s:null});break;
       case 'sp-team':if(sprintRes(r,id))sprintRes(r,id).t=v;break;
       case 'sp-tm':{var sx=sprintRes(r,id);if(sx){if(v.trim())sx.tm=v.trim();else delete sx.tm;}break;}
+      case 'sp-attend':{var sa=sprintRes(r,id);if(sa){if(v)delete sa.a;else sa.a=false;}break;}
     }
     ['pole','fl','dotd','ot','clean'].forEach(function(k){if(!r[k])delete r[k];});
   }
@@ -1722,6 +1728,7 @@ function doAction(act,el){
       s.races.push(nr);ui.admRace=nr.id;changed();break;}
     case 'editRace':ui.admRace=id;ui.confirm=null;ui.admSess='rennen';window.scrollTo(0,0);break;
     case 'closeRace':ui.admRace=null;ui.confirm=null;window.scrollTo(0,0);break;
+    case 'toggleFull':{s=S(ui.admSeason);var fr=null;if(s)s.races.forEach(function(x){if(x.id===id)fr=x;});if(fr){if(fr.full)delete fr.full;else fr.full=true;changed();}break;}
     case 'addSprint':{s=S(ui.admSeason);var sr=null;if(s)s.races.forEach(function(x){if(x.id===id)sr=x;});if(sr&&!sr.sprint){sr.sprint={results:[]};ui.admSess='sprint';changed();}break;}
     case 'ask':ui.confirm=el.dataset.key||null;break;
     case 'do':{
