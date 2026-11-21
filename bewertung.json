@@ -602,7 +602,7 @@
                                           "s":  "s1",
                                           "r":  "r03",
                                           "tempo":  31,
-                                          "rv":  22,
+                                          "rv":  24,
                                           "kon":  14,
                                           "sau":  11,
                                           "kurz":  "Sprint P2 und im Hauptrennen nach einem frühen Flügelwechsel von P9 bis auf P2 gekämpft. Die 10-s-Strafe für die gelbe Flagge war ein Spielfehler und zählt nicht, die zwei Kontakte in Runde 1 schon.",
@@ -617,7 +617,7 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Gutes Quali mit nur 0,27 s Rückstand, im Sprint vorne mit dabei. Im Hauptrennen etwa 0,4 s pro Runde langsamer als The_White_Epic.",
-                                                        "rv":  "Sprint P2 und im Hauptrennen das beste Comeback des Tages: von P9 nach dem Flügelwechsel bis auf P2, mit den meisten Überholmanövern im Feld.",
+                                                        "rv":  "Sprint P2 und im Hauptrennen eine der stärksten Aufholjagden der Saison: nach dem Flügelwechsel schon in Runde 1 von P9 bis auf P2, mit den meisten Überholmanövern im ganzen Feld.",
                                                         "kon":  "Die erste Runde des Hauptrennens war zu wild und kostete einen Flügel und einen Extra-Stopp. Danach war das Rennen fehlerfrei.",
                                                         "sau":  "Zwei Kontakte in Runde 1 gehen laut Spiel auf ihn. Die gelbe Flagge zählt nicht, weil die Strafe ein Spielfehler war."
                                                     },
@@ -627,7 +627,8 @@
                                                       "Im Hauptrennen nach dem Flügelwechsel in Runde 1 von P9 bis auf P2 nach vorne gefahren.",
                                                       "Meiste Überholungen des Rennens.",
                                                       "Nach der Safety-Car-Phase stark: Runde 19 P4, Runde 20 P3, Runde 23 P2.",
-                                                      "Zweiter Stopp in Runde 13 in 2,249 s, danach mit Hard bis ins Ziel."
+                                                      "Zweiter Stopp in Runde 13 in 2,249 s, danach mit Hard bis ins Ziel.",
+                                                      "Herausragende Aufholjagd nach dem Frontflügelschaden in Runde 1: von P9 bis auf P2."
                                                   ],
                                           "neg":  [
                                                       "Runde 1 im Hauptrennen zu wild: Kontakt mit Crashturtle2000 und danach mit The_White_Epic, beide Male Verwarnung für Mesota.",
@@ -677,7 +678,7 @@
                                           "s":  "s1",
                                           "r":  "r04",
                                           "tempo":  28,
-                                          "rv":  17,
+                                          "rv":  19,
                                           "kon":  16,
                                           "sau":  11,
                                           "kurz":  "Guter Start bis P3, dann zwei Kontakte in Runde 1 und ein Flügelwechsel. Danach fehlerfrei zurück auf P5.",
@@ -692,7 +693,7 @@
                                                      },
                                           "noten":  {
                                                         "tempo":  "Gutes Quali, aber die langsamste beste Rennrunde der Top 5.",
-                                                        "rv":  "Nach dem Schaden von P9 zurück auf P5, teils durch Fehler anderer.",
+                                                        "rv":  "Nach dem Flügelschaden in Runde 1 von P9 zurück auf P5. Ein Teil der Plätze kam über Fehler anderer, die Aufholjagd selbst war aber stark und fehlerfrei, auch im Regen.",
                                                         "kon":  "Nach Runde 1 keine eigenen Fehler und gleichmäßige Runden.",
                                                         "sau":  "Zwei Kontakte in Runde 1. Mit Max war Mesota Betroffener. Mit Mehlone war es ein Rennunfall, aus Mehlones Sicht schnitt Mesota eng vor ihm rein. Das Spiel verwarnte beide."
                                                     },
@@ -700,7 +701,8 @@
                                                       "Quali P4 mit 1:05.336.",
                                                       "Starker Start bis auf P3.",
                                                       "Nach dem Schaden fehlerfrei durch das Rennen, auch im Regen.",
-                                                      "Drei schnelle Stopps."
+                                                      "Drei schnelle Stopps.",
+                                                      "Starke Aufholjagd nach dem Flügelwechsel in Runde 2: von P9 zurück auf P5."
                                                   ],
                                           "neg":  [
                                                       "Runde 1: Kontakt mit Max in Kurve 3 und danach ein Rennunfall mit Mehlone in Kurve 4, Frontflügel kaputt, Extra-Stopp.",
