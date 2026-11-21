@@ -383,6 +383,16 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .tw-ln.dash{stroke-dasharray:6 6;opacity:.85}
 .tw-end{font-size:13px;font-weight:700}
 .tw-note{margin:0;color:var(--muted);font-size:12.5px}
+.tw-evs{display:flex;flex-wrap:wrap;gap:6px}
+.tw-ev{display:grid;gap:1px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);min-width:86px;font-size:12px;color:var(--muted)}
+.tw-ev b{display:flex;align-items:center;gap:5px;color:var(--fg);font-family:var(--f-display);font-weight:800;font-size:16px;letter-spacing:.03em}
+.tw-ev i{font-style:normal;font-variant-numeric:tabular-nums}
+.tw-ev.full{border-color:rgba(61,220,132,.55);background:rgba(61,220,132,.08)}.tw-ev.full small{color:#8FF0BC;font-weight:700}
+.tw-ev.sp{border-color:rgba(46,200,232,.45)}.tw-ev.sp small{color:#8FE3F4;font-weight:700}
+.tw-xl.x2{fill:#8FF0BC;font-weight:700}
+.rh i{font-style:normal;font-size:9.5px;font-weight:700;letter-spacing:.04em;line-height:1;padding:1px 4px;border-radius:3px}
+.rh i.x2{background:rgba(61,220,132,.15);color:#8FF0BC}.rh i.sp{background:rgba(46,200,232,.15);color:#8FE3F4}
+.badge.sm{margin-left:6px;font-size:10.5px}
 @media (max-width:820px){.tw-grid{grid-template-columns:1fr}.tw-facts{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){
   .ch-row{grid-template-columns:36px minmax(0,1fr) 64px 28px}
@@ -725,7 +735,7 @@ function twChart(c){
   var g='';for(var v=0;v<=top;v+=step)g+='<line x1="'+pl+'" x2="'+(W-pr)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" class="tw-gl"/><text x="'+(pl-7)+'" y="'+(+Y(v)+4)+'" class="tw-yl">'+v+'</text>';
   var last=0;ev.forEach(function(e,i){if(e.done)last=i+1;});
   if(last>0&&last<n)g+='<line x1="'+X(last)+'" x2="'+X(last)+'" y1="'+pt+'" y2="'+(H-pb)+'" class="tw-now"/><text x="'+X(last)+'" y="'+(pt-3)+'" class="tw-nowl">jetzt</text>';
-  ev.forEach(function(e,i){if(!e.sp)g+='<text x="'+X(i+1)+'" y="'+(H-10)+'" class="tw-xl">'+esc(e.r.short||'')+'</text>';});
+  ev.forEach(function(e,i){if(!e.sp)g+='<text x="'+X(i+1)+'" y="'+(H-10)+'" class="tw-xl'+(e.r.full?' x2':'')+'">'+esc(e.r.short||'')+(e.r.full?' ×2':'')+'</text>';});
   function path(v,dash){var d='';ev.forEach(function(e,i){if(!e.done!==dash)return;d+='M'+X(i)+' '+Y(v[i])+'L'+X(i+1)+' '+Y(v[i+1]);});return d;}
   var ya=+Y(a[n]),yb=b?+Y(b[n]):0;
   if(b&&Math.abs(ya-yb)<15){if(ya<=yb){ya-=(15-(yb-ya))/2;yb=ya+15;}else{yb-=(15-(ya-yb))/2;ya=yb+15;}}
@@ -752,7 +762,7 @@ function twSlider(c,key,r){
 }
 function twPanel(c){
   var s=c.s,me=c.me,riv=c.riv,lead=c.rows[0],na=esc(c.name(me)),rem=c.open.reduce(function(a,e){return a+twMax(s,e,c.teams);},0);
-  var nR=c.open.filter(function(e){return !e.sp;}).length,nS=c.open.length-nR;
+  var nR=c.open.filter(function(e){return !e.sp;}).length,nS=c.open.length-nR,nF=c.open.filter(function(e){return !e.sp&&e.r.full;}).length;
   var chip,txt;
   if(!c.open.length){chip=me.pos===1?'<span class="tw-chip ok">Meister</span>':'<span class="tw-chip">Saison beendet</span>';txt=me.pos===1?na+' hat die Meisterschaft gewonnen.':na+' beendet die Saison auf Platz '+me.pos+'.';}
   else if(me===lead){
@@ -766,7 +776,11 @@ function twPanel(c){
   }
   var h='<div class="tw" id="tw" style="--tc:'+esc(c.col(me))+'"><div class="tw-head"><h3>Weg zum Titel</h3>'+chip+'</div><p class="tw-txt">'+txt+'</p>';
   h+='<div class="tw-facts"><span><b>'+fmtP(me.total)+'</b>Punkte</span><span><b>'+(me===lead?(riv?'+'+fmtP(me.total-riv.total):'–'):'−'+fmtP(lead.total-me.total))+'</b>'+(me===lead?'Vorsprung':'Rückstand')+'</span>'+
-    '<span><b>'+nR+'</b>Rennen offen'+(nS?' + '+nS+' Sprint'+(nS>1?'s':''):'')+'</span><span><b>'+fmtP(rem)+'</b>Punkte max. zu holen</span></div>';
+    '<span><b>'+nR+'</b>Rennen offen'+(nF?', davon '+nF+'× 100 %':'')+(nS?' + '+nS+' Sprint'+(nS>1?'s':''):'')+'</span><span><b>'+fmtP(rem)+'</b>Punkte max. zu holen</span></div>';
+  if(c.open.length) h+='<div class="tw-evs" aria-label="Offene Rennen">'+c.open.map(function(e){
+    var typ=e.sp?'Sprint':e.r.full?'100 % · ×2':'Rennen';
+    return '<span class="tw-ev'+(e.sp?' sp':e.r.full?' full':'')+'" title="'+esc(e.r.name)+': '+typ+', maximal '+fmtP(twMax(s,e,c.teams))+' Punkte'+(c.teams?' pro Team':'')+'"><b>'+flag(e.r.flag)+' '+esc(e.r.short||'')+'</b><small>'+typ+'</small><i>max. '+fmtP(twMax(s,e,c.teams))+'</i></span>';
+  }).join('')+'</div>';
   if(c.open.length&&riv){
     var Ls=[1,2,3,4,5,6].filter(function(L){return L<=c.maxP;}).concat([0]),rn=esc(c.name(riv));
     h+='<div class="tw-grid"><div class="tw-box"><h4>Was '+na+' braucht</h4><table class="tw-tab"><thead><tr><th>'+rn+(c.teams?' holt':' fährt')+' im Schnitt …</th><th>… dann braucht '+na+'</th></tr></thead><tbody>'+
@@ -920,7 +934,7 @@ function statRows(races,fixed){
 }
 function raceHeads(races){
   return races.map(function(r,i){
-    return '<th class="c"><button class="rh" data-act="race" data-id="'+esc(r.id)+'" title="'+esc(r.name)+' ansehen">'+flag(r.flag)+'<b>'+esc(r.short||'R'+(i+1))+'</b><small>'+esc(rLabel(r,i))+'</small></button></th>';
+    return '<th class="c"><button class="rh" data-act="race" data-id="'+esc(r.id)+'" title="'+esc(r.name+(r.full?' · 100-%-Rennen, doppelte Punkte':'')+(r.sprint?' · mit Sprint':''))+' ansehen">'+flag(r.flag)+'<b>'+esc(r.short||'R'+(i+1))+'</b><small>'+esc(rLabel(r,i))+'</small>'+(r.full?'<i class="x2">×2</i>':'')+(r.sprint?'<i class="sp">Sprint</i>':'')+'</button></th>';
   }).join('');
 }
 function posCell(s,r,d,noSpr){
@@ -1077,7 +1091,7 @@ function viewKalender(){
     if(r.weekend&&r.weekend!==lastWe){lastWe=r.weekend;h+='<tr class="wk"><td colspan="8">Rennwochenende '+esc(r.weekend)+(r.dateLabel?' · '+esc(r.dateLabel):'')+'</td></tr>';}
     var win=done(r)?raceOrder(r)[0]:null;
     var status=done(r)?(win&&!win.s?'<span class="drv">'+esc(dName(s,win.d))+'</span>':'–'):r.id===nextId?'<span class="badge next">Nächstes Rennen</span>':'<span class="badge open">Ausstehend</span>';
-    h+='<tr><td>'+(r.slot?'<span class="slot">'+esc(r.slot)+'</span>':'<span class="pos">'+(i+1)+'</span>')+'</td><td>'+flag(r.flag)+' '+esc(r.name)+'</td><td class="muted">'+esc(r.track)+'</td><td>'+esc(dLabel(r))+'</td><td>'+(r.time?esc(r.time)+' Uhr':'–')+'</td><td>'+(wx(r.weather)||'<span class="muted">–</span>')+'</td><td>'+status+'</td>'+
+    h+='<tr><td>'+(r.slot?'<span class="slot">'+esc(r.slot)+'</span>':'<span class="pos">'+(i+1)+'</span>')+'</td><td>'+flag(r.flag)+' '+esc(r.name)+(r.full?'<span class="badge full sm">100 % · ×2</span>':'')+(r.sprint?'<span class="badge sprint sm">Sprint</span>':'')+'</td><td class="muted">'+esc(r.track)+'</td><td>'+esc(dLabel(r))+'</td><td>'+(r.time?esc(r.time)+' Uhr':'–')+'</td><td>'+(wx(r.weather)||'<span class="muted">–</span>')+'</td><td>'+status+'</td>'+
       '<td><button class="btn small" data-act="openRace" data-id="'+esc(r.id)+'">'+(done(r)?'Ergebnis':'Details')+'</button></td></tr>';
   });
   return h+'</tbody></table></div>';
