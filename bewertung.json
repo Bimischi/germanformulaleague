@@ -1,6 +1,6 @@
 {
-    "stand":  "Stand nach Saison 1 · Rennen 4 (Österreich)",
-    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota, Mehlone und DON-FUCHSER88. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet. Strafen wegen blauer Flaggen werden nicht gewertet. In Kanada sind die Gastfahrer CHERNOSHTANOV und waltherjonas28 samt aller durch sie entstandenen Strafen herausgerechnet, Mesotas 10-s-Strafe für die gelbe Flagge war ein Spielfehler.",
+    "stand":  "Stand nach Saison 1 – Rennen 5 (Monza)",
+    "basis":  "Ausgewertet wird nur das Bild aus den Onboard-Videos der Fahrer, dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus dem Spiel. Rennen 1 Melbourne: Videos von Crashturtle2000, The_White_Epic, DON-FUCHSER88, Mesota, Mehlone und Italian Gamer. Rennen 2 Barcelona: The_White_Epic, Mehlone, Mesota und DON-FUCHSER88. Rennen 3 Kanada (mit Sprint): Mehlone, Crashturtle2000, Mesota, The_White_Epic und DON-FUCHSER88. Rennen 4 Österreich: Italian Gamer, The_White_Epic, Mesota, Mehlone und DON-FUCHSER88. Rennen 5 Monza: JokerFinn06, Mehlone, Mesota, The_White_Epic und Crashturtle2000; Max ohne eigenes Video, aus den Sichten der anderen bewertet. Das offizielle Ergebnis kommt von der Website, inklusive nachträglicher Strafen. Track Limits standen ab Rennen 3 auf Medium, leichtes Abkürzen wiegt deshalb wenig. Schwer wiegen unsauberes Fahren, Kontakte, ignorierte Flaggen und gefährliche Aktionen. Fahrer ohne eigenes Video wurden aus den Sichten der anderen bewertet. Strafen wegen blauer Flaggen werden nicht gewertet. In Kanada sind die Gastfahrer CHERNOSHTANOV und waltherjonas28 samt aller durch sie entstandenen Strafen herausgerechnet, Mesotas 10-s-Strafe für die gelbe Flagge war ein Spielfehler.",
     "skala":  [
                   {
                       "k":  "tempo",
@@ -59,19 +59,19 @@
                    {
                        "id":  "joker",
                        "gesamt":  {
-                                      "kritik":  "JokerFinn06 ist neben The_White_Epic der Schnellste: drei Poles und Siege in Melbourne und Österreich. Er schwankt aber stark, denn in Barcelona und Kanada kosteten ihn Unfälle und Strafen alles. Österreich zeigt, was möglich ist, wenn er fehlerfrei bleibt.",
+                                      "kritik":  "JokerFinn06 ist neben The_White_Epic der Schnellste der Liga: vier Poles, Siege in Melbourne und Österreich und in Monza die mit Abstand schnellste Runde. Er schwankt aber stark: In Barcelona und Kanada kosteten ihn Unfälle alles, in Monza Track-Limit-Strafen und eine missglückte Boxeneinfahrt den Sieg. Wenn er fehlerfrei bleibt, ist er kaum zu schlagen.",
                                       "staerken":  [
-                                                       "Quali-Tempo (drei Poles)",
+                                                       "Quali-Tempo (vier Poles)",
                                                        "Dauertempo über ganze Stints",
-                                                       "Fehlerfrei, wenn es läuft"
+                                                       "Saubere Zweikämpfe"
                                                    ],
                                       "schwaechen":  [
                                                          "Einzelne teure Fehler und Unfälle",
-                                                         "Kontakte in Runde 1 (Sprint Kanada)",
+                                                         "Track Limits unter Druck",
                                                          "Strafen in der Boxengasse"
                                                      ],
                                       "fokus":  [
-                                                    "In Führung Risiko rausnehmen",
+                                                    "Nach einer Warnung Randsteine nicht weiter ausreizen",
                                                     "Boxeneinfahrt sauber treffen"
                                                 ]
                                   },
@@ -357,26 +357,97 @@
                                                               "x":  "Ein makelloses Rennen nach dem Fehler-Wochenende in Kanada. Pole, Sieg und sauberster Fahrer, mehr geht nicht. Unsicherheit: kein eigenes Video."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  38,
+                                          "rv":  18,
+                                          "kon":  13,
+                                          "sau":  8,
+                                          "kurz":  "Pole und mit Abstand schnellste Runde, auf der Straße P2. Zweimal 3 s für Track Limits und 10 s für Rasen an der Boxeneinfahrt machten daraus P3.",
+                                          "quelle":  "Eigenes Video (JokerFinn06) mit Ergebnistabelle, dazu Ereignis- und Boxenstopp-Reiter aus Mesotas Video und die Videos von Mehlone, The_White_Epic und Crashturtle2000.",
+                                          "fakten":  {
+                                                         "quali":  "P1 – 1:19.676 (Pole)",
+                                                         "start":  "P1",
+                                                         "ziel":  "P3 – +6 s Strafe (auf der Straße P2)",
+                                                         "runde":  "1:21.797 (schnellste Runde, Runde 17)",
+                                                         "stopps":  "2 – Runde 7 Medium auf Medium (2,251 s), Runde 15 auf Hard (10 s Strafe dabei abgesessen)",
+                                                         "strafen":  "3 s Kurve abgekürzt und 3 s mehrere Warnungen (Runde 7), 10 s Rasen in der Boxengasse (Runde 7, beim zweiten Stopp abgesessen), Track-Limit-Warnungen in Runde 5 und 6"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Pole und mit 1:21.797 die mit Abstand schnellste Rennrunde; auf frischen Hards holte er über eine Sekunde pro Runde auf den Führenden auf.",
+                                                        "rv":  "Gute Duelle gegen Mesota und saubere Überholmanöver gegen Max, aber die Strafen kosteten Sieg und am Ende auch P2.",
+                                                        "kon":  "Keine Dreher und kein Kontakt, aber in Runde 5 bis 7 wiederholt über die Track Limits und eine viel zu späte Boxeneinfahrt.",
+                                                        "sau":  "Kein Dirty Driving, aber zwei 3-s-Strafen, darunter ein Abkürzen der Roggia beim Angriff auf Mesota (Platz sofort zurückgegeben), und 10 s für die Boxeneinfahrt."
+                                                    },
+                                          "pos":  [
+                                                      "Pole mit 1:19.676.",
+                                                      "Schnellste Rennrunde mit 1:21.797, fast 0,8 s schneller als alle anderen.",
+                                                      "Saubere Duelle mit Mesota um die Führung, ohne Kontakt.",
+                                                      "Nach dem Abkürzen der Roggia den Platz sofort zurückgegeben.",
+                                                      "Im letzten Stint auf Hard das schnellste Auto, von +14,5 s auf +5,2 s an den Sieger heran."
+                                                  ],
+                                          "neg":  [
+                                                      "Drei Track-Limit-Vergehen in Runde 5 bis 7, dazu ein Abkürzen der Roggia beim Angriff: zusammen 6 s Strafe.",
+                                                      "Viel zu späte Boxeneinfahrt in Runde 7 mit Rasenkontakt: 10 s Zeitstrafe, beim zweiten Stopp abgesessen – das kostete wohl den Sieg.",
+                                                      "P2 wegen der Strafen um 0,16 s an Mesota verloren."
+                                                  ],
+                                          "besser":  [
+                                                         "In Monza die Randsteine in Roggia und Ascari nicht ausreizen: Nach zwei Warnungen den Fuß etwas lupfen.",
+                                                         "Die Boxeneinfahrt früher anbremsen, das Tempolimit greift schon an der Linie."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "Pole mit 1:19.676, 0,177 s vor Mesota und 0,435 s vor Mehlone. Damit war er auch in Monza der Schnellste auf eine Runde. Alle Top-Runden fielen auf Soft."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Mesota ging schon vor der ersten Schikane im Windschatten an ihm vorbei. Joker blieb ruhig und überholte Mesota Ende Runde 2 sauber auf der Geraden. Vom Chaos dahinter war er nicht betroffen."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "In Runde 4 holte sich Mesota die Führung zurück, Joker blieb dicht dran. In Runde 5 bis 7 kam er mehrfach über die Track Limits und kürzte beim Angriff die Roggia ab; den Platz gab er sofort zurück, die Strafen kamen trotzdem. Nach den Stopps arbeitete er sich mit Überholmanövern gegen Max nach vorne. Auf frischen Hards fuhr er die schnellste Runde des Rennens (1:21.797) und kam bis auf 5,2 s an den Sieger heran."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Zwei Stopps: Runde 7 Medium auf Medium, Runde 15 auf Hard. An der ersten Boxeneinfahrt bremste er viel zu spät und bekam 10 s für Rasen in der Boxengasse. Die 10 s saß er beim zweiten Stopp ab, die Standzeit stieg damit auf rund 13 s. Ohne diese Strafe wäre er rechnerisch klar vor Mehlone ins Ziel gekommen."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Alle Duelle waren sauber: zwei Führungswechsel mit Mesota, Überholmanöver gegen Max auf der Geraden. Der einzige Makel ist das Abkürzen der Roggia beim Angriff auf Mesota in Runde 7, mit sofortiger Platzrückgabe. Kein Kontakt im ganzen Rennen."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine Dreher, keine Mauer, kein Kontakt. Aber 3 s für Abkürzen, 3 s für mehrere Warnungen und 10 s für die Boxeneinfahrt, alles in Runde 5 bis 7. Diese Phase entschied sein Rennen."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Joker hatte in Monza das schnellste Auto und die schnellste Runde. Auf der Straße wurde er Zweiter, mit 6 s Zeitstrafe offiziell Dritter, 0,16 s hinter Mesota. Der Sieg ging vermutlich schon an der Boxeneinfahrt in Runde 7 verloren."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "mesota",
                        "gesamt":  {
-                                      "kritik":  "Mesota ist der konstanteste Podiumsfahrer der Liga: dreimal P2 auf der Website (Melbourne, Kanada im Rennen und im Sprint), dazu P3 in Barcelona, und in Kanada die meisten Überholungen. Seine Stärken sind Starts, Aufholjagden und Kampfgeist. Was ihn Siege kostet, sind Kontakte in der ersten Runde: In Kanada und Österreich musste er jeweils schon früh den Frontflügel wechseln. Dazu fehlen im Rennen einige Zehntel auf die Spitze.",
+                                      "kritik":  "Mesota ist der konstanteste Podiumsfahrer der Liga: P2 in Melbourne, Kanada (Rennen und Sprint) und Monza, P3 in Barcelona, dazu die meisten Überholungen in Kanada. Seine Stärken sind Starts, Kampfgeist und starke Pace-Phasen wie der Hard-Stint in Monza mit der lange gehaltenen schnellsten Runde. Was ihn Siege kostet, sind teure Einzelfehler: Kontakte in Runde 1 in Kanada und Österreich und der Alleinunfall aus der Führung in Monza. Dazu kommen gelegentliche Auffahrer im Zweikampf.",
                                       "staerken":  [
                                                        "Starts",
-                                                       "Aufholjagden und Überholmanöver",
+                                                       "Kampfgeist und Überholmanöver",
+                                                       "Starke Pace auf Hard",
                                                        "Schnelle Boxenstopps",
                                                        "Konstante Podien"
                                                    ],
                                       "schwaechen":  [
-                                                         "Kontakte in Runde 1",
-                                                         "Rennpace auf Medium und Hard"
+                                                         "Teure Einzelfehler (Lesmo in Monza)",
+                                                         "Kontakte in Runde 1 und beim Anbremsen"
                                                      ],
                                       "fokus":  [
-                                                    "In Runde 1 Platz lassen statt Lücken zu erzwingen",
-                                                    "Zwei bis drei Zehntel im Rennen finden"
+                                                    "In Führung Risiko an Kurvenausgängen rausnehmen",
+                                                    "Im Zweikampf beim Anbremsen mehr Abstand lassen"
                                                 ]
                                   },
                        "rennen":  [
@@ -669,25 +740,97 @@
                                                               "x":  "Ein ordentliches Ergebnis nach unglücklichem Start. P5 kam auch durch den Abflug von Italian Gamer, die Pace reichte nicht für mehr."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  34,
+                                          "rv":  19,
+                                          "kon":  11,
+                                          "sau":  12,
+                                          "kurz":  "Führte das Rennen bis Runde 8, dann Alleinunfall in Lesmo und Reparaturstopp. Mit der schnellsten Runde auf Hard von P6 zurück auf P3 auf der Straße, offiziell P2.",
+                                          "quelle":  "Eigenes Video (Mesota) mit Ergebnis-, Ereignis- und Boxenstopp-Reiter, dazu die Videos von JokerFinn06, Mehlone, The_White_Epic und Crashturtle2000.",
+                                          "fakten":  {
+                                                         "quali":  "P2 – 1:19.853 (+0,177)",
+                                                         "start":  "P2",
+                                                         "ziel":  "P2 – +11,030 (auf der Straße P3)",
+                                                         "runde":  "1:22.524 (Runde 10, Hard)",
+                                                         "stopps":  "2 – Runde 8 auf Hard mit neuem Frontflügel (7,450 s), Runde 18 auf neue Hard (2,233 s)",
+                                                         "strafen":  "Kollisionswarnung in Runde 18 (mit Crashturtle2000)"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali nur 0,177 s hinter der Pole, zweitschnellste Rennrunde und im Hard-Stint der schnellste Mann im Feld; nur Joker war auf frischen Hards noch schneller.",
+                                                        "rv":  "Starker Start in die Führung, zweimal Joker auf der Geraden geschlagen und nach dem Unfall drei saubere Überholmanöver. Die meisten Plätze der Aufholjagd kamen aber über die Stopps der anderen.",
+                                                        "kon":  "Stint 2 und 3 sehr gleichmäßig, aber der Alleinunfall aus der Führung in Runde 8 kostete sehr wahrscheinlich den Sieg.",
+                                                        "sau":  "Keine Zeitstrafe und keine Track-Limit-Einträge, aber ein Auffahrer auf Crashturtle2000 in der Roggia (Warnung) und ein Unfall mit gelber Flagge."
+                                                    },
+                                          "pos":  [
+                                                      "Quali P2, nur 0,177 s hinter der Pole.",
+                                                      "Starker Start: schon vor der ersten Schikane an Joker vorbei und Führung in Runde 1.",
+                                                      "Die Führung zweimal gegen Joker per Windschatten geholt (Start und Ende Runde 4).",
+                                                      "Schnellste Runde 1:22.524 auf Hard, von Runde 11 bis 18 gehalten (rund 10 Minuten), bis Joker sie mit 1:21.797 übertraf.",
+                                                      "Nach dem Unfall nicht eingebrochen: von P6 mit rund 32 s Rückstand auf P3 auf der Straße, nur 11 s hinter dem Sieger trotz eines Stopps mehr.",
+                                                      "Saubere Überholmanöver gegen Crashturtle2000, The_White_Epic und Max in der Schlussphase."
+                                                  ],
+                                          "neg":  [
+                                                      "Alleinunfall aus der Führung in Runde 8 am Ausgang Lesmo, Frontflügel kaputt, Reparaturstopp mit 7,45 s. Ohne diesen Fehler war der Sieg sehr wahrscheinlich.",
+                                                      "Auffahrer auf Crashturtle2000 beim Anbremsen der Roggia in Runde 18 (Warnung); kurz davor war auf der Geraden das MFD-Menü offen.",
+                                                      "Gegen The_White_Epic in Runde 24 auf der Geraden ohne Gegenwehr.",
+                                                      "Offiziell P2 nur durch Jokers 6 s Strafe (0,159 s Vorsprung); auf der Straße war es P3."
+                                                  ],
+                                          "besser":  [
+                                                         "In Führung mit Polster an Kurvenausgängen wie Lesmo einen Tick Risiko rausnehmen: ein sicherer Sieg ist mehr wert als ein paar Zehntel.",
+                                                         "Das MFD nicht kurz vor einer Bremszone bedienen und hinter einem Gegner beim Anbremsen mehr Abstand lassen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P2 mit 1:19.853, nur 0,177 s hinter JokerFinn06 und 0,258 s vor Mehlone. Die erste Startreihe war verdient. Teamkollege The_White_Epic lag 0,44 s dahinter. Joker hatte die etwas bessere Runde, aber die Lücke war klein."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Sehr guter Start: Mesota ging noch vor der ersten Schikane im Windschatten an Joker vorbei und führte nach Runde 1. Die vier Kollisionen dahinter (Mehlone, Crashturtle2000, The_White_Epic, Max) betrafen ihn nicht. In den ersten Runden fuhr er die schnellste Runde (1:23.547). Ende Runde 2 ging Joker auf der Geraden vorbei, Ende Runde 4 holte sich Mesota die Führung souverän zurück."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Bis Runde 8 führte er knapp vor Joker und Mehlone. Dann der Alleinunfall in Lesmo: Er kam am Kurvenausgang zu weit, ging in die Begrenzung und musste zurücksetzen. Mit neuem Flügel lag er auf P6, rund 32 s hinter P2. Auf Hard fuhr er dann die schnellste Runde des Rennens (1:22.524) und hielt sie acht Runden lang, der Rückstand schmolz bis Runde 17 auf rund 2 s. Im letzten Stint lag er konstant 5–6 s hinter Joker."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Der erste Stopp in Runde 8 war durch den Unfall erzwungen (7,45 s mit Frontflügel) und machte aus dem Rennen ein Zwei-Stopp-Rennen. Den zweiten Stopp in Runde 18 auf neue Hard nahm er freiwillig. Er kostete kurz Plätze, brachte aber die Pace für den Schluss. Der Sieger Mehlone kam mit einem Stopp durch und lag am Ende nur 11 s vorn – ein Zeichen für Mesotas klar bessere Grundpace."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Gegen Joker lieferte er sich in den ersten Runden ein sauberes Duell mit zwei Führungswechseln. In Runde 18 fuhr er Crashturtle2000 beim Anbremsen der Roggia ins Heck (Warnung, kaum Folgen für Crash) und überholte ihn eine halbe Runde später sauber. The_White_Epic ging in Runde 24 mit DRS vorbei, Mesota holte sich den Platz in Runde 25 zurück und überholte direkt danach Max. Die „Aufholjagd“ bestand damit aus drei eigenen Überholmanövern; die übrigen Plätze kamen durch die Stopps von Max, Joker, Mehlone und White."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Der große Fehler war der Alleinunfall aus der Führung in Runde 8, ohne Fremdeinwirkung (Mehlone lag 0,85 s dahinter). Dazu kommt der Auffahrer in Runde 18 mit Kollisionswarnung. Keine Zeitstrafe, keine Track-Limit-Einträge, beide Stopps sauber."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Mesota war in Monza zusammen mit Joker der schnellste Fahrer und hätte ohne den Fehler in Runde 8 sehr wahrscheinlich gewonnen. Die Aussage zur schnellsten Runde stimmt: Er hielt sie im Hard-Stint rund acht Runden. Die Aufholjagd war stark im Tempo, die Plätze kamen aber überwiegend über die Stopps der anderen. Offiziell P2, weil Joker mit seinen Strafen 0,159 s zurückfiel."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "luis",
                        "gesamt":  {
-                                      "kritik":  "Mehlone ist ein kluger Rennfahrer mit guten Strategien, zweimal auf dem Podium in den ersten beiden Rennen und Sprint-P3 in Kanada. Sein Grundtempo liegt aber deutlich hinter der Spitze, und viele Plätze kamen durch Fehler anderer. In Österreich kam ein klarer Minuspunkt dazu: ein später Divebomb gegen Leokobra in Runde 23 ohne Entschuldigung und ohne Platzrückgabe.",
+                                      "kritik":  "Mehlone ist ein kluger Rennfahrer mit guten Strategien: Podien in Melbourne und Barcelona, Sprint-P3 in Kanada und der Sieg in Monza mit der einzigen Ein-Stopp-Strategie der Spitze. Sein Grundtempo liegt aber deutlich hinter der Spitze, und viele Plätze kamen durch Fehler anderer. In Österreich kam ein klarer Minuspunkt dazu: ein später Divebomb gegen Leokobra ohne Entschuldigung und ohne Platzrückgabe.",
                                       "staerken":  [
                                                        "Strategie (Ein-Stopp-Rennen)",
                                                        "Ruhe in chaotischen Phasen",
-                                                       "Meist saubere Zweikämpfe"
+                                                       "Fehlerfreie lange Stints"
                                                    ],
                                       "schwaechen":  [
                                                          "Grundtempo in Quali und Rennen",
                                                          "Späte Bremsmanöver im Zweikampf (Österreich)",
-                                                         "Keine Entschuldigung nach eigenem Kontakt"
+                                                         "Starts auf der Geraden"
                                                      ],
                                       "fokus":  [
-                                                    "Quali-Tempo verbessern, vor allem in Sektor 2",
+                                                    "Rennpace auf Medium verbessern",
                                                     "Nur mit Überlappung vor dem Bremspunkt angreifen und nach Kontakt den Platz zurückgeben"
                                                 ]
                                   },
@@ -984,26 +1127,96 @@
                                                               "x":  "P7 entspricht ungefähr seinem Tempo, ohne den Schaden in Runde 1 wäre P6 realistisch gewesen. Der Schwachpunkt dieses Rennens ist die Sauberkeit: Der Divebomb in Runde 23 ohne Entschuldigung und ohne Platzrückgabe zählt klar gegen ihn. Runde 1 zählt dagegen nicht gegen Mehlone."
                                                           }
                                                       ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  28,
+                                          "rv":  22,
+                                          "kon":  19,
+                                          "sau":  12,
+                                          "kurz":  "Sieg mit der einzigen Ein-Stopp-Strategie der Spitze. Nach einer chaotischen ersten Runde fehlerfrei, die Führung kam über die Stopps der anderen.",
+                                          "quelle":  "Eigenes Video (Mehlone), dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus Mesotas Video und die Videos von JokerFinn06, The_White_Epic und Crashturtle2000.",
+                                          "fakten":  {
+                                                         "quali":  "P3 – 1:20.111 (+0,435)",
+                                                         "start":  "P3",
+                                                         "ziel":  "P1 – 38:35,435",
+                                                         "runde":  "1:23.404 (Runde 3, Hard)",
+                                                         "stopps":  "1 – Runde 17 Hard auf Medium (2,252 s)",
+                                                         "strafen":  "Zwei Kollisionswarnungen in Runde 1 (mit Crashturtle2000 und Max)"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Solides Quali auf P3, aber im Rennen nur die fünftbeste Runde von sechs; die Spitze war pro Runde klar schneller.",
+                                                        "rv":  "Kluge Ein-Stopp-Strategie und in Runde 1 von P6 auf P3 zurück. Die Führung kam allerdings dreimal durch Stopps der anderen, nicht durch Überholmanöver.",
+                                                        "kon":  "Ab Runde 2 fehlerfrei, keine Warnung mehr und gleichmäßige Runden über einen langen Hard-Stint.",
+                                                        "sau":  "Zwei Kontakte in Runde 1: Bei Crashturtle2000 lag die Schuld vor allem beim Red Bull, mit Max war es ein Rennunfall. Danach blitzsauber."
+                                                    },
+                                          "pos":  [
+                                                      "Sieg in Monza.",
+                                                      "Als einziger Fahrer der Spitze mit nur einem Stopp, ein langer und gleichmäßiger Hard-Stint in Führung.",
+                                                      "In Runde 1 nach dem Absturz auf P6 noch in der ersten Schikane zurück auf P3.",
+                                                      "Ab Runde 2 fehlerfrei und ohne Warnung (Saubere Runden bis x20).",
+                                                      "Hielt die schnellste Runde von Runde 4 bis Runde 8."
+                                                  ],
+                                          "neg":  [
+                                                      "Am Start auf der Geraden von P3 auf P6 durchgereicht.",
+                                                      "Zwei Kollisionswarnungen in Runde 1.",
+                                                      "Rennpace klar hinter Joker, Mesota und White; der Sieg kam über die Strategie und die Probleme der anderen."
+                                                  ],
+                                          "besser":  [
+                                                         "Am Start die Innenlinie zur ersten Schikane besser schützen, statt sich auf der Geraden zuparken zu lassen.",
+                                                         "Am Grundtempo arbeiten: Auf Medium fehlten rund eine Sekunde pro Runde auf die Spitze."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P3 mit 1:20.111, 0,435 s hinter der Pole und 0,26 s hinter Mesota. Ein gutes Quali für Mehlone, das ihn direkt hinter die beiden Schnellsten stellte."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Auf der Start-Ziel-Geraden ging es zunächst rückwärts: White, Crashturtle2000 und Max zogen vorbei, er wurde links gegen das Gras gedrückt. Crashturtle2000 zog vor ihm zu früh nach links rüber, es gab einen leichten Kontakt, den das Spiel Mehlone anlastete, obwohl er keinen Platz hatte. In der ersten Schikane kämpfte er Rad an Rad mit Max (Rennunfall mit Berührung), und weil vor ihm Crashturtle2000 und White kollidierten, kam er an allen drei vorbei auf P3."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Von Runde 2 bis 7 fuhr er 1–3 s hinter Mesota und Joker, die auf Medium unterwegs waren. Mit dem Stopp von Joker und dem Unfall von Mesota übernahm er in Runde 8 die Führung und baute sie auf rund 13 s aus. Seine Runden lagen konstant bei 1:24 bis 1:25,5. Nach seinem Stopp führte er ab Runde 21 und hielt den heranstürmenden Joker mit 5,2 s auf Distanz."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Die Strategie war der Schlüssel: Als einziger der Spitze fuhr er nur einen Stopp, Hard bis Runde 17, dann Medium. Joker, Mesota, White und Crashturtle2000 stoppten zweimal. Der Stopp selbst war sauber (2,25 s)."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Nach Runde 1 gab es kaum direkte Duelle. Die drei Führungsübernahmen kamen alle durch Stopps der anderen. Nach seinem eigenen Stopp ging Mesota kurz an der Boxenausfahrt vorbei, sonst wurde er nicht mehr überholt."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine Dreher, keine Abflüge, keine Boxenfehler, keine Zeitstrafe. Nur zwei Kollisionswarnungen aus der chaotischen ersten Runde. Danach meldete das Spiel bis zum Schluss saubere Runden."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein verdienter Sieg durch Köpfchen: richtige Strategie, keine Fehler und ein langer, gleichmäßiger Hard-Stint. Das Tempo der Spitze hatte er nicht, Joker verlor den Sieg an der Boxeneinfahrt und Mesota durch den Unfall. Genau diese Fehler hat Mehlone vermieden."
+                                                          }
+                                                      ]
                                       }
                                   ]
                    },
                    {
                        "id":  "white",
                        "gesamt":  {
-                                      "kritik":  "The_White_Epic ist nach vier Rennen der schnellste Fahrer der Liga: in jedem Rennen Pole oder knapp dahinter und oft die schnellste Runde. Seit Barcelona bringt er das auch ins Ziel, mit Siegen in Barcelona und Kanada und P2 in Österreich. Die Restschwächen sind kleine Fehler unter Druck, wie der Sprint-Dreher in Kanada.",
+                                      "kritik":  "The_White_Epic ist nach fünf Rennen einer der beiden schnellsten Fahrer der Liga: meist Pole oder knapp dahinter, Siege in Barcelona und Kanada, P2 in Österreich. Er fährt so sauber wie kaum ein anderer, in Monza mit 27 sauberen Runden. Monza zeigte aber auch Grenzen: weniger Tempo als gewohnt und zu viele Plätze im direkten Konter abgegeben.",
                                       "staerken":  [
                                                        "Eine-Runde-Tempo",
-                                                       "Spitzenpace im Rennen",
+                                                       "Sehr saubere Rennen",
                                                        "Kaum Kontakte",
                                                        "Schnelle Boxenstopps"
                                                    ],
                                       "schwaechen":  [
                                                          "Kleine Fehler unter Druck (Sprint Kanada)",
-                                                         "Innenlinie in Zweikämpfen nicht immer zu"
+                                                         "Verteidigung gegen DRS-Konter"
                                                      ],
                                       "fokus":  [
-                                                    "Nach Überholmanövern defensiv die Linie schließen",
-                                                    "In Sprints die ersten Runden ruhiger fahren"
+                                                    "Nach Überholmanövern die Batterie für die Verteidigung aufheben",
+                                                    "Strategie mit weniger Stopps prüfen"
                                                 ]
                                   },
                        "rennen":  [
@@ -1296,6 +1509,76 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Eines seiner stärksten Rennen: schnellster Mann im Feld und nur durch die Track Position beim Reifenwechsel geschlagen."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  30,
+                                          "rv":  17,
+                                          "kon":  18,
+                                          "sau":  15,
+                                          "kurz":  "Fehlerfreies Rennen ohne Warnung auf P4. In Runde 1 von Crashturtle2000 ins Kies geschoben, später drei Runden in Führung, aber der zweite Stopp und fehlendes Tempo kosteten das Podium.",
+                                          "quelle":  "Eigenes Video (The_White_Epic) mit Ergebnistabelle und TV-Replay von Runde 1, dazu Ereignis- und Boxenstopp-Reiter aus Mesotas Video und die Videos von JokerFinn06, Mehlone und Crashturtle2000.",
+                                          "fakten":  {
+                                                         "quali":  "P4 – 1:20.297 (+0,621)",
+                                                         "start":  "P4",
+                                                         "ziel":  "P4 – +15,389",
+                                                         "runde":  "1:22.767 (Runde 23)",
+                                                         "stopps":  "2 – Runde 12 Hard auf Medium (2,241 s), Runde 20 Medium auf Medium (2,233 s)",
+                                                         "strafen":  "Keine"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali 0,62 s hinter der Pole und nur die viertbeste Rennrunde; in Monza fehlte ihm das Tempo von Joker und Mesota.",
+                                                        "rv":  "Drei Führungsrunden und faire Überholmanöver, aber mehrere Duelle direkt im Konter wieder verloren (Crashturtle2000, Mesota).",
+                                                        "kon":  "Keine eigenen Fehler, gleichmäßige Runden, nur gegen Stintende leicht nachlassend.",
+                                                        "sau":  "27 von 27 sauberen Runden, keine Warnung, keine Strafe – sauberster Fahrer des Rennens."
+                                                    },
+                                          "pos":  [
+                                                      "Fehlerfreies Rennen mit 27 sauberen Runden, Auszeichnung als sauberster Fahrer.",
+                                                      "Nach dem unverschuldeten Kontakt in Runde 1 noch in derselben Runde zurück auf P5.",
+                                                      "Drei Runden in Führung (Runde 18 bis 20).",
+                                                      "Zwei Stopps mit je 2,2 s.",
+                                                      "Beste Runde spät im Rennen (Runde 23), als es um Positionen ging."
+                                                  ],
+                                          "neg":  [
+                                                      "Rennpace nur die viertbeste.",
+                                                      "Positionen zu oft direkt wieder abgegeben: Crashturtle2000 in Runde 4 und 7, Mesota in Runde 25.",
+                                                      "Die Zwei-Stopp-Strategie kostete die Führung; der Sieger kam mit einem Stopp 15 s vorn ins Ziel."
+                                                  ],
+                                          "besser":  [
+                                                         "Nach einem Überholmanöver Batterie für die nächste Gerade aufheben, um den DRS-Konter abzuwehren.",
+                                                         "Mit dem Team die Strategie hinterfragen: Ein längerer Medium-Stint ab Runde 13 hätte einen Stopp sparen können."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P4 mit 1:20.297, 0,621 s hinter der Pole und 0,444 s hinter Teamkollege Mesota. Knapp vor Crashturtle2000. Ein solides, aber für seine Verhältnisse schwaches Quali."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Sauberer Start, P4 durch die erste Schikane. In der Roggia stach Crashturtle2000 innen rein, bekam das Auto nicht um die Kurve und nahm White mit ins Kiesbett. Das kostete zwei Plätze und rund 5 s. White blieb ruhig und holte sich P5 noch in Runde 1 zurück."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "Auf Hard hing er lange hinter Crashturtle2000 fest und tauschte mehrfach die Plätze mit ihm. Durch die Stopps der anderen rückte er vor, überholte Crashturtle2000 in Runde 17 mit DRS und führte drei Runden. Gegen Mehlone auf frischen Reifen fehlte ihm dort rund eine Sekunde pro Runde. Im letzten Stint kämpfte er mit Mesota und Max und sicherte P4."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Hard, Medium, Medium mit zwei fehlerfreien Stopps von 2,2 s. Der zweite Stopp war geplant und ist der Hauptgrund für P4: Er kam von P1 auf P5 zurück und hatte danach nicht das Tempo, um mehr als einen Platz zurückzuholen. Mehlone und Max kamen mit einem Stopp durch."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Alle eigenen Manöver waren fair, per Windschatten oder DRS auf der Geraden. Er gab aber zu oft die Tür auf: Crashturtle2000 kam in Runde 4 und 7 vorbei, Mesota holte sich in Runde 25 direkt den Platz zurück, und Max ging in der letzten Runde kurz vorbei. In Runde 1 war er das Opfer."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine eigenen Fehler, keine Track Limits, keine Strafen, kein Schaden. Der einzige Ausflug ins Kies kam durch Crashturtle2000."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Ein blitzsauberes Rennen, aber ohne das gewohnte Spitzentempo. Der Kontakt in Runde 1, die viertbeste Pace und vor allem der zweite Stopp machten aus drei Führungsrunden P4."
                                                           }
                                                       ]
                                       }
@@ -1846,18 +2129,19 @@
                    {
                        "id":  "crash",
                        "gesamt":  {
-                                      "kritik":  "Crashturtle2000 hat Top-4-Tempo im Quali, das er lange nicht ins Ziel brachte: Abflug und Verbindungsabbruch in Melbourne, Auffahrunfall und Mauerunfall in Kanada. In Österreich zeigte er mit P3 und der zweitschnellsten Runde, was möglich ist, wenn er fehlerfrei bleibt.",
+                                      "kritik":  "Crashturtle2000 hat Spitzentempo, das er zu selten ins Ziel bringt: Abflug und Verbindungsabbruch in Melbourne, Auffahrunfall und Mauerunfall in Kanada. In Österreich zeigte er mit P3, was fehlerfrei möglich ist. In Monza fuhr er laut Spiel die zweitschnellste Runde, wurde nach Kontakten in Runde 1 und einem Abflug in der letzten Runde aber nur Sechster.",
                                       "staerken":  [
-                                                       "Quali-Tempo",
-                                                       "Spitzenrunden"
+                                                       "Spitzenrunden im Rennen",
+                                                       "Starts"
                                                    ],
                                       "schwaechen":  [
-                                                         "Fehler und Kontakte in Runde 1",
-                                                         "Track Limits und Platzrückgaben"
+                                                         "Kontakte in Runde 1",
+                                                         "Fehler unter Druck und in Schlussrunden",
+                                                         "Track Limits"
                                                      ],
                                       "fokus":  [
-                                                    "In Runde 1 Abstand halten",
-                                                    "Nach einem Fehler ruhig weiterfahren"
+                                                    "In Runde 1 Abstand halten und sauber zurück auf die Strecke kommen",
+                                                    "Schlussrunden mit Puffer fahren"
                                                 ]
                                   },
                        "rennen":  [
@@ -2074,6 +2358,77 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Endlich hat Crashturtle2000 sein Quali-Tempo ins Ziel gebracht. Das Podium ist völlig verdient. Unsicherheit: kein eigenes Video."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  30,
+                                          "rv":  13,
+                                          "kon":  11,
+                                          "sau":  8,
+                                          "kurz":  "Gutes Tempo mit der zweitschnellsten Runde laut Spiel, aber Kontakte in Runde 1, Track Limits und ein Abflug in der letzten Runde. Am Ende P6.",
+                                          "quelle":  "Eigenes Video (Crashturtle2000), dazu Ergebnis-, Ereignis- und Boxenstopp-Reiter aus Mesotas Video, das TV-Replay aus The_White_Epics Video und die Videos von JokerFinn06 und Mehlone.",
+                                          "fakten":  {
+                                                         "quali":  "P5 – 1:20.443 (+0,767)",
+                                                         "start":  "P5",
+                                                         "ziel":  "P6 – +23,004",
+                                                         "runde":  "1:22.293 laut Spiel (Runde 24; Website: 1:22.991)",
+                                                         "stopps":  "2 – Runde 10 Hard auf Medium (2,227 s), Runde 18 Medium auf Hard (2,234 s)",
+                                                         "strafen":  "Kollisionswarnungen in Runde 1 (mit The_White_Epic und Max) und Runde 17 (mit The_White_Epic), Track-Limit-Warnungen in Runde 24 und 25"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Quali nur P5, im Rennen aber laut Spiel die zweitschnellste Runde (1:22.293) und zeitweise auf P2.",
+                                                        "rv":  "Starke Starts und Überholmanöver, aber in Runde 1 durch den Kontakt mit White zurückgefallen und mehrere Duelle verloren.",
+                                                        "kon":  "Kontakt und Kiesausflug in Runde 1, Track Limits in Runde 24 und 25 und ein Abflug in der Ascari in der letzten Runde, der P5 kostete.",
+                                                        "sau":  "Drei Kollisionswarnungen: Er nahm White in Runde 1 mit ins Kies und kam unsicher vor Max auf die Strecke zurück."
+                                                    },
+                                          "pos":  [
+                                                      "Starker Start von P5 auf P3 bis zur ersten Schikane.",
+                                                      "Laut Spiel die zweitschnellste Rennrunde (1:22.293).",
+                                                      "Zeitweise auf P2.",
+                                                      "Zwei saubere Stopps mit je 2,2 s.",
+                                                      "Gute Überholmanöver in Runde 4 und 7."
+                                                  ],
+                                          "neg":  [
+                                                      "Runde 1: optimistischer Angriff innen auf White, beide im Kies, White verliert zwei Plätze. Danach unsicheres Zurückkommen vor Max mit Kontakt.",
+                                                      "Abflug in der Ascari in der letzten Runde, P5 an Max verloren.",
+                                                      "Track Limits in Runde 24 und 25, obwohl er allein fuhr.",
+                                                      "Keine Entschuldigung nach den Kontakten zu sehen."
+                                                  ],
+                                          "besser":  [
+                                                         "In Runde 1 nur innen angreifen, wenn das Auto vor dem Einlenken wirklich daneben ist, und beim Zurückkommen auf die Strecke auf den Verkehr achten.",
+                                                         "In den Schlussrunden mit Puffer fahren, statt allein auf P6 noch ans Limit zu gehen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P5 mit 1:20.443, 0,767 s hinter der Pole und 0,146 s hinter White. Wieder Mittelfeld im Quali, nach dem starken P3 in Österreich ein Schritt zurück."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Sehr guter Start: Auf der Geraden ging er an Mehlone vorbei, dabei zog er etwas früh nach links rüber und berührte ihn leicht. In der Schikane stach er innen neben White, bekam das Auto nicht um die Kurve und nahm White mit ins Kiesbett (Warnung). Beim Zurückkommen auf die Strecke kam er vor Max raus, es gab erneut Kontakt (Warnung). Ende Runde 1 lag er auf P6."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "In Runde 4 überholte er White und Max, danach tauschte er mehrfach die Plätze mit White. Durch die Stopps der anderen lag er zeitweise auf P2. Im letzten Stint auf Hard fuhr er laut Spiel die zweitschnellste Runde des Rennens (1:22.293), allerdings allein auf P6. In der letzten Runde holte er sich P5 von Max, verbremste sich aber in der Ascari und verlor den Platz wieder."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Hard, Medium, Hard mit zwei sauberen Stopps von 2,2 s. Die Zwei-Stopp-Strategie kostete aber Plätze: Max kam mit einem Stopp vor ihm ins Ziel. Nach dem zweiten Stopp lag er allein auf P6, rund 4–5 s hinter dem Fünften."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Viele Überholmanöver, aber auch viele Duelle verloren. Der Kontakt mit White in Runde 1 geht hauptsächlich auf ihn. In Runde 17 berührten sich beide erneut, als White außen vorbeiging. In Runde 18 fuhr ihm Mesota in der Roggia ins Heck, hier war Crashturtle2000 Opfer."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Kiesausflug nach dem Kontakt in Runde 1, Track Limits in Runde 24 und 25 und der Abflug in der Ascari in der letzten Runde. Keine Zeitstrafe, aber fünf Warnungen."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "Das Tempo war da, wie die zweitschnellste Runde zeigt. Runde 1 mit zwei Kontakten, die Strategie und der Fehler in der letzten Runde machten daraus P6. Mit einer sauberen ersten Runde war mindestens P5 drin."
                                                           }
                                                       ]
                                       }
@@ -2633,18 +2988,18 @@
                    {
                        "id":  "x0ts2jvy",
                        "gesamt":  {
-                                      "kritik":  "Max ist stark eingestiegen: Sprintsieg in Kanada und P4 in Österreich von Startplatz 7. Das Tempo reicht für das obere Mittelfeld. Abzüge gibt es für Kontakte in Runde 1 und eine Strafe in der Boxengasse.",
+                                      "kritik":  "Max ist stark eingestiegen: Sprintsieg in Kanada und P4 in Österreich von Startplatz 7. In Monza fehlte deutlich Tempo, P5 kam über die erste Runde und eine kluge Ein-Stopp-Strategie. Abzüge gibt es für Kontakte in Runde 1 und eine Strafe in der Boxengasse in Kanada.",
                                       "staerken":  [
-                                                       "Starts und Sprint-Tempo",
-                                                       "Konstante Rennen"
+                                                       "Starts und erste Runden",
+                                                       "Strategie mit wenig Stopps"
                                                    ],
                                       "schwaechen":  [
                                                          "Kontakte in Runde 1",
-                                                         "Boxeneinfahrt"
+                                                         "Grundtempo im Quali (Monza)"
                                                      ],
                                       "fokus":  [
                                                     "Beim Einlenken mehr Platz lassen",
-                                                    "Strategie mit weniger Stopps"
+                                                    "Quali-Tempo verbessern"
                                                 ]
                                   },
                        "rennen":  [
@@ -2784,6 +3139,75 @@
                                                           {
                                                               "t":  "Fazit",
                                                               "x":  "Ein solides Rennen mit gutem Ergebnis, das auch von den Unfällen in Runde 1 profitierte. Unsicherheit: kein eigenes Video."
+                                                          }
+                                                      ]
+                                      },
+                                      {
+                                          "s":  "s1",
+                                          "r":  "r05",
+                                          "tempo":  22,
+                                          "rv":  17,
+                                          "kon":  14,
+                                          "sau":  11,
+                                          "kurz":  "Von Startplatz 6 mit einer Ein-Stopp-Strategie auf P5. Klar das langsamste Auto im Feld, profitierte vom Chaos in Runde 1 und Crashturtle2000s Fehler in der letzten Runde.",
+                                          "quelle":  "Kein eigenes Video. Bewertet aus den Videos von Crashturtle2000, Mehlone, The_White_Epic, Mesota und JokerFinn06 sowie Ergebnis-, Ereignis- und Boxenstopp-Reiter.",
+                                          "fakten":  {
+                                                         "quali":  "P6 – 1:22.375 (+2,699)",
+                                                         "start":  "P6",
+                                                         "ziel":  "P5 – +21,169",
+                                                         "runde":  "1:23.991",
+                                                         "stopps":  "1 – Runde 14 Hard auf Medium (2,249 s)",
+                                                         "strafen":  "Warnung für Kurve abgekürzt in Runde 27"
+                                                     },
+                                          "noten":  {
+                                                        "tempo":  "Fast 2,7 s Rückstand im Quali und die langsamste beste Rennrunde im Feld.",
+                                                        "rv":  "Gute erste Runde und eine kluge Ein-Stopp-Strategie, die ihn zeitweise auf P2 brachte; am Ende von Mesota, White und kurz Crashturtle2000 überholt.",
+                                                        "kon":  "Keine großen Fehler sichtbar, aber auf alten Medium am Ende deutlich nachlassend.",
+                                                        "sau":  "Kontakt mit Mehlone in Runde 1 (Rennunfall), bei Crashturtle2000 Opfer; eine Warnung für Abkürzen in der letzten Runde."
+                                                    },
+                                          "pos":  [
+                                                      "Aus Runde 1 von P6 auf P4.",
+                                                      "Ein-Stopp-Strategie, zeitweise auf P2.",
+                                                      "Sauberer Boxenstopp mit 2,25 s.",
+                                                      "Vor Crashturtle2000 ins Ziel."
+                                                  ],
+                                          "neg":  [
+                                                      "Fast 2,7 s Rückstand im Quali.",
+                                                      "Langsamste beste Rennrunde im Feld.",
+                                                      "Am Ende auf alten Medium von Mesota, White und Crashturtle2000 überholt; P5 kam durch Crashturtle2000s Abflug zurück."
+                                                  ],
+                                          "besser":  [
+                                                         "Im Quali am Grundtempo arbeiten, vor allem auf den langen Geraden und in den Schikanen.",
+                                                         "In Runde 1 in der Schikane mehr Platz lassen."
+                                                     ],
+                                          "analyse":  [
+                                                          {
+                                                              "t":  "Qualifying",
+                                                              "x":  "P6 mit 1:22.375, 2,699 s hinter der Pole und fast 2 s hinter dem Fünften. Ein klar schwaches Quali, deutlich unter seinem Niveau aus Kanada und Österreich."
+                                                          },
+                                                          {
+                                                              "t":  "Start und Runde 1",
+                                                              "x":  "Guter Start: Auf der Geraden ging er rechts an Mehlone vorbei. In der ersten Schikane fuhr er Rad an Rad mit Mehlone, es gab Kontakt, das wirkt wie ein Rennunfall. Kurz danach kam Crashturtle2000 vor ihm unsicher auf die Strecke zurück. Durch das Chaos lag er nach Runde 1 auf P4."
+                                                          },
+                                                          {
+                                                              "t":  "Rennverlauf und Pace",
+                                                              "x":  "In Runde 3 und 4 fiel er hinter White und Crashturtle2000 zurück. Mit nur einem Stopp lag er durch die Stopps der anderen zeitweise auf P2. Auf alten Medium verlor er am Ende viel Zeit und wurde von Joker, Mesota, White und Crashturtle2000 überholt. P5 bekam er zurück, weil Crashturtle2000 sich in der letzten Runde in der Ascari verbremste."
+                                                          },
+                                                          {
+                                                              "t":  "Strategie und Boxenstopps",
+                                                              "x":  "Ein Stopp in Runde 14 von Hard auf Medium, 2,25 s. Die Strategie war richtig und brachte ihn vor Crashturtle2000, der zweimal stoppte. Ohne sie wäre er wohl Sechster geworden."
+                                                          },
+                                                          {
+                                                              "t":  "Zweikämpfe",
+                                                              "x":  "Die Duelle in Runde 1 waren hart, der Kontakt mit Mehlone ein Rennunfall. Später verlor er fast alle direkten Duelle auf der Geraden, das Tempo fehlte. Keine weiteren Kontakte gesehen."
+                                                          },
+                                                          {
+                                                              "t":  "Fehler und Strafen",
+                                                              "x":  "Keine großen Fehler sichtbar. Eine Warnung für Abkürzen in der letzten Runde."
+                                                          },
+                                                          {
+                                                              "t":  "Fazit",
+                                                              "x":  "P5 war ein ordentliches Ergebnis für das langsamste Auto im Feld, getragen von einer guten ersten Runde, der richtigen Strategie und dem Fehler von Crashturtle2000. Die Bewertung ist unsicherer, weil es kein eigenes Video gibt."
                                                           }
                                                       ]
                                       }
