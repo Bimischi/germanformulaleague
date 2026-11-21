@@ -941,7 +941,8 @@
      "time": "",
      "weather": "",
      "laps": "",
-     "results": []
+     "results": [],
+     "full": true
     },
     {
      "id": "r07",
