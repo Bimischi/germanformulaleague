@@ -744,11 +744,11 @@
                                       {
                                           "s":  "s1",
                                           "r":  "r05",
-                                          "tempo":  34,
-                                          "rv":  19,
+                                          "tempo":  35,
+                                          "rv":  22,
                                           "kon":  11,
                                           "sau":  12,
-                                          "kurz":  "Führte das Rennen bis Runde 8, dann Alleinunfall in Lesmo und Reparaturstopp. Mit der schnellsten Runde auf Hard von P6 zurück auf P3 auf der Straße, offiziell P2.",
+                                          "kurz":  "Führte das Rennen bis Runde 8, dann ein Alleinunfall in Lesmo und ein Reparaturstopp. Danach eine starke Aufholjagd: mit der schnellsten Runde auf Hard von P6 und rund 32 s Rückstand bis auf P3 auf der Straße, offiziell P2.",
                                           "quelle":  "Eigenes Video (Mesota) mit Ergebnis-, Ereignis- und Boxenstopp-Reiter, dazu die Videos von JokerFinn06, Mehlone, The_White_Epic und Crashturtle2000.",
                                           "fakten":  {
                                                          "quali":  "P2 – 1:19.853 (+0,177)",
@@ -759,8 +759,8 @@
                                                          "strafen":  "Kollisionswarnung in Runde 18 (mit Crashturtle2000)"
                                                      },
                                           "noten":  {
-                                                        "tempo":  "Quali nur 0,177 s hinter der Pole, zweitschnellste Rennrunde und im Hard-Stint der schnellste Mann im Feld; nur Joker war auf frischen Hards noch schneller.",
-                                                        "rv":  "Starker Start in die Führung, zweimal Joker auf der Geraden geschlagen und nach dem Unfall drei saubere Überholmanöver. Die meisten Plätze der Aufholjagd kamen aber über die Stopps der anderen.",
+                                                        "tempo":  "Quali P2 nur 0,177 s hinter der Pole, Führung in den ersten Runden und auf Hard die schnellste Runde des Rennens, die er rund acht Runden hielt. Zusammen mit JokerFinn06 der Schnellste in Monza.",
+                                                        "rv":  "Nach dem Unfall von P6 und rund 32 s Rückstand bis auf P3 auf der Straße. Er holte in wenigen Runden fast 30 s auf, überholte Crashturtle2000, The_White_Epic und Max auf der Strecke und nutzte den zweiten Stopp für den Schlussangriff. Auch JokerFinn06 nannte die Aufholjagd herausragend.",
                                                         "kon":  "Stint 2 und 3 sehr gleichmäßig, aber der Alleinunfall aus der Führung in Runde 8 kostete sehr wahrscheinlich den Sieg.",
                                                         "sau":  "Keine Zeitstrafe und keine Track-Limit-Einträge, aber ein Auffahrer auf Crashturtle2000 in der Roggia (Warnung) und ein Unfall mit gelber Flagge."
                                                     },
@@ -770,7 +770,8 @@
                                                       "Die Führung zweimal gegen Joker per Windschatten geholt (Start und Ende Runde 4).",
                                                       "Schnellste Runde 1:22.524 auf Hard, von Runde 11 bis 18 gehalten (rund 10 Minuten), bis Joker sie mit 1:21.797 übertraf.",
                                                       "Nach dem Unfall nicht eingebrochen: von P6 mit rund 32 s Rückstand auf P3 auf der Straße, nur 11 s hinter dem Sieger trotz eines Stopps mehr.",
-                                                      "Saubere Überholmanöver gegen Crashturtle2000, The_White_Epic und Max in der Schlussphase."
+                                                      "Saubere Überholmanöver gegen Crashturtle2000, The_White_Epic und Max in der Schlussphase.",
+                                                      "Herausragende Aufholjagd von P6 mit rund 32 s Rückstand bis aufs Podium."
                                                   ],
                                           "neg":  [
                                                       "Alleinunfall aus der Führung in Runde 8 am Ausgang Lesmo, Frontflügel kaputt, Reparaturstopp mit 7,45 s. Ohne diesen Fehler war der Sieg sehr wahrscheinlich.",
@@ -801,7 +802,7 @@
                                                           },
                                                           {
                                                               "t":  "Zweikämpfe",
-                                                              "x":  "Gegen Joker lieferte er sich in den ersten Runden ein sauberes Duell mit zwei Führungswechseln. In Runde 18 fuhr er Crashturtle2000 beim Anbremsen der Roggia ins Heck (Warnung, kaum Folgen für Crash) und überholte ihn eine halbe Runde später sauber. The_White_Epic ging in Runde 24 mit DRS vorbei, Mesota holte sich den Platz in Runde 25 zurück und überholte direkt danach Max. Die „Aufholjagd“ bestand damit aus drei eigenen Überholmanövern; die übrigen Plätze kamen durch die Stopps von Max, Joker, Mehlone und White."
+                                                              "x":  "Gegen JokerFinn06 lieferte er sich in den ersten Runden ein sauberes Duell mit zwei Führungswechseln. In der Aufholjagd überholte er Crashturtle2000 (nach einem Auffahrer beim Anbremsen der Roggia in Runde 18, Verwarnung, kaum Folgen für Crashturtle2000), holte sich in Runde 25 den Platz gegen The_White_Epic zurück, nachdem dieser mit DRS vorbeigegangen war, und ging direkt danach an Max vorbei. Weitere Plätze kamen über die Stopps der anderen, die er aber nur nutzen konnte, weil er den Rückstand vorher mit seinem Tempo fast aufgeholt hatte."
                                                           },
                                                           {
                                                               "t":  "Fehler und Strafen",
@@ -809,7 +810,7 @@
                                                           },
                                                           {
                                                               "t":  "Fazit",
-                                                              "x":  "Mesota war in Monza zusammen mit Joker der schnellste Fahrer und hätte ohne den Fehler in Runde 8 sehr wahrscheinlich gewonnen. Die Aussage zur schnellsten Runde stimmt: Er hielt sie im Hard-Stint rund acht Runden. Die Aufholjagd war stark im Tempo, die Plätze kamen aber überwiegend über die Stopps der anderen. Offiziell P2, weil Joker mit seinen Strafen 0,159 s zurückfiel."
+                                                              "x":  "Mesota war in Monza zusammen mit JokerFinn06 der schnellste Fahrer und hätte ohne den Fehler in Runde 8 sehr wahrscheinlich gewonnen. Die Aufholjagd danach war eine der stärksten Leistungen der Saison: Er fuhr die schnellste Runde des Rennens, hielt sie rund acht Runden und kam aus rund 32 s Rückstand noch aufs Podium. Abzug gibt es nur für den Alleinunfall aus der Führung und den Auffahrer in Runde 18. Offiziell P2, weil JokerFinn06 mit seinen Strafen 0,159 s zurückfiel."
                                                           }
                                                       ]
                                       }
