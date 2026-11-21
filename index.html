@@ -384,6 +384,11 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .tw-end{font-size:13px;font-weight:700}
 .tw-note{margin:0;color:var(--muted);font-size:12.5px}
 .tw-evs{display:flex;flex-wrap:wrap;gap:6px}
+.tw-pick{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.tw-pick select{flex:0 1 320px;min-width:0}
+.tw-slh{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tw-avg{background:none;border:1px solid var(--line);border-radius:4px;color:var(--muted);font-size:12px;padding:2px 7px;cursor:pointer}
+.tw-avg:hover{color:var(--fg);border-color:var(--muted)}
 .tw-ev{display:grid;gap:1px;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel-2);min-width:86px;font-size:12px;color:var(--muted)}
 .tw-ev b{display:flex;align-items:center;gap:5px;color:var(--fg);font-family:var(--f-display);font-weight:800;font-size:16px;letter-spacing:.03em}
 .tw-ev i{font-style:normal;font-variant-numeric:tabular-nums}
@@ -687,7 +692,9 @@ function pointsText(s){
    Anwesenheitspunkt, eingetragene Sprints. Bonuspunkte gehen nur ins Maximum ein. */
 function twEvents(s){var ev=[];sortedRaces(s).forEach(function(r){if(r.sprint)ev.push({r:r,sp:1,done:sprintDone(r)});ev.push({r:r,sp:0,done:done(r)});});return ev;}
 function twBonus(s){return (+s.flPoint||0)+(+s.polePoint||0)+(+s.cleanPoint||0)+(+s.otPoint||0)+(+s.dotdPoint||0);}
-function twPlace(s,e,p){if(!p)return 0;if(e.sp)return (+sprintPts(s)[p-1]||0)+(+s.attendPoint||0);return ((+s.points[p-1]||0)+(+s.attendPoint||0))*(e.r.full?2:1);}
+/* Platz darf ein Schnitt sein (z. B. 3,4): dann wird zwischen P3 und P4 interpoliert */
+function twPlace(s,e,p){if(!p)return 0;var lo=Math.floor(p),f=p-lo;if(f<1e-6)return twPlaceI(s,e,lo);return twPlaceI(s,e,lo)*(1-f)+twPlaceI(s,e,lo+1)*f;}
+function twPlaceI(s,e,p){if(!p)return 0;if(e.sp)return (+sprintPts(s)[p-1]||0)+(+s.attendPoint||0);return ((+s.points[p-1]||0)+(+s.attendPoint||0))*(e.r.full?2:1);}
 function twProj(s,e,p,teams){return teams?(p?twPlace(s,e,p)+twPlace(s,e,p+1):0):twPlace(s,e,p);}
 function twMax(s,e,teams){return twProj(s,e,1,teams)+(e.sp?0:twBonus(s)*(e.r.full?2:1));}
 function twRemain(s,teams){return twEvents(s).filter(function(e){return !e.done;}).reduce(function(a,e){return a+twMax(s,e,teams);},0);}
@@ -696,11 +703,17 @@ function twGot(s,e,id,teams){
   var l=e.sp?(e.r.sprint.results||[]):(e.r.results||[]),p=0;
   l.forEach(function(x){if((x.t||'')===id)p+=e.sp?sPts(s,e.r,x.d):rPts(s,e.r,x.d);});return p;
 }
-function twAvg(s,id,teams){
+/* Echter Schnitt der gewerteten Hauptrennen (eine Nachkommastelle); null ohne Ergebnis */
+function twAvgRaw(s,id,teams){
   var n=0,sum=0;sortedRaces(s).filter(done).forEach(function(r){r.results.forEach(function(x){if(x.s||!x.p)return;if(teams?(x.t||'')===id:x.d===id){sum+=x.p;n++;}});});
-  if(!n)return 3;var a=teams?Math.round(sum/n-0.5):Math.round(sum/n);return Math.min(s.points.length,Math.max(1,a));
+  return n?Math.round(sum/n*10)/10:null;
 }
-function twLbl(p,teams){return !p?'Ausfall':teams?'P'+p+' + P'+(p+1):'P'+p;}
+function twAvg(s,id,teams){
+  var a=twAvgRaw(s,id,teams);if(a==null)return 3;
+  if(teams)a=Math.round((a-0.5)*10)/10;
+  return Math.min(s.points.length-(teams?1:0),Math.max(1,a));
+}
+function twLbl(p,teams){return !p?'Ausfall':teams?'P'+fmtP(p)+' + P'+fmtP(p+1):'P'+fmtP(p);}
 function chRows(s,mode){
   if(mode==='teams')return teamRows(s).filter(function(r){return r.id||r.total>0;});
   return driverRows(s).filter(function(r){return r.starts>0||r.total>0||drv(s,r.id)&&drv(s,r.id).role!=='ersatz';});
@@ -711,8 +724,10 @@ function twCtx(){
   if(ui.chOpen.indexOf(mode+':')!==0)return null;
   var id=ui.chOpen.slice(mode.length+1),rows=chRows(s,mode),me=null;
   rows.forEach(function(r){if(r.id===id)me=r;});if(!me)return null;
-  var ev=twEvents(s);
-  return {s:s,teams:teams,rows:rows,me:me,riv:me===rows[0]?rows[1]||null:rows[0],ev:ev,open:ev.filter(function(e){return !e.done;}),
+  var ev=twEvents(s),riv=null;
+  if(ui.twRivId!=null)rows.forEach(function(r){if(r.id===ui.twRivId&&r!==me)riv=r;});
+  if(!riv)riv=me===rows[0]?rows[1]||null:rows[0];
+  return {s:s,teams:teams,rows:rows,me:me,riv:riv,ev:ev,open:ev.filter(function(e){return !e.done;}),
     maxP:Math.max(1,s.points.length-(teams?1:0)),
     name:function(r){return teams?(team(s,r.id)||{name:'Ohne Team'}).name:dName(s,r.id);},
     col:function(r){return teams?(team(s,r.id)||{color:'#4A505C'}).color:curTeam(s,r.id).color;}};
@@ -755,10 +770,11 @@ function twOut(c){
   return h+twChart(c);
 }
 function twSlider(c,key,r){
-  var p=ui[key],v=p?p:c.maxP+1;
-  return '<label class="tw-sl" style="--sc:'+esc(key==='twMe'?c.col(r):'#AEB3BD')+'"><span>'+esc(c.name(r))+(c.teams?' holt':' fährt')+' im Schnitt <b id="lbl-'+key+'">'+twLbl(p,c.teams)+'</b></span>'+
-    '<input type="range" min="1" max="'+(c.maxP+1)+'" step="1" value="'+v+'" data-tw="'+key+'" aria-label="Durchschnittlicher Platz '+esc(c.name(r))+'">'+
-    '<span class="tw-scale"><small>'+twLbl(1,c.teams)+'</small><small>Ausfall</small></span></label>';
+  var p=ui[key],v=p?p:c.maxP+1,avg=twAvgRaw(c.s,r.id,c.teams);
+  return '<div class="tw-sl" style="--sc:'+esc(key==='twMe'?c.col(r):'#AEB3BD')+'"><span class="tw-slh"><span>'+esc(c.name(r))+(c.teams?' holt':' fährt')+' im Schnitt <b id="lbl-'+key+'">'+twLbl(p,c.teams)+'</b></span>'+
+    '<button class="tw-avg" data-act="twReset" data-id="'+key+'" title="Regler auf den bisherigen Schnitt setzen">'+(avg==null?'noch kein Ergebnis':'bisher Ø P'+fmtP(avg)+(c.teams?' pro Fahrer':''))+'</button></span>'+
+    '<input type="range" min="1" max="'+(c.maxP+1)+'" step="0.1" value="'+v+'" data-tw="'+key+'" aria-label="Durchschnittlicher Platz '+esc(c.name(r))+'">'+
+    '<span class="tw-scale"><small>'+twLbl(1,c.teams)+'</small><small>Ausfall</small></span></div>';
 }
 function twPanel(c){
   var s=c.s,me=c.me,riv=c.riv,lead=c.rows[0],na=esc(c.name(me)),rem=c.open.reduce(function(a,e){return a+twMax(s,e,c.teams);},0);
@@ -783,7 +799,9 @@ function twPanel(c){
   }).join('')+'</div>';
   if(c.open.length&&riv){
     var Ls=[1,2,3,4,5,6].filter(function(L){return L<=c.maxP;}).concat([0]),rn=esc(c.name(riv));
-    h+='<div class="tw-grid"><div class="tw-box"><h4>Was '+na+' braucht</h4><table class="tw-tab"><thead><tr><th>'+rn+(c.teams?' holt':' fährt')+' im Schnitt …</th><th>… dann braucht '+na+'</th></tr></thead><tbody>'+
+    h+='<label class="tw-pick">Vergleichen mit <select id="tw-riv" aria-label="Gegner für den Vergleich">'+c.rows.filter(function(r){return r!==me;}).map(function(r){
+      return '<option value="'+esc(r.id)+'"'+(r===riv?' selected':'')+'>P'+r.pos+' · '+esc(c.name(r))+' ('+fmtP(r.total)+' Pkt)</option>';}).join('')+'</select></label>';
+    h+='<div class="tw-grid"><div class="tw-box"><h4>Was '+na+' gegen '+rn+' braucht</h4><table class="tw-tab"><thead><tr><th>'+rn+(c.teams?' holt':' fährt')+' im Schnitt …</th><th>… dann braucht '+na+'</th></tr></thead><tbody>'+
       Ls.map(function(L){var q=twNeed(c,L);
         return '<tr><td>'+twLbl(L,c.teams)+'</td><td>'+(q===0?'<span class="ok">Titel auch mit Ausfällen</span>':q<0?'<span class="no">reicht nicht</span>':'<b>'+twLbl(q,c.teams)+'</b> oder besser')+'</td></tr>';}).join('')+
       '</tbody></table></div>'+
@@ -1707,9 +1725,10 @@ function doAction(act,el){
     case 'recTop':ui.recTop=id;break;
     case 'recSeason':ui.recSeason=id;break;
     case 'champ':ui.champ=id;ui.chOpen=null;break;
+    case 'twReset':{var cr=twCtx();if(cr){var rr=id==='twMe'?cr.me:cr.riv;if(rr)ui[id]=twAvg(cr.s,rr.id,cr.teams);}break;}
     case 'chOpen':{
       if(ui.chOpen===id){ui.chOpen=null;break;}
-      ui.chOpen=id;var c0=twCtx();
+      ui.chOpen=id;ui.twRivId=null;var c0=twCtx();
       if(c0){ui.twMe=twAvg(c0.s,c0.me.id,c0.teams);ui.twRiv=c0.riv?twAvg(c0.s,c0.riv.id,c0.teams):1;}
       render();setTimeout(function(){var t=document.getElementById('tw');if(t&&t.getBoundingClientRect().bottom>window.innerHeight)t.scrollIntoView({behavior:'smooth',block:'nearest'});},30);return;}
     case 'rate':ui.rate=ui.rate===id?null:id;ui.rateScroll=!!ui.rate;break;
@@ -1947,7 +1966,9 @@ document.addEventListener('submit',function(e){
     login(t?t.value:'',rm?rm.checked:true,false);
   }
 });
-document.addEventListener('change',function(e){var el=e.target;if(el&&el.dataset&&el.dataset.f)applyField(el.dataset.f,el);});
+document.addEventListener('change',function(e){var el=e.target;
+  if(el&&el.id==='tw-riv'){ui.twRivId=el.value;var c=twCtx();if(c&&c.riv)ui.twRiv=twAvg(c.s,c.riv.id,c.teams);render();return;}
+  if(el&&el.dataset&&el.dataset.f)applyField(el.dataset.f,el);});
 document.addEventListener('input',function(e){
   if(e.target&&e.target.id==='json-io')ui.json=e.target.value;
   var k=e.target&&e.target.dataset&&e.target.dataset.tw;
