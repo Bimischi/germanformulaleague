@@ -1017,7 +1017,10 @@
      "time": "",
      "weather": "",
      "laps": "",
-     "results": []
+     "results": [],
+     "sprint": {
+      "results": []
+     }
     },
     {
      "id": "r08",
