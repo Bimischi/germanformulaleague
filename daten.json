@@ -1268,7 +1268,11 @@
      "laps": "",
      "results": [],
      "sprint": {
-      "results": []
+      "results": [],
+      "name": "Großer Preis von Großbritannien",
+      "track": "Silverstone",
+      "flag": "gb",
+      "short": "GBR"
      }
     },
     {
