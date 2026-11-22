@@ -1111,6 +1111,15 @@
      "laps": "",
      "results": []
     }
+   ],
+   "penalties": [
+    {
+     "id": "xg12t5h5",
+     "d": "ds4",
+     "r": "r06",
+     "p": 1,
+     "why": "Crash mit Melone R3"
+    }
    ]
   }
  ]
