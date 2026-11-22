@@ -1050,7 +1050,10 @@
      "time": "",
      "weather": "night",
      "laps": "",
-     "results": []
+     "results": [],
+     "sprint": {
+      "results": []
+     }
     },
     {
      "id": "r10",
