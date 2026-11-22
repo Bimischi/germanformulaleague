@@ -449,6 +449,19 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .pen-inc-s{margin:0;color:var(--muted);font-size:12.5px}
 .pen-inc-g{margin:0;color:#FFB3AB;font-weight:700;font-size:13.5px;border-top:1px solid rgba(225,6,0,.35);padding-top:6px}
 .pen-lapin{width:70px}.pen-whyin{min-width:220px}
+.pen-reg{display:grid;gap:8px}
+.pen-ladder{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:6px}
+.pen-step-c{background:var(--panel);border:1px solid var(--line);border-top:3px solid #F3C744;border-radius:6px;padding:8px 10px;display:grid;gap:2px}
+.pen-step-c b{font-family:var(--f-display);font-weight:800;font-size:26px;line-height:1}
+.pen-step-c span{font-size:12.5px;color:var(--muted)}
+.pen-step-c.t-quali{border-top-color:#FF8A3D}.pen-step-c.t-quali span{color:#FFB98A;font-weight:600}
+.pen-step-c.t-season{border-top-color:var(--red);background:rgba(225,6,0,.1)}.pen-step-c.t-season span{color:#FFB3AB;font-weight:700}
+.pips i.mk{box-shadow:0 0 0 1px #8E95A2 inset}
+.pips i.mk-quali{box-shadow:0 0 0 1px #FF8A3D inset}.pips i.mk-season{box-shadow:0 0 0 1px var(--red) inset}
+.pips i.on.mk{box-shadow:0 0 0 2px #16181D inset}
+.pips i{width:14px}
+.pen-card.banned{border-color:rgba(225,6,0,.6);border-left-color:var(--red)}
+.pen-ban{color:#FFB3AB}
 .pen-form{display:grid;grid-template-columns:minmax(140px,1fr) minmax(170px,1.2fr) 80px 150px minmax(200px,2fr) auto;gap:8px;align-items:end}
 .pen-step{display:grid;grid-template-columns:1fr 1fr auto;align-items:end}
 @media (max-width:760px){.pen-form{grid-template-columns:1fr 1fr}.pen-form .pen-why{grid-column:1/-1}}
@@ -1117,99 +1130,121 @@ function viewQuali(s,r){
 }
 
 /* ---------- Strafen ----------
-   Daten pro Saison: penalties [{id,d,r,p,why}], penaltyRules {limit,grid,extra,steps:[{at,grid}]},
-   penaltyApply {"<fahrer>:<stufe>": rennId | ""}. Grid-Strafen werden aus den Strafpunkten berechnet:
-   sobald ein Fahrer eine Stufe erreicht, entsteht automatisch eine Grid-Strafe (Standard: nächstes Rennen). */
-function penRules(s){var r=s.penaltyRules||{};return {limit:Math.max(1,+r.limit||3),grid:Math.max(1,+r.grid||1),extra:!!r.extra,steps:(r.steps&&r.steps.length?r.steps:[{at:4,grid:3},{at:5,grid:5}])};}
-function penR(s){if(!s.penaltyRules)s.penaltyRules={limit:3,grid:1,extra:false};return s.penaltyRules;}
-function penSteps(s){var R=penRules(s),st=[{at:R.limit,grid:R.grid}];if(R.extra)R.steps.forEach(function(x){if(+x.at>R.limit)st.push({at:+x.at,grid:Math.max(1,+x.grid||1)});});return st.sort(function(a,b){return a.at-b.at;});}
-function penGridTxt(n){return n+(n>1?' Startplätze':' Startplatz')+' zurück';}
-function penState(s){
-  var races=sortedRaces(s),idx={};races.forEach(function(r,i){idx[r.id]=i;});
-  var list=(s.penalties||[]).map(function(e,i){return {e:e,i:i,k:(e.r in idx?idx[e.r]:999)};}).sort(function(a,b){return a.k-b.k||((+a.e.lap||999)-(+b.e.lap||999))||a.i-b.i;}).map(function(o){return o.e;});
-  var steps=penSteps(s),tot={},after={},trig={},grids=[];
-  list.forEach(function(e){
-    var before=tot[e.d]||0,now=before+penPts(e);tot[e.d]=now;after[e.id]=now;
-    steps.forEach(function(st){if(before<st.at&&now>=st.at){
-      var key=e.d+':'+st.at,nx=races[(e.r in idx?idx[e.r]:races.length)+1];
-      var ap=s.penaltyApply&&(key in s.penaltyApply)?s.penaltyApply[key]:(nx?nx.id:''),ar=null;
-      races.forEach(function(r){if(r.id===ap)ar=r;});
-      var g={key:key,d:e.d,at:st.at,places:st.grid,src:e,apply:ar,status:!ar?'offen':done(ar)?'verbüßt':'steht an'};
-      grids.push(g);(trig[e.id]=trig[e.id]||[]).push(g);}});
-  });
-  return {list:list,tot:tot,after:after,trig:trig,grids:grids,steps:steps,races:races};
+   Strafpunkte gelten saisonübergreifend und werden zum Saisonende nicht zurückgesetzt.
+   Pro Saison: penalties [{id,d,r,p,lap,why}]. Ligaweit: draft.penaltyRules {steps:[{at,type,grid}]}
+   und draft.penaltyApply {"<fahrer>:<stufe>": "<saison>:<rennen>" | ""}.
+   type: grid = Grid-Strafe (grid Startplätze), quali = Ausschluss vom Qualifying, season = Ausschluss aus der laufenden Saison.
+   Konsequenzen werden aus den Strafpunkten berechnet (Standard: nächstes Rennen nach dem Vorfall). */
+var PEN_DEF=[[3,'grid'],[5,'grid'],[7,'grid'],[9,'grid'],[10,'grid'],[11,'grid'],[12,'quali'],[13,'grid'],[14,'grid'],[15,'season']];
+var PEN_TYPES=[['grid','Grid-Strafe'],['quali','Ausschluss vom Qualifying'],['season','Ausschluss aus der laufenden Saison']];
+function penSteps(){
+  var st=(draft.penaltyRules&&draft.penaltyRules.steps&&draft.penaltyRules.steps.length)?draft.penaltyRules.steps:PEN_DEF.map(function(x){return {at:x[0],type:x[1],grid:1};});
+  return st.map(function(x){return {at:Math.max(1,+x.at||1),type:x.type||'grid',grid:Math.max(1,+x.grid||1)};}).sort(function(a,b){return a.at-b.at;});
 }
-function penRace(P,id){for(var i=0;i<P.races.length;i++)if(P.races[i].id===id)return P.races[i];return null;}
-function penPips(n,limit){var h='',m=Math.max(n,limit);for(var i=1;i<=m;i++)h+='<i class="'+(i<=n?(i>limit?'over':'on'):'')+'"></i>';return '<span class="pips" title="'+n+' von '+limit+' Strafpunkten">'+h+'</span>';}
-function penChip(st){return '<span class="pchip '+(st==='verbüßt'?'done':st==='steht an'?'due':'open')+'">'+esc(st)+'</span>';}
-function penRaceTag(r){return r?flag(r.flag)+' '+esc(r.short||r.name):'<span class="muted">noch offen</span>';}
+function penRulesW(){if(!draft.penaltyRules||!draft.penaltyRules.steps||!draft.penaltyRules.steps.length)draft.penaltyRules={steps:penSteps()};return draft.penaltyRules;}
+function penSortSteps(){var R=penRulesW();R.steps.sort(function(a,b){return (+a.at||0)-(+b.at||0);});}
+function penGridTxt(n){return n+(n>1?' Startplätze':' Startplatz')+' zurück';}
+function penConTxt(st){return st.type==='quali'?'Ausschluss vom Qualifying':st.type==='season'?'Ausschluss aus der laufenden Saison':'Grid-Strafe, '+penGridTxt(st.grid);}
+function penConShort(st){return st.type==='quali'?'Quali-Ausschluss':st.type==='season'?'Saison-Ausschluss':'Grid-Strafe −'+st.grid;}
 function penPts(e){return (e.p===0||e.p==='0')?0:Math.max(1,+e.p||1);}
 function penPtsTxt(n){return n?n+' Strafpunkt'+(n>1?'e':''):'Verwarnung ohne Strafpunkt';}
-function penStand(n,limit){return n<limit?n+' von '+limit:n+' Strafpunkte';}
-/* Ein Vorfall als dunkle, rot umrahmte Karte */
-function penInc(s,P,e,showDrv){
-  var r=penRace(P,e.r),n=penPts(e),tr=P.trig[e.id]||[];
-  return '<article class="pen-inc"><header><span class="pen-inc-r">'+penRaceTag(r)+(r?' <span class="muted">'+esc(r.name)+'</span>':'')+(e.lap?' <span class="pen-lap">Runde '+esc(e.lap)+'</span>':'')+'</span>'+
+function penSeasons(){return draft.seasons.filter(function(s){return !s.demo;});}
+function penState(){
+  var steps=penSteps(),items=[],all=[];
+  penSeasons().forEach(function(s){
+    var races=sortedRaces(s),idx={},byId={};races.forEach(function(r,i){idx[r.id]=i;byId[r.id]=r;all.push({s:s,r:r});});
+    (s.penalties||[]).map(function(e,i){return {e:e,i:i,k:(e.r in idx?idx[e.r]:999)};})
+      .sort(function(a,b){return a.k-b.k||((+a.e.lap||999)-(+b.e.lap||999))||a.i-b.i;})
+      .forEach(function(o){items.push({e:o.e,s:s,r:byId[o.e.r]||null});});
+  });
+  var tot={},after={},trig={},grids=[],A=draft.penaltyApply||{};
+  items.forEach(function(it){
+    var e=it.e,before=tot[e.d]||0,now=before+penPts(e);tot[e.d]=now;after[e.id]=now;
+    steps.forEach(function(st){if(before<st.at&&now>=st.at){
+      var key=e.d+':'+st.at,pos=-1,ap=null;
+      all.forEach(function(x,i){if(x.s===it.s&&x.r===it.r)pos=i;});
+      if(key in A){all.forEach(function(x){if(A[key]&&x.s.id+':'+x.r.id===A[key])ap=x;});}
+      else ap=pos>=0?all[pos+1]||null:null;
+      var status=st.type==='season'?'ausgeschlossen':!ap?'offen':done(ap.r)?'verbüßt':'steht an';
+      var g={key:key,d:e.d,step:st,src:it,apply:ap,status:status};grids.push(g);(trig[e.id]=trig[e.id]||[]).push(g);}});
+  });
+  return {items:items,tot:tot,after:after,trig:trig,grids:grids,steps:steps,all:all,multi:penSeasons().length>1};
+}
+/* Name und Team aus der neuesten Saison, in der der Fahrer vorkommt */
+function penSeasonOf(id){var ss=penSeasons();for(var i=ss.length-1;i>=0;i--)if(drv(ss[i],id))return ss[i];return ss[ss.length-1]||null;}
+function penName(id){var s=penSeasonOf(id);return s?dName(s,id):'Unbekannt';}
+function penTeam(id){var s=penSeasonOf(id);return s?curTeam(s,id):{name:'',color:'#4A505C'};}
+function penRaceTag(x,P){return x?flag(x.r.flag)+' '+esc(x.r.short||x.r.name)+(P&&P.multi?' <span class="muted">('+esc(x.s.name)+')</span>':''):'<span class="muted">noch offen</span>';}
+function penChip(st){return '<span class="pchip '+(st==='verbüßt'?'done':(st==='steht an'||st==='ausgeschlossen')?'due':'open')+'">'+esc(st)+'</span>';}
+function penTrack(n,steps){
+  var last=steps.length?steps[steps.length-1].at:3,m=Math.max(n,last),mk={},h='';steps.forEach(function(st){mk[st.at]=st.type;});
+  for(var i=1;i<=m;i++)h+='<i class="'+(i<=n?(i>last?'over':'on'):'')+(mk[i]?' mk mk-'+mk[i]:'')+'"></i>';
+  return '<span class="pips" title="'+n+' Strafpunkte">'+h+'</span>';
+}
+function penNext(n,steps){for(var i=0;i<steps.length;i++)if(steps[i].at>n)return steps[i];return null;}
+function penInc(P,it){
+  var e=it.e,n=penPts(e),tr=P.trig[e.id]||[];
+  return '<article class="pen-inc"><header><span class="pen-inc-r">'+(it.r?penRaceTag(it,P)+' <span class="muted">'+esc(it.r.name)+'</span>':'<span class="muted">Rennen gelöscht</span>')+(e.lap?' <span class="pen-lap">Runde '+esc(e.lap)+'</span>':'')+'</span>'+
     '<span class="pchip '+(n?'due':'open')+'">'+esc(penPtsTxt(n))+'</span></header>'+
-    (showDrv?'<p class="pen-inc-d">'+esc(dName(s,e.d))+'</p>':'')+
     '<p class="pen-inc-w">'+(e.why?esc(e.why):'<span class="muted">Ohne Angabe</span>')+'</p>'+
-    '<p class="pen-inc-s">Stand danach: '+esc(penStand(P.after[e.id],penRules(s).limit))+'</p>'+
-    tr.map(function(g){return '<p class="pen-inc-g">'+g.at+'. Strafpunkt erreicht: Grid-Strafe, '+penGridTxt(g.places)+(g.apply?' · '+esc(g.apply.name):' · Rennen noch offen')+'</p>';}).join('')+'</article>';
+    '<p class="pen-inc-s">Stand danach: '+P.after[e.id]+' Strafpunkte</p>'+
+    tr.map(function(g){return '<p class="pen-inc-g">'+g.step.at+' Strafpunkte erreicht: '+esc(penConTxt(g.step))+(g.step.type==='season'?'':(g.apply?' · '+esc(g.apply.r.name):' · Rennen noch offen'))+'</p>';}).join('')+'</article>';
+}
+function penLadder(steps){
+  return '<div class="pen-ladder">'+steps.map(function(st){return '<div class="pen-step-c t-'+st.type+'"><b>'+st.at+'</b><span>'+esc(st.type==='grid'?'Grid-Strafe'+(st.grid>1?' ('+st.grid+' Plätze)':''):penConShort(st))+'</span></div>';}).join('')+'</div>';
 }
 function viewStrafen(){
-  var s=S(ui.season);
-  if(!s) return emptyBox('Noch keine Saison','Lege in der Verwaltung die erste Saison an.');
-  var P=penState(s),R=penRules(s);
-  var h=filters(s,false)+demoBanner(s)+'<div class="sec-head"><div><h2>Strafen</h2><p class="meta">'+esc(s.name)+' · '+P.steps.map(function(st){return st.at+' Strafpunkte = Grid-Strafe, '+penGridTxt(st.grid);}).join(' · ')+'</p></div></div>';
+  if(!penSeasons().length) return emptyBox('Noch keine Saison','Lege in der Verwaltung die erste Saison an.');
+  var P=penState(),steps=P.steps,cur=S(ui.season)||penSeasons()[penSeasons().length-1];
+  var h='<div class="sec-head"><div><h2>Strafen</h2><p class="meta">Strafpunkte gelten saisonübergreifend und werden zum Saisonende nicht zurückgesetzt.</p></div></div>';
+  h+='<section class="pen-reg"><p class="eyebrow">Strafenkatalog · ab so vielen Strafpunkten</p>'+penLadder(steps)+'</section>';
   var ids=[],seen={};
   Object.keys(P.tot).forEach(function(id){seen[id]=1;ids.push(id);});
-  s.drivers.forEach(function(d){if(d.active!==false&&!seen[d.id]){seen[d.id]=1;ids.push(d.id);}});
-  ids.sort(function(a,b){return (P.tot[b]||0)-(P.tot[a]||0)||dName(s,a).localeCompare(dName(s,b));});
+  if(cur&&!cur.demo)cur.drivers.forEach(function(d){if(d.active!==false&&!seen[d.id]){seen[d.id]=1;ids.push(d.id);}});
+  ids.sort(function(a,b){return (P.tot[b]||0)-(P.tot[a]||0)||penName(a).localeCompare(penName(b));});
   if(!ids.length) return h+emptyBox('Keine Fahrer','Lege in der Verwaltung Fahrer an.');
   h+='<p class="ch-hint">Fahrer anklicken: Was ist passiert?</p><div class="pen-drv">'+ids.map(function(id){
-    var t=curTeam(s,id),n=P.tot[id]||0,g=P.grids.filter(function(x){return x.d===id;}),es=P.list.filter(function(e){return e.d===id;}),next=null,open=ui.penOpen===id;
-    P.steps.forEach(function(st){if(!next&&st.at>n)next=st;});
-    var last=g.length?g[g.length-1]:null;
-    var line=last?'<span class="pen-gl">Grid-Strafe −'+last.places+' · '+penRaceTag(last.apply)+' '+penChip(last.status)+'</span>':
-      '<span class="pen-gl muted">'+(!es.length?'Keine Vorfälle':next?'Noch '+(next.at-n)+' bis zur Grid-Strafe':'Alle Stufen erreicht')+'</span>';
-    var hcard='<div class="pen-card'+(open?' open':'')+(n?'':' clean')+'" style="--tc:'+esc(t.color)+'" data-act="penOpen" data-id="'+esc(id)+'" role="button" tabindex="0" aria-expanded="'+open+'">'+
-      '<div class="pen-top"><div><div class="ch-name">'+esc(dName(s,id))+'</div><div class="sub">'+esc(t.name)+' · '+es.length+(es.length===1?' Vorfall':' Vorfälle')+'</div></div><div class="pen-n"><b>'+n+'</b><small>'+(n<R.limit?'von '+R.limit:'Strafpunkte')+'</small></div></div>'+
-      penPips(n,R.limit)+line;
+    var t=penTeam(id),n=P.tot[id]||0,g=P.grids.filter(function(x){return x.d===id;}),its=P.items.filter(function(it){return it.e.d===id;}),nx=penNext(n,steps),open=ui.penOpen===id;
+    var ban=g.filter(function(x){return x.step.type==='season';})[0],last=g.length?g[g.length-1]:null;
+    var line=ban?'<span class="pen-gl"><b class="pen-ban">Ausgeschlossen aus der laufenden Saison</b></span>':
+      last&&last.status==='steht an'?'<span class="pen-gl">'+esc(penConShort(last.step))+' · '+penRaceTag(last.apply,P)+' '+penChip(last.status)+'</span>':
+      '<span class="pen-gl muted">'+(!its.length?'Keine Vorfälle':nx?'Nächste Konsequenz bei '+nx.at+': '+esc(penConShort(nx.step||nx)):'Alle Stufen erreicht')+'</span>';
+    var hc='<div class="pen-card'+(open?' open':'')+(n?'':' clean')+(ban?' banned':'')+'" style="--tc:'+esc(t.color)+'" data-act="penOpen" data-id="'+esc(id)+'" role="button" tabindex="0" aria-expanded="'+open+'">'+
+      '<div class="pen-top"><div><div class="ch-name">'+esc(penName(id))+'</div><div class="sub">'+esc(t.name)+' · '+its.length+(its.length===1?' Vorfall':' Vorfälle')+'</div></div><div class="pen-n"><b>'+n+'</b><small>'+(n===1?'Strafpunkt':'Strafpunkte')+'</small></div></div>'+
+      penTrack(n,steps)+line;
     if(open){
-      hcard+='<div class="pen-detail">'+
-        (g.length?'<div class="pen-grids">'+g.map(function(x){var sr=penRace(P,x.src.r);return '<p><b>Grid-Strafe: '+penGridTxt(x.places)+'</b> · ausgelöst durch den '+x.at+'. Strafpunkt ('+penRaceTag(sr)+') · Rennen: '+penRaceTag(x.apply)+' '+penChip(x.status)+'</p>';}).join('')+'</div>':'')+
-        (es.length?'<div class="pen-incs">'+es.slice().reverse().map(function(e){return penInc(s,P,e,false);}).join('')+'</div>':'<p class="muted">Keine Vorfälle in dieser Saison. Sauber gefahren!</p>')+'</div>';
+      hc+='<div class="pen-detail">'+
+        (g.length?'<div class="pen-grids">'+g.map(function(x){return '<p><b>'+x.step.at+' Strafpunkte: '+esc(penConTxt(x.step))+'</b>'+(x.step.type==='season'?' · ab '+penRaceTag(x.apply,P):' · Rennen: '+penRaceTag(x.apply,P))+' '+penChip(x.status)+'</p>';}).join('')+'</div>':'')+
+        (its.length?'<div class="pen-incs">'+its.slice().reverse().map(function(it){return penInc(P,it);}).join('')+'</div>':'<p class="muted">Keine Vorfälle. Sauber gefahren!</p>')+'</div>';
     }
-    return hcard+'</div>';
+    return hc+'</div>';
   }).join('')+'</div>';
   return h;
 }
 /* Kurzer Stewards-Hinweis in der Rennansicht */
 function penRaceNote(s,r){
-  var P=penState(s),es=P.list.filter(function(e){return e.r===r.id;}),gs=P.grids.filter(function(g){return g.apply===r;});
+  var P=penState(),es=P.items.filter(function(it){return it.s===s&&it.r===r;}),gs=P.grids.filter(function(g){return g.apply&&g.apply.s===s&&g.apply.r===r;});
   if(!es.length&&!gs.length)return '';
   return '<section class="pen-note"><p class="eyebrow">Stewards</p>'+
-    gs.map(function(g){return '<p><b>'+esc(dName(s,g.d))+'</b>: Grid-Strafe, '+penGridTxt(g.places)+' '+penChip(g.status)+'</p>';}).join('')+
-    es.map(function(e){var n=penPts(e);return '<p><b>'+esc(dName(s,e.d))+'</b>'+(e.lap?' (Runde '+esc(e.lap)+')':'')+': '+esc(penPtsTxt(n))+(e.why?' · '+esc(e.why):'')+' <span class="muted">(Stand '+P.after[e.id]+')</span></p>';}).join('')+
+    gs.map(function(g){return '<p><b>'+esc(penName(g.d))+'</b>: '+esc(penConTxt(g.step))+' '+penChip(g.status)+'</p>';}).join('')+
+    es.map(function(it){var e=it.e,n=penPts(e);return '<p><b>'+esc(penName(e.d))+'</b>'+(e.lap?' (Runde '+esc(e.lap)+')':'')+': '+esc(penPtsTxt(n))+(e.why?' · '+esc(e.why):'')+' <span class="muted">(Stand '+P.after[e.id]+')</span></p>';}).join('')+
     '<a class="btn small" href="#strafen">Alle Strafen</a></section>';
 }
 function penAdminPanel(s){
-  var R=penRules(s),P=penState(s),races=P.races;
+  var P=penState(),steps=P.steps,races=sortedRaces(s);
   var raceOpts=races.map(function(r,i){return [r.id,(r.short||'R'+(i+1))+' · '+r.name];});
+  var allOpts=P.all.map(function(x){return [x.s.id+':'+x.r.id,(P.multi?x.s.name+' · ':'')+(x.r.short||'')+' · '+x.r.name];});
   var lastDone='';races.forEach(function(r){if(counted(r))lastDone=r.id;});
   var drvOpts=s.drivers.filter(function(d){return d.active!==false;}).map(function(d){return [d.id,d.name];});
   var ptOpts=[[0,'0 (nur Verwarnung)'],[1,'1'],[2,'2'],[3,'3']],L=ui.penLast||{};
-  var h='<section class="panel"><h3>Strafen</h3><p>Ihr tragt die Vorfälle selbst ein. Erreicht ein Fahrer eine Stufe, legt die Seite automatisch eine Grid-Strafe an. Sie gilt erst einmal im nächsten Rennen. Ihr könnt sie auf ein anderes Rennen legen, auch auf ein vergangenes. Ist das Rennen gefahren, gilt die Strafe als verbüßt.</p>';
-  h+='<div class="fgrid"><label class="f">Strafpunkte bis zur Grid-Strafe<input type="number" min="1" id="pen-limit" data-f="pen-limit" value="'+R.limit+'"></label>'+
-    '<label class="f">Grid-Strafe (Startplätze zurück)<input type="number" min="1" id="pen-grid" data-f="pen-grid" value="'+R.grid+'"></label></div>'+
-    '<div class="acts"><label class="chk"><input type="checkbox" id="pen-extra" data-f="pen-extra"'+(R.extra?' checked':'')+'> Weitere Stufen über die Grenze hinaus (z. B. ab 4 und ab 5 Strafpunkten mehr Startplätze)</label></div>';
-  if(R.extra){
-    h+='<div class="erows">'+R.steps.map(function(st,i){
-      return '<div class="erow pen-step"><label class="f">Ab Strafpunkten<input type="number" min="'+(R.limit+1)+'" id="pst-a'+i+'" data-f="pen-st-at" data-id="'+i+'" value="'+esc(st.at)+'"></label>'+
-        '<label class="f">Startplätze zurück<input type="number" min="1" id="pst-g'+i+'" data-f="pen-st-grid" data-id="'+i+'" value="'+esc(st.grid)+'"></label>'+askBtn('delPenStep:'+i,'Entfernen')+'</div>';
-    }).join('')+'</div><div class="acts"><button class="btn small" data-act="penStepAdd">+ Stufe</button><span class="muted" style="font-size:13px">Punktabzüge kommen später dazu.</span></div>';
-  }
-  h+='<h4 class="pen-sub">Vorfall eintragen</h4><p class="muted" style="font-size:13.5px;margin:0 0 8px">Mehrere Vorfälle im selben Rennen, z. B. Runde 3 und Runde 5? Einfach nacheinander eintragen. Fahrer und Rennen bleiben ausgewählt.</p><div class="pen-form">'+
+  var h='<section class="panel"><h3>Strafen</h3><p>Ihr tragt die Vorfälle selbst ein. Strafpunkte gelten saisonübergreifend und werden zum Saisonende nicht zurückgesetzt. Erreicht ein Fahrer eine Stufe aus dem Strafenkatalog, legt die Seite die Konsequenz automatisch an. Sie gilt erst einmal im nächsten Rennen, ihr könnt sie aber auf ein anderes Rennen legen, auch auf ein vergangenes.</p>';
+  h+='<h4 class="pen-sub">Strafenkatalog (gilt für alle Saisons)</h4><div class="tbl-wrap"><table class="res pen-cat"><thead><tr><th>Ab Strafpunkten</th><th>Konsequenz</th><th>Startplätze</th><th></th></tr></thead><tbody>'+
+    steps.map(function(st,i){return '<tr><td><input type="number" min="1" class="tin pen-lapin" id="pst-a'+i+'" data-f="pen-st-at" data-id="'+i+'" value="'+st.at+'" aria-label="Ab Strafpunkten"></td>'+
+      '<td><select id="pst-t'+i+'" data-f="pen-st-type" data-id="'+i+'" aria-label="Konsequenz">'+opts(PEN_TYPES,st.type)+'</select></td>'+
+      '<td>'+(st.type==='grid'?'<input type="number" min="1" class="tin pen-lapin" id="pst-g'+i+'" data-f="pen-st-grid" data-id="'+i+'" value="'+st.grid+'" aria-label="Startplätze zurück">':'<span class="muted">–</span>')+'</td>'+
+      '<td>'+askBtn('delPenStep:'+i,'Entfernen')+'</td></tr>';}).join('')+'</tbody></table></div>'+
+    '<div class="acts"><button class="btn small" data-act="penStepAdd">+ Stufe</button><span class="muted" style="font-size:13px">Punktabzüge kommen später dazu.</span></div>';
+  h+='<h4 class="pen-sub">Vorfall eintragen ('+esc(s.name)+')</h4><p class="muted" style="font-size:13.5px;margin:0 0 8px">Mehrere Vorfälle im selben Rennen, z. B. Runde 3 und Runde 5? Einfach nacheinander eintragen. Fahrer und Rennen bleiben ausgewählt.</p><div class="pen-form">'+
     '<label class="f">Fahrer<select id="pf-d">'+opts([['','Fahrer wählen']].concat(drvOpts),L.d||'')+'</select></label>'+
     '<label class="f">Rennen<select id="pf-r">'+opts(raceOpts,L.r||lastDone||(races[0]&&races[0].id)||'')+'</select></label>'+
     '<label class="f">Runde<input type="number" min="1" id="pf-lap" placeholder="z. B. 3"></label>'+
@@ -1217,19 +1252,20 @@ function penAdminPanel(s){
     '<label class="f pen-why">Was ist passiert?<input type="text" id="pf-why" placeholder="z. B. Fahrer in Kurve 1 abgeschossen"></label>'+
     '<button class="btn primary" data-act="penAdd">Eintragen</button></div>';
   if(ui.penMsg)h+='<p class="'+(ui.penOk?'ok':'warn')+'" style="margin:6px 0 0">'+esc(ui.penMsg)+'</p>';
-  if(P.list.length){
+  var mine=P.items.filter(function(it){return it.s===s;});
+  if(mine.length){
     h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Rennen</th><th>Runde</th><th>Fahrer</th><th>Pkt</th><th>Was ist passiert?</th><th class="num">Stand</th><th></th></tr></thead><tbody>'+
-      P.list.map(function(e){var r=penRace(P,e.r);return '<tr><td>'+penRaceTag(r)+'</td>'+
+      mine.map(function(it){var e=it.e;return '<tr><td>'+(it.r?penRaceTag(it):'<span class="muted">gelöscht</span>')+'</td>'+
         '<td><input type="number" min="1" class="tin pen-lapin" id="pl-'+esc(e.id)+'" data-f="pen-lap" data-id="'+esc(e.id)+'" value="'+esc(e.lap||'')+'" aria-label="Runde"></td>'+
         '<td class="drv">'+esc(dName(s,e.d))+'</td>'+
         '<td><select id="pp-'+esc(e.id)+'" data-f="pen-p" data-id="'+esc(e.id)+'" aria-label="Strafpunkte">'+opts(ptOpts,penPts(e))+'</select></td>'+
         '<td><input type="text" class="tin pen-whyin" id="pw-'+esc(e.id)+'" data-f="pen-why" data-id="'+esc(e.id)+'" value="'+esc(e.why||'')+'" aria-label="Was ist passiert"></td>'+
-        '<td class="num">'+P.after[e.id]+' / '+R.limit+'</td><td>'+askBtn('delPen:'+e.id,'Löschen')+'</td></tr>';}).join('')+'</tbody></table></div>';
+        '<td class="num">'+P.after[e.id]+'</td><td>'+askBtn('delPen:'+e.id,'Löschen')+'</td></tr>';}).join('')+'</tbody></table></div>';
   }
   if(P.grids.length){
-    h+='<h4 class="pen-sub">Grid-Strafen (automatisch)</h4><div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Auslöser</th><th>Strafe</th><th>Anwenden beim Rennen</th><th>Status</th></tr></thead><tbody>'+
-      P.grids.map(function(g){var sr=penRace(P,g.src.r);return '<tr><td class="drv">'+esc(dName(s,g.d))+'</td><td>'+g.at+'. Strafpunkt · '+penRaceTag(sr)+'</td><td>'+penGridTxt(g.places)+'</td>'+
-        '<td><select id="pa-'+esc(g.key)+'" data-f="pen-apply" data-id="'+esc(g.key)+'" aria-label="Rennen für die Grid-Strafe">'+opts([['','Noch offen']].concat(raceOpts),g.apply?g.apply.id:'')+'</select></td><td>'+penChip(g.status)+'</td></tr>';}).join('')+'</tbody></table></div>';
+    h+='<h4 class="pen-sub">Konsequenzen (automatisch)</h4><div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Auslöser</th><th>Konsequenz</th><th>Rennen</th><th>Status</th></tr></thead><tbody>'+
+      P.grids.map(function(g){return '<tr><td class="drv">'+esc(penName(g.d))+'</td><td>'+g.step.at+' Strafpunkte · '+(g.src.r?penRaceTag(g.src,P):'')+'</td><td>'+esc(penConTxt(g.step))+'</td>'+
+        '<td><select id="pa-'+esc(g.key)+'" data-f="pen-apply" data-id="'+esc(g.key)+'" aria-label="Rennen für die Konsequenz">'+opts([['','Noch offen']].concat(allOpts),g.apply?g.apply.s.id+':'+g.apply.r.id:'')+'</select></td><td>'+penChip(g.status)+'</td></tr>';}).join('')+'</tbody></table></div>';
   }
   return h+'</section>';
 }
@@ -1833,11 +1869,8 @@ function applyField(f,el){
     case 'd-nat':if(d)d.nat=v;break;
     case 'd-active':if(d)d.active=v;break;
     case 'd-role':if(d)d.role=v;break;
-    case 'pen-limit':penR(s).limit=Math.max(1,+v||3);break;
-    case 'pen-grid':penR(s).grid=Math.max(1,+v||1);break;
-    case 'pen-extra':{var pr=penR(s);pr.extra=v;if(v&&!(pr.steps&&pr.steps.length))pr.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});break;}
-    case 'pen-st-at':case 'pen-st-grid':{var pr2=penR(s);if(!(pr2.steps&&pr2.steps.length))pr2.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});var stp=pr2.steps[+id];if(stp){if(f==='pen-st-at')stp.at=Math.max(1,+v||1);else stp.grid=Math.max(1,+v||1);}break;}
-    case 'pen-apply':s.penaltyApply=s.penaltyApply||{};s.penaltyApply[id]=v;break;
+    case 'pen-st-at':case 'pen-st-type':case 'pen-st-grid':{var pr2=penRulesW(),stp=pr2.steps[+id];if(stp){if(f==='pen-st-at')stp.at=Math.max(1,+v||1);else if(f==='pen-st-type')stp.type=v;else stp.grid=Math.max(1,+v||1);}penSortSteps();break;}
+    case 'pen-apply':draft.penaltyApply=draft.penaltyApply||{};draft.penaltyApply[id]=v;break;
     case 'pen-p':case 'pen-why':case 'pen-lap':(s.penalties||[]).forEach(function(e){if(e.id===id){
       if(f==='pen-p')e.p=+v||0;
       else if(f==='pen-lap'){if(+v>0)e.lap=Math.round(+v);else delete e.lap;}
@@ -1923,8 +1956,7 @@ function doAction(act,el){
       if(!pd||!prr){ui.penMsg='Bitte Fahrer und Rennen wählen.';break;}
       s.penalties=s.penalties||[];var pe={id:uid(),d:pd,r:prr,p:pp};if(pl>0)pe.lap=Math.round(pl);if(pw)pe.why=pw;s.penalties.push(pe);
       ui.penLast={d:pd,r:prr};ui.penOk=true;ui.penMsg='Eingetragen: '+dName(s,pd)+(pe.lap?', Runde '+pe.lap:'')+'. Du kannst direkt den nächsten Vorfall eintragen.';changed();break;}
-    case 'penStepAdd':{s=S(ui.admSeason);if(!s)break;var pr4=penR(s);if(!(pr4.steps&&pr4.steps.length))pr4.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});
-      var ls=pr4.steps[pr4.steps.length-1]||{at:penRules(s).limit,grid:penRules(s).grid};pr4.steps.push({at:(+ls.at||3)+1,grid:(+ls.grid||1)+2});changed();break;}
+    case 'penStepAdd':{var pr4=penRulesW(),ls=pr4.steps[pr4.steps.length-1]||{at:2};pr4.steps.push({at:(+ls.at||2)+1,type:'grid',grid:1});changed();break;}
     case 'addDriver':s=S(ui.admSeason);if(s){var nd={id:uid(),name:'Neuer Fahrer',team:'',nat:'',active:true};s.drivers.push(nd);changed();render();var el2=document.getElementById('dn-'+nd.id);if(el2){el2.focus();el2.select();}return;}break;
     case 'delDriver':s=S(ui.admSeason);if(s&&!usedDriver(s,id)){s.drivers=s.drivers.filter(function(d){return d.id!==id;});changed();}break;
     case 'addRace':{
@@ -1965,7 +1997,7 @@ function doAction(act,el){
       }}
       if(parts[0]==='delSprint'){s=S(ui.admSeason);if(s)s.races.forEach(function(x){if(x.id===parts[1])delete x.sprint;});ui.admSess='rennen';}
       if(parts[0]==='delPen'){s=S(ui.admSeason);if(s&&s.penalties)s.penalties=s.penalties.filter(function(e){return e.id!==parts[1];});}
-      if(parts[0]==='delPenStep'){s=S(ui.admSeason);if(s){var pr3=penR(s);if(!(pr3.steps&&pr3.steps.length))pr3.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});pr3.steps.splice(+parts[1],1);if(!pr3.steps.length)pr3.extra=false;}}
+      if(parts[0]==='delPenStep'){var pr3=penRulesW();pr3.steps.splice(+parts[1],1);}
       if(parts[0]==='delRace'){s=S(ui.admSeason);if(s){s.races=s.races.filter(function(x){return x.id!==parts[1];});if(s.penalties)s.penalties=s.penalties.filter(function(e){return e.r!==parts[1];});}ui.admRace=null;if(ui.race===parts[1])ui.race='all';}
       if(parts[0]==='discard'){draft=clone(DATA);ui.admRace=null;if(!S(ui.season))ui.season=defaultSeason();if(!S(ui.admSeason))ui.admSeason=ui.season;}
       if(parts[0]==='jsonApply'){
