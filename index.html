@@ -410,7 +410,46 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
   .pod.p1 .pod-pos{font-size:64px}
   .ch-row{grid-template-columns:36px minmax(0,1fr) 64px 28px;gap:8px}.ch-st{display:none}.ch-pos{font-size:20px}
   .ch-alive{position:static;grid-column:2/-1;margin-top:-4px}
-}/* Bewertung */
+}
+/* Strafen */
+.pen-rules{display:flex;flex-wrap:wrap;gap:8px}
+.pen-rule{display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:6px;padding:10px 14px;min-width:220px}
+.pen-rule b{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1;grid-row:1/3}
+.pen-rule span{color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.pen-rule em{font-style:normal;font-size:14px}
+.pen-h{margin:6px 0 -2px;font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:20px}
+.pen-drv{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:8px}
+.pen-card{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--tc);border-radius:6px;padding:12px 14px;display:grid;gap:9px;align-content:start}
+.pen-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.pen-n{text-align:right;line-height:1}.pen-n b{display:block;font-family:var(--f-display);font-weight:800;font-size:30px}.pen-n small{color:var(--muted);font-size:12px}
+.pips{display:flex;gap:5px;flex-wrap:wrap}
+.pips i{width:22px;height:8px;border-radius:2px;background:var(--panel-2);border:1px solid var(--line)}
+.pips i.on{background:#F3C744;border-color:#F3C744}
+.pips i.over{background:var(--red);border-color:var(--red)}
+.pen-gl{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:13.5px}
+.pchip{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
+.pchip.due{color:#FFB3AB;border-color:rgba(255,120,110,.5);background:rgba(225,6,0,.12)}
+.pchip.done{color:#8FF0BC;border-color:rgba(61,220,132,.4);background:rgba(61,220,132,.08)}
+.pen-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:10px}
+.pen-doc{background:#F2F2F0;color:#16181D;border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.35);display:grid;align-content:start}
+.pen-doc header{display:flex;justify-content:space-between;align-items:center;background:#16181D;color:#fff;padding:8px 12px;border-bottom:3px solid var(--red)}
+.pen-doc-t{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:14px}
+.pen-doc-n{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:#C9CDD4}
+.pen-doc-r{padding:10px 12px 0;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.pen-doc-r .muted{color:#5B6170;font-weight:500}
+.pen-doc dl{display:grid;grid-template-columns:max-content 1fr;gap:5px 14px;margin:0;padding:10px 12px 12px;font-size:14px}
+.pen-doc dt{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5B6170;font-weight:700;padding-top:2px}
+.pen-doc dd{margin:0}
+.pen-doc .dlink{color:#16181D}
+.pen-doc .muted{color:#5B6170}
+.pen-doc-g{margin:0;padding:8px 12px;background:#FCE3E1;color:#9B0E07;font-weight:700;font-size:13.5px;border-top:1px solid #F3C2BE}
+.pen-note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;display:grid;gap:6px;justify-items:start}
+.pen-note p{margin:0;font-size:14px}
+.pen-sub{margin:14px 0 6px;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted)}
+.pen-form{display:grid;grid-template-columns:minmax(150px,1fr) minmax(170px,1.2fr) 100px minmax(200px,2fr) auto;gap:8px;align-items:end}
+.pen-step{display:grid;grid-template-columns:1fr 1fr auto;align-items:end}
+@media (max-width:760px){.pen-form{grid-template-columns:1fr 1fr}.pen-form .pen-why{grid-column:1/-1}}
+/* Bewertung */
 .tier{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:4px;font-family:var(--f-display);font-weight:800;font-size:16px;line-height:1;vertical-align:middle}
 .tier.big{width:52px;height:52px;font-size:32px;border-radius:6px;flex:none}
 .tier.tS{background:rgba(243,199,68,.18);color:#F3C744;box-shadow:inset 0 0 0 1px rgba(243,199,68,.55)}
@@ -903,7 +942,7 @@ function viewSocials(){
 }
 
 function header(){
-  var tabs=[['championship','Championship'],['tabelle','Tabelle'],['kalender','Kalender'],['fahrer','Fahrer'],['bewertung','Bewertung'],['rekorde','Rekorde'],['socials','Socials']];
+  var tabs=[['championship','Championship'],['tabelle','Tabelle'],['kalender','Kalender'],['fahrer','Fahrer'],['bewertung','Bewertung'],['strafen','Strafen'],['rekorde','Rekorde'],['socials','Socials']];
   if(auth.token) tabs.push(['verwaltung','Verwaltung']);
   var dirty=isDirty()&&!!auth.token;
   return '<header class="top"><div class="top-in"><a class="brand" href="#championship"><img class="emblem" src="logo.png" width="58" height="58" alt=""><span class="brand-name"><b>German Formula League</b><span>Standings</span></span></a><nav class="tabs" aria-label="Bereiche">'+
@@ -1037,7 +1076,7 @@ function viewRace(s,r){
   h+='<div class="chips" role="group" aria-label="Session">'+[['rennen','Rennen'],['quali','Qualifying']].concat(r.sprint?[['sprint','Sprint']]:[]).map(function(o){return '<button class="chip" data-act="sess" data-id="'+o[0]+'" aria-pressed="'+(sess===o[0])+'">'+o[1]+'</button>';}).join('')+'</div>';
   if(sess==='quali') return h+viewQuali(s,r);
   if(sess==='sprint') return h+viewSprint(s,r);
-  if(!done(r)) return h+emptyBox('Noch nicht gefahren','Geplant für '+dLabel(r,true)+(r.time?', '+r.time+' Uhr':'')+'.');
+  if(!done(r)) return h+penRaceNote(s,r)+emptyBox('Noch nicht gefahren','Geplant für '+dLabel(r,true)+(r.time?', '+r.time+' Uhr':'')+'.');
   var order=raceOrder(r),win=order[0];
   var hasTm=r.results.some(function(x){return x.tm;}),hasBl=r.results.some(function(x){return x.bl;});
   function fact(cls,label,d,t){
@@ -1054,7 +1093,7 @@ function viewRace(s,r){
     if(r.clean===x.d)b.push('<span class="badge clean">Sauberster Fahrer</span>');
     h+='<tr><td>'+posCell(s,r,x.d,1)+'</td><td class="drv">'+(d&&d.nat?flag(d.nat)+' ':'')+dLink(s,x.d,r.id)+'</td><td>'+tmTag(t)+'</td>'+(hasTm?'<td class="num">'+esc(x.tm||'')+'</td>':'')+(hasBl?'<td class="num'+(r.fl===x.d?' flt':'')+'">'+esc(x.bl||'')+'</td>':'')+(r.sprint?'<td class="num">'+fmtP(rPts(s,r,x.d))+'</td><td class="num">'+fmtP(sPts(s,r,x.d))+'</td><td class="num total">'+fmtP(pts(s,r,x.d))+'</td>':'<td class="num total">'+fmtP(rPts(s,r,x.d))+'</td>')+'<td><div class="badges">'+b.join('')+'</div></td></tr>';
   });
-  return h+'</tbody></table></div>';
+  return h+'</tbody></table></div>'+penRaceNote(s,r);
 }
 function fmtGap(ms){
   var s=ms/1000;if(s<60)return '+'+s.toFixed(3);
@@ -1072,6 +1111,113 @@ function viewQuali(s,r){
       '<td class="num total">'+esc(x.tm||'–')+'</td><td class="num muted">'+(x.p===1?'Pole':(ms&&best?fmtGap(ms-best):''))+'</td></tr>';
   });
   return h+'</tbody></table></div>';
+}
+
+/* ---------- Strafen ----------
+   Daten pro Saison: penalties [{id,d,r,p,why}], penaltyRules {limit,grid,extra,steps:[{at,grid}]},
+   penaltyApply {"<fahrer>:<stufe>": rennId | ""}. Grid-Strafen werden aus den Strafpunkten berechnet:
+   sobald ein Fahrer eine Stufe erreicht, entsteht automatisch eine Grid-Strafe (Standard: nächstes Rennen). */
+function penRules(s){var r=s.penaltyRules||{};return {limit:Math.max(1,+r.limit||3),grid:Math.max(1,+r.grid||1),extra:!!r.extra,steps:(r.steps&&r.steps.length?r.steps:[{at:4,grid:3},{at:5,grid:5}])};}
+function penR(s){if(!s.penaltyRules)s.penaltyRules={limit:3,grid:1,extra:false};return s.penaltyRules;}
+function penSteps(s){var R=penRules(s),st=[{at:R.limit,grid:R.grid}];if(R.extra)R.steps.forEach(function(x){if(+x.at>R.limit)st.push({at:+x.at,grid:Math.max(1,+x.grid||1)});});return st.sort(function(a,b){return a.at-b.at;});}
+function penGridTxt(n){return n+(n>1?' Startplätze':' Startplatz')+' zurück';}
+function penState(s){
+  var races=sortedRaces(s),idx={};races.forEach(function(r,i){idx[r.id]=i;});
+  var list=(s.penalties||[]).map(function(e,i){return {e:e,i:i,k:(e.r in idx?idx[e.r]:999)};}).sort(function(a,b){return a.k-b.k||a.i-b.i;}).map(function(o){return o.e;});
+  var steps=penSteps(s),tot={},after={},trig={},grids=[];
+  list.forEach(function(e){
+    var before=tot[e.d]||0,now=before+Math.max(1,+e.p||1);tot[e.d]=now;after[e.id]=now;
+    steps.forEach(function(st){if(before<st.at&&now>=st.at){
+      var key=e.d+':'+st.at,nx=races[(e.r in idx?idx[e.r]:races.length)+1];
+      var ap=s.penaltyApply&&(key in s.penaltyApply)?s.penaltyApply[key]:(nx?nx.id:''),ar=null;
+      races.forEach(function(r){if(r.id===ap)ar=r;});
+      var g={key:key,d:e.d,at:st.at,places:st.grid,src:e,apply:ar,status:!ar?'offen':done(ar)?'verbüßt':'steht an'};
+      grids.push(g);(trig[e.id]=trig[e.id]||[]).push(g);}});
+  });
+  return {list:list,tot:tot,after:after,trig:trig,grids:grids,steps:steps,races:races};
+}
+function penRace(P,id){for(var i=0;i<P.races.length;i++)if(P.races[i].id===id)return P.races[i];return null;}
+function penPips(n,limit){var h='',m=Math.max(n,limit);for(var i=1;i<=m;i++)h+='<i class="'+(i<=n?(i>limit?'over':'on'):'')+'"></i>';return '<span class="pips" title="'+n+' von '+limit+' Strafpunkten">'+h+'</span>';}
+function penChip(st){return '<span class="pchip '+(st==='verbüßt'?'done':st==='steht an'?'due':'open')+'">'+esc(st)+'</span>';}
+function penRaceTag(r){return r?flag(r.flag)+' '+esc(r.short||r.name):'<span class="muted">noch offen</span>';}
+function viewStrafen(){
+  var s=S(ui.season);
+  if(!s) return emptyBox('Noch keine Saison','Lege in der Verwaltung die erste Saison an.');
+  var P=penState(s),R=penRules(s);
+  var h=filters(s,false)+demoBanner(s)+'<div class="sec-head"><div><h2>Strafen</h2><p class="meta">'+esc(s.name)+' · Entscheidungen der Stewards · Strafpunkte gelten für die ganze Saison</p></div></div>';
+  h+='<div class="pen-rules">'+P.steps.map(function(st){return '<div class="pen-rule"><b>'+st.at+'</b><span>Strafpunkte</span><em>Grid-Strafe: '+penGridTxt(st.grid)+'</em></div>';}).join('')+'</div>';
+  if(!P.list.length) return h+emptyBox('Keine Strafen','Bisher hat niemand einen Strafpunkt bekommen. Sauber gefahren!');
+  // Strafpunkte je Fahrer
+  var ids=Object.keys(P.tot).sort(function(a,b){return P.tot[b]-P.tot[a]||dName(s,a).localeCompare(dName(s,b));});
+  h+='<h3 class="pen-h">Strafpunkte</h3><div class="pen-drv">'+ids.map(function(id){
+    var t=curTeam(s,id),n=P.tot[id],g=P.grids.filter(function(x){return x.d===id;}),next=null;
+    P.steps.forEach(function(st){if(!next&&st.at>n)next=st;});
+    var st=g.length?g.map(function(x){return '<span class="pen-gl">Grid-Strafe −'+x.places+' · '+penRaceTag(x.apply)+' '+penChip(x.status)+'</span>';}).join(''):'';
+    return '<div class="pen-card" style="--tc:'+esc(t.color)+'"><div class="pen-top"><div><div class="ch-name">'+dLink(s,id)+'</div><div class="sub">'+esc(t.name)+'</div></div><div class="pen-n"><b>'+n+'</b><small>'+(n<R.limit?'von '+R.limit:'Strafpunkte')+'</small></div></div>'+
+      penPips(n,R.limit)+(st||'<span class="pen-gl muted">'+(next?'Noch '+(next.at-n)+' bis zur Grid-Strafe':'Alle Stufen erreicht')+'</span>')+'</div>';
+  }).join('')+'</div>';
+  // Grid-Strafen
+  if(P.grids.length){
+    h+='<h3 class="pen-h">Grid-Strafen</h3><div class="tbl-wrap"><table><thead><tr><th>Fahrer</th><th>Auslöser</th><th>Strafe</th><th>Rennen</th><th>Status</th></tr></thead><tbody>'+
+      P.grids.map(function(g){var sr=penRace(P,g.src.r);return '<tr><td class="drv">'+dLink(s,g.d)+'</td><td>'+g.at+'. Strafpunkt · '+penRaceTag(sr)+'</td><td><b>'+penGridTxt(g.places)+'</b></td><td>'+penRaceTag(g.apply)+'</td><td>'+penChip(g.status)+'</td></tr>';}).join('')+
+      '</tbody></table></div>';
+  }
+  // Entscheidungen
+  var docs=P.list.slice().reverse();
+  h+='<h3 class="pen-h">Entscheidungen der Stewards</h3><div class="pen-docs">'+docs.map(function(e,i){
+    var r=penRace(P,e.r),n=+e.p||1,tr=P.trig[e.id]||[];
+    return '<article class="pen-doc"><header><span class="pen-doc-t">Stewards\' Decision</span><span class="pen-doc-n">Dok. '+String(docs.length-i).padStart(2,'0')+'</span></header>'+
+      '<div class="pen-doc-r">'+penRaceTag(r)+(r?' <span class="muted">'+esc(r.name)+'</span>':'')+'</div>'+
+      '<dl><dt>Fahrer</dt><dd>'+dLink(s,e.d)+'</dd><dt>Vergehen</dt><dd>'+(e.why?esc(e.why):'<span class="muted">ohne Angabe</span>')+'</dd>'+
+      '<dt>Entscheidung</dt><dd>Verwarnung, '+n+' Strafpunkt'+(n>1?'e':'')+'</dd><dt>Stand</dt><dd>'+P.after[e.id]+(P.after[e.id]<R.limit?' von '+R.limit:'')+' Strafpunkte'+(P.after[e.id]<R.limit?'n':'')+'</dd></dl>'+
+      tr.map(function(g){return '<p class="pen-doc-g">'+g.at+'. Strafpunkt erreicht: Grid-Strafe, '+penGridTxt(g.places)+(g.apply?' · Rennen: '+esc(g.apply.name):' · Rennen noch offen')+'</p>';}).join('')+'</article>';
+  }).join('')+'</div>';
+  return h;
+}
+/* Kurzer Stewards-Hinweis in der Rennansicht */
+function penRaceNote(s,r){
+  var P=penState(s),es=P.list.filter(function(e){return e.r===r.id;}),gs=P.grids.filter(function(g){return g.apply===r;});
+  if(!es.length&&!gs.length)return '';
+  return '<section class="pen-note"><p class="eyebrow">Stewards</p>'+
+    gs.map(function(g){return '<p><b>'+esc(dName(s,g.d))+'</b>: Grid-Strafe, '+penGridTxt(g.places)+' '+penChip(g.status)+'</p>';}).join('')+
+    es.map(function(e){var n=+e.p||1;return '<p><b>'+esc(dName(s,e.d))+'</b>: '+n+' Strafpunkt'+(n>1?'e':'')+(e.why?' · '+esc(e.why):'')+' <span class="muted">(Stand '+P.after[e.id]+')</span></p>';}).join('')+
+    '<a class="btn small" href="#strafen">Alle Strafen</a></section>';
+}
+function penAdminPanel(s){
+  var R=penRules(s),P=penState(s),races=P.races;
+  var raceOpts=races.map(function(r,i){return [r.id,(r.short||'R'+(i+1))+' · '+r.name];});
+  var lastDone='';races.forEach(function(r){if(counted(r))lastDone=r.id;});
+  var drvOpts=s.drivers.filter(function(d){return d.active!==false;}).map(function(d){return [d.id,d.name];});
+  var h='<section class="panel"><h3>Strafen</h3><p>Ihr tragt die Strafpunkte selbst ein. Erreicht ein Fahrer eine Stufe, legt die Seite automatisch eine Grid-Strafe an. Sie gilt erst einmal im nächsten Rennen. Ihr könnt sie auf ein anderes Rennen legen, auch auf ein vergangenes. Ist das Rennen gefahren, gilt die Strafe als verbüßt.</p>';
+  h+='<div class="fgrid"><label class="f">Strafpunkte bis zur Grid-Strafe<input type="number" min="1" id="pen-limit" data-f="pen-limit" value="'+R.limit+'"></label>'+
+    '<label class="f">Grid-Strafe (Startplätze zurück)<input type="number" min="1" id="pen-grid" data-f="pen-grid" value="'+R.grid+'"></label></div>'+
+    '<div class="acts"><label class="chk"><input type="checkbox" id="pen-extra" data-f="pen-extra"'+(R.extra?' checked':'')+'> Weitere Stufen über die Grenze hinaus (z. B. ab 4 und ab 5 Strafpunkten mehr Startplätze)</label></div>';
+  if(R.extra){
+    h+='<div class="erows">'+R.steps.map(function(st,i){
+      return '<div class="erow pen-step"><label class="f">Ab Strafpunkten<input type="number" min="'+(R.limit+1)+'" id="pst-a'+i+'" data-f="pen-st-at" data-id="'+i+'" value="'+esc(st.at)+'"></label>'+
+        '<label class="f">Startplätze zurück<input type="number" min="1" id="pst-g'+i+'" data-f="pen-st-grid" data-id="'+i+'" value="'+esc(st.grid)+'"></label>'+askBtn('delPenStep:'+i,'Entfernen')+'</div>';
+    }).join('')+'</div><div class="acts"><button class="btn small" data-act="penStepAdd">+ Stufe</button><span class="muted" style="font-size:13px">Punktabzüge kommen später dazu.</span></div>';
+  }
+  h+='<h4 class="pen-sub">Strafpunkt eintragen</h4><div class="pen-form">'+
+    '<label class="f">Fahrer<select id="pf-d">'+opts([['','Fahrer wählen']].concat(drvOpts),'')+'</select></label>'+
+    '<label class="f">Rennen<select id="pf-r">'+opts(raceOpts,lastDone||(races[0]&&races[0].id)||'')+'</select></label>'+
+    '<label class="f">Strafpunkte<select id="pf-p">'+opts([[1,'1'],[2,'2'],[3,'3']],1)+'</select></label>'+
+    '<label class="f pen-why">Grund<input type="text" id="pf-why" placeholder="z. B. Kollision in Kurve 1, Track Limits"></label>'+
+    '<button class="btn primary" data-act="penAdd">Eintragen</button></div>';
+  if(ui.penMsg)h+='<p class="warn">'+esc(ui.penMsg)+'</p>';
+  if(P.list.length){
+    h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Rennen</th><th>Fahrer</th><th>Pkt</th><th>Grund</th><th class="num">Stand</th><th></th></tr></thead><tbody>'+
+      P.list.map(function(e){var r=penRace(P,e.r);return '<tr><td>'+penRaceTag(r)+'</td><td class="drv">'+esc(dName(s,e.d))+'</td>'+
+        '<td><select id="pp-'+esc(e.id)+'" data-f="pen-p" data-id="'+esc(e.id)+'" aria-label="Strafpunkte">'+opts([[1,'1'],[2,'2'],[3,'3']],+e.p||1)+'</select></td>'+
+        '<td><input type="text" class="tin" id="pw-'+esc(e.id)+'" data-f="pen-why" data-id="'+esc(e.id)+'" value="'+esc(e.why||'')+'" aria-label="Grund"></td>'+
+        '<td class="num">'+P.after[e.id]+' / '+R.limit+'</td><td>'+askBtn('delPen:'+e.id,'Löschen')+'</td></tr>';}).join('')+'</tbody></table></div>';
+  }
+  if(P.grids.length){
+    h+='<h4 class="pen-sub">Grid-Strafen (automatisch)</h4><div class="tbl-wrap"><table class="res"><thead><tr><th>Fahrer</th><th>Auslöser</th><th>Strafe</th><th>Anwenden beim Rennen</th><th>Status</th></tr></thead><tbody>'+
+      P.grids.map(function(g){var sr=penRace(P,g.src.r);return '<tr><td class="drv">'+esc(dName(s,g.d))+'</td><td>'+g.at+'. Strafpunkt · '+penRaceTag(sr)+'</td><td>'+penGridTxt(g.places)+'</td>'+
+        '<td><select id="pa-'+esc(g.key)+'" data-f="pen-apply" data-id="'+esc(g.key)+'" aria-label="Rennen für die Grid-Strafe">'+opts([['','Noch offen']].concat(raceOpts),g.apply?g.apply.id:'')+'</select></td><td>'+penChip(g.status)+'</td></tr>';}).join('')+'</tbody></table></div>';
+  }
+  return h+'</section>';
 }
 
 /* ---------- Ansichten ---------- */
@@ -1461,6 +1607,7 @@ function viewAdmin(){
       '<label class="chk"><input type="checkbox" id="da-'+esc(d.id)+'" data-f="d-active" data-id="'+esc(d.id)+'"'+(d.active!==false?' checked':'')+'> aktiv</label>'+
       askBtn('delDriver:'+d.id,'Entfernen',usedDriver(s,d.id)?'Alle Ergebnisse von '+(d.name||'diesem Fahrer')+' in dieser Saison werden mit gelöscht.':'')+'</div>';
   }).join('')+'</div><div class="acts"><button class="btn small" data-act="addDriver">+ Fahrer</button></div></section>';
+  h+=penAdminPanel(s);
   // Rennen
   var races=sortedRaces(s);
   h+='<section class="panel"><h3>Rennen und Ergebnisse</h3><p>Die Reihenfolge ergibt sich aus dem Datum.</p>';
@@ -1672,6 +1819,12 @@ function applyField(f,el){
     case 'd-nat':if(d)d.nat=v;break;
     case 'd-active':if(d)d.active=v;break;
     case 'd-role':if(d)d.role=v;break;
+    case 'pen-limit':penR(s).limit=Math.max(1,+v||3);break;
+    case 'pen-grid':penR(s).grid=Math.max(1,+v||1);break;
+    case 'pen-extra':{var pr=penR(s);pr.extra=v;if(v&&!(pr.steps&&pr.steps.length))pr.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});break;}
+    case 'pen-st-at':case 'pen-st-grid':{var pr2=penR(s);if(!(pr2.steps&&pr2.steps.length))pr2.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});var stp=pr2.steps[+id];if(stp){if(f==='pen-st-at')stp.at=Math.max(1,+v||1);else stp.grid=Math.max(1,+v||1);}break;}
+    case 'pen-apply':s.penaltyApply=s.penaltyApply||{};s.penaltyApply[id]=v;break;
+    case 'pen-p':case 'pen-why':(s.penalties||[]).forEach(function(e){if(e.id===id){if(f==='pen-p')e.p=+v||1;else{if(v.trim())e.why=v.trim();else delete e.why;}}});break;
   }
   if(r){
     switch(f){
@@ -1711,7 +1864,7 @@ function applyField(f,el){
     ['pole','fl','dotd','ot','clean'].forEach(function(k){if(!r[k])delete r[k];});
   }
   changed();
-  if(el.tagName==='SELECT'||el.type==='checkbox'||el.type==='radio'||f==='r-date'||f==='r-poleTime'||f==='r-flTime'||f==='q-time') render();
+  if(el.tagName==='SELECT'||el.type==='checkbox'||el.type==='radio'||f==='r-date'||f==='r-poleTime'||f==='r-flTime'||f==='q-time'||(f.indexOf('pen-')===0&&f!=='pen-why')) render();
 }
 function doAction(act,el){
   var id=el.dataset.id,s;
@@ -1746,6 +1899,12 @@ function doAction(act,el){
       draft.seasons.unshift(ns);ui.admSeason=ns.id;ui.admRace=null;changed();break;}
     case 'addTeam':s=S(ui.admSeason);if(s){var nt={id:uid(),name:'Neues Team',color:'#8E95A2'};s.teams.push(nt);changed();render();var el1=document.getElementById('tn-'+nt.id);if(el1){el1.focus();el1.select();}return;}break;
     case 'delTeam':s=S(ui.admSeason);if(s&&!usedTeam(s,id)){s.teams=s.teams.filter(function(t){return t.id!==id;});s.drivers.forEach(function(d){if(d.team===id)d.team='';});changed();}break;
+    case 'penAdd':{s=S(ui.admSeason);if(!s)break;
+      var pd=(document.getElementById('pf-d')||{}).value||'',prr=(document.getElementById('pf-r')||{}).value||'',pp=+((document.getElementById('pf-p')||{}).value)||1,pw=((document.getElementById('pf-why')||{}).value||'').trim();
+      if(!pd||!prr){ui.penMsg='Bitte Fahrer und Rennen wählen.';break;}
+      ui.penMsg='';s.penalties=s.penalties||[];var pe={id:uid(),d:pd,r:prr,p:pp};if(pw)pe.why=pw;s.penalties.push(pe);changed();break;}
+    case 'penStepAdd':{s=S(ui.admSeason);if(!s)break;var pr4=penR(s);if(!(pr4.steps&&pr4.steps.length))pr4.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});
+      var ls=pr4.steps[pr4.steps.length-1]||{at:penRules(s).limit,grid:penRules(s).grid};pr4.steps.push({at:(+ls.at||3)+1,grid:(+ls.grid||1)+2});changed();break;}
     case 'addDriver':s=S(ui.admSeason);if(s){var nd={id:uid(),name:'Neuer Fahrer',team:'',nat:'',active:true};s.drivers.push(nd);changed();render();var el2=document.getElementById('dn-'+nd.id);if(el2){el2.focus();el2.select();}return;}break;
     case 'delDriver':s=S(ui.admSeason);if(s&&!usedDriver(s,id)){s.drivers=s.drivers.filter(function(d){return d.id!==id;});changed();}break;
     case 'addRace':{
@@ -1769,6 +1928,7 @@ function doAction(act,el){
       if(parts[0]==='delSeason'){draft.seasons=draft.seasons.filter(function(x){return x.id!==parts[1];});ui.admSeason=draft.seasons[0]?draft.seasons[0].id:null;ui.admRace=null;if(!S(ui.season))ui.season=defaultSeason();}
       if(parts[0]==='delDriver'){s=S(ui.admSeason);var dd=parts[1];if(s){
         s.drivers=s.drivers.filter(function(d){return d.id!==dd;});
+        if(s.penalties)s.penalties=s.penalties.filter(function(e){return e.d!==dd;});
         var nf=function(x){return x.d!==dd;};
         s.races.forEach(function(r){
           r.results=(r.results||[]).filter(nf);
@@ -1784,7 +1944,9 @@ function doAction(act,el){
         s.races.forEach(function(r){(r.results||[]).concat(r.quali||[],r.sprint&&r.sprint.results||[]).forEach(function(x){if(x.t===dt)x.t='';});});
       }}
       if(parts[0]==='delSprint'){s=S(ui.admSeason);if(s)s.races.forEach(function(x){if(x.id===parts[1])delete x.sprint;});ui.admSess='rennen';}
-      if(parts[0]==='delRace'){s=S(ui.admSeason);if(s)s.races=s.races.filter(function(x){return x.id!==parts[1];});ui.admRace=null;if(ui.race===parts[1])ui.race='all';}
+      if(parts[0]==='delPen'){s=S(ui.admSeason);if(s&&s.penalties)s.penalties=s.penalties.filter(function(e){return e.id!==parts[1];});}
+      if(parts[0]==='delPenStep'){s=S(ui.admSeason);if(s){var pr3=penR(s);if(!(pr3.steps&&pr3.steps.length))pr3.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});pr3.steps.splice(+parts[1],1);if(!pr3.steps.length)pr3.extra=false;}}
+      if(parts[0]==='delRace'){s=S(ui.admSeason);if(s){s.races=s.races.filter(function(x){return x.id!==parts[1];});if(s.penalties)s.penalties=s.penalties.filter(function(e){return e.r!==parts[1];});}ui.admRace=null;if(ui.race===parts[1])ui.race='all';}
       if(parts[0]==='discard'){draft=clone(DATA);ui.admRace=null;if(!S(ui.season))ui.season=defaultSeason();if(!S(ui.admSeason))ui.admSeason=ui.season;}
       if(parts[0]==='jsonApply'){
         try{var nd2=JSON.parse(ui.json);if(!nd2||!Array.isArray(nd2.seasons))throw 0;draft=nd2;ui.season=defaultSeason();ui.admSeason=ui.season;ui.admRace=null;ui.msg='JSON übernommen. Prüfe die Daten und lade dann daten.json herunter.';}
@@ -1932,7 +2094,7 @@ function render(anim){
   var a=document.activeElement,fid=a&&a.id;
   if(!S(ui.season))ui.season=defaultSeason();
   var v=ui.view;
-  var body=v==='championship'?viewChampionship():v==='kalender'?viewKalender():v==='bewertung'?viewBewertung():v==='rekorde'?viewRekorde():v==='socials'?viewSocials():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():v==='impressum'?viewImpressum():v==='datenschutz'?viewDatenschutz():viewTabelle();
+  var body=v==='championship'?viewChampionship():v==='kalender'?viewKalender():v==='bewertung'?viewBewertung():v==='rekorde'?viewRekorde():v==='strafen'?viewStrafen():v==='socials'?viewSocials():v==='fahrer'?viewFahrer():v==='verwaltung'?viewAdmin():v==='impressum'?viewImpressum():v==='datenschutz'?viewDatenschutz():viewTabelle();
   document.getElementById('app').innerHTML=header()+'<main class="wrap'+(anim?' enter':'')+'">'+body+'</main>'+footer()+'<div id="savebar-slot"></div>';
   updateSavebar();
   if(ui.rateScroll&&v==="bewertung"){ui.rateScroll=false;setTimeout(function(){var rd=document.getElementById("rate-detail");if(rd)rd.scrollIntoView({behavior:"smooth",block:"start"});},40);}
@@ -1942,7 +2104,7 @@ function render(anim){
 function navRender(){
   render(true);
 }
-var VIEWS=['championship','tabelle','kalender','fahrer','bewertung','rekorde','socials','verwaltung','impressum','datenschutz'];
+var VIEWS=['championship','tabelle','kalender','fahrer','bewertung','strafen','rekorde','socials','verwaltung','impressum','datenschutz'];
 function readHash(){var h=location.hash.replace('#','');ui.view=VIEWS.indexOf(h)>=0?h:'championship';}
 window.addEventListener('hashchange',function(){var before=ui.view;readHash();if(before!==ui.view){navRender();window.scrollTo(0,0);}});
 function go(view){
