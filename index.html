@@ -710,7 +710,7 @@ function twAvgRaw(s,id,teams){
 }
 function twAvg(s,id,teams){
   var a=twAvgRaw(s,id,teams);if(a==null)return 3;
-  if(teams)a=Math.round((a-0.5)*10)/10;
+  a=teams?Math.round(a-0.5):Math.round(a);
   return Math.min(s.points.length-(teams?1:0),Math.max(1,a));
 }
 function twLbl(p,teams){return !p?'Ausfall':teams?'P'+fmtP(p)+' + P'+fmtP(p+1):'P'+fmtP(p);}
@@ -772,8 +772,8 @@ function twOut(c){
 function twSlider(c,key,r){
   var p=ui[key],v=p?p:c.maxP+1,avg=twAvgRaw(c.s,r.id,c.teams);
   return '<div class="tw-sl" style="--sc:'+esc(key==='twMe'?c.col(r):'#AEB3BD')+'"><span class="tw-slh"><span>'+esc(c.name(r))+(c.teams?' holt':' fährt')+' im Schnitt <b id="lbl-'+key+'">'+twLbl(p,c.teams)+'</b></span>'+
-    '<button class="tw-avg" data-act="twReset" data-id="'+key+'" title="Regler auf den bisherigen Schnitt setzen">'+(avg==null?'noch kein Ergebnis':'bisher Ø P'+fmtP(avg)+(c.teams?' pro Fahrer':''))+'</button></span>'+
-    '<input type="range" min="1" max="'+(c.maxP+1)+'" step="0.1" value="'+v+'" data-tw="'+key+'" aria-label="Durchschnittlicher Platz '+esc(c.name(r))+'">'+
+    '<button class="tw-avg" data-act="twReset" data-id="'+key+'" title="Bisheriger Schnitt aus den gewerteten Rennen. Klick stellt den Regler auf den nächsten ganzen Platz.">'+(avg==null?'noch kein Ergebnis':'bisher Ø P'+fmtP(avg)+(c.teams?' pro Fahrer':''))+'</button></span>'+
+    '<input type="range" min="1" max="'+(c.maxP+1)+'" step="1" value="'+v+'" data-tw="'+key+'" aria-label="Durchschnittlicher Platz '+esc(c.name(r))+'">'+
     '<span class="tw-scale"><small>'+twLbl(1,c.teams)+'</small><small>Ausfall</small></span></div>';
 }
 function twPanel(c){
