@@ -430,23 +430,26 @@ tr.wk td{background:var(--panel-2);font-family:var(--f-display);font-weight:700;
 .pchip{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid var(--line);color:var(--muted)}
 .pchip.due{color:#FFB3AB;border-color:rgba(255,120,110,.5);background:rgba(225,6,0,.12)}
 .pchip.done{color:#8FF0BC;border-color:rgba(61,220,132,.4);background:rgba(61,220,132,.08)}
-.pen-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:10px}
-.pen-doc{background:#F2F2F0;color:#16181D;border-radius:4px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.35);display:grid;align-content:start}
-.pen-doc header{display:flex;justify-content:space-between;align-items:center;background:#16181D;color:#fff;padding:8px 12px;border-bottom:3px solid var(--red)}
-.pen-doc-t{font-family:var(--f-display);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:14px}
-.pen-doc-n{font-family:ui-monospace,Consolas,monospace;font-size:12px;color:#C9CDD4}
-.pen-doc-r{padding:10px 12px 0;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.pen-doc-r .muted{color:#5B6170;font-weight:500}
-.pen-doc dl{display:grid;grid-template-columns:max-content 1fr;gap:5px 14px;margin:0;padding:10px 12px 12px;font-size:14px}
-.pen-doc dt{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#5B6170;font-weight:700;padding-top:2px}
-.pen-doc dd{margin:0}
-.pen-doc .dlink{color:#16181D}
-.pen-doc .muted{color:#5B6170}
-.pen-doc-g{margin:0;padding:8px 12px;background:#FCE3E1;color:#9B0E07;font-weight:700;font-size:13.5px;border-top:1px solid #F3C2BE}
 .pen-note{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:6px;padding:12px 14px;display:grid;gap:6px;justify-items:start}
 .pen-note p{margin:0;font-size:14px}
 .pen-sub{margin:14px 0 6px;font-family:var(--f-display);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted)}
-.pen-form{display:grid;grid-template-columns:minmax(150px,1fr) minmax(170px,1.2fr) 100px minmax(200px,2fr) auto;gap:8px;align-items:end}
+.pen-card{cursor:pointer;transition:border-color .15s}
+.pen-card:hover{border-color:#3A3F4B;border-left-color:var(--tc)}
+.pen-card.clean .pen-n b{color:var(--muted)}
+.pen-card.open{grid-column:1/-1;background:var(--panel-2);cursor:default}
+.pen-detail{display:grid;gap:10px;margin-top:4px;padding-top:12px;border-top:1px solid var(--line);cursor:auto}
+.pen-grids p{margin:0 0 4px;font-size:14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.pen-incs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:8px}
+.pen-inc{background:#121318;border:1px solid rgba(225,6,0,.6);border-left:4px solid var(--red);border-radius:6px;padding:10px 12px;display:grid;gap:6px;align-content:start}
+.pen-inc header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.pen-inc-r{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-weight:700;font-size:14px}
+.pen-lap{font-family:var(--f-display);font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:rgba(225,6,0,.15);color:#FFB3AB;border-radius:3px;padding:1px 6px}
+.pen-inc-d{margin:0;font-weight:700}
+.pen-inc-w{margin:0;font-size:15px}
+.pen-inc-s{margin:0;color:var(--muted);font-size:12.5px}
+.pen-inc-g{margin:0;color:#FFB3AB;font-weight:700;font-size:13.5px;border-top:1px solid rgba(225,6,0,.35);padding-top:6px}
+.pen-lapin{width:70px}.pen-whyin{min-width:220px}
+.pen-form{display:grid;grid-template-columns:minmax(140px,1fr) minmax(170px,1.2fr) 80px 150px minmax(200px,2fr) auto;gap:8px;align-items:end}
 .pen-step{display:grid;grid-template-columns:1fr 1fr auto;align-items:end}
 @media (max-width:760px){.pen-form{grid-template-columns:1fr 1fr}.pen-form .pen-why{grid-column:1/-1}}
 /* Bewertung */
@@ -1123,10 +1126,10 @@ function penSteps(s){var R=penRules(s),st=[{at:R.limit,grid:R.grid}];if(R.extra)
 function penGridTxt(n){return n+(n>1?' Startplätze':' Startplatz')+' zurück';}
 function penState(s){
   var races=sortedRaces(s),idx={};races.forEach(function(r,i){idx[r.id]=i;});
-  var list=(s.penalties||[]).map(function(e,i){return {e:e,i:i,k:(e.r in idx?idx[e.r]:999)};}).sort(function(a,b){return a.k-b.k||a.i-b.i;}).map(function(o){return o.e;});
+  var list=(s.penalties||[]).map(function(e,i){return {e:e,i:i,k:(e.r in idx?idx[e.r]:999)};}).sort(function(a,b){return a.k-b.k||((+a.e.lap||999)-(+b.e.lap||999))||a.i-b.i;}).map(function(o){return o.e;});
   var steps=penSteps(s),tot={},after={},trig={},grids=[];
   list.forEach(function(e){
-    var before=tot[e.d]||0,now=before+Math.max(1,+e.p||1);tot[e.d]=now;after[e.id]=now;
+    var before=tot[e.d]||0,now=before+penPts(e);tot[e.d]=now;after[e.id]=now;
     steps.forEach(function(st){if(before<st.at&&now>=st.at){
       var key=e.d+':'+st.at,nx=races[(e.r in idx?idx[e.r]:races.length)+1];
       var ap=s.penaltyApply&&(key in s.penaltyApply)?s.penaltyApply[key]:(nx?nx.id:''),ar=null;
@@ -1140,37 +1143,44 @@ function penRace(P,id){for(var i=0;i<P.races.length;i++)if(P.races[i].id===id)re
 function penPips(n,limit){var h='',m=Math.max(n,limit);for(var i=1;i<=m;i++)h+='<i class="'+(i<=n?(i>limit?'over':'on'):'')+'"></i>';return '<span class="pips" title="'+n+' von '+limit+' Strafpunkten">'+h+'</span>';}
 function penChip(st){return '<span class="pchip '+(st==='verbüßt'?'done':st==='steht an'?'due':'open')+'">'+esc(st)+'</span>';}
 function penRaceTag(r){return r?flag(r.flag)+' '+esc(r.short||r.name):'<span class="muted">noch offen</span>';}
+function penPts(e){return (e.p===0||e.p==='0')?0:Math.max(1,+e.p||1);}
+function penPtsTxt(n){return n?n+' Strafpunkt'+(n>1?'e':''):'Verwarnung ohne Strafpunkt';}
+function penStand(n,limit){return n<limit?n+' von '+limit:n+' Strafpunkte';}
+/* Ein Vorfall als dunkle, rot umrahmte Karte */
+function penInc(s,P,e,showDrv){
+  var r=penRace(P,e.r),n=penPts(e),tr=P.trig[e.id]||[];
+  return '<article class="pen-inc"><header><span class="pen-inc-r">'+penRaceTag(r)+(r?' <span class="muted">'+esc(r.name)+'</span>':'')+(e.lap?' <span class="pen-lap">Runde '+esc(e.lap)+'</span>':'')+'</span>'+
+    '<span class="pchip '+(n?'due':'open')+'">'+esc(penPtsTxt(n))+'</span></header>'+
+    (showDrv?'<p class="pen-inc-d">'+esc(dName(s,e.d))+'</p>':'')+
+    '<p class="pen-inc-w">'+(e.why?esc(e.why):'<span class="muted">Ohne Angabe</span>')+'</p>'+
+    '<p class="pen-inc-s">Stand danach: '+esc(penStand(P.after[e.id],penRules(s).limit))+'</p>'+
+    tr.map(function(g){return '<p class="pen-inc-g">'+g.at+'. Strafpunkt erreicht: Grid-Strafe, '+penGridTxt(g.places)+(g.apply?' · '+esc(g.apply.name):' · Rennen noch offen')+'</p>';}).join('')+'</article>';
+}
 function viewStrafen(){
   var s=S(ui.season);
   if(!s) return emptyBox('Noch keine Saison','Lege in der Verwaltung die erste Saison an.');
   var P=penState(s),R=penRules(s);
-  var h=filters(s,false)+demoBanner(s)+'<div class="sec-head"><div><h2>Strafen</h2><p class="meta">'+esc(s.name)+' · Entscheidungen der Stewards · Strafpunkte gelten für die ganze Saison</p></div></div>';
-  h+='<div class="pen-rules">'+P.steps.map(function(st){return '<div class="pen-rule"><b>'+st.at+'</b><span>Strafpunkte</span><em>Grid-Strafe: '+penGridTxt(st.grid)+'</em></div>';}).join('')+'</div>';
-  if(!P.list.length) return h+emptyBox('Keine Strafen','Bisher hat niemand einen Strafpunkt bekommen. Sauber gefahren!');
-  // Strafpunkte je Fahrer
-  var ids=Object.keys(P.tot).sort(function(a,b){return P.tot[b]-P.tot[a]||dName(s,a).localeCompare(dName(s,b));});
-  h+='<h3 class="pen-h">Strafpunkte</h3><div class="pen-drv">'+ids.map(function(id){
-    var t=curTeam(s,id),n=P.tot[id],g=P.grids.filter(function(x){return x.d===id;}),next=null;
+  var h=filters(s,false)+demoBanner(s)+'<div class="sec-head"><div><h2>Strafen</h2><p class="meta">'+esc(s.name)+' · '+P.steps.map(function(st){return st.at+' Strafpunkte = Grid-Strafe, '+penGridTxt(st.grid);}).join(' · ')+'</p></div></div>';
+  var ids=[],seen={};
+  Object.keys(P.tot).forEach(function(id){seen[id]=1;ids.push(id);});
+  s.drivers.forEach(function(d){if(d.active!==false&&!seen[d.id]){seen[d.id]=1;ids.push(d.id);}});
+  ids.sort(function(a,b){return (P.tot[b]||0)-(P.tot[a]||0)||dName(s,a).localeCompare(dName(s,b));});
+  if(!ids.length) return h+emptyBox('Keine Fahrer','Lege in der Verwaltung Fahrer an.');
+  h+='<p class="ch-hint">Fahrer anklicken: Was ist passiert?</p><div class="pen-drv">'+ids.map(function(id){
+    var t=curTeam(s,id),n=P.tot[id]||0,g=P.grids.filter(function(x){return x.d===id;}),es=P.list.filter(function(e){return e.d===id;}),next=null,open=ui.penOpen===id;
     P.steps.forEach(function(st){if(!next&&st.at>n)next=st;});
-    var st=g.length?g.map(function(x){return '<span class="pen-gl">Grid-Strafe −'+x.places+' · '+penRaceTag(x.apply)+' '+penChip(x.status)+'</span>';}).join(''):'';
-    return '<div class="pen-card" style="--tc:'+esc(t.color)+'"><div class="pen-top"><div><div class="ch-name">'+dLink(s,id)+'</div><div class="sub">'+esc(t.name)+'</div></div><div class="pen-n"><b>'+n+'</b><small>'+(n<R.limit?'von '+R.limit:'Strafpunkte')+'</small></div></div>'+
-      penPips(n,R.limit)+(st||'<span class="pen-gl muted">'+(next?'Noch '+(next.at-n)+' bis zur Grid-Strafe':'Alle Stufen erreicht')+'</span>')+'</div>';
-  }).join('')+'</div>';
-  // Grid-Strafen
-  if(P.grids.length){
-    h+='<h3 class="pen-h">Grid-Strafen</h3><div class="tbl-wrap"><table><thead><tr><th>Fahrer</th><th>Auslöser</th><th>Strafe</th><th>Rennen</th><th>Status</th></tr></thead><tbody>'+
-      P.grids.map(function(g){var sr=penRace(P,g.src.r);return '<tr><td class="drv">'+dLink(s,g.d)+'</td><td>'+g.at+'. Strafpunkt · '+penRaceTag(sr)+'</td><td><b>'+penGridTxt(g.places)+'</b></td><td>'+penRaceTag(g.apply)+'</td><td>'+penChip(g.status)+'</td></tr>';}).join('')+
-      '</tbody></table></div>';
-  }
-  // Entscheidungen
-  var docs=P.list.slice().reverse();
-  h+='<h3 class="pen-h">Entscheidungen der Stewards</h3><div class="pen-docs">'+docs.map(function(e,i){
-    var r=penRace(P,e.r),n=+e.p||1,tr=P.trig[e.id]||[];
-    return '<article class="pen-doc"><header><span class="pen-doc-t">Stewards\' Decision</span><span class="pen-doc-n">Dok. '+String(docs.length-i).padStart(2,'0')+'</span></header>'+
-      '<div class="pen-doc-r">'+penRaceTag(r)+(r?' <span class="muted">'+esc(r.name)+'</span>':'')+'</div>'+
-      '<dl><dt>Fahrer</dt><dd>'+dLink(s,e.d)+'</dd><dt>Vergehen</dt><dd>'+(e.why?esc(e.why):'<span class="muted">ohne Angabe</span>')+'</dd>'+
-      '<dt>Entscheidung</dt><dd>Verwarnung, '+n+' Strafpunkt'+(n>1?'e':'')+'</dd><dt>Stand</dt><dd>'+P.after[e.id]+(P.after[e.id]<R.limit?' von '+R.limit:'')+' Strafpunkte'+(P.after[e.id]<R.limit?'n':'')+'</dd></dl>'+
-      tr.map(function(g){return '<p class="pen-doc-g">'+g.at+'. Strafpunkt erreicht: Grid-Strafe, '+penGridTxt(g.places)+(g.apply?' · Rennen: '+esc(g.apply.name):' · Rennen noch offen')+'</p>';}).join('')+'</article>';
+    var last=g.length?g[g.length-1]:null;
+    var line=last?'<span class="pen-gl">Grid-Strafe −'+last.places+' · '+penRaceTag(last.apply)+' '+penChip(last.status)+'</span>':
+      '<span class="pen-gl muted">'+(!es.length?'Keine Vorfälle':next?'Noch '+(next.at-n)+' bis zur Grid-Strafe':'Alle Stufen erreicht')+'</span>';
+    var hcard='<div class="pen-card'+(open?' open':'')+(n?'':' clean')+'" style="--tc:'+esc(t.color)+'" data-act="penOpen" data-id="'+esc(id)+'" role="button" tabindex="0" aria-expanded="'+open+'">'+
+      '<div class="pen-top"><div><div class="ch-name">'+esc(dName(s,id))+'</div><div class="sub">'+esc(t.name)+' · '+es.length+(es.length===1?' Vorfall':' Vorfälle')+'</div></div><div class="pen-n"><b>'+n+'</b><small>'+(n<R.limit?'von '+R.limit:'Strafpunkte')+'</small></div></div>'+
+      penPips(n,R.limit)+line;
+    if(open){
+      hcard+='<div class="pen-detail">'+
+        (g.length?'<div class="pen-grids">'+g.map(function(x){var sr=penRace(P,x.src.r);return '<p><b>Grid-Strafe: '+penGridTxt(x.places)+'</b> · ausgelöst durch den '+x.at+'. Strafpunkt ('+penRaceTag(sr)+') · Rennen: '+penRaceTag(x.apply)+' '+penChip(x.status)+'</p>';}).join('')+'</div>':'')+
+        (es.length?'<div class="pen-incs">'+es.slice().reverse().map(function(e){return penInc(s,P,e,false);}).join('')+'</div>':'<p class="muted">Keine Vorfälle in dieser Saison. Sauber gefahren!</p>')+'</div>';
+    }
+    return hcard+'</div>';
   }).join('')+'</div>';
   return h;
 }
@@ -1180,7 +1190,7 @@ function penRaceNote(s,r){
   if(!es.length&&!gs.length)return '';
   return '<section class="pen-note"><p class="eyebrow">Stewards</p>'+
     gs.map(function(g){return '<p><b>'+esc(dName(s,g.d))+'</b>: Grid-Strafe, '+penGridTxt(g.places)+' '+penChip(g.status)+'</p>';}).join('')+
-    es.map(function(e){var n=+e.p||1;return '<p><b>'+esc(dName(s,e.d))+'</b>: '+n+' Strafpunkt'+(n>1?'e':'')+(e.why?' · '+esc(e.why):'')+' <span class="muted">(Stand '+P.after[e.id]+')</span></p>';}).join('')+
+    es.map(function(e){var n=penPts(e);return '<p><b>'+esc(dName(s,e.d))+'</b>'+(e.lap?' (Runde '+esc(e.lap)+')':'')+': '+esc(penPtsTxt(n))+(e.why?' · '+esc(e.why):'')+' <span class="muted">(Stand '+P.after[e.id]+')</span></p>';}).join('')+
     '<a class="btn small" href="#strafen">Alle Strafen</a></section>';
 }
 function penAdminPanel(s){
@@ -1188,7 +1198,8 @@ function penAdminPanel(s){
   var raceOpts=races.map(function(r,i){return [r.id,(r.short||'R'+(i+1))+' · '+r.name];});
   var lastDone='';races.forEach(function(r){if(counted(r))lastDone=r.id;});
   var drvOpts=s.drivers.filter(function(d){return d.active!==false;}).map(function(d){return [d.id,d.name];});
-  var h='<section class="panel"><h3>Strafen</h3><p>Ihr tragt die Strafpunkte selbst ein. Erreicht ein Fahrer eine Stufe, legt die Seite automatisch eine Grid-Strafe an. Sie gilt erst einmal im nächsten Rennen. Ihr könnt sie auf ein anderes Rennen legen, auch auf ein vergangenes. Ist das Rennen gefahren, gilt die Strafe als verbüßt.</p>';
+  var ptOpts=[[0,'0 (nur Verwarnung)'],[1,'1'],[2,'2'],[3,'3']],L=ui.penLast||{};
+  var h='<section class="panel"><h3>Strafen</h3><p>Ihr tragt die Vorfälle selbst ein. Erreicht ein Fahrer eine Stufe, legt die Seite automatisch eine Grid-Strafe an. Sie gilt erst einmal im nächsten Rennen. Ihr könnt sie auf ein anderes Rennen legen, auch auf ein vergangenes. Ist das Rennen gefahren, gilt die Strafe als verbüßt.</p>';
   h+='<div class="fgrid"><label class="f">Strafpunkte bis zur Grid-Strafe<input type="number" min="1" id="pen-limit" data-f="pen-limit" value="'+R.limit+'"></label>'+
     '<label class="f">Grid-Strafe (Startplätze zurück)<input type="number" min="1" id="pen-grid" data-f="pen-grid" value="'+R.grid+'"></label></div>'+
     '<div class="acts"><label class="chk"><input type="checkbox" id="pen-extra" data-f="pen-extra"'+(R.extra?' checked':'')+'> Weitere Stufen über die Grenze hinaus (z. B. ab 4 und ab 5 Strafpunkten mehr Startplätze)</label></div>';
@@ -1198,18 +1209,21 @@ function penAdminPanel(s){
         '<label class="f">Startplätze zurück<input type="number" min="1" id="pst-g'+i+'" data-f="pen-st-grid" data-id="'+i+'" value="'+esc(st.grid)+'"></label>'+askBtn('delPenStep:'+i,'Entfernen')+'</div>';
     }).join('')+'</div><div class="acts"><button class="btn small" data-act="penStepAdd">+ Stufe</button><span class="muted" style="font-size:13px">Punktabzüge kommen später dazu.</span></div>';
   }
-  h+='<h4 class="pen-sub">Strafpunkt eintragen</h4><div class="pen-form">'+
-    '<label class="f">Fahrer<select id="pf-d">'+opts([['','Fahrer wählen']].concat(drvOpts),'')+'</select></label>'+
-    '<label class="f">Rennen<select id="pf-r">'+opts(raceOpts,lastDone||(races[0]&&races[0].id)||'')+'</select></label>'+
-    '<label class="f">Strafpunkte<select id="pf-p">'+opts([[1,'1'],[2,'2'],[3,'3']],1)+'</select></label>'+
-    '<label class="f pen-why">Grund<input type="text" id="pf-why" placeholder="z. B. Kollision in Kurve 1, Track Limits"></label>'+
+  h+='<h4 class="pen-sub">Vorfall eintragen</h4><p class="muted" style="font-size:13.5px;margin:0 0 8px">Mehrere Vorfälle im selben Rennen, z. B. Runde 3 und Runde 5? Einfach nacheinander eintragen. Fahrer und Rennen bleiben ausgewählt.</p><div class="pen-form">'+
+    '<label class="f">Fahrer<select id="pf-d">'+opts([['','Fahrer wählen']].concat(drvOpts),L.d||'')+'</select></label>'+
+    '<label class="f">Rennen<select id="pf-r">'+opts(raceOpts,L.r||lastDone||(races[0]&&races[0].id)||'')+'</select></label>'+
+    '<label class="f">Runde<input type="number" min="1" id="pf-lap" placeholder="z. B. 3"></label>'+
+    '<label class="f">Strafpunkte<select id="pf-p">'+opts(ptOpts,1)+'</select></label>'+
+    '<label class="f pen-why">Was ist passiert?<input type="text" id="pf-why" placeholder="z. B. Fahrer in Kurve 1 abgeschossen"></label>'+
     '<button class="btn primary" data-act="penAdd">Eintragen</button></div>';
-  if(ui.penMsg)h+='<p class="warn">'+esc(ui.penMsg)+'</p>';
+  if(ui.penMsg)h+='<p class="'+(ui.penOk?'ok':'warn')+'" style="margin:6px 0 0">'+esc(ui.penMsg)+'</p>';
   if(P.list.length){
-    h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Rennen</th><th>Fahrer</th><th>Pkt</th><th>Grund</th><th class="num">Stand</th><th></th></tr></thead><tbody>'+
-      P.list.map(function(e){var r=penRace(P,e.r);return '<tr><td>'+penRaceTag(r)+'</td><td class="drv">'+esc(dName(s,e.d))+'</td>'+
-        '<td><select id="pp-'+esc(e.id)+'" data-f="pen-p" data-id="'+esc(e.id)+'" aria-label="Strafpunkte">'+opts([[1,'1'],[2,'2'],[3,'3']],+e.p||1)+'</select></td>'+
-        '<td><input type="text" class="tin" id="pw-'+esc(e.id)+'" data-f="pen-why" data-id="'+esc(e.id)+'" value="'+esc(e.why||'')+'" aria-label="Grund"></td>'+
+    h+='<div class="tbl-wrap"><table class="res"><thead><tr><th>Rennen</th><th>Runde</th><th>Fahrer</th><th>Pkt</th><th>Was ist passiert?</th><th class="num">Stand</th><th></th></tr></thead><tbody>'+
+      P.list.map(function(e){var r=penRace(P,e.r);return '<tr><td>'+penRaceTag(r)+'</td>'+
+        '<td><input type="number" min="1" class="tin pen-lapin" id="pl-'+esc(e.id)+'" data-f="pen-lap" data-id="'+esc(e.id)+'" value="'+esc(e.lap||'')+'" aria-label="Runde"></td>'+
+        '<td class="drv">'+esc(dName(s,e.d))+'</td>'+
+        '<td><select id="pp-'+esc(e.id)+'" data-f="pen-p" data-id="'+esc(e.id)+'" aria-label="Strafpunkte">'+opts(ptOpts,penPts(e))+'</select></td>'+
+        '<td><input type="text" class="tin pen-whyin" id="pw-'+esc(e.id)+'" data-f="pen-why" data-id="'+esc(e.id)+'" value="'+esc(e.why||'')+'" aria-label="Was ist passiert"></td>'+
         '<td class="num">'+P.after[e.id]+' / '+R.limit+'</td><td>'+askBtn('delPen:'+e.id,'Löschen')+'</td></tr>';}).join('')+'</tbody></table></div>';
   }
   if(P.grids.length){
@@ -1824,7 +1838,10 @@ function applyField(f,el){
     case 'pen-extra':{var pr=penR(s);pr.extra=v;if(v&&!(pr.steps&&pr.steps.length))pr.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});break;}
     case 'pen-st-at':case 'pen-st-grid':{var pr2=penR(s);if(!(pr2.steps&&pr2.steps.length))pr2.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});var stp=pr2.steps[+id];if(stp){if(f==='pen-st-at')stp.at=Math.max(1,+v||1);else stp.grid=Math.max(1,+v||1);}break;}
     case 'pen-apply':s.penaltyApply=s.penaltyApply||{};s.penaltyApply[id]=v;break;
-    case 'pen-p':case 'pen-why':(s.penalties||[]).forEach(function(e){if(e.id===id){if(f==='pen-p')e.p=+v||1;else{if(v.trim())e.why=v.trim();else delete e.why;}}});break;
+    case 'pen-p':case 'pen-why':case 'pen-lap':(s.penalties||[]).forEach(function(e){if(e.id===id){
+      if(f==='pen-p')e.p=+v||0;
+      else if(f==='pen-lap'){if(+v>0)e.lap=Math.round(+v);else delete e.lap;}
+      else{if(v.trim())e.why=v.trim();else delete e.why;}}});break;
   }
   if(r){
     switch(f){
@@ -1899,10 +1916,13 @@ function doAction(act,el){
       draft.seasons.unshift(ns);ui.admSeason=ns.id;ui.admRace=null;changed();break;}
     case 'addTeam':s=S(ui.admSeason);if(s){var nt={id:uid(),name:'Neues Team',color:'#8E95A2'};s.teams.push(nt);changed();render();var el1=document.getElementById('tn-'+nt.id);if(el1){el1.focus();el1.select();}return;}break;
     case 'delTeam':s=S(ui.admSeason);if(s&&!usedTeam(s,id)){s.teams=s.teams.filter(function(t){return t.id!==id;});s.drivers.forEach(function(d){if(d.team===id)d.team='';});changed();}break;
+    case 'penOpen':ui.penOpen=ui.penOpen===id?null:id;break;
     case 'penAdd':{s=S(ui.admSeason);if(!s)break;
-      var pd=(document.getElementById('pf-d')||{}).value||'',prr=(document.getElementById('pf-r')||{}).value||'',pp=+((document.getElementById('pf-p')||{}).value)||1,pw=((document.getElementById('pf-why')||{}).value||'').trim();
+      var pd=(document.getElementById('pf-d')||{}).value||'',prr=(document.getElementById('pf-r')||{}).value||'',pp=+((document.getElementById('pf-p')||{}).value)||0,pw=((document.getElementById('pf-why')||{}).value||'').trim(),pl=+((document.getElementById('pf-lap')||{}).value)||0;
+      ui.penOk=false;
       if(!pd||!prr){ui.penMsg='Bitte Fahrer und Rennen wählen.';break;}
-      ui.penMsg='';s.penalties=s.penalties||[];var pe={id:uid(),d:pd,r:prr,p:pp};if(pw)pe.why=pw;s.penalties.push(pe);changed();break;}
+      s.penalties=s.penalties||[];var pe={id:uid(),d:pd,r:prr,p:pp};if(pl>0)pe.lap=Math.round(pl);if(pw)pe.why=pw;s.penalties.push(pe);
+      ui.penLast={d:pd,r:prr};ui.penOk=true;ui.penMsg='Eingetragen: '+dName(s,pd)+(pe.lap?', Runde '+pe.lap:'')+'. Du kannst direkt den nächsten Vorfall eintragen.';changed();break;}
     case 'penStepAdd':{s=S(ui.admSeason);if(!s)break;var pr4=penR(s);if(!(pr4.steps&&pr4.steps.length))pr4.steps=penRules(s).steps.map(function(x){return {at:x.at,grid:x.grid};});
       var ls=pr4.steps[pr4.steps.length-1]||{at:penRules(s).limit,grid:penRules(s).grid};pr4.steps.push({at:(+ls.at||3)+1,grid:(+ls.grid||1)+2});changed();break;}
     case 'addDriver':s=S(ui.admSeason);if(s){var nd={id:uid(),name:'Neuer Fahrer',team:'',nat:'',active:true};s.drivers.push(nd);changed();render();var el2=document.getElementById('dn-'+nd.id);if(el2){el2.focus();el2.select();}return;}break;
@@ -2128,6 +2148,7 @@ document.addEventListener('submit',function(e){
     login(t?t.value:'',rm?rm.checked:true,false);
   }
 });
+document.addEventListener('keydown',function(e){var el=e.target;if((e.key==='Enter'||e.key===' ')&&el&&el.getAttribute&&el.getAttribute('role')==='button'&&el.dataset&&el.dataset.act){e.preventDefault();el.click();}});
 document.addEventListener('change',function(e){var el=e.target;
   if(el&&el.id==='tw-riv'){ui.twRivId=el.value;var c=twCtx();if(c&&c.riv)ui.twRiv=twAvg(c.s,c.riv.id,c.teams);render();return;}
   if(el&&el.dataset&&el.dataset.f)applyField(el.dataset.f,el);});
