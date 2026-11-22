@@ -926,7 +926,35 @@
      "pole": "joker",
      "dotd": "luis",
      "clean": "white",
-     "ot": "luis"
+     "ot": "luis",
+     "quali": [
+      {
+       "d": "joker",
+       "p": 1,
+       "tm": "1:19.676"
+      },
+      {
+       "d": "mesota",
+       "p": 2
+      },
+      {
+       "d": "luis",
+       "p": 3
+      },
+      {
+       "d": "white",
+       "p": 4
+      },
+      {
+       "d": "crash",
+       "p": 5
+      },
+      {
+       "d": "x0ts2jvy",
+       "p": 6
+      }
+     ],
+     "poleTime": "1:19.676"
     },
     {
      "id": "r06",
