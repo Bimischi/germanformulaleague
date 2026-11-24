@@ -202,13 +202,6 @@
      "team": "fer",
      "nat": "de",
      "active": true
-    },
-    {
-     "id": "xqol2y8p",
-     "name": "Skit",
-     "team": "mcl",
-     "nat": "de",
-     "active": true
     }
    ],
    "races": [
@@ -644,12 +637,6 @@
        "t": "rb",
        "a": true,
        "s": "DNS"
-      },
-      {
-       "d": "xqol2y8p",
-       "t": "mcl",
-       "a": true,
-       "s": "DNS"
       }
      ],
      "sprint": {
@@ -866,12 +853,6 @@
        "t": "",
        "a": true,
        "s": "DNS"
-      },
-      {
-       "d": "xqol2y8p",
-       "t": "mcl",
-       "a": true,
-       "s": "DNS"
       }
      ],
      "quali": [
@@ -1052,12 +1033,6 @@
        "t": "fer",
        "a": true,
        "s": "DNS"
-      },
-      {
-       "d": "xqol2y8p",
-       "t": "mcl",
-       "a": true,
-       "s": "DNS"
       }
      ],
      "fl": "joker",
@@ -1196,12 +1171,6 @@
       {
        "d": "xw9zsshm",
        "t": "rb",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "xqol2y8p",
-       "t": "mcl",
        "a": true,
        "s": "DNS"
       }
