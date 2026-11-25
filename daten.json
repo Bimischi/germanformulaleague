@@ -294,9 +294,9 @@
       },
       {
        "d": "schuppi",
-       "t": "fer",
        "a": true,
-       "s": "DNS"
+       "s": "DNS",
+       "t": "haa"
       },
       {
        "d": "dominik",
