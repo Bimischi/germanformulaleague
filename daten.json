@@ -1274,7 +1274,11 @@
      "laps": "",
      "results": [],
      "sprint": {
-      "results": []
+      "results": [],
+      "name": "Großer Preis von Las Vegas",
+      "track": "Las Vegas",
+      "flag": "us",
+      "short": "LVG"
      }
     },
     {
