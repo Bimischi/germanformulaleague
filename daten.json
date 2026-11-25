@@ -175,14 +175,6 @@
      "role": "ersatz"
     },
     {
-     "id": "dominik",
-     "name": "F1Dominik_Kreft",
-     "team": "",
-     "nat": "pl",
-     "active": true,
-     "role": "ersatz"
-    },
-    {
      "id": "xw9zsshm",
      "name": "Leokobra",
      "team": "rb",
@@ -297,12 +289,6 @@
        "a": true,
        "s": "DNS",
        "t": "haa"
-      },
-      {
-       "d": "dominik",
-       "t": "",
-       "a": true,
-       "s": "DNS"
       },
       {
        "d": "lewin",
@@ -449,12 +435,6 @@
       {
        "d": "x0ts2jvy",
        "t": "rbr",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "dominik",
-       "t": "",
        "a": true,
        "s": "DNS"
       },
@@ -622,12 +602,6 @@
       },
       {
        "d": "lewin",
-       "t": "",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "dominik",
        "t": "",
        "a": true,
        "s": "DNS"
@@ -847,12 +821,6 @@
        "t": "",
        "a": true,
        "s": "DNS"
-      },
-      {
-       "d": "dominik",
-       "t": "",
-       "a": true,
-       "s": "DNS"
       }
      ],
      "quali": [
@@ -1017,12 +985,6 @@
        "s": "DNS"
       },
       {
-       "d": "dominik",
-       "t": "",
-       "a": true,
-       "s": "DNS"
-      },
-      {
        "d": "xw9zsshm",
        "t": "rb",
        "a": true,
@@ -1158,12 +1120,6 @@
       },
       {
        "d": "lewin",
-       "t": "",
-       "a": true,
-       "s": "DNS"
-      },
-      {
-       "d": "dominik",
        "t": "",
        "a": true,
        "s": "DNS"
