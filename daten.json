@@ -108,7 +108,7 @@
      "team": "haa",
      "nat": "de",
      "active": true,
-     "role": "ersatz"
+     "role": "stamm"
     },
     {
      "id": "mesota",
@@ -148,7 +148,7 @@
      "team": "haa",
      "nat": "",
      "active": true,
-     "role": "ersatz"
+     "role": "stamm"
     },
     {
      "id": "tore",
