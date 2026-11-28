@@ -201,6 +201,20 @@
      "team": "wil",
      "nat": "de",
      "active": true
+    },
+    {
+     "id": "xksekzb1",
+     "name": "Spirit",
+     "team": "mcl",
+     "nat": "de",
+     "active": true
+    },
+    {
+     "id": "xiued451",
+     "name": "David",
+     "team": "mcl",
+     "nat": "",
+     "active": true
     }
    ],
    "races": [
